@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['organization_0',['Module Organization',['../index.html#modules_sec',1,'']]],
-  ['overview_1',['Overview',['../index.html#overview_sec',1,'']]]
+  ['hardware_0',['Stepdance Hardware',['../index.html#autotoc_md39',1,'']]],
+  ['high_20speed_20frame_20configuration_1',['High Speed Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md32',1,'High-Speed Frame Configuration']]],
+  ['hobby_20servo_20driver_2',['Hobby Servo Driver',['../index.html#autotoc_md52',1,'']]]
 ];

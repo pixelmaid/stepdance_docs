@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['gcodeinterface_0',['GCodeInterface',['../class_g_code_interface.html',1,'']]],
-  ['generators_1',['Motion Generators',['../group__generators.html',1,'']]],
-  ['getting_20started_2',['Getting Started',['../index.html#getting_started',1,'']]],
-  ['groups_2edox_3',['groups.dox',['../groups_8dox.html',1,'']]]
+  ['filtered_5ftarget_5fposition_0',['filtered_target_position',['../class_channel.html#afc949cb6c6bbadcc164ab8191e04558c',1,'Channel']]],
+  ['filtering_5fon_1',['filtering_on',['../class_channel.html#a2b370f0b880c356df887b05a55a46b95',1,'Channel']]],
+  ['filters_2',['Filters',['../group__filters.html',1,'']]],
+  ['fourtrackplayer_3',['FourTrackPlayer',['../class_four_track_player.html',1,'']]],
+  ['fourtrackrecorder_4',['FourTrackRecorder',['../class_four_track_recorder.html',1,'']]],
+  ['frame_20configuration_5',['Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md32',1,'High-Speed Frame Configuration']]],
+  ['frames_3a_20multi_20axis_20synchronous_20motion_6',['Frames: Multi-Axis Synchronous Motion',['../index.html#autotoc_md56',1,'']]],
+  ['functions_7',['Custom Functions',['../stepasketch.html#autotoc_md31',1,'']]],
+  ['future_20work_8',['Future Work',['../highspeed.html#autotoc_md35',1,'']]]
 ];

@@ -25,7 +25,11 @@
 var NAVTREE =
 [
   [ "Stepdance Software Library", "index.html", [
-    [ "Stepdance Software Library Documentation", "index.html", "index" ],
+    [ "Stepdance Documentation", "index.html", "index" ],
+    [ "Axidraw EBB Controller Emulator Example", "ebb.html", null ],
+    [ "Step-A-Sketch Example", "stepasketch.html", null ],
+    [ "High-Speed Frame Configuration", "highspeed.html", null ],
+    [ "TAISS Optical Encoders", "taiss.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

@@ -1,4 +1,26 @@
 var searchData=
 [
-  ['getting_20started_0',['Getting Started',['../index.html#getting_started',1,'']]]
+  ['calculate_20the_20reference_20voltage_0',['Calculate the Reference Voltage',['../stepasketch.html#autotoc_md9',1,'']]],
+  ['channel_1',['Channel',['../stepasketch.html#autotoc_md16',1,'']]],
+  ['channels_2',['Channels',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/SSL/readme.md#autotoc_md63',1,'Channels'],['../stepasketch.html#autotoc_md24',1,'Configure Channels']]],
+  ['code_3',['Code',['../stepasketch.html#autotoc_md11',1,'']]],
+  ['components_4',['Define all stepdance components',['../stepasketch.html#autotoc_md14',1,'']]],
+  ['concepts_5',['Concepts',['../highspeed.html#autotoc_md33',1,'']]],
+  ['configuration_6',['Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md32',1,'High-Speed Frame Configuration']]],
+  ['configure_20channels_7',['Configure Channels',['../stepasketch.html#autotoc_md24',1,'']]],
+  ['configure_20encoders_8',['Configure Encoders',['../stepasketch.html#autotoc_md25',1,'']]],
+  ['configure_20output_20ports_9',['Configure Output Ports',['../stepasketch.html#autotoc_md23',1,'']]],
+  ['configure_20position_20generator_10',['Configure Position Generator',['../stepasketch.html#autotoc_md28',1,'']]],
+  ['configure_20the_20button_11',['Configure the Button',['../stepasketch.html#autotoc_md27',1,'']]],
+  ['configure_20the_20kinematics_12',['Configure the Kinematics',['../stepasketch.html#autotoc_md26',1,'']]],
+  ['configuring_20the_20stepdance_20driver_20board_13',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
+  ['connector_14',['Connector',['../taiss.html#autotoc_md68',1,'']]],
+  ['connectors_15',['QWIIC Connectors',['../index.html#autotoc_md43',1,'']]],
+  ['considerations_16',['Considerations',['../highspeed.html#autotoc_md34',1,'']]],
+  ['control_20knob_20mounting_17',['Display and Control Knob Mounting',['../index.html#autotoc_md46',1,'']]],
+  ['controller_20emulator_18',['Axidraw &quot;EBB&quot; Controller Emulator',['../index.html#autotoc_md59',1,'']]],
+  ['controller_20emulator_20example_19',['Axidraw EBB Controller Emulator Example',['../ebb.html',1,'']]],
+  ['current_20',['Determine the Peak Motor Current',['../stepasketch.html#autotoc_md8',1,'']]],
+  ['currents_21',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],
+  ['custom_20functions_22',['Custom Functions',['../stepasketch.html#autotoc_md31',1,'']]]
 ];
