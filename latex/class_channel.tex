@@ -1,0 +1,247 @@
+\doxysection{Channel Class Reference}
+\hypertarget{class_channel}{}\label{class_channel}\index{Channel@{Channel}}
+
+
+\doxylink{class_channel}{Channel}.  
+
+
+
+
+{\ttfamily \#include $<$channels.\+hpp$>$}
+
+Inheritance diagram for Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_channel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_channel_a395b2f1afe3e1351806fb826e5a23d42}\label{class_channel_a395b2f1afe3e1351806fb826e5a23d42} 
+void {\bfseries begin} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{class_channel}{Channel} with no output port. Not for normal use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_a93505d47732a9a17a97dfb848defadf5}{begin}} (\mbox{\hyperlink{class_output_port}{Output\+Port}} \texorpdfstring{$\ast$}{*}target\+\_\+output\+\_\+port, uint8\+\_\+t output\+\_\+signal)
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{class_channel}{Channel} with a target \doxylink{class_output_port}{Output\+Port} and output signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_ac73f65baf832b880f262e99ad6c79606}{set\+\_\+max\+\_\+pulse\+\_\+rate}} (float max\+\_\+pulses\+\_\+per\+\_\+sec)
+\begin{DoxyCompactList}\small\item\em Sets the maxium allowable pulse rate for the channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_acfd40d913937c2ef292f9d6b00d9f144}{set\+\_\+ratio}} (float input\+\_\+units, float channel\+\_\+units=1.\+0)
+\begin{DoxyCompactList}\small\item\em Sets the transmission ratio for all target transmissions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_a9c0df399ebeba1a09e41b42264d064c7}{set\+\_\+upper\+\_\+limit}} (Decimal\+Position upper\+\_\+limit\+\_\+input\+\_\+units)
+\begin{DoxyCompactList}\small\item\em Sets the upper position limit for the channel. Useful if you want the channel to stop transmitting motion streams at a certain upper threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_add939b27aad8cff94b857bcd2895e3e0}{set\+\_\+lower\+\_\+limit}} (Decimal\+Position lower\+\_\+limit\+\_\+input\+\_\+units)
+\begin{DoxyCompactList}\small\item\em Sets the lower position limit for the channel. Useful if you want the channel to stop transmitting motion streams at a certain lower threshold. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_a837a7759027b950410e4b8ef18ec863e}\label{class_channel_a837a7759027b950410e4b8ef18ec863e} 
+void {\bfseries disable\+\_\+upper\+\_\+limit} ()
+\begin{DoxyCompactList}\small\item\em Disables the upper position limit. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_a28bf6a07b2b7635c85add28b31aeb255}\label{class_channel_a28bf6a07b2b7635c85add28b31aeb255} 
+void {\bfseries disable\+\_\+lower\+\_\+limit} ()
+\begin{DoxyCompactList}\small\item\em Disables the lower position limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_a20bf288de296ba9d7c7105f2a66500aa}{disable\+\_\+limits}} ()
+\begin{DoxyCompactList}\small\item\em Disables the channel. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_a6d2e75a02a53fc31163409f2c58468ab}\label{class_channel_a6d2e75a02a53fc31163409f2c58468ab} 
+void {\bfseries disable} ()
+\begin{DoxyCompactList}\small\item\em Disables the channel. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_a41956c94fe300d0cae25d6040422c9e5}\label{class_channel_a41956c94fe300d0cae25d6040422c9e5} 
+void {\bfseries enable} ()
+\begin{DoxyCompactList}\small\item\em Enables the channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_a4752378e65ebfff9ef89f5d5d942d418}{enable\+\_\+filtering}} (uint16\+\_\+t num\+\_\+samples=20)
+\begin{DoxyCompactList}\small\item\em Enables a moving average filter with a specified sample window. The bigger the window, the smoother the output but the less responsive the motion. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_aebb93ae1a45624307229f2214234b800}\label{class_channel_aebb93ae1a45624307229f2214234b800} 
+void {\bfseries disable\+\_\+filtering} ()
+\begin{DoxyCompactList}\small\item\em Disables the moving average filter. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{class_channel_a7bfd0c8dbc915af01f2f03633257fbc9}{is\+\_\+outside\+\_\+limits}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current channel position is outside the set limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_ab493519b6aa6d2bdcdbb34ef72b2c20d}{invert\+\_\+output}} ()
+\begin{DoxyCompactList}\small\item\em Inverts the channel output direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_channel_aabc1e8d3f0563b1b70e8107d2dd7751d}{invert\+\_\+output}} (bool invert)
+\begin{DoxyCompactList}\small\item\em Inverts the channel output direction. Useful for reversing motor direction without changing wiring. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_channel_a823f52bb234e60643f9b422a084e94f3}\label{class_channel_a823f52bb234e60643f9b422a084e94f3} 
+Decimal\+Position {\bfseries target\+\_\+position}
+\begin{DoxyCompactList}\small\item\em Target position of the channel in pulses. Target positon is what the channel is driving toward. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_a3c96c0b9aee1a6e7d9bb265ccb9c86e7}\label{class_channel_a3c96c0b9aee1a6e7d9bb265ccb9c86e7} 
+Decimal\+Position {\bfseries current\+\_\+position}
+\begin{DoxyCompactList}\small\item\em Current position of the channel in pulses. Current position is where the channel is currently at. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_afc949cb6c6bbadcc164ab8191e04558c}\label{class_channel_afc949cb6c6bbadcc164ab8191e04558c} 
+Decimal\+Position {\bfseries filtered\+\_\+target\+\_\+position}
+\begin{DoxyCompactList}\small\item\em Filtered target position of the channel in pulses. This is used when the enable\+Filtering() method is used to smooth out motion. \end{DoxyCompactList}\item 
+\Hypertarget{class_channel_a2b370f0b880c356df887b05a55a46b95}\label{class_channel_a2b370f0b880c356df887b05a55a46b95} 
+bool {\bfseries filtering\+\_\+on} = false
+\begin{DoxyCompactList}\small\item\em Flag indicating whether filtering is enabled for the channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_channel}{Channel}. 
+
+Channels are modules that store the machine\textquotesingle{}s positional state. A \doxylink{class_channel}{Channel} directly interfaces with an \doxylink{class_output_port}{Output\+Port} by mapping to a particular signal flag (e.\+g. "{}\+X"{}). Channels contain a target position variable that can be modified by upstream components such as motion generators. They also contain a variable representing their current position. Each interrupt frame, the channel increments or decrements the current position when needed to drive \texorpdfstring{$\vert$}{|}target-\/current\texorpdfstring{$\vert$}{|} \texorpdfstring{$<$}{<} 0.\+5, and correspondingly sets step and direction flags on its mapped \doxylink{class_output_port}{Output\+Port}. Any number of channels can be instantiated, often corresponding to axes of the machine machine. Basic Modules may contain multiple channels that map to distinct flags on the same \doxylink{class_output_port}{Output\+Port}. Driver Modules typically have multiple channels that each map to a unique \doxylink{class_output_port}{Output\+Port}, that then generate step/direction signals for a motor drive module. Here\textquotesingle{}s an example of how to instantiate and configure a \doxylink{class_channel}{Channel} and map it to an \doxylink{class_output_port}{Output\+Port}\+: 
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_output_port}{OutputPort}}\ output\_a;\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{class_channel}{Channel}}\ channel\_a;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ setup()\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ -\/-\/\ Configure\ and\ start\ the\ output\ port\ -\/-\/}}
+\DoxyCodeLine{\ \ output\_a.\mbox{\hyperlink{class_output_port_a0158ccdab5705216309a16eeb22039d0}{begin}}(OUTPUT\_A);\ \textcolor{comment}{//\ "{}OUTPUT\_A"{}\ specifies\ the\ physical\ port\ on\ the\ PCB\ for\ the\ output.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ -\/-\/\ Configure\ and\ start\ the\ channels\ -\/-\/}}
+\DoxyCodeLine{\ \ channel\_a.\mbox{\hyperlink{class_channel_a395b2f1afe3e1351806fb826e5a23d42}{begin}}(\&output\_a,\ SIGNAL\_E);\ \textcolor{comment}{//\ Connects\ the\ channel\ to\ the\ "{}E"{}\ signal\ on\ "{}output\_a"{}.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ choose\ the\ "{}E"{}\ signal\ because\ it\ results\ in\ a\ step\ pulse\ of\ 7us,}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ which\ is\ more\ than\ long\ enough\ for\ the\ driver\ IC}}
+\DoxyCodeLine{\ \ channel\_a.\mbox{\hyperlink{class_channel_acfd40d913937c2ef292f9d6b00d9f144}{set\_ratio}}(40,\ 3200);\ \textcolor{comment}{//\ Sets\ the\ input/output\ transmission\ ratio\ for\ the\ channel.}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 
+
+\label{doc-func-members}
+\Hypertarget{class_channel_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_channel_a93505d47732a9a17a97dfb848defadf5}\index{Channel@{Channel}!begin@{begin}}
+\index{begin@{begin}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \label{class_channel_a93505d47732a9a17a97dfb848defadf5} 
+void Channel\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_output_port}{Output\+Port}} \texorpdfstring{$\ast$}{*}}]{target\+\_\+output\+\_\+port}{, }\item[{uint8\+\_\+t}]{output\+\_\+signal}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the \doxylink{class_channel}{Channel} with a target \doxylink{class_output_port}{Output\+Port} and output signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+output\+\_\+port} & Pointer to the target \doxylink{class_output_port}{Output\+Port}. \\
+\hline
+{\em output\+\_\+signal} & Index of the output signal (SIGNAL\+\_\+X, SIGNAL\+\_\+Y, etc.). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_channel_a20bf288de296ba9d7c7105f2a66500aa}\index{Channel@{Channel}!disable\_limits@{disable\_limits}}
+\index{disable\_limits@{disable\_limits}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{disable\_limits()}{disable\_limits()}}
+{\footnotesize\ttfamily \label{class_channel_a20bf288de296ba9d7c7105f2a66500aa} 
+void Channel\+::disable\+\_\+limits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disables the channel. 
+
+Disables all position limits. \Hypertarget{class_channel_a4752378e65ebfff9ef89f5d5d942d418}\index{Channel@{Channel}!enable\_filtering@{enable\_filtering}}
+\index{enable\_filtering@{enable\_filtering}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{enable\_filtering()}{enable\_filtering()}}
+{\footnotesize\ttfamily \label{class_channel_a4752378e65ebfff9ef89f5d5d942d418} 
+void Channel\+::enable\+\_\+filtering (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{num\+\_\+samples}{ = {\ttfamily 20}}\end{DoxyParamCaption})}
+
+
+
+Enables a moving average filter with a specified sample window. The bigger the window, the smoother the output but the less responsive the motion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+samples} & Number of samples for filtering. Default is 20. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_channel_ab493519b6aa6d2bdcdbb34ef72b2c20d}\index{Channel@{Channel}!invert\_output@{invert\_output}}
+\index{invert\_output@{invert\_output}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{invert\_output()}{invert\_output()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_channel_ab493519b6aa6d2bdcdbb34ef72b2c20d} 
+void Channel\+::invert\+\_\+output (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inverts the channel output direction. 
+
+Inverts the channel output direction. Useful for reversing motor direction without changing wiring. \Hypertarget{class_channel_aabc1e8d3f0563b1b70e8107d2dd7751d}\index{Channel@{Channel}!invert\_output@{invert\_output}}
+\index{invert\_output@{invert\_output}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{invert\_output()}{invert\_output()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_channel_aabc1e8d3f0563b1b70e8107d2dd7751d} 
+void Channel\+::invert\+\_\+output (\begin{DoxyParamCaption}\item[{bool}]{invert}{}\end{DoxyParamCaption})}
+
+
+
+Inverts the channel output direction. Useful for reversing motor direction without changing wiring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invert} & If true, inverts the output direction; if false, restores the normal direction. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_channel_a7bfd0c8dbc915af01f2f03633257fbc9}\index{Channel@{Channel}!is\_outside\_limits@{is\_outside\_limits}}
+\index{is\_outside\_limits@{is\_outside\_limits}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{is\_outside\_limits()}{is\_outside\_limits()}}
+{\footnotesize\ttfamily \label{class_channel_a7bfd0c8dbc915af01f2f03633257fbc9} 
+int8\+\_\+t Channel\+::is\+\_\+outside\+\_\+limits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current channel position is outside the set limits. 
+
+\begin{DoxyReturn}{Returns}
+int8\+\_\+t Returns 0 if inside limits, 1 if outside upper limit, or -\/1 if outside lower limit. 
+\end{DoxyReturn}
+\Hypertarget{class_channel_add939b27aad8cff94b857bcd2895e3e0}\index{Channel@{Channel}!set\_lower\_limit@{set\_lower\_limit}}
+\index{set\_lower\_limit@{set\_lower\_limit}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{set\_lower\_limit()}{set\_lower\_limit()}}
+{\footnotesize\ttfamily \label{class_channel_add939b27aad8cff94b857bcd2895e3e0} 
+void Channel\+::set\+\_\+lower\+\_\+limit (\begin{DoxyParamCaption}\item[{Decimal\+Position}]{lower\+\_\+limit\+\_\+input\+\_\+units}{}\end{DoxyParamCaption})}
+
+
+
+Sets the lower position limit for the channel. Useful if you want the channel to stop transmitting motion streams at a certain lower threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lower\+\_\+limit\+\_\+input\+\_\+units} & Lower limit in input (world) units. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_channel_ac73f65baf832b880f262e99ad6c79606}\index{Channel@{Channel}!set\_max\_pulse\_rate@{set\_max\_pulse\_rate}}
+\index{set\_max\_pulse\_rate@{set\_max\_pulse\_rate}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{set\_max\_pulse\_rate()}{set\_max\_pulse\_rate()}}
+{\footnotesize\ttfamily \label{class_channel_ac73f65baf832b880f262e99ad6c79606} 
+void Channel\+::set\+\_\+max\+\_\+pulse\+\_\+rate (\begin{DoxyParamCaption}\item[{float}]{max\+\_\+pulses\+\_\+per\+\_\+sec}{}\end{DoxyParamCaption})}
+
+
+
+Sets the maxium allowable pulse rate for the channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+pulses\+\_\+per\+\_\+sec} & Maximum allowable pulse rate in pulses per second. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_channel_acfd40d913937c2ef292f9d6b00d9f144}\index{Channel@{Channel}!set\_ratio@{set\_ratio}}
+\index{set\_ratio@{set\_ratio}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{set\_ratio()}{set\_ratio()}}
+{\footnotesize\ttfamily \label{class_channel_acfd40d913937c2ef292f9d6b00d9f144} 
+void Channel\+::set\+\_\+ratio (\begin{DoxyParamCaption}\item[{float}]{input\+\_\+units}{, }\item[{float}]{channel\+\_\+units}{ = {\ttfamily 1.0}}\end{DoxyParamCaption})}
+
+
+
+Sets the transmission ratio for all target transmissions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+units} & Number of input units corresponding to channel\+\_\+units. \\
+\hline
+{\em channel\+\_\+units} & Number of channel units corresponding to input\+\_\+units. Default is 1.\+0. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_channel_a9c0df399ebeba1a09e41b42264d064c7}\index{Channel@{Channel}!set\_upper\_limit@{set\_upper\_limit}}
+\index{set\_upper\_limit@{set\_upper\_limit}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{set\_upper\_limit()}{set\_upper\_limit()}}
+{\footnotesize\ttfamily \label{class_channel_a9c0df399ebeba1a09e41b42264d064c7} 
+void Channel\+::set\+\_\+upper\+\_\+limit (\begin{DoxyParamCaption}\item[{Decimal\+Position}]{upper\+\_\+limit\+\_\+input\+\_\+units}{}\end{DoxyParamCaption})}
+
+
+
+Sets the upper position limit for the channel. Useful if you want the channel to stop transmitting motion streams at a certain upper threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upper\+\_\+limit\+\_\+input\+\_\+units} & Upper limit in input (world) units. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/channels.\+hpp\end{DoxyCompactItemize}

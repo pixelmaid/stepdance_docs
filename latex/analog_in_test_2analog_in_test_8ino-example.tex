@@ -1,0 +1,54 @@
+\doxysection{analog\+\_\+in\+\_\+test/analog\+\_\+in\+\_\+test.\+ino}
+\hypertarget{analog_in_test_2analog_in_test_8ino-example}{}\label{analog_in_test_2analog_in_test_8ino-example}An example demonstrating the \doxylink{class_output_port}{Output\+Port} functionality.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{/*}
+\DoxyCodeLine{Analog\ In\ Test}
+\DoxyCodeLine{}
+\DoxyCodeLine{Displays\ current\ analog\ values}
+\DoxyCodeLine{}
+\DoxyCodeLine{A\ part\ of\ the\ Mixing\ Metaphors\ Project}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ (c)\ 2025\ Ilan\ Moyer,\ Jennifer\ Jacobs,\ Devon\ Frost}
+\DoxyCodeLine{*/}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ \#define\ module\_driver\ \ \ //\ tells\ compiler\ we're\ using\ the\ Stepdance\ Driver\ Module\ PCB}
+\DoxyCodeLine{\#define\ module\_basic\ \ \ //\ tells\ compiler\ we're\ using\ the\ Stepdance\ Basic\ Module\ PCB}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ This\ configures\ pin\ assignments\ for\ the\ Teensy\ 4.1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#include\ "{}stepdance.hpp"{}\ \ //\ Import\ the\ stepdance\ library}
+\DoxyCodeLine{}
+\DoxyCodeLine{AnalogInput\ analog\_a1;}
+\DoxyCodeLine{AnalogInput\ analog\_a2;}
+\DoxyCodeLine{AnalogInput\ analog\_a3;}
+\DoxyCodeLine{AnalogInput\ analog\_a4;}
+\DoxyCodeLine{}
+\DoxyCodeLine{void\ setup()\ \{}
+\DoxyCodeLine{\ \ analog\_a1.begin(IO\_A1);}
+\DoxyCodeLine{\ \ analog\_a2.begin(IO\_A2);}
+\DoxyCodeLine{\ \ analog\_a3.begin(IO\_A3);}
+\DoxyCodeLine{\ \ analog\_a4.begin(IO\_A4);}
+\DoxyCodeLine{\ \ Serial.begin(115200);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{void\ loop()\ \{}
+\DoxyCodeLine{\ \ report\_analog\_values();}
+\DoxyCodeLine{\ \ Serial.println("{}\ "{});}
+\DoxyCodeLine{\ \ delay(500);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{void\ report\_analog\_values()\{}
+\DoxyCodeLine{\ \ Serial.print("{}A1:\ "{});}
+\DoxyCodeLine{\ \ Serial.println(analog\_a1.read());}
+\DoxyCodeLine{\ \ Serial.print("{}A2:\ "{});}
+\DoxyCodeLine{\ \ Serial.println(analog\_a2.read());}
+\DoxyCodeLine{\ \ Serial.print("{}A3:\ "{});}
+\DoxyCodeLine{\ \ Serial.println(analog\_a3.read());}
+\DoxyCodeLine{\ \ Serial.print("{}A4:\ "{});}
+\DoxyCodeLine{\ \ Serial.println(analog\_a4.read());}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

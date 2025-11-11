@@ -1,0 +1,210 @@
+\doxysection{core.\+hpp}
+\hypertarget{core_8hpp_source}{}\label{core_8hpp_source}\index{lib/core.hpp@{lib/core.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <sys/\_stdint.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}arm\_math.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Arduino.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00008\ \textcolor{comment}{Core\ Module\ of\ the\ StepDance\ Control\ System}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{This\ contains\ core\ system\ functions\ such\ as\ the\ frame\ interrupt\ timer.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{A\ part\ of\ the\ Mixing\ Metaphors\ Project}}
+\DoxyCodeLine{00013\ \textcolor{comment}{(c)\ 2025\ Ilan\ Moyer,\ Jennifer\ Jacobs,\ Devon\ Frost}}
+\DoxyCodeLine{00014\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ core\_h\ }\textcolor{comment}{//prevent\ importing\ twice}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ core\_h}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ float64\_t\ DecimalPosition;\ \textcolor{comment}{//used\ to\ store\ positions\ across\ the\ system.\ We\ are\ using\ double-\/precision\ to\ allow\ incremental\ moves\ with\ acceptable\ error\ (\string~0.05\ steps/day\ at\ 25khz)}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ int32\_t\ IntegerPosition;\ \textcolor{comment}{//previously\ used\ to\ store\ positions}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ float32\_t\ ControlParameter;\ \textcolor{comment}{//controls\ plugin\ parameters,\ typically\ from\ an\ analog\ input\ value}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ void\ (*frame\_function\_pointer)();\ \textcolor{comment}{//defines\ function\ pointers\ that\ can\ be\ called\ at\ each\ frame}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ CORE\_FRAME\_PERIOD\_US\ 40\ }\textcolor{comment}{//microseconds.\ This\ yields\ a\ max\ output\ step\ rate\ of\ 25k\ steps/sec.}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ CORE\_FRAME\_PERIOD\_S\ CORE\_FRAME\_PERIOD\_US\ /\ 1000000\ }\textcolor{comment}{//duration\ of\ each\ frame\ in\ seconds}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ CORE\_FRAME\_FREQ\_HZ\ 1000000\ /\ CORE\_FRAME\_PERIOD\_US\ }\textcolor{comment}{//framerate\ in\ Hz.\ This\ is\ 25k}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ MAX\_NUM\_FRAME\_FUNCTIONS\ 10\ }\textcolor{comment}{//maximum\ number\ of\ functions\ that\ can\ be\ called\ on\ the\ frame\ interrupt}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ KILOHERTZ\_PLUGIN\_PERIOD\_US\ 1000\ }\textcolor{comment}{//microseconds,\ for\ the\ kilohertz\ plugin\ timer}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Signal\ Indices}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ This\ is\ ordered\ by\ pulse\ length.}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ SIGNAL\_X\ \ 0\ }\textcolor{comment}{//index\ of\ the\ X\ signal\ in\ the\ active\_signal\ and\ signal\_directions\ arrrays}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ SIGNAL\_Y\ \ 1}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ SIGNAL\_R\ \ 2\ }\textcolor{comment}{//\ Polar\ Radial\ Axis}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ SIGNAL\_T\ \ 3\ }\textcolor{comment}{//\ Polar\ Theta\ Axis}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ SIGNAL\_Z\ \ 4}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ SIGNAL\_E\ \ 5\ }\textcolor{comment}{//\ Extruder}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Standard\ Step\ Ratio}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ STANDARD\_RATIO\_MM\ \ 0.01\ }\textcolor{comment}{//\ world\ mm\ /\ steps.\ At\ 25KHz\ this\ provides\ a\ max\ velocity\ of\ 250mm/sec.}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ STANDARD\_RATIO\_IN\ \ 0.0003937\ }\textcolor{comment}{//\ world\ inches\ /\ step}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Plugin\ Execution\ Context}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ PLUGIN\_FRAME\_PRE\_CHANNEL\ \ 0\ }\textcolor{comment}{//runs\ on\ the\ frame,\ before\ channels\ are\ evaluated}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ PLUGIN\_FRAME\_POST\_CHANNEL\ 1\ }\textcolor{comment}{//runs\ on\ the\ frame,\ after\ channels\ are\ evaluated}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ PLUGIN\_KILOHERTZ\ \ \ \ \ \ \ \ \ \ 2\ }\textcolor{comment}{//runs\ in\ an\ independent\ 1khz\ context}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ PLUGIN\_LOOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3\ }\textcolor{comment}{//runs\ in\ the\ main\ loop}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ PLUGIN\_INPUT\_PORT\ \ \ \ \ \ \ \ \ 4\ }\textcolor{comment}{//runs\ on\ the\ frame,\ at\ the\ start\ before\ all\ other\ plugins}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ Block\ Mode}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Throughout\ stepdance,\ there\ is\ a\ question\ of\ whether\ to\ operate\ incrementally\ or\ in\ absolute\ coordinates.}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ By\ default,\ we\ operate\ incrementally.\ But\ some\ modules\ require\ data\ to\ be\ in\ absolute\ values\ (e.g.\ non-\/linear\ functions)}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ INCREMENTAL\ \ \ 0\ }\textcolor{comment}{//data\ is\ handled\ incrementally}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ ABSOLUTE\ \ \ \ \ \ 1\ }\textcolor{comment}{//data\ is\ handled\ in\ absolute\ values}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ MIN\ \ \ 0}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ MAX\ \ \ 1}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ add\_function\_to\_frame(frame\_function\_pointer\ target\_function);}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ dance\_start();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ stepdance\_metrics\_reset();\ \textcolor{comment}{//resets\ the\ CPU\ usage\ metrics}}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{float}\ stepdance\_get\_cpu\_usage();\ \textcolor{comment}{//returns\ a\ value\ from\ 0-\/1\ indicating\ the\ maximum\ CPU\ usage.}}
+\DoxyCodeLine{00066\ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{float}\ stepdance\_max\_cpu\_usage\ =\ 0;\ \textcolor{comment}{//stores\ a\ running\ count\ of\ the\ maximum\ CPU\ usage,\ in\ the\ range\ 0-\/1;}}
+\DoxyCodeLine{00067\ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ uint32\_t\ stepdance\_interrupt\_entry\_cycle\_count\ =\ 0;\ \textcolor{comment}{//stores\ the\ entry\ value\ of\ ARM\_DWT\_CYCCNT}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ -\/-\/\ Plug-\/In\ Base\ Class\ -\/-\/}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ This\ provides\ a\ common\ interface\ for\ any\ filters,\ synthesizers,\ kinematics,\ etc\ that\ need\ access\ to\ the\ core\ frame.}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ MAX\_NUM\_INPUT\_PORT\_FRAME\_PLUGINS\ \ \ 10\ }\textcolor{comment}{//plugins\ that\ execute\ at\ the\ start\ of\ the\ frame.\ This\ is\ reserved\ for\ input\ ports}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ MAX\_NUM\_PRE\_CHANNEL\_FRAME\_PLUGINS\ \ \ 10\ }\textcolor{comment}{//plugins\ that\ execute\ in\ the\ frame,\ before\ the\ channels\ are\ evaluated}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ MAX\_NUM\_POST\_CHANNEL\_FRAME\_PLUGINS\ \ 10\ }\textcolor{comment}{//plugins\ that\ execute\ in\ the\ frame,\ after\ the\ channels\ are\ evaluated}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ MAX\_NUM\_KILOHERTZ\_PLUGINS\ 10\ }\textcolor{comment}{//plugins\ that\ execute\ at\ a\ 1khz\ rate,\ independent\ of\ the\ frame,\ and\ with\ a\ lower\ priority}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ MAX\_NUM\_LOOP\_PLUGINS\ 10\ }\textcolor{comment}{//plugins\ that\ execute\ in\ the\ main\ loop.}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{class\ }Plugin\{}
+\DoxyCodeLine{00079\ \ \ \textcolor{comment}{//\ Base\ class\ for\ all\ plugins\ that\ need\ to\ run\ in\ the\ core\ frame.}}
+\DoxyCodeLine{00080\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00081\ \ \ \ \ Plugin();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ run\_input\_port\_frame\_plugins();\ \textcolor{comment}{//runs\ all\ input\ port\ frame\ plugins.}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ run\_pre\_channel\_frame\_plugins();\ \textcolor{comment}{//runs\ all\ pre-\/channel\ frame\ plugins,\ in\ the\ order\ they\ appear\ in\ the\ registered\_plugins\ list}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ run\_post\_channel\_frame\_plugins();\ \textcolor{comment}{//runs\ all\ post-\/channel\ frame\ plugins,\ in\ the\ order\ they\ appear\ in\ the\ registered\_plugins\ list}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ run\_kilohertz\_plugins();\ \textcolor{comment}{//runs\ all\ post-\/channel\ frame\ plugins,\ in\ the\ order\ they\ appear\ in\ the\ registered\_plugins\ list}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ run\_loop\_plugins();\ \textcolor{comment}{//runs\ all\ loop\ plugins,\ in\ the\ order\ they\ appear\ in\ the\ registered\_plugins\ list}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ enable();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ disable();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{static}\ Plugin*\ registered\_input\_port\_frame\_plugins[MAX\_NUM\_INPUT\_PORT\_FRAME\_PLUGINS];\ \textcolor{comment}{//stores\ all\ registered\ input\ port\ plugins}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{static}\ Plugin*\ registered\_pre\_channel\_frame\_plugins[MAX\_NUM\_PRE\_CHANNEL\_FRAME\_PLUGINS];\ \textcolor{comment}{//stores\ all\ registered\ pre-\/channel\ frame\ plugins}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{static}\ Plugin*\ registered\_post\_channel\_frame\_plugins[MAX\_NUM\_POST\_CHANNEL\_FRAME\_PLUGINS];\ \textcolor{comment}{//stores\ all\ registered\ post-\/channel\ frame\ plugins}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{static}\ Plugin*\ registered\_kilohertz\_plugins[MAX\_NUM\_KILOHERTZ\_PLUGINS];\ \textcolor{comment}{//stores\ all\ registered\ kilohertz\ plugins}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{static}\ Plugin*\ registered\_loop\_plugins[MAX\_NUM\_LOOP\_PLUGINS];\ \textcolor{comment}{//stores\ all\ registered\ loop\ plugins}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ num\_registered\_input\_port\_frame\_plugins;\ \textcolor{comment}{//tracks\ the\ number\ of\ registered\ input\ port\ frame\ plugins}}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ num\_registered\_pre\_channel\_frame\_plugins;\ \textcolor{comment}{//tracks\ the\ number\ of\ registered\ pre-\/channel\ frame\ plugins}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ num\_registered\_post\_channel\_frame\_plugins;\ \textcolor{comment}{//tracks\ the\ number\ of\ registered\ post-\/channel\ frame\ plugins}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ num\_registered\_kilohertz\_plugins;\ \textcolor{comment}{//tracks\ the\ number\ of\ registered\ kilohertz\ plugins}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ num\_registered\_loop\_plugins;\ \textcolor{comment}{//tracks\ the\ number\ of\ registered\ loop\ plugins}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \textcolor{keyword}{protected}:\ \textcolor{comment}{//these\ need\ to\ be\ accessed\ from\ derived\ classes}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ register\_plugin();\ \textcolor{comment}{//registers\ the\ plugin}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ register\_plugin(uint8\_t\ execution\_target);\ \textcolor{comment}{//registers\ the\ plugin}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ run();\ \textcolor{comment}{//this\ should\ be\ overridden\ in\ the\ derived\ class.\ Runs\ each\ frame.}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ loop();\ \textcolor{comment}{//this\ can\ be\ overridden\ in\ the\ derived\ class.\ Runs\ in\ the\ main\ loop\ context.}}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ -\/-\/\ BlockPort\ -\/-\/}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ BlockPorts\ provide\ a\ unified\ interface\ into\ and\ out\ of\ component\ blocks\ (i.e.\ "{}blocks"{})}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//\ These\ are\ designed\ to\ be\ flexibly\ used\ depending\ on\ the\ component\ to\ which\ they\ belong.}}
+\DoxyCodeLine{00114\ \textcolor{keyword}{class\ }BlockPort\{}
+\DoxyCodeLine{00115\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00116\ \ \ \ \ BlockPort();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ User\ Functions\ -\/-\/\ these\ are\ called\ within\ user\ code,\ not\ (just)\ the\ library}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_ratio(\textcolor{keywordtype}{float}\ world\_units,\ \textcolor{keywordtype}{float}\ block\_units\ =\ 1.0);\ \ \textcolor{comment}{//\ sets\ the\ ratio\ between\ world\ and\ block\ units,\ for\ automatic\ conversion.\ Default\ is\ 1.}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ conversion\ always\ happens\ within\ the\ write/read\ functions\ when\ data\ enters\ and\ exits\ the\ BlockPort}}
+\DoxyCodeLine{00121\ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ map(BlockPort\ *map\_target,\ uint8\_t\ mode);\ \textcolor{comment}{//maps\ this\ BlockPort's\ pipe\ to\ a\ target\ BlockPort}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ map(BlockPort\ *map\_target)\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ map(map\_target,\ INCREMENTAL);\ \textcolor{comment}{//default\ internal\ mode\ is\ INCREMENTAL}}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ External\ Functions\ -\/-\/\ these\ are\ called\ outside\ the\ block\ that\ contains\ this\ BlockPort}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ write(float64\_t\ value,\ uint8\_t\ mode);\ \textcolor{comment}{//\ writes\ to\ the\ BlockPort's\ absolute\ or\ incremental\ buffers}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ float64\_t\ read(uint8\_t\ mode);\ \textcolor{comment}{//\ externally\ reads\ the\ BlockPort's\ target\ via\ the\ BlockPort\ buffers.}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ an\ incremental\ read\ will\ reflect\ the\ change\ to\ the\ target,\ either\ pending\ or\ after\ the\ block\ has\ run.}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ an\ absolute\ read\ will\ reflect\ the\ upcoming\ or\ last\ state\ of\ the\ target,\ depending\ on\ whether\ the\ block\ has\ run.}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ some\ cases\ this\ function\ can\ be\ overridden\ by\ a\ custom\ read\ function.}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ write\_now(float64\_t);\ \textcolor{comment}{//writes\ directly\ to\ the\ target.\ REMEMBER\ TO\ UPDATE\ ABSOLUTE\_BUFFER\ AT\ SAME\ TIME.}}
+\DoxyCodeLine{00137\ \ \ \ \ float64\_t\ read\_now();\ \textcolor{comment}{//reads\ directly\ from\ the\ target}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Internal\ Functions\ -\/-\/\ called\ by\ the\ block\ containing\ this\ BlockPort}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ begin(\textcolor{keyword}{volatile}\ float64\_t\ *target);\ \textcolor{comment}{//initializes\ the\ BlockPort}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_target(\textcolor{keyword}{volatile}\ float64\_t\ *target);\ \textcolor{comment}{//sets\ a\ target\ variable\ for\ the\ BlockPort}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ update();\ \textcolor{comment}{//called\ by\ the\ block,\ to\ update\ the\ target\ and\ the\ buffers.\ Note\ that\ this\ does\ not\ handle\ pulling\ or\ pushing,\ which\ must\ be\ done\ first\ or\ after\ update.}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ reverse\_update();\ \textcolor{comment}{//updates\ the\ buffers\ based\ on\ changes\ made\ by\ direct\ writes\ to\ the\ target.\ Used\ by\ input\_ports,\ which\ run\ before\ all\ other\ blocks.}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ set(float64\_t\ value,\ uint8\_t\ mode);\ \textcolor{comment}{//sets\ a\ new\ value\ for\ the\ target.}}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ set(float64\_t\ value)\{\ \textcolor{comment}{//default\ for\ set\ is\ ABSOLUTE}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ set(value,\ ABSOLUTE);}
+\DoxyCodeLine{00147\ \ \ \ \ \};}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ reset(float64\_t\ value,\ \textcolor{keywordtype}{bool}\ raw\ =\ \textcolor{keyword}{false});\ \textcolor{comment}{//resets\ the\ target,\ and\ updates\ buffers\ to\ reflect\ new\ value\ WITHOUT\ an\ incremental\ update.}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ push(uint8\_t\ mode);\ \textcolor{comment}{//\ pushes\ this\ BlockPort's\ buffer\ state\ to\ a\ target.}}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ push()\{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ push(this-\/>mode);\ \textcolor{comment}{//uses\ internal\ mode}}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ pull(uint8\_t\ mode);\ \textcolor{comment}{//\ pulls\ a\ target\ BlockPort's\ buffer\ state\ into\ this\ BlockPort's\ buffers.}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ pull()\{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ pull(this-\/>mode);\ \textcolor{comment}{//uses\ internal\ mode}}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ enable();\ \textcolor{comment}{//\ enables\ push/pull\ on\ blockport}}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ disable();\ \textcolor{comment}{//\ disables\ push/pull}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{volatile}\ float64\_t\ incremental\_buffer\ =\ 0;}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{volatile}\ float64\_t\ absolute\_buffer\ =\ 0;\ \textcolor{comment}{//contains\ a\ new\ value\ if\ absolute\_buffer\_is\_written,\ otherwise\ the\ last\ value\ of\ the\ associated\ variable.}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{inline}\ float64\_t\ convert\_block\_to\_world\_units(float64\_t\ block\_units)\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ block\_units\ *\ world\_to\_block\_ratio;}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{inline}\ float64\_t\ convert\_world\_to\_block\_units(float64\_t\ world\_units)\{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ world\_units\ /\ world\_to\_block\_ratio;}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{volatile}\ float64\_t*\ target\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ update\_has\_run\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//set\ to\ true\ when\ an\ update\ has\ run,\ and\ false\ when\ write()\ is\ called.}}
+\DoxyCodeLine{00177\ \ \ \ \ uint8\_t\ mode\ =\ INCREMENTAL;\ \textcolor{comment}{//default\ mode\ used\ by\ push\ and\ pull,\ unless\ specified\ in\ that\ function\ call.\ This\ is\ set\ by\ the\ map\ function.}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ push\_pull\_enabled\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//controlled\ by\ enable()\ and\ disable().\ This\ enables/disables\ push\ and\ pull.\ NOTE:\ We\ could\ optimize\ by\ removing\ volatile,}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ but\ then\ this\ couldn't\ be\ operated\ inside\ any\ interrupts\ incl.\ the\ kilohertz\ interrupt,\ which\ could\ be\ confusing.}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Can\ re-\/examine\ if\ we\ start\ running\ out\ of\ compute\ overhead.}}
+\DoxyCodeLine{00181\ \ \ \ \ float64\_t\ world\_to\_block\_ratio\ =\ 1;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ BlockPort*\ target\_BlockPort\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{comment}{//\ -\/-\/\ LOOP\ FUNCTION\ AND\ CLASSES\ -\/-\/}}
+\DoxyCodeLine{00189\ \textcolor{comment}{//\ These\ allow\ non-\/blocking\ functions\ to\ be\ called\ within\ the\ loop,\ at\ an\ approximately\ given\ frequency.}}
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{void}\ dance\_loop();}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{float}\ stepdance\_loop\_time\_ms;\ \textcolor{comment}{//tracks\ the\ time\ spent\ in\ the\ last\ loop}}
+\DoxyCodeLine{00193\ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ uint32\_t\ stepdance\_loop\_entry\_cycle\_count\ =\ 0;\ \textcolor{comment}{//cycle\ count\ when\ dance\_loop\ was\ last\ called}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{keyword}{class\ }LoopDelay\{}
+\DoxyCodeLine{00196\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00197\ \ \ \ \ LoopDelay();}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ periodic\_call(\textcolor{keywordtype}{void}\ (*callback\_function)(),\ \textcolor{keywordtype}{float}\ interval\_ms);}
+\DoxyCodeLine{00199\ \ \ }
+\DoxyCodeLine{00200\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{float}\ time\_since\_last\_call\_ms;\ \textcolor{comment}{//stores\ time\ since\ the\ function\ was\ last\ called}}
+\DoxyCodeLine{00202\ \};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

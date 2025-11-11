@@ -1,0 +1,173 @@
+\doxysection{output\+\_\+ports.\+hpp}
+\hypertarget{output__ports_8hpp_source}{}\label{output__ports_8hpp_source}\index{lib/output\_ports.hpp@{lib/output\_ports.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}arm\_math.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <sys/\_stdint.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}analog\_in.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}string.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}configuration.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00008\ \textcolor{comment}{Output\ Ports\ Module\ of\ the\ StepDance\ Control\ System}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{This\ module\ is\ responsible\ for\ outputting\ a\ pulse-\/width\ encoded\ stream\ of\ step\ and\ direction\ pulses\ on\ a}}
+\DoxyCodeLine{00011\ \textcolor{comment}{physical\ microcontroller\ pin.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{[More\ Details\ to\ be\ Added]}}
+\DoxyCodeLine{00014\ \textcolor{comment}{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{A\ part\ of\ the\ Mixing\ Metaphors\ Project}}
+\DoxyCodeLine{00016\ \textcolor{comment}{(c)\ 2025\ Ilan\ Moyer,\ Jennifer\ Jacobs,\ Devon\ Frost}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ output\_ports\_h\ }\textcolor{comment}{//\ prevent\ importing\ twice}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ output\_ports\_h}\textcolor{preprocessor}{}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }output\_port\_info\_struct}
+\DoxyCodeLine{00027\ \{\ \textcolor{comment}{//\ we\ use\ this\ structure\ to\ store\ hardware-\/specific\ information\ for\ each\ available\ port}}
+\DoxyCodeLine{00028\ \ \ \textcolor{comment}{//\ Port\ Name\ (for\ reporting)}}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{char}\ PORT\_NAME[10];}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{comment}{//\ Physical\ IO}}
+\DoxyCodeLine{00032\ \ \ uint8\_t\ STEP\_TEENSY\_PIN;\ \textcolor{comment}{//\ TEENSY\ Pin\ \#s}}
+\DoxyCodeLine{00033\ \ \ uint8\_t\ DIR\_TEENSY\_PIN;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{comment}{//\ Connecting\ FlexIO\ to\ Physical\ IO}}
+\DoxyCodeLine{00036\ \ \ uint8\_t\ STEP\_FLEXIO\_PIN;\ \textcolor{comment}{//\ FlexIO\ Module\ Pin\ \#s\ (remember,\ IMXRT\ modules\ have\ pins,\ which\ attach\ to\ physical\ "{}pads"{}\ on\ the\ chip)}}
+\DoxyCodeLine{00037\ \ \ uint8\_t\ DIR\_FLEXIO\_PIN;}
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *STEP\_PIN\_IOMUXC\_REGISTER;\ \textcolor{comment}{//\ mux\ register\ pointer\ for\ the\ step\ pin}}
+\DoxyCodeLine{00039\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *DIR\_PIN\_IOMUXC\_REGISTER;\ \ \textcolor{comment}{//\ mux\ register\ pointer\ for\ the\ step\ pin}}
+\DoxyCodeLine{00040\ \ \ uint8\_t\ STEP\_PIN\_IOMUXC\_VALUE;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ mux\ register\ value\ for\ the\ step\ pin}}
+\DoxyCodeLine{00041\ \ \ uint8\_t\ DIR\_PIN\_IOMUXC\_VALUE;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ mux\ register\ value\ for\ the\ step\ pin}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{comment}{//\ FlexIO\ Module\ Setup}}
+\DoxyCodeLine{00044\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *STEP\_SHIFTCTRL\_REGISTER;\ \textcolor{comment}{//\ step\ shifter\ control\ register\ pointer}}
+\DoxyCodeLine{00045\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *DIR\_SHIFTCTRL\_REGISTER;\ \ \textcolor{comment}{//\ step\ shifter\ control\ register\ pointer}}
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *STEP\_SHIFTCFG\_REGISTER;\ \ \textcolor{comment}{//\ step\ shifter\ config\ register\ pointer}}
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *DIR\_SHIFTCFG\_REGISTER;\ \ \ \textcolor{comment}{//\ step\ shifter\ config\ register\ pointer}}
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *STEP\_SHIFTBUF;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ step\ shift\ output\ buffer}}
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *DIR\_SHIFTBUF;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ dir\ shift\ output\ buffer}}
+\DoxyCodeLine{00050\ \ \ uint8\_t\ TIMER\_ID;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 0-\/3\ to\ identify\ the\ timer\ being\ used\ for\ this\ output\ port}}
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *TIMCMP\_REGISTER;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ timer\ compare\ register\ pointer,\ sets\ the\ output\ length\ and\ frequency}}
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *TIMCTL\_REGISTER;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ timer\ control\ register\ pointer}}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ *TIMCFG\_REGISTER;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ timer\ config\ register}}
+\DoxyCodeLine{00054\ \ \ uint8\_t\ VREF\_TEENSY\_PIN;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ current\ vref\ pin\ on\ teensy}}
+\DoxyCodeLine{00055\ \ \ uint8\_t\ ENABLE\_TEENSY\_PIN;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ enable\ pin\ on\ teensy}}
+\DoxyCodeLine{00056\ \ \ uint8\_t\ LIMIT\_TEENSY\_PIN;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ limit\ switch\ pin\ on\ teensy}}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{struct\ }output\_format\_struct}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ uint8\_t\ FRAME\_LENGTH\_US;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ length\ of\ the\ frame}}
+\DoxyCodeLine{00062\ \ \ uint8\_t\ STEP\_PULSE\_START\_TIME\_US;\ \textcolor{comment}{//\ time\ from\ start\ of\ frame\ to\ start\ of\ the\ step\ pulse}}
+\DoxyCodeLine{00063\ \ \ uint8\_t\ DIR\_PULSE\_START\_TIME\_US;\ \ \textcolor{comment}{//\ time\ from\ start\ of\ frame\ to\ start\ of\ the\ dir\ pulse}}
+\DoxyCodeLine{00064\ \ \ uint8\_t\ SIGNAL\_MIN\_WIDTH\_US;\ \ \ \ \ \ \textcolor{comment}{//\ pulse\ width\ in\ microseconds\ of\ shortest\ signal\ (index\ =\ 0)}}
+\DoxyCodeLine{00065\ \ \ uint8\_t\ SIGNAL\_GAP\_US;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ gap\ in\ microseconds\ between\ signals}}
+\DoxyCodeLine{00066\ \ \ uint8\_t\ RATE\_SHIFT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2\string^N\ bits\ per\ microsecond}}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ \#define\ OUTPUT\_FORMAT\_STEPDANCE\ 0\ //outputting\ a\ pulse-\/length\ encoded\ step\ stream,\ which\ supports\ multiple\ signals\ over\ a\ single\ stream}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ \#define\ OUTPUT\_FORMAT\_DRIVER\ \ \ \ 1\ //outputting\ a\ standard\ stepper\ driver\ stream.}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ OUTPUT\ SPEED\ SETTINGS}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ OUTPUT\_FRAME\_32US\ 0\ }\textcolor{comment}{//\ frame\ is\ 32us\ long.\ This\ is\ the\ standard\ stepdance\ output\ frame,\ for\ a\ 25KHz\ framerate.}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ OUTPUT\_FRAME\_16US\ 1\ }\textcolor{comment}{//\ 16us\ frame,\ supports\ up\ to\ 50KHz\ framerate}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ OUTPUT\_FRAME\_8US\ 2\ \ }\textcolor{comment}{//\ 8us\ frame,\ supports\ up\ to\ 100KHz\ framerate}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ OUTPUT\_FRAME\_4US\ 3\ \ }\textcolor{comment}{//\ 4us\ frame,\ supports\ up\ to\ 200KHz\ framerate}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ OUTPUT\ TRIGGERING}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ OUTPUT\_TRANSMIT\_ON\_FRAME\ 1\ }\textcolor{comment}{//\ transmits\ each\ stepdance\ frame}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ OUTPUT\_TRANSMIT\_MANUAL\ 2\ \ \ }\textcolor{comment}{//\ transmits\ only\ with\ manual\ call\ to\ transmit();}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ OUTPUT\_A\ 0}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ OUTPUT\_B\ 1}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ OUTPUT\_C\ 2}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ OUTPUT\_D\ 3}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ OUTPUT\_A\_LEGACY\ 0}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ OUTPUT\_B\_LEGACY\ 1}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ NUM\_SIGNALS\ 6\ }\textcolor{comment}{//\ total\ number\ of\ signal\ types}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ DIRECTION\_FORWARD\ 1}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ DIRECTION\_REVERSE\ 0}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ NUM\_AVAILABLE\_OUTPUT\_PORTS\ 4\ }\textcolor{comment}{//\ max\ available\ output\ ports.\ NOTE:\ Should\ make\ this\ dynamic\ based\ on\ TEENSY\ version}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ Main\ Output\ Port\ Class}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_output_port_a37599417e158d6943faf393104179ed6}{OutputPort}}\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00110\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{class_output_port_a37599417e158d6943faf393104179ed6}{OutputPort}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ STANDARD\ PORT\ FUNCTIONS\ -\/-\/}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_output_port_a0158ccdab5705216309a16eeb22039d0}{begin}}(uint8\_t\ port\_number);\ \textcolor{comment}{//\ initialize\ using\ only\ port\ number}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_output_port_a0158ccdab5705216309a16eeb22039d0}{begin}}(uint8\_t\ port\_number,\ uint8\_t\ output\_format,\ uint8\_t\ transmit\_mode);\ \textcolor{comment}{//complete\ initializer}}
+\DoxyCodeLine{00124\ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ add\_signal(uint8\_t\ signal\_index,\ uint8\_t\ signal\_direction);\ \textcolor{comment}{//adds\ a\ signal\ to\ the\ current\ active\ frame}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ transmit\_frame();\ \textcolor{comment}{//encodes\ and\ transmits\ the\ active\ frame}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ step\_now(uint8\_t\ direction);\ \textcolor{comment}{//shortcut\ to\ immediately\ output\ a\ step\ at\ the\ minimum\ signal\ size}}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ step\_now(uint8\_t\ direction,\ uint8\_t\ signal\_index);}
+\DoxyCodeLine{00129\ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ DRIVER\ FUNCTIONS\ -\/-\/}}
+\DoxyCodeLine{00131\ \ \ \ \ float32\_t\ read\_drive\_current\_amps();\ \textcolor{comment}{//\ returns\ the\ last\ drive\ current\ reading}}
+\DoxyCodeLine{00132\ \ \ \ \ float32\_t\ read\_drive\_current\_amps(float32\_t\ drive\_current\_gain\_amps\_per\_volt);\ \textcolor{comment}{//\ sets\ the\ gain\ and\ then\ returns\ the\ last\ drive\ current\ reading}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_drive\_current\_gain(float32\_t\ amps\_per\_volt);\ \textcolor{comment}{//\ sets\ the\ drive\ current\ gain,\ in\ amps/volt}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ enable\_driver();\ \textcolor{comment}{//enables\ the\ motor\ driver}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ disable\_driver();\ \textcolor{comment}{//disables\ the\ motor\ driver}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{bool}\ read\_limit\_switch();\ \textcolor{comment}{//returns\ the\ current\ value\ of\ the\ limit\ switch}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{char}\ port\_name[10];\ \textcolor{comment}{//stores\ the\ name\ of\ the\ port}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ enroll(RPC\ *rpc,\ \textcolor{keyword}{const}\ String\&\ instance\_name);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00143\ \ \ \textcolor{comment}{//\ -\/-\/\ CONFIGURATION\ PARAMETERS\ -\/-\/}}
+\DoxyCodeLine{00144\ \ \ uint8\_t\ port\_number;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ output\ port\ ID\ number}}
+\DoxyCodeLine{00145\ \ \ uint8\_t\ format\_index;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ an\ index\ into\ the\ output\_formats\ struct\ array.}}
+\DoxyCodeLine{00146\ \ \ uint8\_t\ transmit\_mode;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ transmit\ on\ frame,\ or\ transmit\ manually}}
+\DoxyCodeLine{00147\ \ \ uint8\_t\ FRAME\_LENGTH\_US;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ length\ of\ the\ frame}}
+\DoxyCodeLine{00148\ \ \ uint8\_t\ STEP\_PULSE\_START\_TIME\_US;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ time\ from\ start\ of\ frame\ to\ start\ of\ the\ step\ pulse}}
+\DoxyCodeLine{00149\ \ \ uint8\_t\ DIR\_PULSE\_START\_TIME\_US;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ time\ from\ start\ of\ frame\ to\ start\ of\ the\ dir\ pulse}}
+\DoxyCodeLine{00150\ \ \ uint8\_t\ SIGNAL\_MIN\_WIDTH\_US;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pulse\ width\ in\ microseconds\ of\ shortest\ signal\ (index\ =\ 0)}}
+\DoxyCodeLine{00151\ \ \ uint8\_t\ SIGNAL\_GAP\_US;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ gap\ in\ microseconds\ between\ signals}}
+\DoxyCodeLine{00152\ \ \ uint8\_t\ RATE\_SHIFT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2\string^N\ bits\ per\ microsecond}}
+\DoxyCodeLine{00153\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }output\_port\_info\_struct\ port\_info[];\ \ \ \textcolor{comment}{//\ stores\ setup\ information\ for\ all\ four\ output\ ports}}
+\DoxyCodeLine{00154\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }output\_format\_struct\ output\_formats[];\ \textcolor{comment}{//\ output\ formats\ for\ different\ frame\ sizes}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \textcolor{comment}{//\ -\/-\/\ STATE\ VARIABLES\ -\/-\/}}
+\DoxyCodeLine{00157\ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ active\_signals[NUM\_SIGNALS];}
+\DoxyCodeLine{00158\ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ active\_signal\_directions[NUM\_SIGNALS];}
+\DoxyCodeLine{00159\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ active\_encoded\_frame\_step;\ \textcolor{comment}{//\ these\ get\ populated\ by\ the\ encode\ function}}
+\DoxyCodeLine{00160\ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ active\_encoded\_frame\_dir;}
+\DoxyCodeLine{00161\ \ \ \textcolor{keyword}{volatile}\ float32\_t\ last\_drive\_current\_reading\_amps;}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \textcolor{comment}{//\ DRIVER\ CONFIG\ AND\ STATE}}
+\DoxyCodeLine{00164\ \ \ \textcolor{comment}{//\ for\ reading\ driver-\/related\ peripherals}}
+\DoxyCodeLine{00165\ \ \ \textcolor{comment}{//\ storing\ this\ state\ allows\ us\ to\ configure\ on-\/the-\/fly\ when\ relevant\ functions\ get\ called.}}
+\DoxyCodeLine{00166\ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ vref\_is\_configured\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00167\ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ enable\_is\_configured\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00168\ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ limitsw\_is\_configured\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00169\ \ \ float32\_t\ drive\_current\_gain\_amps\_per\_volt\ =\ 0;\ \textcolor{comment}{//\ stores\ the\ drive\ current\ gain\ setting.}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \textcolor{comment}{//\ -\/-\/\ METHODS\ -\/-\/}}
+\DoxyCodeLine{00172\ \ \ \textcolor{keywordtype}{void}\ encode();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ encodes\ the\ active\_signal\ arrays\ into\ the\ active\_encoded\_frames}}
+\DoxyCodeLine{00173\ \ \ \textcolor{keywordtype}{void}\ transmit();\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ transmits\ the\ active\ encoded\ frame}}
+\DoxyCodeLine{00174\ \ \ \textcolor{keywordtype}{void}\ clear\_all\_signals();\ \ \ \ \textcolor{comment}{//\ clears\ all\ signals\ in\ the\ current\ active\ frame}}
+\DoxyCodeLine{00175\ \ \ \textcolor{keywordtype}{void}\ register\_output\_port();\ \textcolor{comment}{//\ registers\ the\ output\ port}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \textcolor{comment}{//\ -\/-\/\ ADC\ -\/-\/}}
+\DoxyCodeLine{00178\ \ \ AnalogInput\ analog\_vref;}
+\DoxyCodeLine{00179\ \};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{keywordtype}{void}\ transmit\_frames\_on\_all\_output\_ports();\ \textcolor{comment}{//\ transmits\ across\ all\ output\ ports}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ iterate\_across\_all\_output\_ports(\textcolor{keywordtype}{void}\ (*target\_function)(\mbox{\hyperlink{class_output_port}{OutputPort}}\ *));\ \textcolor{comment}{//\ allows\ user\ code\ to\ iterate\ across\ all\ output\ ports}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{keywordtype}{void}\ enable\_drivers();\ \ \textcolor{comment}{//\ enables\ drivers\ on\ all\ registered\ output\ ports}}
+\DoxyCodeLine{00186\ \textcolor{keywordtype}{void}\ disable\_drivers();\ \textcolor{comment}{//\ enables\ drivers\ on\ all\ registered\ output\ ports}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ output\_ports\_h}}
+\DoxyCodeLine{00189\ }
+
+\end{DoxyCode}

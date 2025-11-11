@@ -1,0 +1,235 @@
+\doxysection{generators.\+hpp}
+\hypertarget{generators_8hpp_source}{}\label{generators_8hpp_source}\index{lib/generators.hpp@{lib/generators.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}arm\_math.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00005\ \textcolor{comment}{Generators\ Module\ of\ the\ StepDance\ Control\ System}}
+\DoxyCodeLine{00006\ \textcolor{comment}{}}
+\DoxyCodeLine{00007\ \textcolor{comment}{This\ module\ contains\ an\ assortment\ of\ motion\ stream\ generators}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{[More\ Details\ to\ be\ Added]}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{A\ part\ of\ the\ Mixing\ Metaphors\ Project}}
+\DoxyCodeLine{00012\ \textcolor{comment}{(c)\ 2025\ Ilan\ Moyer,\ Jennifer\ Jacobs,\ Devon\ Frost}}
+\DoxyCodeLine{00013\ \textcolor{comment}{}}
+\DoxyCodeLine{00014\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}core.hpp"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ generators\_h\ }\textcolor{comment}{//prevent\ importing\ twice}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ generators\_h}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }ThresholdGenerator\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ ThresholdGenerator();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ threshold\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_a;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_b;}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ debugPrint();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ enable();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ disable();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ DecimalPosition\ input\_a\_position;\ }
+\DoxyCodeLine{00035\ \ \ \ \ DecimalPosition\ input\_b\_position;\ }
+\DoxyCodeLine{00036\ \ \ \ \ DecimalPosition\ output\_position;}
+\DoxyCodeLine{00037\ \ \ \ \ DecimalPosition\ current\_value;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }WaveGenerator1D\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ WaveGenerator1D();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ amplitude\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ phase\ =\ 0.0;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ rotational\_speed\_rev\_per\_sec\ =\ 8;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ setNoInput();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ debugPrint();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ enable();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ disable();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ DecimalPosition\ input\_position;\ }
+\DoxyCodeLine{00063\ \ \ \ \ DecimalPosition\ output\_position;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ no\_input\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//if\ set\ to\ true\ uses\ the\ frame\ value\ to\ update\ the\ output}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ float64\_t\ current\_angle\_rad\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ float64\_t\ delta\ =\ 0;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{//removing\ because\ it's\ currently\ not\ needed\ with\ WaveGenerator1D}}
+\DoxyCodeLine{00075\ \textcolor{comment}{/*class\ WaveGenerator2D\ :\ public\ Plugin\{}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ public:}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ WaveGenerator2D();}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ volatile\ ControlParameter\ amplitude\ =\ 1.0;}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ volatile\ ControlParameter\ phase\ =\ 0.0;}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ volatile\ ControlParameter\ rotational\_speed\_rev\_per\_sec\ =\ 6;}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ volatile\ bool\ no\_input\ =\ false;\ //if\ set\ to\ true\ uses\ the\ frame\ value\ to\ update\ the\ output}}
+\DoxyCodeLine{00082\ \textcolor{comment}{}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ void\ begin();}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ void\ setNoInput();}}
+\DoxyCodeLine{00085\ \textcolor{comment}{}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ void\ debugPrint();}}
+\DoxyCodeLine{00087\ \textcolor{comment}{}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ BlockPort\ input;\ }}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ BlockPort\ output\_x;}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ BlockPort\ output\_y;}}
+\DoxyCodeLine{00091\ \textcolor{comment}{}}
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ private:}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ DecimalPosition\ input\_position;\ }}
+\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ DecimalPosition\ output\_x\_position;}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ DecimalPosition\ output\_y\_position;}}
+\DoxyCodeLine{00096\ \textcolor{comment}{}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ protected:}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ \ volatile\ float64\_t\ current\_angle\_rad\ =\ 0;}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ \ volatile\ float64\_t\ delta\ =\ 0;}}
+\DoxyCodeLine{00100\ \textcolor{comment}{}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ void\ run();}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\};*/}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{class\ }CircleGenerator\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00105\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00106\ \ \ \ \ CircleGenerator();}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ radius\ =\ 1.0;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ rotational\_speed\_rev\_per\_sec\ =\ 6;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ setNoInput();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ debugPrint();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input;\ }
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output\_x;}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output\_y;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00119\ \ \ \ \ DecimalPosition\ input\_position;\ }
+\DoxyCodeLine{00120\ \ \ \ \ DecimalPosition\ output\_x\_position;}
+\DoxyCodeLine{00121\ \ \ \ \ DecimalPosition\ output\_y\_position;}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{bool}\ no\_input\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//if\ set\ to\ true\ uses\ the\ frame\ value\ to\ update\ the\ output}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ float64\_t\ current\_angle\_rad\ =\ 0;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ float64\_t\ delta\ =\ 0;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00130\ \};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{class\ }VelocityGenerator\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00133\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00134\ \ \ \ \ VelocityGenerator();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ speed\_units\_per\_sec\ =\ 0;\ \textcolor{comment}{//\ generation\ velocity}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output;}
+\DoxyCodeLine{00138\ \ \ \ \ DecimalPosition\ target\_position\ =\ 0;}
+\DoxyCodeLine{00139\ \ \ }
+\DoxyCodeLine{00140\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00142\ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{keyword}{class\ }PositionGenerator\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00145\ \ \ \textcolor{comment}{//\ This\ position\ generator\ maintains\ its\ own\ internal\ state,\ and\ will\ incrementally\ drive\ an\ output\ transmission\ to\ achieve}}
+\DoxyCodeLine{00146\ \ \ \textcolor{comment}{//\ a\ particular\ value\ of\ its\ internal\ position\ state\ under\ the\ constraints\ of\ a\ maximum\ velocity.}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00149\ \ \ \ \ PositionGenerator();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_speed(ControlParameter\ speed);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ go(float64\_t\ distance\_or\_position,\ uint8\_t\ mode);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ go(float64\_t\ distance\_or\_position,\ uint8\_t\ mode,\ ControlParameter\ speed);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{volatile}\ ControlParameter\ speed\_units\_per\_sec\ =\ 0;\ \textcolor{comment}{//\ generation\ velocity.\ This\ will\ be\ used\ if\ not\ explicitly\ provided\ by\ the\ call\ to\ go()}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//\ BlockPorts}}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output;}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00162\ \ \ \ \ DecimalPosition\ target\_position\ =\ 0;}
+\DoxyCodeLine{00163\ \ \ \ \ DecimalPosition\ current\_position\ =\ 0;}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00167\ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{keyword}{class\ }PathLengthGenerator2D\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00170\ \ \ \textcolor{comment}{//\ Generates\ an\ output\ signal\ in\ proportion\ to\ the\ linear\ distance\ traversed\ by\ two\ inputs.}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00173\ \ \ \ \ PathLengthGenerator2D();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ ratio);}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ output\_distance,\ ControlParameter\ input\_distance)\{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ set\_ratio(output\_distance\ /\ input\_distance);}
+\DoxyCodeLine{00179\ \ \ \ \ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ ControlParameter\ ratio\ =\ 1.0;\ \textcolor{comment}{//\ output\ /\ input}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//\ BlockPorts}}
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_1;}
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_2;}
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output;}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ DecimalPosition\ input\_1\_position;}
+\DoxyCodeLine{00189\ \ \ \ \ DecimalPosition\ input\_2\_position;}
+\DoxyCodeLine{00190\ \ \ \ \ DecimalPosition\ output\_position;}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00197\ \};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{class\ }PathLengthGenerator3D\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00200\ \ \ \textcolor{comment}{//\ Generates\ an\ output\ signal\ in\ proportion\ to\ the\ linear\ distance\ traversed\ by\ three\ inputs.}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00203\ \ \ \ \ PathLengthGenerator3D();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ ratio);}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ output\_distance,\ ControlParameter\ input\_distance)\{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ set\_ratio(output\_distance\ /\ input\_distance);}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ ControlParameter\ ratio\ =\ 1.0;\ \textcolor{comment}{//\ output\ /\ input}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{comment}{//\ BlockPorts}}
+\DoxyCodeLine{00214\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_1;}
+\DoxyCodeLine{00215\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_2;}
+\DoxyCodeLine{00216\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_3;}
+\DoxyCodeLine{00217\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output;}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00220\ \ \ \ \ DecimalPosition\ input\_1\_position;}
+\DoxyCodeLine{00221\ \ \ \ \ DecimalPosition\ input\_2\_position;}
+\DoxyCodeLine{00222\ \ \ \ \ DecimalPosition\ input\_3\_position;}
+\DoxyCodeLine{00223\ \ \ \ \ DecimalPosition\ output\_position;}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00227\ \};}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//generators\_h}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\doxysection{filters.\+hpp}
+\hypertarget{filters_8hpp_source}{}\label{filters_8hpp_source}\index{lib/filters.hpp@{lib/filters.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00004\ \textcolor{comment}{Filters\ Module\ of\ the\ StepDance\ Control\ System}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{This\ module\ contains\ an\ assortment\ of\ motion\ filters}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{[More\ Details\ to\ be\ Added]}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{A\ part\ of\ the\ Mixing\ Metaphors\ Project}}
+\DoxyCodeLine{00011\ \textcolor{comment}{(c)\ 2025\ Ilan\ Moyer,\ Jennifer\ Jacobs,\ Devon\ Frost}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}core.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ filters\_h\ }\textcolor{comment}{//prevent\ importing\ twice}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ filters\_h}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }ScalingFilter1D\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00020\ \ \ \textcolor{comment}{//\ Generates\ an\ output\ signal\ in\ proportion\ to\ one\ input\ signal.}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ ScalingFilter1D();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ begin(uint8\_t\ mode\ =\ INCREMENTAL);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ ratio);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ output\_distance,\ ControlParameter\ input\_distance)\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ set\_ratio(output\_distance\ /\ input\_distance);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ ControlParameter\ ratio\ =\ 1.0;\ \textcolor{comment}{//\ output\ /\ input}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ BlockPorts}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input;}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ DecimalPosition\ input\_position;}
+\DoxyCodeLine{00039\ \ \ \ \ DecimalPosition\ output\_position;}
+\DoxyCodeLine{00040\ \ \ \ \ uint8\_t\ mode\ =\ INCREMENTAL;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }ScalingFilter2D\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00047\ \ \ \textcolor{comment}{//\ Generates\ two\ output\ signals,\ each\ in\ proportion\ to\ an\ input\ signal.}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ ScalingFilter2D();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ begin(uint8\_t\ mode\ =\ INCREMENTAL);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ ratio);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ set\_ratio(ControlParameter\ output\_distance,\ ControlParameter\ input\_distance)\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ set\_ratio(output\_distance\ /\ input\_distance);}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ ControlParameter\ ratio\ =\ 1.0;\ \textcolor{comment}{//\ output\ /\ input}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ BlockPorts}}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_1;}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_2;}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output\_1;}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output\_2;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ DecimalPosition\ input\_1\_position;}
+\DoxyCodeLine{00068\ \ \ \ \ DecimalPosition\ input\_2\_position;}
+\DoxyCodeLine{00069\ \ \ \ \ DecimalPosition\ output\_1\_position;}
+\DoxyCodeLine{00070\ \ \ \ \ DecimalPosition\ output\_2\_position;}
+\DoxyCodeLine{00071\ \ \ \ \ uint8\_t\ mode\ =\ INCREMENTAL;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

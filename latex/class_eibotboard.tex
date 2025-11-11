@@ -1,0 +1,97 @@
+\doxysection{Eibotboard Class Reference}
+\hypertarget{class_eibotboard}{}\label{class_eibotboard}\index{Eibotboard@{Eibotboard}}
+Inheritance diagram for Eibotboard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_eibotboard}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_eibotboard_a77c54c9883af9bca2ffc0488f1bf490b}\label{class_eibotboard_a77c54c9883af9bca2ffc0488f1bf490b} 
+void {\bfseries begin} ()
+\item 
+\Hypertarget{class_eibotboard_ab7b0631eac328b0394edc65f28755529}\label{class_eibotboard_ab7b0631eac328b0394edc65f28755529} 
+void {\bfseries set\+\_\+ratio\+\_\+xy} (float output\+\_\+units\+\_\+mm, float input\+\_\+units\+\_\+steps)
+\item 
+\Hypertarget{class_eibotboard_afd2401a96a31faa83fa9d68a873fe229}\label{class_eibotboard_afd2401a96a31faa83fa9d68a873fe229} 
+void {\bfseries set\+\_\+ratio\+\_\+z} (float output\+\_\+units\+\_\+mm, float input\+\_\+units\+\_\+steps)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries enable} ()
+\item 
+virtual void {\bfseries disable} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_eibotboard_a85eb2ea307f4488697133e8e7d664c09}\label{class_eibotboard_a85eb2ea307f4488697133e8e7d664c09} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+x} = target\+\_\+interpolator.\+output\+\_\+x
+\item 
+\Hypertarget{class_eibotboard_a94721a0c24dbf2fd02cddc07aee3de9a}\label{class_eibotboard_a94721a0c24dbf2fd02cddc07aee3de9a} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+y} = target\+\_\+interpolator.\+output\+\_\+y
+\item 
+\Hypertarget{class_eibotboard_a5d6694916dbb254f0201fceebc556223}\label{class_eibotboard_a5d6694916dbb254f0201fceebc556223} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+z} = target\+\_\+interpolator.\+output\+\_\+z
+\item 
+\Hypertarget{class_eibotboard_a8f8c6483682accc267712e52f8845c01}\label{class_eibotboard_a8f8c6483682accc267712e52f8845c01} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+e} = target\+\_\+interpolator.\+output\+\_\+e
+\item 
+\Hypertarget{class_eibotboard_a6199965135084af043207a9e85d6fc47}\label{class_eibotboard_a6199965135084af043207a9e85d6fc47} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+r} = target\+\_\+interpolator.\+output\+\_\+r
+\item 
+\Hypertarget{class_eibotboard_a7010e36edb45b6a5ad1a775d4971809b}\label{class_eibotboard_a7010e36edb45b6a5ad1a775d4971809b} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+t} = target\+\_\+interpolator.\+output\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eibotboard_a428b9e6bdaf04cb27848f4365e2edaeb}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries register\+\_\+plugin} ()
+\item 
+void {\bfseries register\+\_\+plugin} (uint8\+\_\+t execution\+\_\+target)
+\item 
+virtual void {\bfseries run} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries run\+\_\+input\+\_\+port\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+pre\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+post\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+kilohertz\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+loop\+\_\+plugins} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_eibotboard_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_eibotboard_a428b9e6bdaf04cb27848f4365e2edaeb}\index{Eibotboard@{Eibotboard}!loop@{loop}}
+\index{loop@{loop}!Eibotboard@{Eibotboard}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{class_eibotboard_a428b9e6bdaf04cb27848f4365e2edaeb} 
+void Eibotboard\+::loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plugin}{Plugin}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/interfaces.\+hpp\item 
+lib/interfaces.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\doxysection{Threshold\+Generator Class Reference}
+\hypertarget{class_threshold_generator}{}\label{class_threshold_generator}\index{ThresholdGenerator@{ThresholdGenerator}}
+Inheritance diagram for Threshold\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_threshold_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_threshold_generator_a3578c3b057e12dc5dfc04b5eae671289}\label{class_threshold_generator_a3578c3b057e12dc5dfc04b5eae671289} 
+void {\bfseries begin} ()
+\item 
+\Hypertarget{class_threshold_generator_aed4b3aab359cccf7d139486422ecad5e}\label{class_threshold_generator_aed4b3aab359cccf7d139486422ecad5e} 
+void {\bfseries debug\+Print} ()
+\item 
+void \mbox{\hyperlink{class_threshold_generator_aaabaf01447179abc74a6525a3ec06729}{enable}} ()
+\item 
+void \mbox{\hyperlink{class_threshold_generator_ae4414385f46b4c3701eb25586eaf9eca}{disable}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_threshold_generator_a8748e61a2d640a80ca1bd1f2175923de}\label{class_threshold_generator_a8748e61a2d640a80ca1bd1f2175923de} 
+volatile Control\+Parameter {\bfseries threshold} = 0
+\item 
+\Hypertarget{class_threshold_generator_a0f3b5fe9c91c48e211fba7635cca5371}\label{class_threshold_generator_a0f3b5fe9c91c48e211fba7635cca5371} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} {\bfseries input\+\_\+a}
+\item 
+\Hypertarget{class_threshold_generator_ad6c7b9220abe6afa883089721fc524ac}\label{class_threshold_generator_ad6c7b9220abe6afa883089721fc524ac} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} {\bfseries input\+\_\+b}
+\item 
+\Hypertarget{class_threshold_generator_abb039acbb4fe9654b9dd0b758c686c4a}\label{class_threshold_generator_abb039acbb4fe9654b9dd0b758c686c4a} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} {\bfseries output}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_threshold_generator_a614d69375604f6af95fc58070bef60f0}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries register\+\_\+plugin} ()
+\item 
+void {\bfseries register\+\_\+plugin} (uint8\+\_\+t execution\+\_\+target)
+\item 
+virtual void {\bfseries loop} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries run\+\_\+input\+\_\+port\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+pre\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+post\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+kilohertz\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+loop\+\_\+plugins} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_threshold_generator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_threshold_generator_ae4414385f46b4c3701eb25586eaf9eca}\index{ThresholdGenerator@{ThresholdGenerator}!disable@{disable}}
+\index{disable@{disable}!ThresholdGenerator@{ThresholdGenerator}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily \label{class_threshold_generator_ae4414385f46b4c3701eb25586eaf9eca} 
+void Threshold\+Generator\+::disable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plugin}{Plugin}}.
+
+\Hypertarget{class_threshold_generator_aaabaf01447179abc74a6525a3ec06729}\index{ThresholdGenerator@{ThresholdGenerator}!enable@{enable}}
+\index{enable@{enable}!ThresholdGenerator@{ThresholdGenerator}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily \label{class_threshold_generator_aaabaf01447179abc74a6525a3ec06729} 
+void Threshold\+Generator\+::enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plugin}{Plugin}}.
+
+\Hypertarget{class_threshold_generator_a614d69375604f6af95fc58070bef60f0}\index{ThresholdGenerator@{ThresholdGenerator}!run@{run}}
+\index{run@{run}!ThresholdGenerator@{ThresholdGenerator}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_threshold_generator_a614d69375604f6af95fc58070bef60f0} 
+void Threshold\+Generator\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plugin}{Plugin}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/generators.\+hpp\item 
+lib/generators.\+cpp\end{DoxyCompactItemize}

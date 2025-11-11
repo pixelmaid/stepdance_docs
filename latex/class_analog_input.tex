@@ -1,0 +1,122 @@
+\doxysection{Analog\+Input Class Reference}
+\hypertarget{class_analog_input}{}\label{class_analog_input}\index{AnalogInput@{AnalogInput}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_analog_input_a5b775afdce5bed709d007d5e1ca9c6d7}\label{class_analog_input_a5b775afdce5bed709d007d5e1ca9c6d7} 
+void {\bfseries begin} (uint8\+\_\+t pin\+\_\+reference)
+\item 
+\Hypertarget{class_analog_input_acbd686f710f68d83a6f09d9a73c032a1}\label{class_analog_input_acbd686f710f68d83a6f09d9a73c032a1} 
+void {\bfseries calibrate} ()
+\item 
+\Hypertarget{class_analog_input_ae233466f5e005db70969b067035ab51f}\label{class_analog_input_ae233466f5e005db70969b067035ab51f} 
+void {\bfseries set\+\_\+averaging} (int8\+\_\+t averaging)
+\item 
+\Hypertarget{class_analog_input_ad4880014845313a7ef6edc53f52759ff}\label{class_analog_input_ad4880014845313a7ef6edc53f52759ff} 
+void {\bfseries set\+\_\+resolution} (int8\+\_\+t resolution)
+\item 
+\Hypertarget{class_analog_input_a2fee7d564405332e40a536e11d2d992b}\label{class_analog_input_a2fee7d564405332e40a536e11d2d992b} 
+void {\bfseries set\+\_\+clock} (int8\+\_\+t clock)
+\item 
+\Hypertarget{class_analog_input_a5b693352b0883ae6fa94cbeae55eb8dd}\label{class_analog_input_a5b693352b0883ae6fa94cbeae55eb8dd} 
+void {\bfseries map} (Control\+Parameter \texorpdfstring{$\ast$}{*}target\+\_\+parameter)
+\item 
+\Hypertarget{class_analog_input_a7d3661f551d44b75d4f61fa17a89f248}\label{class_analog_input_a7d3661f551d44b75d4f61fa17a89f248} 
+void {\bfseries map} (Decimal\+Position \texorpdfstring{$\ast$}{*}target\+\_\+parameter)
+\item 
+\Hypertarget{class_analog_input_a94321fb79cb3204d7e3ccd98406bb664}\label{class_analog_input_a94321fb79cb3204d7e3ccd98406bb664} 
+void {\bfseries set\+\_\+callback} (void(\texorpdfstring{$\ast$}{*}callback\+\_\+function)())
+\item 
+\Hypertarget{class_analog_input_a9d7fd8ae2d3c12b9bb3133c85386287d}\label{class_analog_input_a9d7fd8ae2d3c12b9bb3133c85386287d} 
+void {\bfseries configure\+\_\+adc} ()
+\item 
+\Hypertarget{class_analog_input_a21954bb6c667d2696299708f8b8d5a66}\label{class_analog_input_a21954bb6c667d2696299708f8b8d5a66} 
+void {\bfseries begin\+\_\+conversion} ()
+\item 
+\Hypertarget{class_analog_input_abebd50d249b8180d1b18fe37e026afd5}\label{class_analog_input_abebd50d249b8180d1b18fe37e026afd5} 
+void {\bfseries set\+\_\+floor} (Control\+Parameter output\+\_\+at\+\_\+floor)
+\item 
+\Hypertarget{class_analog_input_ace60001ca7af6539ac805b815cdf06b5}\label{class_analog_input_ace60001ca7af6539ac805b815cdf06b5} 
+void {\bfseries set\+\_\+floor} (Control\+Parameter output\+\_\+at\+\_\+floor, uint16\+\_\+t adc\+\_\+lower\+\_\+limit)
+\item 
+\Hypertarget{class_analog_input_a79552bae1a61205c886343c8c147bcab}\label{class_analog_input_a79552bae1a61205c886343c8c147bcab} 
+void {\bfseries set\+\_\+ceiling} (Control\+Parameter output\+\_\+at\+\_\+ceiling)
+\item 
+\Hypertarget{class_analog_input_a0ed67a746ae3db0fac09006979f590d5}\label{class_analog_input_a0ed67a746ae3db0fac09006979f590d5} 
+void {\bfseries set\+\_\+ceiling} (Control\+Parameter output\+\_\+at\+\_\+ceiling, uint16\+\_\+t adc\+\_\+upper\+\_\+limit)
+\item 
+\Hypertarget{class_analog_input_a599eea7a23b85f7dd51bae71afefabad}\label{class_analog_input_a599eea7a23b85f7dd51bae71afefabad} 
+void {\bfseries set\+\_\+deadband\+\_\+here} (Control\+Parameter output\+\_\+at\+\_\+deadband=0, uint16\+\_\+t adc\+\_\+deadband\+\_\+width=4)
+\item 
+\Hypertarget{class_analog_input_a7c615a849a53c78ca2519a41d7db6c27}\label{class_analog_input_a7c615a849a53c78ca2519a41d7db6c27} 
+void {\bfseries set\+\_\+deadband} (Control\+Parameter output\+\_\+at\+\_\+deadband, uint16\+\_\+t adc\+\_\+deadband\+\_\+center, uint16\+\_\+t adc\+\_\+deadband\+\_\+width=4)
+\item 
+\Hypertarget{class_analog_input_af8b06cf2264b9d6e79b680a4e0caac4a}\label{class_analog_input_af8b06cf2264b9d6e79b680a4e0caac4a} 
+void {\bfseries invert} ()
+\item 
+\Hypertarget{class_analog_input_af143ba031f43d5b8a5d4766ed9737cf9}\label{class_analog_input_af143ba031f43d5b8a5d4766ed9737cf9} 
+Control\+Parameter {\bfseries read} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_analog_input_a5f3366d30bc78c74b58593d02723f5d8}\label{class_analog_input_a5f3366d30bc78c74b58593d02723f5d8} 
+volatile uint16\+\_\+t {\bfseries last\+\_\+value\+\_\+raw} = 0
+\item 
+\Hypertarget{class_analog_input_ab1bcb6671779163b900b784cc8316c74}\label{class_analog_input_ab1bcb6671779163b900b784cc8316c74} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries callback\+\_\+function} )() = nullptr
+\item 
+\Hypertarget{class_analog_input_a250a3c6820f6073f1ce3d931768c8318}\label{class_analog_input_a250a3c6820f6073f1ce3d931768c8318} 
+Control\+Parameter \texorpdfstring{$\ast$}{*} {\bfseries target\+\_\+control\+\_\+param} = nullptr
+\item 
+\Hypertarget{class_analog_input_ad780c8e573dc9e7518df02596bc1c657}\label{class_analog_input_ad780c8e573dc9e7518df02596bc1c657} 
+Decimal\+Position \texorpdfstring{$\ast$}{*} {\bfseries target\+\_\+decimal\+\_\+pos} = nullptr
+\item 
+\Hypertarget{class_analog_input_aa5d8e477911fce6e3facd287d94205df}\label{class_analog_input_aa5d8e477911fce6e3facd287d94205df} 
+float32\+\_\+t {\bfseries full\+\_\+scale\+\_\+volts} = VREF\+\_\+3\+V3
+\item 
+\Hypertarget{class_analog_input_a0017764bc844ca44c5873287229d60d2}\label{class_analog_input_a0017764bc844ca44c5873287229d60d2} 
+float32\+\_\+t {\bfseries conversion\+\_\+slope\+\_\+1} = 1
+\item 
+\Hypertarget{class_analog_input_a04fc93d87648291cfecb468b1a7df348}\label{class_analog_input_a04fc93d87648291cfecb468b1a7df348} 
+float32\+\_\+t {\bfseries conversion\+\_\+intercept\+\_\+1} = 0
+\item 
+\Hypertarget{class_analog_input_ac1d590fbeb3a159940af288cd7d0b2df}\label{class_analog_input_ac1d590fbeb3a159940af288cd7d0b2df} 
+float32\+\_\+t {\bfseries conversion\+\_\+slope\+\_\+2} = 1
+\item 
+\Hypertarget{class_analog_input_a15234f8e24e74733f5a915ed9d3178b0}\label{class_analog_input_a15234f8e24e74733f5a915ed9d3178b0} 
+float32\+\_\+t {\bfseries conversion\+\_\+intercept\+\_\+2} = 0
+\item 
+\Hypertarget{class_analog_input_ab0059a8694b8b7b91669a7000e0f862d}\label{class_analog_input_ab0059a8694b8b7b91669a7000e0f862d} 
+uint16\+\_\+t {\bfseries adc\+\_\+deadband\+\_\+location} = 0
+\item 
+\Hypertarget{class_analog_input_aec2b95e3fdfa534c8926fb500ccd652d}\label{class_analog_input_aec2b95e3fdfa534c8926fb500ccd652d} 
+uint16\+\_\+t {\bfseries adc\+\_\+deadband\+\_\+width} = 0
+\item 
+\Hypertarget{class_analog_input_a6f19e2304c9bba4df3700f2d41f5562b}\label{class_analog_input_a6f19e2304c9bba4df3700f2d41f5562b} 
+uint16\+\_\+t {\bfseries adc\+\_\+deadband\+\_\+lower} = 0
+\item 
+\Hypertarget{class_analog_input_a5869a95f220fa781bf86fe57b34750a8}\label{class_analog_input_a5869a95f220fa781bf86fe57b34750a8} 
+uint16\+\_\+t {\bfseries adc\+\_\+deadband\+\_\+upper} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_analog_input_ad5e6d4e5163d774cb6638f042b9d790f}\label{class_analog_input_ad5e6d4e5163d774cb6638f042b9d790f} 
+static \mbox{\hyperlink{class_analog_input}{Analog\+Input}} \texorpdfstring{$\ast$}{*} {\bfseries adc1\+\_\+inputs} \mbox{[}MAX\+\_\+\+NUM\+\_\+\+ADC\+\_\+\+INPUTS\mbox{]} = \{nullptr, nullptr\}
+\item 
+\Hypertarget{class_analog_input_a8fc774d8b7b91dcdc193f778c222bb2c}\label{class_analog_input_a8fc774d8b7b91dcdc193f778c222bb2c} 
+static \mbox{\hyperlink{class_analog_input}{Analog\+Input}} \texorpdfstring{$\ast$}{*} {\bfseries adc2\+\_\+inputs} \mbox{[}MAX\+\_\+\+NUM\+\_\+\+ADC\+\_\+\+INPUTS\mbox{]} = \{nullptr, nullptr\}
+\item 
+\Hypertarget{class_analog_input_addd399f922d723a93f0b0ffe41a3e114}\label{class_analog_input_addd399f922d723a93f0b0ffe41a3e114} 
+static uint8\+\_\+t {\bfseries module\+\_\+num\+\_\+inputs} \mbox{[}NUM\+\_\+\+ADC\+\_\+\+MODULES\mbox{]} = \{0, 0\}
+\item 
+\Hypertarget{class_analog_input_a5db36e0b1dffeb15be9f690e6fdaa262}\label{class_analog_input_a5db36e0b1dffeb15be9f690e6fdaa262} 
+static volatile uint8\+\_\+t {\bfseries module\+\_\+current\+\_\+input\+\_\+index} \mbox{[}NUM\+\_\+\+ADC\+\_\+\+MODULES\mbox{]} = \{0, 0\}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/analog\+\_\+in.\+hpp\item 
+lib/analog\+\_\+in.\+cpp\end{DoxyCompactItemize}

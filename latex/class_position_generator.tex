@@ -1,0 +1,88 @@
+\doxysection{Position\+Generator Class Reference}
+\hypertarget{class_position_generator}{}\label{class_position_generator}\index{PositionGenerator@{PositionGenerator}}
+Inheritance diagram for Position\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_position_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_position_generator_ac1ffc639139b334d2d180332859e0d48}\label{class_position_generator_ac1ffc639139b334d2d180332859e0d48} 
+void {\bfseries begin} ()
+\item 
+\Hypertarget{class_position_generator_a4b39e72ca8796b959b5f1bd16bee5141}\label{class_position_generator_a4b39e72ca8796b959b5f1bd16bee5141} 
+void {\bfseries set\+\_\+speed} (Control\+Parameter speed)
+\item 
+\Hypertarget{class_position_generator_a069294b6a0d1b9204f1e613cb40f83a3}\label{class_position_generator_a069294b6a0d1b9204f1e613cb40f83a3} 
+void {\bfseries go} (float64\+\_\+t distance\+\_\+or\+\_\+position, uint8\+\_\+t mode)
+\item 
+\Hypertarget{class_position_generator_ad6daff12b8005974f878d33d8ab5b1ba}\label{class_position_generator_ad6daff12b8005974f878d33d8ab5b1ba} 
+void {\bfseries go} (float64\+\_\+t distance\+\_\+or\+\_\+position, uint8\+\_\+t mode, Control\+Parameter speed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries enable} ()
+\item 
+virtual void {\bfseries disable} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_position_generator_a616c3fdcd9dfea7c2d18c4a69d9568f4}\label{class_position_generator_a616c3fdcd9dfea7c2d18c4a69d9568f4} 
+volatile Control\+Parameter {\bfseries speed\+\_\+units\+\_\+per\+\_\+sec} = 0
+\item 
+\Hypertarget{class_position_generator_abfeae5a3a55ab5333502b0d97f232647}\label{class_position_generator_abfeae5a3a55ab5333502b0d97f232647} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} {\bfseries output}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_position_generator_ac6871dbe97cd62a71fc730245d4a1ad6}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries register\+\_\+plugin} ()
+\item 
+void {\bfseries register\+\_\+plugin} (uint8\+\_\+t execution\+\_\+target)
+\item 
+virtual void {\bfseries loop} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries run\+\_\+input\+\_\+port\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+pre\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+post\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+kilohertz\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+loop\+\_\+plugins} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_position_generator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_position_generator_ac6871dbe97cd62a71fc730245d4a1ad6}\index{PositionGenerator@{PositionGenerator}!run@{run}}
+\index{run@{run}!PositionGenerator@{PositionGenerator}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_position_generator_ac6871dbe97cd62a71fc730245d4a1ad6} 
+void Position\+Generator\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plugin}{Plugin}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/generators.\+hpp\item 
+lib/generators.\+cpp\end{DoxyCompactItemize}

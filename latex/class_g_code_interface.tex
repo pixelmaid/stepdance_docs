@@ -1,0 +1,91 @@
+\doxysection{GCode\+Interface Class Reference}
+\hypertarget{class_g_code_interface}{}\label{class_g_code_interface}\index{GCodeInterface@{GCodeInterface}}
+Inheritance diagram for GCode\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_code_interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_g_code_interface_a66a91087fbd12663b46f94fde3f51e6b}\label{class_g_code_interface_a66a91087fbd12663b46f94fde3f51e6b} 
+void {\bfseries begin} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries enable} ()
+\item 
+virtual void {\bfseries disable} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_g_code_interface_ad3330be19d87038d9a1277c9f62f5037}\label{class_g_code_interface_ad3330be19d87038d9a1277c9f62f5037} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+x} = target\+\_\+interpolator.\+output\+\_\+x
+\item 
+\Hypertarget{class_g_code_interface_acc8598d93085f212c3d87e8324b36bfb}\label{class_g_code_interface_acc8598d93085f212c3d87e8324b36bfb} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+y} = target\+\_\+interpolator.\+output\+\_\+y
+\item 
+\Hypertarget{class_g_code_interface_a8155b912a3a6844116c345ff405c389a}\label{class_g_code_interface_a8155b912a3a6844116c345ff405c389a} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+z} = target\+\_\+interpolator.\+output\+\_\+z
+\item 
+\Hypertarget{class_g_code_interface_a59368d7347a46b91bd1e34e6c38e6ce1}\label{class_g_code_interface_a59368d7347a46b91bd1e34e6c38e6ce1} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+e} = target\+\_\+interpolator.\+output\+\_\+e
+\item 
+\Hypertarget{class_g_code_interface_a86ad235397367d7e0838e04ee4196663}\label{class_g_code_interface_a86ad235397367d7e0838e04ee4196663} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+r} = target\+\_\+interpolator.\+output\+\_\+r
+\item 
+\Hypertarget{class_g_code_interface_a47555687a153567cb5637d46217b3c36}\label{class_g_code_interface_a47555687a153567cb5637d46217b3c36} 
+\mbox{\hyperlink{class_block_port}{Block\+Port}} \& {\bfseries output\+\_\+t} = target\+\_\+interpolator.\+output\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_code_interface_a07222d87083d3be4b44c096cc293b843}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries register\+\_\+plugin} ()
+\item 
+void {\bfseries register\+\_\+plugin} (uint8\+\_\+t execution\+\_\+target)
+\item 
+virtual void {\bfseries run} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_plugin}{Plugin}}}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries run\+\_\+input\+\_\+port\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+pre\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+post\+\_\+channel\+\_\+frame\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+kilohertz\+\_\+plugins} ()
+\item 
+static void {\bfseries run\+\_\+loop\+\_\+plugins} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_g_code_interface_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_code_interface_a07222d87083d3be4b44c096cc293b843}\index{GCodeInterface@{GCodeInterface}!loop@{loop}}
+\index{loop@{loop}!GCodeInterface@{GCodeInterface}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{class_g_code_interface_a07222d87083d3be4b44c096cc293b843} 
+void GCode\+Interface\+::loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plugin}{Plugin}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/interfaces.\+hpp\item 
+lib/interfaces.\+cpp\end{DoxyCompactItemize}

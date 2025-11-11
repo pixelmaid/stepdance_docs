@@ -1,0 +1,89 @@
+\doxysection{Block\+Port Class Reference}
+\hypertarget{class_block_port}{}\label{class_block_port}\index{BlockPort@{BlockPort}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_block_port_adcdf52455b347f9f3a77d539c470d763}\label{class_block_port_adcdf52455b347f9f3a77d539c470d763} 
+void {\bfseries set\+\_\+ratio} (float world\+\_\+units, float block\+\_\+units=1.\+0)
+\item 
+\Hypertarget{class_block_port_a15141b0edfad4e702588f16599e2655b}\label{class_block_port_a15141b0edfad4e702588f16599e2655b} 
+void {\bfseries map} (\mbox{\hyperlink{class_block_port}{Block\+Port}} \texorpdfstring{$\ast$}{*}map\+\_\+target, uint8\+\_\+t mode)
+\item 
+\Hypertarget{class_block_port_a5c274518e2f625878f717aab25a51d4e}\label{class_block_port_a5c274518e2f625878f717aab25a51d4e} 
+void {\bfseries map} (\mbox{\hyperlink{class_block_port}{Block\+Port}} \texorpdfstring{$\ast$}{*}map\+\_\+target)
+\item 
+\Hypertarget{class_block_port_aa4edc4e34721ae82fe624db591e6d484}\label{class_block_port_aa4edc4e34721ae82fe624db591e6d484} 
+void {\bfseries write} (float64\+\_\+t value, uint8\+\_\+t mode)
+\item 
+\Hypertarget{class_block_port_a0e61b493a03687e4a6ac314a88320584}\label{class_block_port_a0e61b493a03687e4a6ac314a88320584} 
+float64\+\_\+t {\bfseries read} (uint8\+\_\+t mode)
+\item 
+\Hypertarget{class_block_port_af58b93dfd0ae1ea92886fd033495cfa0}\label{class_block_port_af58b93dfd0ae1ea92886fd033495cfa0} 
+void {\bfseries write\+\_\+now} (float64\+\_\+t)
+\item 
+\Hypertarget{class_block_port_a489277bffcb0a95c74d1558608ed7d2e}\label{class_block_port_a489277bffcb0a95c74d1558608ed7d2e} 
+float64\+\_\+t {\bfseries read\+\_\+now} ()
+\item 
+\Hypertarget{class_block_port_adbf1c081966c415f295a18ef6b8737cf}\label{class_block_port_adbf1c081966c415f295a18ef6b8737cf} 
+void {\bfseries begin} (volatile float64\+\_\+t \texorpdfstring{$\ast$}{*}target)
+\item 
+\Hypertarget{class_block_port_a6d2f3e7a15b26477e00262956f53fb62}\label{class_block_port_a6d2f3e7a15b26477e00262956f53fb62} 
+void {\bfseries set\+\_\+target} (volatile float64\+\_\+t \texorpdfstring{$\ast$}{*}target)
+\item 
+\Hypertarget{class_block_port_aed29db56637b1d51accce4d5a5ce6c05}\label{class_block_port_aed29db56637b1d51accce4d5a5ce6c05} 
+void {\bfseries update} ()
+\item 
+\Hypertarget{class_block_port_a2a7c938a884ba68fb0c2906b1d544a79}\label{class_block_port_a2a7c938a884ba68fb0c2906b1d544a79} 
+void {\bfseries reverse\+\_\+update} ()
+\item 
+\Hypertarget{class_block_port_a5bb9a4183be896a314994ff0372b6695}\label{class_block_port_a5bb9a4183be896a314994ff0372b6695} 
+void {\bfseries set} (float64\+\_\+t value, uint8\+\_\+t mode)
+\item 
+\Hypertarget{class_block_port_ac885a20135059116de8329d3f9b82ecd}\label{class_block_port_ac885a20135059116de8329d3f9b82ecd} 
+void {\bfseries set} (float64\+\_\+t value)
+\item 
+\Hypertarget{class_block_port_ae19a195fcb612dd9de3e52beec5a75e1}\label{class_block_port_ae19a195fcb612dd9de3e52beec5a75e1} 
+void {\bfseries reset} (float64\+\_\+t value, bool raw=false)
+\item 
+\Hypertarget{class_block_port_ad7a0ca88fe4bb022f54b2390c3e0606a}\label{class_block_port_ad7a0ca88fe4bb022f54b2390c3e0606a} 
+void {\bfseries push} (uint8\+\_\+t mode)
+\item 
+\Hypertarget{class_block_port_a665409dc85cdece197e85d83c6e08099}\label{class_block_port_a665409dc85cdece197e85d83c6e08099} 
+void {\bfseries push} ()
+\item 
+\Hypertarget{class_block_port_a06ed714429e35a9ad313310053bc2582}\label{class_block_port_a06ed714429e35a9ad313310053bc2582} 
+void {\bfseries pull} (uint8\+\_\+t mode)
+\item 
+\Hypertarget{class_block_port_ab6bca5882bbc8e4a3ec7d8512e97e6bc}\label{class_block_port_ab6bca5882bbc8e4a3ec7d8512e97e6bc} 
+void {\bfseries pull} ()
+\item 
+\Hypertarget{class_block_port_a82af2f6c256fa8c62ccd2867f3eb1c02}\label{class_block_port_a82af2f6c256fa8c62ccd2867f3eb1c02} 
+void {\bfseries enable} ()
+\item 
+\Hypertarget{class_block_port_a872964b3c96d9c9f4016a9ca4274925a}\label{class_block_port_a872964b3c96d9c9f4016a9ca4274925a} 
+void {\bfseries disable} ()
+\item 
+\Hypertarget{class_block_port_a6e5b158cc0f75f567a0dab345325e0ea}\label{class_block_port_a6e5b158cc0f75f567a0dab345325e0ea} 
+float64\+\_\+t {\bfseries convert\+\_\+block\+\_\+to\+\_\+world\+\_\+units} (float64\+\_\+t block\+\_\+units)
+\item 
+\Hypertarget{class_block_port_a38173dac9a0a3e75286826029eeb3330}\label{class_block_port_a38173dac9a0a3e75286826029eeb3330} 
+float64\+\_\+t {\bfseries convert\+\_\+world\+\_\+to\+\_\+block\+\_\+units} (float64\+\_\+t world\+\_\+units)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_block_port_a4c84725b4be4f7a7333f99c5656ca18b}\label{class_block_port_a4c84725b4be4f7a7333f99c5656ca18b} 
+volatile float64\+\_\+t {\bfseries incremental\+\_\+buffer} = 0
+\item 
+\Hypertarget{class_block_port_a34173de4d7310b1160825d88059a36ae}\label{class_block_port_a34173de4d7310b1160825d88059a36ae} 
+volatile float64\+\_\+t {\bfseries absolute\+\_\+buffer} = 0
+\item 
+\Hypertarget{class_block_port_a7d9a702d5a59cb88f680d120802b1d3a}\label{class_block_port_a7d9a702d5a59cb88f680d120802b1d3a} 
+volatile float64\+\_\+t \texorpdfstring{$\ast$}{*} {\bfseries target} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/core.\+hpp\item 
+lib/core.\+cpp\end{DoxyCompactItemize}

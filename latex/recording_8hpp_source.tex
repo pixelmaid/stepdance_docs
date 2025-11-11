@@ -1,0 +1,114 @@
+\doxysection{recording.\+hpp}
+\hypertarget{recording_8hpp_source}{}\label{recording_8hpp_source}\index{lib/recording.hpp@{lib/recording.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00003\ \textcolor{comment}{Recording\ Module\ of\ the\ StepDance\ Control\ System}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{This\ module\ contains\ facilities\ for\ recording\ and\ playback\ of\ motion\ streams.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{}}
+\DoxyCodeLine{00007\ \textcolor{comment}{[More\ Details\ to\ be\ Added]}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{A\ part\ of\ the\ Mixing\ Metaphors\ Project}}
+\DoxyCodeLine{00010\ \textcolor{comment}{(c)\ 2025\ Ilan\ Moyer,\ Jennifer\ Jacobs,\ Devon\ Frost}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}core.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <SD.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ recording\_h\ }\textcolor{comment}{//prevent\ importing\ twice}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ recording\_h}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }RecorderTrack\ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{comment}{//\ a\ single\ track\ used\ for\ recording}}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ RecorderTrack();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00026\ \ \ \ \ int8\_t\ run();\ \textcolor{comment}{//returns\ 1\ or\ -\/1\ if\ step\ is\ taken,\ 0\ if\ not.}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ input\_target\_position;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ DecimalPosition\ target\_position\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ DecimalPosition\ current\_position\ =\ 0;}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }FourTrackRecorder\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00035\ \ \ \textcolor{comment}{//\ Simultaneously\ records\ four\ motion\ streams\ to\ an\ SD\ card\ file.}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ FourTrackRecorder();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ start(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *recording\_name,\ uint8\_t\ recording\_length\_min\ =\ 30);\ \textcolor{comment}{//\ start\ recording}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ pause();\ \textcolor{comment}{//\ pause\ recording}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ resume();\ \textcolor{comment}{//continues\ recording}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ stop();\ \textcolor{comment}{//\ stop\ recording}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_resolution(\textcolor{keywordtype}{float}\ input\_units,\ \textcolor{keywordtype}{float}\ per\_steps\ =\ 1.0);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint8\_t\ NUM\_CHANNELS\ =\ 4;}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_recorder_track}{RecorderTrack}}\ recorder\_tracks[NUM\_CHANNELS];}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ input\_1\ =\ recorder\_tracks[0].input\_target\_position;}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ input\_2\ =\ recorder\_tracks[1].input\_target\_position;}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ input\_3\ =\ recorder\_tracks[2].input\_target\_position;}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ input\_4\ =\ recorder\_tracks[3].input\_target\_position;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{long}\ current\_sample\_index\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{long}\ max\_num\_samples\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ recorder\_active\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ float32\_t\ resolution\_units\_per\_step\ =\ STANDARD\_RATIO\_MM;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ in\_recording\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//true\ when\ paused}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{char}\ recording\_filename[30];}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{char}\ length\_filename[30];}
+\DoxyCodeLine{00062\ \ \ \ \ FsFile\ active\_recording\_file;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{class\ }FourTrackPlayer\ :\ \textcolor{keyword}{public}\ Plugin\{}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00071\ \ \ \ \ FourTrackPlayer();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ begin();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ start(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *recording\_name\ =\ \textcolor{stringliteral}{"{}recording"{}});}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ pause();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ resume();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ stop();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_resolution(\textcolor{keywordtype}{float}\ output\_units,\ \textcolor{keywordtype}{float}\ per\_steps\ =\ 1.0);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//BlockPorts}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint8\_t\ NUM\_CHANNELS\ =\ 4;}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\ output\_BlockPorts[NUM\_CHANNELS];}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ output\_1\ =\ output\_BlockPorts[0];}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ output\_2\ =\ output\_BlockPorts[1];}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ output\_3\ =\ output\_BlockPorts[2];}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_block_port}{BlockPort}}\&\ output\_4\ =\ output\_BlockPorts[3];}
+\DoxyCodeLine{00087\ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{long}\ current\_sample\_index\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{long}\ max\_num\_playback\_samples\ =\ 0;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ playback\_active\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ BlockPort\ output\ positions}}
+\DoxyCodeLine{00094\ \ \ \ \ DecimalPosition\ output\_positions[NUM\_CHANNELS];}
+\DoxyCodeLine{00095\ \ \ \ \ float32\_t\ resolution\_units\_per\_step\ =\ STANDARD\_RATIO\_MM;}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ in\_playback\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//true\ when\ paused}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{char}\ recording\_filename[30];}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{char}\ length\_filename[30];}
+\DoxyCodeLine{00099\ \ \ \ \ FsFile\ active\_playback\_file;}
+\DoxyCodeLine{00100\ \ \ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ -\/-\/-\/\ SD\ CARD\ UTILITIES\ -\/-\/-\/}}
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ initialize\_sd\_card();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//recording\_h}}
+
+\end{DoxyCode}
