@@ -1,6 +1,32 @@
 var annotated_dup =
 [
+    [ "analog_pin_info_struct", "structanalog__pin__info__struct.html", null ],
+    [ "AnalogInput", "class_analog_input.html", null ],
+    [ "BlockPort", "class_block_port.html", "class_block_port" ],
+    [ "Button", "class_button.html", null ],
+    [ "ButtonKilohertzPlugin", "class_button_kilohertz_plugin.html", null ],
     [ "Channel", "class_channel.html", "class_channel" ],
+    [ "CircleGenerator", "class_circle_generator.html", null ],
+    [ "Eibotboard", "class_eibotboard.html", null ],
+    [ "Encoder", "class_encoder.html", null ],
+    [ "encoder_info_struct", "structencoder__info__struct.html", null ],
+    [ "FourTrackPlayer", "class_four_track_player.html", null ],
+    [ "FourTrackRecorder", "class_four_track_recorder.html", null ],
+    [ "GCodeInterface", "class_g_code_interface.html", null ],
     [ "InputPort", "class_input_port.html", "class_input_port" ],
-    [ "OutputPort", "class_output_port.html", "class_output_port" ]
+    [ "KinematicsCoreXY", "class_kinematics_core_x_y.html", null ],
+    [ "KinematicsFiveBarForward", "class_kinematics_five_bar_forward.html", null ],
+    [ "KinematicsPolarToCartesian", "class_kinematics_polar_to_cartesian.html", null ],
+    [ "OutputPort", "class_output_port.html", "class_output_port" ],
+    [ "PathLengthGenerator2D", "class_path_length_generator2_d.html", null ],
+    [ "PathLengthGenerator3D", "class_path_length_generator3_d.html", null ],
+    [ "PositionGenerator", "class_position_generator.html", null ],
+    [ "RecorderTrack", "class_recorder_track.html", null ],
+    [ "RPC", "class_r_p_c.html", null ],
+    [ "ScalingFilter1D", "class_scaling_filter1_d.html", null ],
+    [ "ScalingFilter2D", "class_scaling_filter2_d.html", null ],
+    [ "ThresholdGenerator", "class_threshold_generator.html", null ],
+    [ "TimeBasedInterpolator", "class_time_based_interpolator.html", "class_time_based_interpolator" ],
+    [ "VelocityGenerator", "class_velocity_generator.html", null ],
+    [ "WaveGenerator1D", "class_wave_generator1_d.html", null ]
 ];

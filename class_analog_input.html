@@ -91,6 +91,12 @@ $(function(){initNavTree('class_analog_input.html','','class_analog_input-member
   <div class="headertitle"><div class="title">AnalogInput Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for AnalogInput:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_analog_input.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -130,6 +136,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_deadband</b> (Con
 void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></tr>
 <tr class="memitem:af143ba031f43d5b8a5d4766ed9737cf9" id="r_af143ba031f43d5b8a5d4766ed9737cf9"><td class="memItemLeft" align="right" valign="top"><a id="af143ba031f43d5b8a5d4766ed9737cf9" name="af143ba031f43d5b8a5d4766ed9737cf9"></a>
 ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</td></tr>
+<tr class="memitem:ac84e6d7c1beda9c24a551a992fd1e7b0" id="r_ac84e6d7c1beda9c24a551a992fd1e7b0"><td class="memItemLeft" align="right" valign="top"><a id="ac84e6d7c1beda9c24a551a992fd1e7b0" name="ac84e6d7c1beda9c24a551a992fd1e7b0"></a>
+ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>read_raw</b> ()</td></tr>
+<tr class="memitem:a398254742cd2c72bc47166fcabd85fa1" id="r_a398254742cd2c72bc47166fcabd85fa1"><td class="memItemLeft" align="right" valign="top"><a id="a398254742cd2c72bc47166fcabd85fa1" name="a398254742cd2c72bc47166fcabd85fa1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -162,18 +172,17 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_deadband_uppe
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ad5e6d4e5163d774cb6638f042b9d790f" id="r_ad5e6d4e5163d774cb6638f042b9d790f"><td class="memItemLeft" align="right" valign="top"><a id="ad5e6d4e5163d774cb6638f042b9d790f" name="ad5e6d4e5163d774cb6638f042b9d790f"></a>
-static <a class="el" href="class_analog_input.html">AnalogInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>adc1_inputs</b> [MAX_NUM_ADC_INPUTS] = {nullptr, nullptr}</td></tr>
-<tr class="memitem:a8fc774d8b7b91dcdc193f778c222bb2c" id="r_a8fc774d8b7b91dcdc193f778c222bb2c"><td class="memItemLeft" align="right" valign="top"><a id="a8fc774d8b7b91dcdc193f778c222bb2c" name="a8fc774d8b7b91dcdc193f778c222bb2c"></a>
-static <a class="el" href="class_analog_input.html">AnalogInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>adc2_inputs</b> [MAX_NUM_ADC_INPUTS] = {nullptr, nullptr}</td></tr>
-<tr class="memitem:addd399f922d723a93f0b0ffe41a3e114" id="r_addd399f922d723a93f0b0ffe41a3e114"><td class="memItemLeft" align="right" valign="top"><a id="addd399f922d723a93f0b0ffe41a3e114" name="addd399f922d723a93f0b0ffe41a3e114"></a>
-static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>module_num_inputs</b> [NUM_ADC_MODULES] = {0, 0}</td></tr>
-<tr class="memitem:a5db36e0b1dffeb15be9f690e6fdaa262" id="r_a5db36e0b1dffeb15be9f690e6fdaa262"><td class="memItemLeft" align="right" valign="top"><a id="a5db36e0b1dffeb15be9f690e6fdaa262" name="a5db36e0b1dffeb15be9f690e6fdaa262"></a>
-static volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>module_current_input_index</b> [NUM_ADC_MODULES] = {0, 0}</td></tr>
+<tr class="memitem:a28f19f3b8abf60efa06008f363726541" id="r_a28f19f3b8abf60efa06008f363726541"><td class="memItemLeft" align="right" valign="top"><a id="a28f19f3b8abf60efa06008f363726541" name="a28f19f3b8abf60efa06008f363726541"></a>
+static <a class="el" href="class_analog_input.html">AnalogInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>adc1_inputs</b> [MAX_NUM_ADC_INPUTS]</td></tr>
+<tr class="memitem:afd5acfb1b0e0155a1b0178a592a597fb" id="r_afd5acfb1b0e0155a1b0178a592a597fb"><td class="memItemLeft" align="right" valign="top"><a id="afd5acfb1b0e0155a1b0178a592a597fb" name="afd5acfb1b0e0155a1b0178a592a597fb"></a>
+static <a class="el" href="class_analog_input.html">AnalogInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>adc2_inputs</b> [MAX_NUM_ADC_INPUTS]</td></tr>
+<tr class="memitem:aa3dbc699762a66caab2e2aa6b33102f8" id="r_aa3dbc699762a66caab2e2aa6b33102f8"><td class="memItemLeft" align="right" valign="top"><a id="aa3dbc699762a66caab2e2aa6b33102f8" name="aa3dbc699762a66caab2e2aa6b33102f8"></a>
+static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>module_num_inputs</b> [NUM_ADC_MODULES]</td></tr>
+<tr class="memitem:ab4738b74775eaa728199db996eb3c93a" id="r_ab4738b74775eaa728199db996eb3c93a"><td class="memItemLeft" align="right" valign="top"><a id="ab4738b74775eaa728199db996eb3c93a" name="ab4738b74775eaa728199db996eb3c93a"></a>
+static volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>module_current_input_index</b> [NUM_ADC_MODULES]</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="analog__in_8hpp_source.html">analog_in.hpp</a></li>
-<li>lib/<b>analog_in.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

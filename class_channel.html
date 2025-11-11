@@ -88,11 +88,11 @@ $(function(){initNavTree('class_channel.html','','class_channel-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Channel Class Reference</div></div>
+  <div class="headertitle"><div class="title">Channel Class Reference<div class="ingroups"><a class="el" href="group__channels.html">Channels</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="class_channel.html" title="Channel.">Channel</a>.  
+<p>Channels are modules that store the machine's positional state.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="channels_8hpp_source.html">channels.hpp</a>&gt;</code></p>
@@ -107,9 +107,9 @@ Inheritance diagram for Channel:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a395b2f1afe3e1351806fb826e5a23d42" id="r_a395b2f1afe3e1351806fb826e5a23d42"><td class="memItemLeft" align="right" valign="top"><a id="a395b2f1afe3e1351806fb826e5a23d42" name="a395b2f1afe3e1351806fb826e5a23d42"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memdesc:a395b2f1afe3e1351806fb826e5a23d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_channel.html" title="Channel.">Channel</a> with no output port. Not for normal use. <br /></td></tr>
+<tr class="memdesc:a395b2f1afe3e1351806fb826e5a23d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> with no output port. Not for normal use. <br /></td></tr>
 <tr class="memitem:a93505d47732a9a17a97dfb848defadf5" id="r_a93505d47732a9a17a97dfb848defadf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93505d47732a9a17a97dfb848defadf5">begin</a> (<a class="el" href="class_output_port.html">OutputPort</a> *target_output_port, uint8_t output_signal)</td></tr>
-<tr class="memdesc:a93505d47732a9a17a97dfb848defadf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_channel.html" title="Channel.">Channel</a> with a target <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a> and output signal.  <br /></td></tr>
+<tr class="memdesc:a93505d47732a9a17a97dfb848defadf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> with a target <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a> and output signal.  <br /></td></tr>
 <tr class="memitem:ac73f65baf832b880f262e99ad6c79606" id="r_ac73f65baf832b880f262e99ad6c79606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac73f65baf832b880f262e99ad6c79606">set_max_pulse_rate</a> (float max_pulses_per_sec)</td></tr>
 <tr class="memdesc:ac73f65baf832b880f262e99ad6c79606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maxium allowable pulse rate for the channel.  <br /></td></tr>
 <tr class="memitem:acfd40d913937c2ef292f9d6b00d9f144" id="r_acfd40d913937c2ef292f9d6b00d9f144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfd40d913937c2ef292f9d6b00d9f144">set_ratio</a> (float input_units, float channel_units=1.0)</td></tr>
@@ -160,8 +160,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>filtering_on</b> = fa
 <tr class="memdesc:a2b370f0b880c356df887b05a55a46b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating whether filtering is enabled for the channel. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_channel.html" title="Channel.">Channel</a>. </p>
-<p>Channels are modules that store the machine's positional state. A <a class="el" href="class_channel.html" title="Channel.">Channel</a> directly interfaces with an <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a> by mapping to a particular signal flag (e.g. "X"). Channels contain a target position variable that can be modified by upstream components such as motion generators. They also contain a variable representing their current position. Each interrupt frame, the channel increments or decrements the current position when needed to drive |target-current| &lt; 0.5, and correspondingly sets step and direction flags on its mapped <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a>. Any number of channels can be instantiated, often corresponding to axes of the machine machine. Basic Modules may contain multiple channels that map to distinct flags on the same <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a>. Driver Modules typically have multiple channels that each map to a unique <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a>, that then generate step/direction signals for a motor drive module. Here's an example of how to instantiate and configure a <a class="el" href="class_channel.html" title="Channel.">Channel</a> and map it to an <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a>: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_a; </div>
+<div class="textblock"><p>Channels are modules that store the machine's positional state. </p>
+<p>A <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> directly interfaces with an <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a> by mapping to a particular signal flag (e.g. "X").Channels contain a target position variable that can be modified by upstream components such as motion generators. They also contain a variable representing their current position. Each interrupt frame, the channel increments or decrements the current position when needed to drive |target-current| &lt; 0.5, and correspondingly sets step and direction flags on its mapped <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>. Any number of channels can be instantiated, often corresponding to axes of the machine machine. Basic Modules may contain multiple channels that map to distinct flags on the same <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>. Driver Modules typically have multiple channels that each map to a unique <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>, that then generate step/direction signals for a motor drive module. Here's an example of how to instantiate and configure a <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> and map it to an <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_a; </div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_a;</div>
 <div class="line"> </div>
@@ -194,10 +194,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>filtering_on</b> = fa
       </table>
 </div><div class="memdoc">
 
-<p>Initialize the <a class="el" href="class_channel.html" title="Channel.">Channel</a> with a target <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a> and output signal. </p>
+<p>Initialize the <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> with a target <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a> and output signal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target_output_port</td><td>Pointer to the target <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a>. </td></tr>
+    <tr><td class="paramname">target_output_port</td><td>Pointer to the target <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>. </td></tr>
     <tr><td class="paramname">output_signal</td><td>Index of the output signal (SIGNAL_X, SIGNAL_Y, etc.). </td></tr>
   </table>
   </dd>

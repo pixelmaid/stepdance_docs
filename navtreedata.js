@@ -25,6 +25,8 @@
 var NAVTREE =
 [
   [ "Stepdance Software Library", "index.html", [
+    [ "Stepdance Software Library Documentation", "index.html", "index" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -44,7 +46,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"analog_in_test_2analog_in_test_8ino-example.html"
+"analog__in_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

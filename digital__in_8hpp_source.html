@@ -132,7 +132,7 @@ $(function(){initNavTree('digital__in_8hpp_source.html','',''); });
 </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_button.html">   39</a></span><span class="keyword">class </span>Button{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_button.html">   39</a></span><span class="keyword">class </span>Button : <span class="keyword">public</span> Plugin{</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    Button();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    uint8_t read(); <span class="comment">//returns button state</span></div>
@@ -151,28 +151,30 @@ $(function(){initNavTree('digital__in_8hpp_source.html','',''); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">static</span> Button* registered_buttons[MAX_NUM_BUTTONS]; <span class="comment">//stores all registered buttons</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">static</span> uint8_t num_registered_buttons;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_button_kilohertz_plugin.html">ButtonKilohertzPlugin</a> kilohertz_plugin; <span class="comment">// runs in the kilohertz frame</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    uint8_t input_pin;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    uint8_t invert = BUTTON_NON_INVERTED;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    uint16_t debounce_period_ms = DIGITAL_IN_DEFAULT_DEBOUNCE_MS;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    uint8_t button_mode = BUTTON_MODE_STANDARD;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">volatile</span> uint16_t debounce_blackout_remaining_ms = 0; <span class="comment">//starts at debounce_period_ms, and counts down to zero</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">volatile</span> uint8_t button_state = 0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">volatile</span> uint8_t change_flag = 0; <span class="comment">//set when the button state changes, unless a callback is provided</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">volatile</span> uint8_t last_raw_pin_state = 0;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    void (*callback_on_toggle)() = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    void (*callback_on_press)() = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    void (*callback_on_release)() = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    uint8_t input_pin;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    uint8_t invert = BUTTON_NON_INVERTED;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    uint16_t debounce_period_ms = DIGITAL_IN_DEFAULT_DEBOUNCE_MS;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    uint8_t button_mode = BUTTON_MODE_STANDARD;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">volatile</span> uint16_t debounce_blackout_remaining_ms = 0; <span class="comment">//starts at debounce_period_ms, and counts down to zero</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">volatile</span> uint8_t button_state = 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">volatile</span> uint8_t change_flag = 0; <span class="comment">//set when the button state changes, unless a callback is provided</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">volatile</span> uint8_t last_raw_pin_state = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    void (*callback_on_toggle)() = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    void (*callback_on_press)() = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    void (*callback_on_release)() = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">//digital_in_h</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif </span><span class="comment">//digital_in_h</span></div>
 <div class="ttc" id="aclass_button_kilohertz_plugin_html"><div class="ttname"><a href="class_button_kilohertz_plugin.html">ButtonKilohertzPlugin</a></div><div class="ttdef"><b>Definition</b> digital_in.hpp:31</div></div>
+<div class="ttc" id="aclass_r_p_c_html"><div class="ttname"><a href="class_r_p_c.html">RPC</a></div><div class="ttdef"><b>Definition</b> rpc.hpp:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

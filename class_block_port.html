@@ -88,69 +88,130 @@ $(function(){initNavTree('class_block_port.html','','class_block_port-members');
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">BlockPort Class Reference</div></div>
+  <div class="headertitle"><div class="title">BlockPort Class Reference<div class="ingroups"><a class="el" href="group__core.html">Core Components</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance components (E.g. Channels, Kinematics, Generators, etc)  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="core_8hpp_source.html">core.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adcdf52455b347f9f3a77d539c470d763" id="r_adcdf52455b347f9f3a77d539c470d763"><td class="memItemLeft" align="right" valign="top"><a id="adcdf52455b347f9f3a77d539c470d763" name="adcdf52455b347f9f3a77d539c470d763"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio</b> (float world_units, float block_units=1.0)</td></tr>
-<tr class="memitem:a15141b0edfad4e702588f16599e2655b" id="r_a15141b0edfad4e702588f16599e2655b"><td class="memItemLeft" align="right" valign="top"><a id="a15141b0edfad4e702588f16599e2655b" name="a15141b0edfad4e702588f16599e2655b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> (<a class="el" href="class_block_port.html">BlockPort</a> *map_target, uint8_t mode)</td></tr>
+<tr class="memitem:a1b0f7e5c475c6b7e260be652d3e0adb9" id="r_a1b0f7e5c475c6b7e260be652d3e0adb9"><td class="memItemLeft" align="right" valign="top"><a id="a1b0f7e5c475c6b7e260be652d3e0adb9" name="a1b0f7e5c475c6b7e260be652d3e0adb9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BlockPort</b> ()</td></tr>
+<tr class="memdesc:a1b0f7e5c475c6b7e260be652d3e0adb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. Initializes a <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> instance. You do not need to call this directly; BlockPorts are typically members of other components and are automatically initialized when the component is initialized. <br /></td></tr>
+<tr class="memitem:adcdf52455b347f9f3a77d539c470d763" id="r_adcdf52455b347f9f3a77d539c470d763"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcdf52455b347f9f3a77d539c470d763">set_ratio</a> (float world_units, float block_units=1.0)</td></tr>
+<tr class="memdesc:adcdf52455b347f9f3a77d539c470d763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ratio between world units and block units for this <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for automatic conversion. Default is 1:1. For example if ou want the <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to transmit data in millimeters corresponding to a single step, you would set the ratio to 0.01 world units to 1 block_units (i.e. 1 step = 0.01mm).  <br /></td></tr>
+<tr class="memitem:a15141b0edfad4e702588f16599e2655b" id="r_a15141b0edfad4e702588f16599e2655b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15141b0edfad4e702588f16599e2655b">map</a> (<a class="el" href="class_block_port.html">BlockPort</a> *map_target, uint8_t mode)</td></tr>
+<tr class="memdesc:a15141b0edfad4e702588f16599e2655b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps this <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to a target <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> with a specified mode (INCREMENTAL or ABSOLUTE).  <br /></td></tr>
 <tr class="memitem:a5c274518e2f625878f717aab25a51d4e" id="r_a5c274518e2f625878f717aab25a51d4e"><td class="memItemLeft" align="right" valign="top"><a id="a5c274518e2f625878f717aab25a51d4e" name="a5c274518e2f625878f717aab25a51d4e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> (<a class="el" href="class_block_port.html">BlockPort</a> *map_target)</td></tr>
-<tr class="memitem:aa4edc4e34721ae82fe624db591e6d484" id="r_aa4edc4e34721ae82fe624db591e6d484"><td class="memItemLeft" align="right" valign="top"><a id="aa4edc4e34721ae82fe624db591e6d484" name="aa4edc4e34721ae82fe624db591e6d484"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (float64_t value, uint8_t mode)</td></tr>
-<tr class="memitem:a0e61b493a03687e4a6ac314a88320584" id="r_a0e61b493a03687e4a6ac314a88320584"><td class="memItemLeft" align="right" valign="top"><a id="a0e61b493a03687e4a6ac314a88320584" name="a0e61b493a03687e4a6ac314a88320584"></a>
-float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (uint8_t mode)</td></tr>
-<tr class="memitem:af58b93dfd0ae1ea92886fd033495cfa0" id="r_af58b93dfd0ae1ea92886fd033495cfa0"><td class="memItemLeft" align="right" valign="top"><a id="af58b93dfd0ae1ea92886fd033495cfa0" name="af58b93dfd0ae1ea92886fd033495cfa0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_now</b> (float64_t)</td></tr>
-<tr class="memitem:a489277bffcb0a95c74d1558608ed7d2e" id="r_a489277bffcb0a95c74d1558608ed7d2e"><td class="memItemLeft" align="right" valign="top"><a id="a489277bffcb0a95c74d1558608ed7d2e" name="a489277bffcb0a95c74d1558608ed7d2e"></a>
-float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_now</b> ()</td></tr>
-<tr class="memitem:adbf1c081966c415f295a18ef6b8737cf" id="r_adbf1c081966c415f295a18ef6b8737cf"><td class="memItemLeft" align="right" valign="top"><a id="adbf1c081966c415f295a18ef6b8737cf" name="adbf1c081966c415f295a18ef6b8737cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (volatile float64_t *target)</td></tr>
-<tr class="memitem:a6d2f3e7a15b26477e00262956f53fb62" id="r_a6d2f3e7a15b26477e00262956f53fb62"><td class="memItemLeft" align="right" valign="top"><a id="a6d2f3e7a15b26477e00262956f53fb62" name="a6d2f3e7a15b26477e00262956f53fb62"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_target</b> (volatile float64_t *target)</td></tr>
-<tr class="memitem:aed29db56637b1d51accce4d5a5ce6c05" id="r_aed29db56637b1d51accce4d5a5ce6c05"><td class="memItemLeft" align="right" valign="top"><a id="aed29db56637b1d51accce4d5a5ce6c05" name="aed29db56637b1d51accce4d5a5ce6c05"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
-<tr class="memitem:a2a7c938a884ba68fb0c2906b1d544a79" id="r_a2a7c938a884ba68fb0c2906b1d544a79"><td class="memItemLeft" align="right" valign="top"><a id="a2a7c938a884ba68fb0c2906b1d544a79" name="a2a7c938a884ba68fb0c2906b1d544a79"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reverse_update</b> ()</td></tr>
-<tr class="memitem:a5bb9a4183be896a314994ff0372b6695" id="r_a5bb9a4183be896a314994ff0372b6695"><td class="memItemLeft" align="right" valign="top"><a id="a5bb9a4183be896a314994ff0372b6695" name="a5bb9a4183be896a314994ff0372b6695"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (float64_t value, uint8_t mode)</td></tr>
-<tr class="memitem:ac885a20135059116de8329d3f9b82ecd" id="r_ac885a20135059116de8329d3f9b82ecd"><td class="memItemLeft" align="right" valign="top"><a id="ac885a20135059116de8329d3f9b82ecd" name="ac885a20135059116de8329d3f9b82ecd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (float64_t value)</td></tr>
-<tr class="memitem:ae19a195fcb612dd9de3e52beec5a75e1" id="r_ae19a195fcb612dd9de3e52beec5a75e1"><td class="memItemLeft" align="right" valign="top"><a id="ae19a195fcb612dd9de3e52beec5a75e1" name="ae19a195fcb612dd9de3e52beec5a75e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (float64_t value, bool raw=false)</td></tr>
-<tr class="memitem:ad7a0ca88fe4bb022f54b2390c3e0606a" id="r_ad7a0ca88fe4bb022f54b2390c3e0606a"><td class="memItemLeft" align="right" valign="top"><a id="ad7a0ca88fe4bb022f54b2390c3e0606a" name="ad7a0ca88fe4bb022f54b2390c3e0606a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (uint8_t mode)</td></tr>
-<tr class="memitem:a665409dc85cdece197e85d83c6e08099" id="r_a665409dc85cdece197e85d83c6e08099"><td class="memItemLeft" align="right" valign="top"><a id="a665409dc85cdece197e85d83c6e08099" name="a665409dc85cdece197e85d83c6e08099"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> ()</td></tr>
-<tr class="memitem:a06ed714429e35a9ad313310053bc2582" id="r_a06ed714429e35a9ad313310053bc2582"><td class="memItemLeft" align="right" valign="top"><a id="a06ed714429e35a9ad313310053bc2582" name="a06ed714429e35a9ad313310053bc2582"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>pull</b> (uint8_t mode)</td></tr>
-<tr class="memitem:ab6bca5882bbc8e4a3ec7d8512e97e6bc" id="r_ab6bca5882bbc8e4a3ec7d8512e97e6bc"><td class="memItemLeft" align="right" valign="top"><a id="ab6bca5882bbc8e4a3ec7d8512e97e6bc" name="ab6bca5882bbc8e4a3ec7d8512e97e6bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>pull</b> ()</td></tr>
-<tr class="memitem:a82af2f6c256fa8c62ccd2867f3eb1c02" id="r_a82af2f6c256fa8c62ccd2867f3eb1c02"><td class="memItemLeft" align="right" valign="top"><a id="a82af2f6c256fa8c62ccd2867f3eb1c02" name="a82af2f6c256fa8c62ccd2867f3eb1c02"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> ()</td></tr>
-<tr class="memitem:a872964b3c96d9c9f4016a9ca4274925a" id="r_a872964b3c96d9c9f4016a9ca4274925a"><td class="memItemLeft" align="right" valign="top"><a id="a872964b3c96d9c9f4016a9ca4274925a" name="a872964b3c96d9c9f4016a9ca4274925a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></tr>
-<tr class="memitem:a6e5b158cc0f75f567a0dab345325e0ea" id="r_a6e5b158cc0f75f567a0dab345325e0ea"><td class="memItemLeft" align="right" valign="top"><a id="a6e5b158cc0f75f567a0dab345325e0ea" name="a6e5b158cc0f75f567a0dab345325e0ea"></a>
-float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert_block_to_world_units</b> (float64_t block_units)</td></tr>
-<tr class="memitem:a38173dac9a0a3e75286826029eeb3330" id="r_a38173dac9a0a3e75286826029eeb3330"><td class="memItemLeft" align="right" valign="top"><a id="a38173dac9a0a3e75286826029eeb3330" name="a38173dac9a0a3e75286826029eeb3330"></a>
-float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert_world_to_block_units</b> (float64_t world_units)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a4c84725b4be4f7a7333f99c5656ca18b" id="r_a4c84725b4be4f7a7333f99c5656ca18b"><td class="memItemLeft" align="right" valign="top"><a id="a4c84725b4be4f7a7333f99c5656ca18b" name="a4c84725b4be4f7a7333f99c5656ca18b"></a>
-volatile float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>incremental_buffer</b> = 0</td></tr>
-<tr class="memitem:a34173de4d7310b1160825d88059a36ae" id="r_a34173de4d7310b1160825d88059a36ae"><td class="memItemLeft" align="right" valign="top"><a id="a34173de4d7310b1160825d88059a36ae" name="a34173de4d7310b1160825d88059a36ae"></a>
-volatile float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>absolute_buffer</b> = 0</td></tr>
-<tr class="memitem:a7d9a702d5a59cb88f680d120802b1d3a" id="r_a7d9a702d5a59cb88f680d120802b1d3a"><td class="memItemLeft" align="right" valign="top"><a id="a7d9a702d5a59cb88f680d120802b1d3a" name="a7d9a702d5a59cb88f680d120802b1d3a"></a>
-volatile float64_t *&#160;</td><td class="memItemRight" valign="bottom"><b>target</b> = nullptr</td></tr>
+<tr class="memitem:a0e61b493a03687e4a6ac314a88320584" id="r_a0e61b493a03687e4a6ac314a88320584"><td class="memItemLeft" align="right" valign="top">float64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e61b493a03687e4a6ac314a88320584">read</a> (uint8_t mode)</td></tr>
+<tr class="memdesc:a0e61b493a03687e4a6ac314a88320584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position value of the <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> in world units. Reading in INCREMENTAL mode returns the change to the position since the last read or update; reading in ABSOLUTE mode returns the absolute position value.  <br /></td></tr>
+<tr class="memitem:a073b5a1e106bfcc72748bb5aa9749dc0" id="r_a073b5a1e106bfcc72748bb5aa9749dc0"><td class="memItemLeft" align="right" valign="top"><a id="a073b5a1e106bfcc72748bb5aa9749dc0" name="a073b5a1e106bfcc72748bb5aa9749dc0"></a>
+float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_absolute</b> ()</td></tr>
+<tr class="memdesc:a073b5a1e106bfcc72748bb5aa9749dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the absolute position value of the <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> in world units. <br /></td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance components (E.g. Channels, Kinematics, Generators, etc) </p>
+<p>BlockPorts manage push and pull of data between components automatically through the <a class="el" href="#a15141b0edfad4e702588f16599e2655b" title="Maps this BlockPort to a target BlockPort with a specified mode (INCREMENTAL or ABSOLUTE).">map()</a> method, which when called assigns a target to the <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. Each <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> has an internal position value. On each interrupt frame a component reads its input BlockPorts' position, performs internal calculations specific to the component, and then stores the result in its output BlockPorts' position. The component then calls BlockPort.push() for each output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> which transmits the position value to the mapped target <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. However BlockPorts can only have one target of their map function. To get around this you can also have <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> Inputs pull from multiple other BlockPorts by mapping an input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to either an input or an output. The Component will first call BlockPort.pull() on its input BlockPorts to retrieve the latest values from all mapped BlockPorts, then perform its internal calculations, and finally call BlockPort.push() on its output BlockPorts to transmit the results.</p>
+<div class="image">
+<img src="blockport_diagram.png" alt="" width="400px"/>
+<div class="caption">
+Typical mapping patterns of BlockPorts. Components (A-E) each have one BlockPort Input and one BlockPort Output. Multiple BlockPort Outputs can map to a single Input (e.g. A.output and C.output are both mapped to B.input). Inputs can map to multiple inputs or outputs (e.g. D.input is mapped to C.output)</div></div>
+<p>You will never instantiate a <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> directly; instead, you can access the BlockPorts that are members of different components. The example below shows how to access and map an <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a>'s <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to a <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a>'s input target position <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> inputA;</div>
+<div class="line">inputA.<a class="code hl_function" href="class_input_port.html#a7bec13041ef7d76fbcb3f4126300270a">begin</a>(INPUT_A); <span class="comment">// Initialize InputPort A</span></div>
+<div class="line">inputA.<a class="code hl_variable" href="class_input_port.html#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="#a15141b0edfad4e702588f16599e2655b">map</a>(channelX.input_target_position); <span class="comment">// Map SIGNAL_X to Channel X&#39;s input target position</span></div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a15141b0edfad4e702588f16599e2655b" name="a15141b0edfad4e702588f16599e2655b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15141b0edfad4e702588f16599e2655b">&#9670;&#160;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockPort::map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_block_port.html">BlockPort</a> *</td>          <td class="paramname"><span class="paramname"><em>map_target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maps this <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to a target <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> with a specified mode (INCREMENTAL or ABSOLUTE). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map_target</td><td>Pointer to the target <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to map to. </td></tr>
+    <tr><td class="paramname">mode</td><td>Mode of operation: INCREMENTAL or ABSOLUTE. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e61b493a03687e4a6ac314a88320584" name="a0e61b493a03687e4a6ac314a88320584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e61b493a03687e4a6ac314a88320584">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float64_t BlockPort::read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the position value of the <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> in world units. Reading in INCREMENTAL mode returns the change to the position since the last read or update; reading in ABSOLUTE mode returns the absolute position value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>Mode of operation: INCREMENTAL or ABSOLUTE. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adcdf52455b347f9f3a77d539c470d763" name="adcdf52455b347f9f3a77d539c470d763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcdf52455b347f9f3a77d539c470d763">&#9670;&#160;</a></span>set_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockPort::set_ratio </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>world_units</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>block_units</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the ratio between world units and block units for this <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for automatic conversion. Default is 1:1. For example if ou want the <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to transmit data in millimeters corresponding to a single step, you would set the ratio to 0.01 world units to 1 block_units (i.e. 1 step = 0.01mm). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world_units</td><td>Number of world units. </td></tr>
+    <tr><td class="paramname">block_units</td><td>Number of block units. Default is 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="core_8hpp_source.html">core.hpp</a></li>
-<li>lib/<b>core.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

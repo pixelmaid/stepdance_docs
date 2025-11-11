@@ -95,11 +95,8 @@ $(function(){initNavTree('class_time_based_interpolator.html','','class_time_bas
 Inheritance diagram for TimeBasedInterpolator:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_time_based_interpolator.png" usemap="#TimeBasedInterpolator_map" alt=""/>
-  <map id="TimeBasedInterpolator_map" name="TimeBasedInterpolator_map">
-<area href="class_plugin.html" alt="Plugin" shape="rect" coords="0,0,137,24"/>
-  </map>
-</div></div>
+  <img src="class_time_based_interpolator.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -110,13 +107,16 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ab0b7c5caeda2d897f6d98b9d9b7ae4" id="r_a1ab0b7c5caeda2d897f6d98b9d9b7ae4"><td class="memItemLeft" align="right" valign="top"><a id="a1ab0b7c5caeda2d897f6d98b9d9b7ae4" name="a1ab0b7c5caeda2d897f6d98b9d9b7ae4"></a>
 int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>add_block</b> (struct <a class="el" href="struct_time_based_interpolator_1_1motion__block.html">motion_block</a> *block_to_add)</td></tr>
+<tr class="memitem:ac7d867e097fab22eba8754f97bf8f62c" id="r_ac7d867e097fab22eba8754f97bf8f62c"><td class="memItemLeft" align="right" valign="top"><a id="ac7d867e097fab22eba8754f97bf8f62c" name="ac7d867e097fab22eba8754f97bf8f62c"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>add_move</b> (float32_t move_time_s, DecimalPosition delta_x, DecimalPosition delta_y, DecimalPosition delta_z, DecimalPosition delta_e, DecimalPosition delta_r, DecimalPosition delta_t)</td></tr>
 <tr class="memitem:a93e3c39bcfc47fa6b223422bf8e14481" id="r_a93e3c39bcfc47fa6b223422bf8e14481"><td class="memItemLeft" align="right" valign="top"><a id="a93e3c39bcfc47fa6b223422bf8e14481" name="a93e3c39bcfc47fa6b223422bf8e14481"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="inherit_header pub_methods_class_plugin"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_plugin')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_plugin.html">Plugin</a></td></tr>
-<tr class="memitem:a19973dd26d55450f784adc40c0beb648 inherit pub_methods_class_plugin" id="r_a19973dd26d55450f784adc40c0beb648"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> ()</td></tr>
-<tr class="memitem:ab0ac3d6ff1e5b389eaa24ef5419f4208 inherit pub_methods_class_plugin" id="r_ab0ac3d6ff1e5b389eaa24ef5419f4208"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></tr>
+<tr class="memitem:a0af6e18b3908c93c85318a2f7a37562c" id="r_a0af6e18b3908c93c85318a2f7a37562c"><td class="memItemLeft" align="right" valign="top"><a id="a0af6e18b3908c93c85318a2f7a37562c" name="a0af6e18b3908c93c85318a2f7a37562c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_idle</b> ()</td></tr>
+<tr class="memitem:a88f2dfecc864b27ec2b32bd9b29ffe96" id="r_a88f2dfecc864b27ec2b32bd9b29ffe96"><td class="memItemLeft" align="right" valign="top"><a id="a88f2dfecc864b27ec2b32bd9b29ffe96" name="a88f2dfecc864b27ec2b32bd9b29ffe96"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>queue_is_full</b> ()</td></tr>
+<tr class="memitem:adff7513fcbd829ebc69333cbe2a20230" id="r_adff7513fcbd829ebc69333cbe2a20230"><td class="memItemLeft" align="right" valign="top"><a id="adff7513fcbd829ebc69333cbe2a20230" name="adff7513fcbd829ebc69333cbe2a20230"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -139,60 +139,11 @@ volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>slots_re
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a3a5f8a6ed76fe5484693f04a07ef0475" id="r_a3a5f8a6ed76fe5484693f04a07ef0475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a5f8a6ed76fe5484693f04a07ef0475">run</a> ()</td></tr>
-<tr class="inherit_header pro_methods_class_plugin"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_plugin')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_plugin.html">Plugin</a></td></tr>
-<tr class="memitem:adeab53ca4bfc2b6b2b1b5c82376ba312 inherit pro_methods_class_plugin" id="r_adeab53ca4bfc2b6b2b1b5c82376ba312"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_plugin</b> ()</td></tr>
-<tr class="memitem:a7868d4f3742c6c6633c102c55f0cd44d inherit pro_methods_class_plugin" id="r_a7868d4f3742c6c6633c102c55f0cd44d"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_plugin</b> (uint8_t execution_target)</td></tr>
-<tr class="memitem:aade6be28a6bb6083bf93375d2d188793 inherit pro_methods_class_plugin" id="r_aade6be28a6bb6083bf93375d2d188793"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_class_plugin"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_plugin')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="class_plugin.html">Plugin</a></td></tr>
-<tr class="memitem:a8015ef99773c711c1e646f781e0e13ef inherit pub_static_methods_class_plugin" id="r_a8015ef99773c711c1e646f781e0e13ef"><td class="memItemLeft" align="right" valign="top">
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_input_port_frame_plugins</b> ()</td></tr>
-<tr class="memitem:a48f0ac31b9e20e3e353f5c002f705f48 inherit pub_static_methods_class_plugin" id="r_a48f0ac31b9e20e3e353f5c002f705f48"><td class="memItemLeft" align="right" valign="top">
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_pre_channel_frame_plugins</b> ()</td></tr>
-<tr class="memitem:a04f7669f164cd1c6260ba8173712c0d8 inherit pub_static_methods_class_plugin" id="r_a04f7669f164cd1c6260ba8173712c0d8"><td class="memItemLeft" align="right" valign="top">
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_post_channel_frame_plugins</b> ()</td></tr>
-<tr class="memitem:a2066ab4869bf159ec49613714fb5fb1e inherit pub_static_methods_class_plugin" id="r_a2066ab4869bf159ec49613714fb5fb1e"><td class="memItemLeft" align="right" valign="top">
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_kilohertz_plugins</b> ()</td></tr>
-<tr class="memitem:a26c5eb984bea11634651134fd966a8cb inherit pub_static_methods_class_plugin" id="r_a26c5eb984bea11634651134fd966a8cb"><td class="memItemLeft" align="right" valign="top">
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_loop_plugins</b> ()</td></tr>
+<tr class="memitem:a3a5f8a6ed76fe5484693f04a07ef0475" id="r_a3a5f8a6ed76fe5484693f04a07ef0475"><td class="memItemLeft" align="right" valign="top"><a id="a3a5f8a6ed76fe5484693f04a07ef0475" name="a3a5f8a6ed76fe5484693f04a07ef0475"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a3a5f8a6ed76fe5484693f04a07ef0475" name="a3a5f8a6ed76fe5484693f04a07ef0475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a5f8a6ed76fe5484693f04a07ef0475">&#9670;&#160;</a></span>run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TimeBasedInterpolator::run </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_plugin.html">Plugin</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="interpolators_8hpp_source.html">interpolators.hpp</a></li>
-<li>lib/<b>interpolators.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['inputport_0',['InputPort',['../class_input_port.html',1,'InputPort'],['../class_input_port.html#af2431071e069bf97869b474ae313406b',1,'InputPort::InputPort()']]],
-  ['invert_5foutput_1',['invert_output',['../class_channel.html#ab493519b6aa6d2bdcdbb34ef72b2c20d',1,'Channel::invert_output()'],['../class_channel.html#aabc1e8d3f0563b1b70e8107d2dd7751d',1,'Channel::invert_output(bool invert)']]],
-  ['is_5foutside_5flimits_2',['is_outside_limits',['../class_channel.html#a7bfd0c8dbc915af01f2f03633257fbc9',1,'Channel']]]
+  ['filtered_5ftarget_5fposition_0',['filtered_target_position',['../class_channel.html#afc949cb6c6bbadcc164ab8191e04558c',1,'Channel']]],
+  ['filtering_5fon_1',['filtering_on',['../class_channel.html#a2b370f0b880c356df887b05a55a46b95',1,'Channel']]],
+  ['filters_2',['Filters',['../group__filters.html',1,'']]],
+  ['fourtrackplayer_3',['FourTrackPlayer',['../class_four_track_player.html',1,'']]],
+  ['fourtrackrecorder_4',['FourTrackRecorder',['../class_four_track_recorder.html',1,'']]]
 ];

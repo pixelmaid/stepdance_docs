@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Stepdance Software Library: Main Page</title>
+<title>Stepdance Software Library: Stepdance Software Library Documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,10 +87,67 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Stepdance Software Library Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Stepdance Software Library Documentation </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>Welcome to the Stepdance Software Library documentation. Stepdance is a framework for building motion control systems using modular, composable components.</p>
+<h1 class="doxsection"><a class="anchor" id="overview_sec"></a>
+Overview</h1>
+<p>The Stepdance library provides a flexible architecture for motion control through several key concepts:</p>
+<ul>
+<li><b>BlockPorts</b>: Unified interface for connecting components and routing data between them</li>
+<li><b>Channels</b>: Position state management and step/direction signal generation</li>
+<li><b>Input/Output Ports</b>: Physical hardware interface for receiving and transmitting motion signals</li>
+<li><b>Generators</b>: Motion pattern and trajectory generation</li>
+<li><b>Kinematics</b>: Coordinate system transformations (Cartesian, polar, CoreXY, etc.)</li>
+<li><b>Filters</b>: Signal smoothing and noise reduction</li>
+<li><b>Interfaces</b>: External protocol support (G-code, EiBotBoard, etc.)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="getting_started"></a>
+Getting Started</h1>
+<p>To get started with Stepdance:</p>
+<ol type="1">
+<li><b>Understand BlockPorts</b>: BlockPorts are the fundamental communication mechanism between components. See <a class="el" href="group__core.html">Core Components</a> for details.</li>
+<li><b>Configure Output Ports</b>: Set up your physical output ports to send step/direction signals. See <a class="el" href="group__io.html">Input/Output Modules</a> for OutputPort configuration.</li>
+<li><b>Create Channels</b>: Channels drive motors to target positions. See <a class="el" href="group__channels.html">Channels</a> for Channel setup and usage.</li>
+<li><b>Add Motion Sources</b>: Connect input ports, generators, or other motion sources to your channels using BlockPort mapping.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="examples_sec"></a>
+Examples</h1>
+<p>Example code snippets are provided throughout the documentation. Look for code examples in the documentation for each class.</p>
+<h1 class="doxsection"><a class="anchor" id="modules_sec"></a>
+Module Organization</h1>
+<p>The library is organized into functional modules:</p><ul>
+<li><a class="el" href="group__core.html">Core Components</a> - Core framework components</li>
+<li><a class="el" href="group__io.html">Input/Output Modules</a> - Hardware I/O interfaces</li>
+<li><a class="el" href="group__channels.html">Channels</a> - Position control</li>
+<li><a class="el" href="group__generators.html">Motion Generators</a> - Motion generation</li>
+<li><a class="el" href="group__kinematics.html">Kinematics</a> - Coordinate transformations</li>
+<li><a class="el" href="group__filters.html">Filters</a> - Signal processing</li>
+<li><a class="el" href="group__interfaces.html">External Interfaces</a> - External protocols</li>
+<li><a class="el" href="group__recording.html">Recording and Playback</a> - Motion recording and playback</li>
+<li><a class="el" href="group__inputs.html">Input Devices</a> - Physical input devices</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="hardware_sec"></a>
+Supported Hardware</h1>
+<p>Stepdance runs on Teensy microcontrollers and supports:</p><ul>
+<li>Basic Modules (single input port)</li>
+<li>Machine Controller Modules (multiple I/O ports)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="resources_sec"></a>
+Additional Resources</h1>
+<ul>
+<li>GitHub Repository: <a href="https://github.com/imoyer/stepdance">https://github.com/imoyer/stepdance</a></li>
+<li>Hardware Documentation: [Add link to hardware docs]</li>
+<li>Tutorials: [Add link to tutorials]</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="license_sec"></a>
+License</h1>
+<p>[Add your license information here] </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

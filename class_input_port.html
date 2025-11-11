@@ -88,11 +88,11 @@ $(function(){initNavTree('class_input_port.html','','class_input_port-members');
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">InputPort Class Reference</div></div>
+  <div class="headertitle"><div class="title">InputPort Class Reference<div class="ingroups"><a class="el" href="group__io.html">Input/Output Modules</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="class_input_port.html" title="InputPort.">InputPort</a>.  
+<p><a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> components receive motion streams on physical Stepdance input ports, and map these signals to downstream components.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="input__ports_8hpp_source.html">input_ports.hpp</a>&gt;</code></p>
@@ -106,9 +106,9 @@ Inheritance diagram for InputPort:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af2431071e069bf97869b474ae313406b" id="r_af2431071e069bf97869b474ae313406b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2431071e069bf97869b474ae313406b">InputPort</a> ()</td></tr>
-<tr class="memdesc:af2431071e069bf97869b474ae313406b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_input_port.html" title="InputPort.">InputPort</a>.  <br /></td></tr>
+<tr class="memdesc:af2431071e069bf97869b474ae313406b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a>.  <br /></td></tr>
 <tr class="memitem:a7bec13041ef7d76fbcb3f4126300270a" id="r_a7bec13041ef7d76fbcb3f4126300270a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bec13041ef7d76fbcb3f4126300270a">begin</a> (uint8_t port_number)</td></tr>
-<tr class="memdesc:a7bec13041ef7d76fbcb3f4126300270a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_input_port.html" title="InputPort.">InputPort</a> with a port number corresponding to the target physical port on the Stepdance Board.  <br /></td></tr>
+<tr class="memdesc:a7bec13041ef7d76fbcb3f4126300270a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> with a port number corresponding to the target physical port on the Stepdance Board.  <br /></td></tr>
 <tr class="memitem:a0797c12815fab1d042c5eee79760d8f5" id="r_a0797c12815fab1d042c5eee79760d8f5"><td class="memItemLeft" align="right" valign="top"><a id="a0797c12815fab1d042c5eee79760d8f5" name="a0797c12815fab1d042c5eee79760d8f5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_all_signals</b> ()</td></tr>
 <tr class="memdesc:a0797c12815fab1d042c5eee79760d8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables all input signals (SIGNAL_X, SIGNAL_Y, SIGNAL_Z, SIGNAL_E, SIGNAL_R, SIGNAL_T). Signals are enabled by default. <br /></td></tr>
@@ -124,42 +124,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>disable_all_signals</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a7352accb51d331f3ec1f827c0af6fc24" id="r_a7352accb51d331f3ec1f827c0af6fc24"><td class="memItemLeft" align="right" valign="top">BlockPort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a></td></tr>
-<tr class="memdesc:a7352accb51d331f3ec1f827c0af6fc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">BlockPort that acts as output for the SIGNAL_X input.  <br /></td></tr>
+<tr class="memitem:a7352accb51d331f3ec1f827c0af6fc24" id="r_a7352accb51d331f3ec1f827c0af6fc24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a></td></tr>
+<tr class="memdesc:a7352accb51d331f3ec1f827c0af6fc24"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> that acts as output for the SIGNAL_X input.  <br /></td></tr>
 <tr class="memitem:a0b2ad48f40bfff29bc53dd55f84a34fb" id="r_a0b2ad48f40bfff29bc53dd55f84a34fb"><td class="memItemLeft" align="right" valign="top"><a id="a0b2ad48f40bfff29bc53dd55f84a34fb" name="a0b2ad48f40bfff29bc53dd55f84a34fb"></a>
-BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_y</b></td></tr>
-<tr class="memdesc:a0b2ad48f40bfff29bc53dd55f84a34fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">BlockPort that acts as output for the SIGNAL_Y input. <br /></td></tr>
+<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_y</b></td></tr>
+<tr class="memdesc:a0b2ad48f40bfff29bc53dd55f84a34fb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> that acts as output for the SIGNAL_Y input. <br /></td></tr>
 <tr class="memitem:afed004f3067384be0634ecc591c1870a" id="r_afed004f3067384be0634ecc591c1870a"><td class="memItemLeft" align="right" valign="top"><a id="afed004f3067384be0634ecc591c1870a" name="afed004f3067384be0634ecc591c1870a"></a>
-BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_r</b></td></tr>
-<tr class="memdesc:afed004f3067384be0634ecc591c1870a"><td class="mdescLeft">&#160;</td><td class="mdescRight">BlockPort that acts as output for the SIGNAL_R input. <br /></td></tr>
+<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_r</b></td></tr>
+<tr class="memdesc:afed004f3067384be0634ecc591c1870a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> that acts as output for the SIGNAL_R input. <br /></td></tr>
 <tr class="memitem:a7e65195177953fb499b7c6fdc88f74ba" id="r_a7e65195177953fb499b7c6fdc88f74ba"><td class="memItemLeft" align="right" valign="top"><a id="a7e65195177953fb499b7c6fdc88f74ba" name="a7e65195177953fb499b7c6fdc88f74ba"></a>
-BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_t</b></td></tr>
-<tr class="memdesc:a7e65195177953fb499b7c6fdc88f74ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">BlockPort that acts as output for the SIGNAL_T input. <br /></td></tr>
+<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_t</b></td></tr>
+<tr class="memdesc:a7e65195177953fb499b7c6fdc88f74ba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> that acts as output for the SIGNAL_T input. <br /></td></tr>
 <tr class="memitem:ac9cf91a3af212ae8ae12d44f087ad487" id="r_ac9cf91a3af212ae8ae12d44f087ad487"><td class="memItemLeft" align="right" valign="top"><a id="ac9cf91a3af212ae8ae12d44f087ad487" name="ac9cf91a3af212ae8ae12d44f087ad487"></a>
-BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_z</b></td></tr>
-<tr class="memdesc:ac9cf91a3af212ae8ae12d44f087ad487"><td class="mdescLeft">&#160;</td><td class="mdescRight">BlockPort that acts as output for the SIGNAL_Z input. <br /></td></tr>
+<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_z</b></td></tr>
+<tr class="memdesc:ac9cf91a3af212ae8ae12d44f087ad487"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> that acts as output for the SIGNAL_Z input. <br /></td></tr>
 <tr class="memitem:ae7d83e7c3c03b8edffb9f21f1caf113f" id="r_ae7d83e7c3c03b8edffb9f21f1caf113f"><td class="memItemLeft" align="right" valign="top"><a id="ae7d83e7c3c03b8edffb9f21f1caf113f" name="ae7d83e7c3c03b8edffb9f21f1caf113f"></a>
-BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_e</b></td></tr>
-<tr class="memdesc:ae7d83e7c3c03b8edffb9f21f1caf113f"><td class="mdescLeft">&#160;</td><td class="mdescRight">BlockPort that acts as output for the SIGNAL_E input. <br /></td></tr>
+<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_e</b></td></tr>
+<tr class="memdesc:ae7d83e7c3c03b8edffb9f21f1caf113f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> that acts as output for the SIGNAL_E input. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_input_port.html" title="InputPort.">InputPort</a>. </p>
-<p><a class="el" href="class_input_port.html" title="InputPort.">InputPort</a> components receive motion streams on physical Stepdance input ports, and map these signals to downstream components. Receiving and decoding of input streams occurs asynchronously. Here's an example of how to instantiate and configure an <a class="el" href="class_input_port.html" title="InputPort.">InputPort</a> and map it to an <a class="el" href="class_output_port.html" title="OutputPort.">OutputPort</a>: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> input_a; </div>
+<div class="textblock"><p><a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> components receive motion streams on physical Stepdance input ports, and map these signals to downstream components. </p>
+<p>Receiving and decoding of input streams occurs asynchronously. Here's an example of how to instantiate and configure an <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> and map it to an <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> input_a; </div>
 <div class="line"> </div>
-<div class="line">KinematicsCoreXY axidraw_kinematics;</div>
+<div class="line"><a class="code hl_class" href="class_kinematics_core_x_y.html">KinematicsCoreXY</a> axidraw_kinematics;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> setup() {</div>
 <div class="line">  <span class="comment">// -- Configure and start the input port --</span></div>
 <div class="line">  input_a.<a class="code hl_function" href="#a7bec13041ef7d76fbcb3f4126300270a">begin</a>(INPUT_A); <span class="comment">// &quot;INPUT_A&quot; specifies the physical port on the PCB for the input.</span></div>
 <div class="line">  <span class="comment">// -- Map InputPort x, y, and z Output BlockPorts to kinematics object BlockPorts --</span></div>
-<div class="line">  input_a.<a class="code hl_variable" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.set_ratio(0.01, 1); <span class="comment">//for this mapping, 1 step is 0.01mm</span></div>
-<div class="line">  input_a.<a class="code hl_variable" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.map(&amp;axidraw_kinematics.input_x);</div>
+<div class="line">  input_a.<a class="code hl_variable" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="class_block_port.html#adcdf52455b347f9f3a77d539c470d763">set_ratio</a>(0.01, 1); <span class="comment">//for this mapping, 1 step is 0.01mm</span></div>
+<div class="line">  input_a.<a class="code hl_variable" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(&amp;axidraw_kinematics.input_x);</div>
 <div class="line"> </div>
-<div class="line">  input_a.<a class="code hl_variable" href="#a0b2ad48f40bfff29bc53dd55f84a34fb">output_y</a>.set_ratio(0.01, 1); <span class="comment">//1 step is 0.01mm</span></div>
-<div class="line">  input_a.<a class="code hl_variable" href="#a0b2ad48f40bfff29bc53dd55f84a34fb">output_y</a>.map(&amp;axidraw_kinematics.input_y);</div>
+<div class="line">  input_a.<a class="code hl_variable" href="#a0b2ad48f40bfff29bc53dd55f84a34fb">output_y</a>.<a class="code hl_function" href="class_block_port.html#adcdf52455b347f9f3a77d539c470d763">set_ratio</a>(0.01, 1); <span class="comment">//1 step is 0.01mm</span></div>
+<div class="line">  input_a.<a class="code hl_variable" href="#a0b2ad48f40bfff29bc53dd55f84a34fb">output_y</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(&amp;axidraw_kinematics.input_y);</div>
 <div class="line"> </div>
-<div class="line">  input_a.<a class="code hl_variable" href="#ac9cf91a3af212ae8ae12d44f087ad487">output_z</a>.set_ratio(0.01, 1); <span class="comment">//1 step is 0.01mm</span></div>
-<div class="line">  input_a.<a class="code hl_variable" href="#ac9cf91a3af212ae8ae12d44f087ad487">output_z</a>.map(&amp;channel_z.input_target_position);</div>
+<div class="line">  input_a.<a class="code hl_variable" href="#ac9cf91a3af212ae8ae12d44f087ad487">output_z</a>.<a class="code hl_function" href="class_block_port.html#adcdf52455b347f9f3a77d539c470d763">set_ratio</a>(0.01, 1); <span class="comment">//1 step is 0.01mm</span></div>
+<div class="line">  input_a.<a class="code hl_variable" href="#ac9cf91a3af212ae8ae12d44f087ad487">output_z</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(&amp;channel_z.input_target_position);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af2431071e069bf97869b474ae313406b" name="af2431071e069bf97869b474ae313406b"></a>
@@ -177,8 +177,8 @@ BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_e</b></td
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor for <a class="el" href="class_input_port.html" title="InputPort.">InputPort</a>. </p>
-<p>Initializes an <a class="el" href="class_input_port.html" title="InputPort.">InputPort</a> instance with default, unconfigured state. This does not configure hardware or register the port; call <a class="el" href="#a7bec13041ef7d76fbcb3f4126300270a" title="Initialize the InputPort with a port number corresponding to the target physical port on the Stepdanc...">begin()</a> to initialize hardware-specific settings and register the port with the system. </p>
+<p>Default constructor for <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a>. </p>
+<p>Initializes an <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> instance with default, unconfigured state. This does not configure hardware or register the port; call <a class="el" href="#a7bec13041ef7d76fbcb3f4126300270a" title="Initialize the InputPort with a port number corresponding to the target physical port on the Stepdanc...">begin()</a> to initialize hardware-specific settings and register the port with the system. </p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_e</b></td
       </table>
 </div><div class="memdoc">
 
-<p>Initialize the <a class="el" href="class_input_port.html" title="InputPort.">InputPort</a> with a port number corresponding to the target physical port on the Stepdance Board. </p>
+<p>Initialize the <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> with a port number corresponding to the target physical port on the Stepdance Board. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port_number</td><td>Index of the physical input port (INPUT_A for all Basic Modules and INPUT_A through INPUT_D for Machine Controllers). </td></tr>
@@ -296,16 +296,17 @@ BlockPort&#160;</td><td class="memItemRight" valign="bottom"><b>output_e</b></td
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">BlockPort InputPort::output_x</td>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> InputPort::output_x</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>BlockPort that acts as output for the SIGNAL_X input. </p>
+<p><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> that acts as output for the SIGNAL_X input. </p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="#af2431071e069bf97869b474ae313406b">InputPort</a> inputA;</div>
 <div class="line">inputA.<a class="code hl_function" href="#a7bec13041ef7d76fbcb3f4126300270a">begin</a>(INPUT_A); <span class="comment">// Initialize InputPort A</span></div>
-<div class="line">inputA.<a class="code hl_variable" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.map(channelX.input_target_position); <span class="comment">// Map SIGNAL_X to Channel X&#39;s input target position</span></div>
-<div class="ttc" id="aclass_input_port_html_a7352accb51d331f3ec1f827c0af6fc24"><div class="ttname"><a href="#a7352accb51d331f3ec1f827c0af6fc24">InputPort::output_x</a></div><div class="ttdeci">BlockPort output_x</div><div class="ttdoc">BlockPort that acts as output for the SIGNAL_X input.</div><div class="ttdef"><b>Definition</b> input_ports.hpp:122</div></div>
+<div class="line">inputA.<a class="code hl_variable" href="#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channelX.input_target_position); <span class="comment">// Map SIGNAL_X to Channel X&#39;s input target position</span></div>
+<div class="ttc" id="aclass_block_port_html_a15141b0edfad4e702588f16599e2655b"><div class="ttname"><a href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">BlockPort::map</a></div><div class="ttdeci">void map(BlockPort *map_target, uint8_t mode)</div><div class="ttdoc">Maps this BlockPort to a target BlockPort with a specified mode (INCREMENTAL or ABSOLUTE).</div></div>
+<div class="ttc" id="aclass_input_port_html_a7352accb51d331f3ec1f827c0af6fc24"><div class="ttname"><a href="#a7352accb51d331f3ec1f827c0af6fc24">InputPort::output_x</a></div><div class="ttdeci">BlockPort output_x</div><div class="ttdoc">BlockPort that acts as output for the SIGNAL_X input.</div><div class="ttdef"><b>Definition</b> input_ports.hpp:123</div></div>
 <div class="ttc" id="aclass_input_port_html_a7bec13041ef7d76fbcb3f4126300270a"><div class="ttname"><a href="#a7bec13041ef7d76fbcb3f4126300270a">InputPort::begin</a></div><div class="ttdeci">void begin(uint8_t port_number)</div><div class="ttdoc">Initialize the InputPort with a port number corresponding to the target physical port on the Stepdanc...</div></div>
 <div class="ttc" id="aclass_input_port_html_af2431071e069bf97869b474ae313406b"><div class="ttname"><a href="#af2431071e069bf97869b474ae313406b">InputPort::InputPort</a></div><div class="ttdeci">InputPort()</div><div class="ttdoc">Default constructor for InputPort.</div></div>
 </div><!-- fragment --> 

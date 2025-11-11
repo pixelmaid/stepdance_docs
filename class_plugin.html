@@ -97,47 +97,30 @@ Inheritance diagram for Plugin:</div>
  <div class="center">
   <img src="class_plugin.png" usemap="#Plugin_map" alt=""/>
   <map id="Plugin_map" name="Plugin_map">
-<area href="class_button_kilohertz_plugin.html" alt="ButtonKilohertzPlugin" shape="rect" coords="180,56,350,80"/>
-<area href="class_circle_generator.html" alt="CircleGenerator" shape="rect" coords="180,112,350,136"/>
-<area href="class_eibotboard.html" alt="Eibotboard" shape="rect" coords="180,168,350,192"/>
-<area href="class_encoder.html" alt="Encoder" shape="rect" coords="180,224,350,248"/>
-<area href="class_four_track_player.html" alt="FourTrackPlayer" shape="rect" coords="180,280,350,304"/>
-<area href="class_four_track_recorder.html" alt="FourTrackRecorder" shape="rect" coords="180,336,350,360"/>
-<area href="class_g_code_interface.html" alt="GCodeInterface" shape="rect" coords="180,392,350,416"/>
-<area href="class_input_port.html" alt="InputPort" shape="rect" coords="180,448,350,472"/>
-<area href="class_kinematics_core_x_y.html" alt="KinematicsCoreXY" shape="rect" coords="180,504,350,528"/>
-<area href="class_kinematics_five_bar_forward.html" alt="KinematicsFiveBarForward" shape="rect" coords="180,560,350,584"/>
-<area href="class_kinematics_polar_to_cartesian.html" alt="KinematicsPolarToCartesian" shape="rect" coords="180,616,350,640"/>
-<area href="class_path_length_generator2_d.html" alt="PathLengthGenerator2D" shape="rect" coords="180,672,350,696"/>
-<area href="class_path_length_generator3_d.html" alt="PathLengthGenerator3D" shape="rect" coords="180,728,350,752"/>
-<area href="class_position_generator.html" alt="PositionGenerator" shape="rect" coords="180,784,350,808"/>
-<area href="class_scaling_filter1_d.html" alt="ScalingFilter1D" shape="rect" coords="180,840,350,864"/>
-<area href="class_scaling_filter2_d.html" alt="ScalingFilter2D" shape="rect" coords="180,896,350,920"/>
-<area href="class_threshold_generator.html" alt="ThresholdGenerator" shape="rect" coords="180,952,350,976"/>
-<area href="class_time_based_interpolator.html" alt="TimeBasedInterpolator" shape="rect" coords="180,1008,350,1032"/>
-<area href="class_velocity_generator.html" alt="VelocityGenerator" shape="rect" coords="180,1064,350,1088"/>
-<area href="class_wave_generator1_d.html" alt="WaveGenerator1D" shape="rect" coords="180,1120,350,1144"/>
+<area href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state." alt="Channel" shape="rect" coords="0,56,72,80"/>
+<area href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ..." alt="InputPort" shape="rect" coords="82,56,154,80"/>
+<area href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys..." alt="OutputPort" shape="rect" coords="164,56,236,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a19973dd26d55450f784adc40c0beb648" id="r_a19973dd26d55450f784adc40c0beb648"><td class="memItemLeft" align="right" valign="top"><a id="a19973dd26d55450f784adc40c0beb648" name="a19973dd26d55450f784adc40c0beb648"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> ()</td></tr>
-<tr class="memitem:ab0ac3d6ff1e5b389eaa24ef5419f4208" id="r_ab0ac3d6ff1e5b389eaa24ef5419f4208"><td class="memItemLeft" align="right" valign="top"><a id="ab0ac3d6ff1e5b389eaa24ef5419f4208" name="ab0ac3d6ff1e5b389eaa24ef5419f4208"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></tr>
+<tr class="memitem:a74b006ffc186bd9f69bcef2b1eed3f6b" id="r_a74b006ffc186bd9f69bcef2b1eed3f6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74b006ffc186bd9f69bcef2b1eed3f6b">enable</a> ()</td></tr>
+<tr class="memitem:ad8926a91ce338766ddd8ea20135d378b" id="r_ad8926a91ce338766ddd8ea20135d378b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8926a91ce338766ddd8ea20135d378b">disable</a> ()</td></tr>
+<tr class="memitem:a8911c36d4790ec71d602a3b2ecb3f746" id="r_a8911c36d4790ec71d602a3b2ecb3f746"><td class="memItemLeft" align="right" valign="top"><a id="a8911c36d4790ec71d602a3b2ecb3f746" name="a8911c36d4790ec71d602a3b2ecb3f746"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (RPC *rpc, const String &amp;instance_name)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a8015ef99773c711c1e646f781e0e13ef" id="r_a8015ef99773c711c1e646f781e0e13ef"><td class="memItemLeft" align="right" valign="top"><a id="a8015ef99773c711c1e646f781e0e13ef" name="a8015ef99773c711c1e646f781e0e13ef"></a>
+<tr class="memitem:a0b9c03a4593e8310d4bdd5ce692ccdd1" id="r_a0b9c03a4593e8310d4bdd5ce692ccdd1"><td class="memItemLeft" align="right" valign="top"><a id="a0b9c03a4593e8310d4bdd5ce692ccdd1" name="a0b9c03a4593e8310d4bdd5ce692ccdd1"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_input_port_frame_plugins</b> ()</td></tr>
-<tr class="memitem:a48f0ac31b9e20e3e353f5c002f705f48" id="r_a48f0ac31b9e20e3e353f5c002f705f48"><td class="memItemLeft" align="right" valign="top"><a id="a48f0ac31b9e20e3e353f5c002f705f48" name="a48f0ac31b9e20e3e353f5c002f705f48"></a>
+<tr class="memitem:a2efd6468c544597900bce14b749ecae0" id="r_a2efd6468c544597900bce14b749ecae0"><td class="memItemLeft" align="right" valign="top"><a id="a2efd6468c544597900bce14b749ecae0" name="a2efd6468c544597900bce14b749ecae0"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_pre_channel_frame_plugins</b> ()</td></tr>
-<tr class="memitem:a04f7669f164cd1c6260ba8173712c0d8" id="r_a04f7669f164cd1c6260ba8173712c0d8"><td class="memItemLeft" align="right" valign="top"><a id="a04f7669f164cd1c6260ba8173712c0d8" name="a04f7669f164cd1c6260ba8173712c0d8"></a>
+<tr class="memitem:a1b99eebcd322f8bfa4b8f4b47cd5d84c" id="r_a1b99eebcd322f8bfa4b8f4b47cd5d84c"><td class="memItemLeft" align="right" valign="top"><a id="a1b99eebcd322f8bfa4b8f4b47cd5d84c" name="a1b99eebcd322f8bfa4b8f4b47cd5d84c"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_post_channel_frame_plugins</b> ()</td></tr>
-<tr class="memitem:a2066ab4869bf159ec49613714fb5fb1e" id="r_a2066ab4869bf159ec49613714fb5fb1e"><td class="memItemLeft" align="right" valign="top"><a id="a2066ab4869bf159ec49613714fb5fb1e" name="a2066ab4869bf159ec49613714fb5fb1e"></a>
+<tr class="memitem:abdec55d56c81624aba393e6db9be0cbd" id="r_abdec55d56c81624aba393e6db9be0cbd"><td class="memItemLeft" align="right" valign="top"><a id="abdec55d56c81624aba393e6db9be0cbd" name="abdec55d56c81624aba393e6db9be0cbd"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_kilohertz_plugins</b> ()</td></tr>
-<tr class="memitem:a26c5eb984bea11634651134fd966a8cb" id="r_a26c5eb984bea11634651134fd966a8cb"><td class="memItemLeft" align="right" valign="top"><a id="a26c5eb984bea11634651134fd966a8cb" name="a26c5eb984bea11634651134fd966a8cb"></a>
+<tr class="memitem:ab1f1d1d5ae5f23dfdc8c44fe5d70c191" id="r_ab1f1d1d5ae5f23dfdc8c44fe5d70c191"><td class="memItemLeft" align="right" valign="top"><a id="ab1f1d1d5ae5f23dfdc8c44fe5d70c191" name="ab1f1d1d5ae5f23dfdc8c44fe5d70c191"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>run_loop_plugins</b> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -146,14 +129,68 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>register_plugin</b> ()</td></tr>
 <tr class="memitem:a7868d4f3742c6c6633c102c55f0cd44d" id="r_a7868d4f3742c6c6633c102c55f0cd44d"><td class="memItemLeft" align="right" valign="top"><a id="a7868d4f3742c6c6633c102c55f0cd44d" name="a7868d4f3742c6c6633c102c55f0cd44d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>register_plugin</b> (uint8_t execution_target)</td></tr>
-<tr class="memitem:a4ed74fffad25bb15f6a0acf8e61a694a" id="r_a4ed74fffad25bb15f6a0acf8e61a694a"><td class="memItemLeft" align="right" valign="top"><a id="a4ed74fffad25bb15f6a0acf8e61a694a" name="a4ed74fffad25bb15f6a0acf8e61a694a"></a>
+<tr class="memitem:a02f2f15e60878a948e23df02bc731a1f" id="r_a02f2f15e60878a948e23df02bc731a1f"><td class="memItemLeft" align="right" valign="top"><a id="a02f2f15e60878a948e23df02bc731a1f" name="a02f2f15e60878a948e23df02bc731a1f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
-<tr class="memitem:aade6be28a6bb6083bf93375d2d188793" id="r_aade6be28a6bb6083bf93375d2d188793"><td class="memItemLeft" align="right" valign="top"><a id="aade6be28a6bb6083bf93375d2d188793" name="aade6be28a6bb6083bf93375d2d188793"></a>
+<tr class="memitem:a9d34a7edf97a902b59e887eca718b0dd" id="r_a9d34a7edf97a902b59e887eca718b0dd"><td class="memItemLeft" align="right" valign="top"><a id="a9d34a7edf97a902b59e887eca718b0dd" name="a9d34a7edf97a902b59e887eca718b0dd"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad8926a91ce338766ddd8ea20135d378b" name="ad8926a91ce338766ddd8ea20135d378b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8926a91ce338766ddd8ea20135d378b">&#9670;&#160;</a></span>disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Plugin::disable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_channel.html#a6d2e75a02a53fc31163409f2c58468ab">Channel</a>.</p>
+
+</div>
+</div>
+<a id="a74b006ffc186bd9f69bcef2b1eed3f6b" name="a74b006ffc186bd9f69bcef2b1eed3f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b006ffc186bd9f69bcef2b1eed3f6b">&#9670;&#160;</a></span>enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Plugin::enable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_channel.html#a41956c94fe300d0cae25d6040422c9e5">Channel</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="core_8hpp_source.html">core.hpp</a></li>
-<li>lib/<b>core.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
