@@ -3,7 +3,7 @@ var topics =
     [ "Core Components", "group__core.html", "group__core" ],
     [ "Input/Output Modules", "group__io.html", "group__io" ],
     [ "Channels", "group__channels.html", "group__channels" ],
-    [ "Motion Generators", "group__generators.html", null ],
+    [ "Generators", "group__generators.html", "group__generators" ],
     [ "Kinematics", "group__kinematics.html", null ],
     [ "Filters", "group__filters.html", null ],
     [ "Interpolators", "group__interpolators.html", null ],

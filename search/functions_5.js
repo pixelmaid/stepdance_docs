@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['has_5fchanged_0',['has_changed',['../class_button.html#a7b3bce210b74ea7a37a922a0f92fb12b',1,'Button']]]
+  ['go_0',['go',['../class_position_generator.html#a069294b6a0d1b9204f1e613cb40f83a3',1,'PositionGenerator::go(float64_t distance_or_position, uint8_t mode)'],['../class_position_generator.html#ad6daff12b8005974f878d33d8ab5b1ba',1,'PositionGenerator::go(float64_t distance_or_position, uint8_t mode, ControlParameter speed)']]]
 ];

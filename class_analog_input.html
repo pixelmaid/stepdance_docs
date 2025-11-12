@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5b775afdce5bed709d007d5e1ca9c6d7" id="r_a5b775afdce5bed709d007d5e1ca9c6d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b775afdce5bed709d007d5e1ca9c6d7">begin</a> (uint8_t pin_reference)</td></tr>
 <tr class="memdesc:a5b775afdce5bed709d007d5e1ca9c6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> with a pin reference corresponding to the target physical analog input pin on the Stepdance Board.  <br /></td></tr>
 <tr class="memitem:a5b693352b0883ae6fa94cbeae55eb8dd" id="r_a5b693352b0883ae6fa94cbeae55eb8dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b693352b0883ae6fa94cbeae55eb8dd">map</a> (ControlParameter *target_parameter)</td></tr>
-<tr class="memdesc:a5b693352b0883ae6fa94cbeae55eb8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> to a ControlParameter, which will be updated each time a new analog value is read. ControlParameters are typically used to control Component parameters (e.g. 1DWaveGenerator Amplitude, <a class="el" href="class_velocity_generator.html">VelocityGenerator</a> Speed etc.).  <br /></td></tr>
+<tr class="memdesc:a5b693352b0883ae6fa94cbeae55eb8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> to a ControlParameter, which will be updated each time a new analog value is read. ControlParameters are typically used to control Component parameters (e.g. 1DWaveGenerator Amplitude, <a class="el" href="class_velocity_generator.html" title="Used for generating a position signal that advances at a constant speed.">VelocityGenerator</a> Speed etc.).  <br /></td></tr>
 <tr class="memitem:a94321fb79cb3204d7e3ccd98406bb664" id="r_a94321fb79cb3204d7e3ccd98406bb664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94321fb79cb3204d7e3ccd98406bb664">set_callback</a> (void(*callback_function)())</td></tr>
 <tr class="memdesc:a94321fb79cb3204d7e3ccd98406bb664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback function that will be called each time a new analog value is read.  <br /></td></tr>
 <tr class="memitem:abebd50d249b8180d1b18fe37e026afd5" id="r_abebd50d249b8180d1b18fe37e026afd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abebd50d249b8180d1b18fe37e026afd5">set_floor</a> (ControlParameter output_at_floor)</td></tr>
@@ -134,7 +134,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></t
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> components read values from physical user interface components and enable them to be mapped to Stepdance Components. </p>
 <p>AnalogInputs function similarly to the Arduino <a href="https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/">analogIn</a> function. They can be used to directly map analog readings from the Analog input terminals on the Machine Controller or Basic Module to Stepdance Component ControlParameters. Alternatively, you can read the value of the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> directly during the loop() function to implement custom control schemes. You can read <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> values at either scaled values (based on user-defined floor and ceiling settings) or as raw Analog-to-Digital Converter (ADC) values.</p>
-<p>Here's an example of how to instantiate and configure two AnalogInputs to either map to control parameters or read a value directly during the loop() function: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<p>Here's an example of how to instantiate and configure two AnalogInputs to either map to control parameters or read a value directly during the loop() function: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> analog_a1;</div>
 <div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> analog_a2;</div>
@@ -146,7 +147,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></t
 <div class="line"><span class="comment">//analog input a1 </span></div>
 <div class="line">  analog_a1.<a class="code hl_function" href="#abebd50d249b8180d1b18fe37e026afd5">set_floor</a>(0, 25); <span class="comment">//set floor to 0 output at ADC values of 25 and below. </span></div>
 <div class="line">  analog_a1.<a class="code hl_function" href="#a79552bae1a61205c886343c8c147bcab">set_ceiling</a>(2.75, 1020); <span class="comment">//set ceiling to 2.75 output at ADC values of 1020 and above.</span></div>
-<div class="line">  analog_a1.<a class="code hl_function" href="#a5b693352b0883ae6fa94cbeae55eb8dd">map</a>(&amp;velocity_gen.speed_units_per_sec); <span class="comment">//map analog output to VelocityGenerator speed ControlParameter</span></div>
+<div class="line">  analog_a1.<a class="code hl_function" href="#a5b693352b0883ae6fa94cbeae55eb8dd">map</a>(&amp;velocity_gen.<a class="code hl_variable" href="class_velocity_generator.html#a6585a0eb09b0b7f27bd944059613cb19">speed_units_per_sec</a>); <span class="comment">//map analog output to VelocityGenerator speed ControlParameter</span></div>
 <div class="line">  analog_a1.<a class="code hl_function" href="#a5b775afdce5bed709d007d5e1ca9c6d7">begin</a>(IO_A1); <span class="comment">//initialize analog input on physical input port IO_A1</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//analog input a2</span></div>
@@ -156,10 +157,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></t
 <div class="line">  </div>
 <div class="line">  dance_start();</div>
 <div class="line"> </div>
+<div class="line">  Serial.begin(115200);</div>
+<div class="line"> </div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> loop() {</div>
-<div class="line">  <span class="keywordtype">float</span> extrusionMultiplier =analog_a2.<a class="code hl_function" href="#af143ba031f43d5b8a5d4766ed9737cf9">read</a>(); <span class="comment">//read analog input a2 value during loop and store it in variable </span></div>
+<div class="line">  <span class="keywordtype">float</span> extrusionMultiplier = analog_a2.<a class="code hl_function" href="#af143ba031f43d5b8a5d4766ed9737cf9">read</a>(); <span class="comment">//read analog input a2 value during loop and store it in variable</span></div>
+<div class="line">  Serial.println(extrusionMultiplier); <span class="comment">//print the read value to the serial console</span></div>
+<div class="line">  dance_loop(); </div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a5b775afdce5bed709d007d5e1ca9c6d7" name="a5b775afdce5bed709d007d5e1ca9c6d7"></a>
@@ -202,7 +207,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></t
       </table>
 </div><div class="memdoc">
 
-<p>Maps the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> to a ControlParameter, which will be updated each time a new analog value is read. ControlParameters are typically used to control Component parameters (e.g. 1DWaveGenerator Amplitude, <a class="el" href="class_velocity_generator.html">VelocityGenerator</a> Speed etc.). </p>
+<p>Maps the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> to a ControlParameter, which will be updated each time a new analog value is read. ControlParameters are typically used to control Component parameters (e.g. 1DWaveGenerator Amplitude, <a class="el" href="class_velocity_generator.html" title="Used for generating a position signal that advances at a constant speed.">VelocityGenerator</a> Speed etc.). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">target_parameter</td><td>Pointer to the ControlParameter to map to. </td></tr>
@@ -270,7 +275,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></t
 <p>Sets a callback function that will be called each time a new analog value is read. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function to be executed on new data. code example: <div class="fragment"><div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> analog_a1;</div>
+    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function to be executed on new data. code example: <div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> analog_a1;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -287,6 +295,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></t
 <div class="line">  <span class="keywordtype">float</span> inputValue = analog_a1.<a class="code hl_function" href="#af143ba031f43d5b8a5d4766ed9737cf9">read</a>(); <span class="comment">//read analog input a1 value during callback</span></div>
 <div class="line">  <span class="comment">// Do something with inputValue, e.g., print it to the console</span></div>
 <div class="line">  Serial.println(inputValue);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">dance_loop();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </td></tr>
   </table>

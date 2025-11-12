@@ -279,7 +279,7 @@ Configure the Button</h4>
 Configure Position Generator</h4>
 <div class="fragment"><div class="line">position_gen.map(&amp;channel_z.target_position_transmission);</div>
 <div class="line">position_gen.begin();</div>
-</div><!-- fragment --><p>Here we directly connect the <a class="el" href="class_position_generator.html">PositionGenerator</a> object to the Z Axis <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> object's input transmission.</p>
+</div><!-- fragment --><p>Here we directly connect the <a class="el" href="class_position_generator.html" title="Used for generating position signals based on a target position and maximum velocity.">PositionGenerator</a> object to the Z Axis <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> object's input transmission.</p>
 <h4 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Start Stepdance</h4>
 <div class="fragment"><div class="line">dance_start();</div>
@@ -300,7 +300,7 @@ Custom Functions</h3>
 <div class="line">void pen_up(){</div>
 <div class="line">  position_gen.go_absolute(500, 2000);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>When called, these will cause the position generator to go to +500 or -500 steps, at a rate of 2000 steps/sec. This is the full range of the hobby servo driver board. Note that the absolute position state is stored in the <a class="el" href="class_position_generator.html">PositionGenerator</a> object, rather than in the Z Axis <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> object. </p>
+</div><!-- fragment --><p>When called, these will cause the position generator to go to +500 or -500 steps, at a rate of 2000 steps/sec. This is the full range of the hobby servo driver board. Note that the absolute position state is stored in the <a class="el" href="class_position_generator.html" title="Used for generating position signals based on a target position and maximum velocity.">PositionGenerator</a> object, rather than in the Z Axis <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> object. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

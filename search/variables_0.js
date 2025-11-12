@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['current_5fposition_0',['current_position',['../class_channel.html#a3c96c0b9aee1a6e7d9bb265ccb9c86e7',1,'Channel']]]
+  ['amplitude_0',['amplitude',['../class_wave_generator1_d.html#a486debcdc8df3736920fa9c6f482351f',1,'WaveGenerator1D']]]
 ];

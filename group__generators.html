@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Stepdance Software Library: Motion Generators</title>
+<title>Stepdance Software Library: Generators</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,14 +89,33 @@ $(function(){initNavTree('group__generators.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Motion Generators </div></div>
+  <div class="headertitle"><div class="title">Generators </div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Motion pattern generation components.  
-</p>
-<p>Motion pattern generation components. </p>
-<p>Classes that generate motion patterns and trajectories. </p>
+<p>Generators are components that synthesize motion signals based on control parameters.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:ThresholdGenerator" id="r_ThresholdGenerator"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_threshold_generator.html">ThresholdGenerator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for generating output signals based on upper and lower thresholds.  <a href="class_threshold_generator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:WaveGenerator1D" id="r_WaveGenerator1D"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wave_generator1_d.html">WaveGenerator1D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for generating a sinusoidal waveform signal.  <a href="class_wave_generator1_d.html#details">More...</a><br /></td></tr>
+<tr class="memitem:CircleGenerator" id="r_CircleGenerator"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_circle_generator.html">CircleGenerator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for generating circular motion signals.  <a href="class_circle_generator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:VelocityGenerator" id="r_VelocityGenerator"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_generator.html">VelocityGenerator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for generating a position signal that advances at a constant speed.  <a href="class_velocity_generator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:PositionGenerator" id="r_PositionGenerator"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_generator.html">PositionGenerator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for generating position signals based on a target position and maximum velocity.  <a href="class_position_generator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:PathLengthGenerator2D" id="r_PathLengthGenerator2D"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_length_generator2_d.html">PathLengthGenerator2D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for generating an output proportional to the 2D path length traveled by two inputs.  <a href="class_path_length_generator2_d.html#details">More...</a><br /></td></tr>
+<tr class="memitem:PathLengthGenerator3D" id="r_PathLengthGenerator3D"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_length_generator3_d.html">PathLengthGenerator3D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for generating an output proportional to the 3D path length traveled by three inputs.  <a href="class_path_length_generator3_d.html#details">More...</a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<p>Generators are components that synthesize motion signals based on control parameters. </p>
+<p>Generators are useful as lower-level compoments for specifying predefined motion patterns and signals that can be mixed in with manual input or used to drive autonomous movement in synchronization with manual input. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

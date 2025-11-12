@@ -145,8 +145,12 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> components receive motion streams on physical Stepdance input ports, and map these signals to downstream components. </p>
-<p>Receiving and decoding of input streams occurs asynchronously. Here's an example of how to instantiate and configure an <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> and map it to an <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> input_a; </div>
+<p>Receiving and decoding of input streams occurs asynchronously. Here's an example of how to instantiate and configure an <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a> and map it to an <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
 <div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> input_a; </div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_z;</div>
 <div class="line"><a class="code hl_class" href="class_kinematics_core_x_y.html">KinematicsCoreXY</a> axidraw_kinematics;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> setup() {</div>
@@ -161,6 +165,10 @@ Public Attributes</h2></td></tr>
 <div class="line"> </div>
 <div class="line">  input_a.<a class="code hl_variable" href="#ac9cf91a3af212ae8ae12d44f087ad487">output_z</a>.<a class="code hl_function" href="class_block_port.html#adcdf52455b347f9f3a77d539c470d763">set_ratio</a>(0.01, 1); <span class="comment">//1 step is 0.01mm</span></div>
 <div class="line">  input_a.<a class="code hl_variable" href="#ac9cf91a3af212ae8ae12d44f087ad487">output_z</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(&amp;channel_z.input_target_position);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">dance_loop();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af2431071e069bf97869b474ae313406b" name="af2431071e069bf97869b474ae313406b"></a>

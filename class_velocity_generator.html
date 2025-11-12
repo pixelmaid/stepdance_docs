@@ -89,9 +89,14 @@ $(function(){initNavTree('class_velocity_generator.html','','class_velocity_gene
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">VelocityGenerator Class Reference</div></div>
+  <div class="headertitle"><div class="title">VelocityGenerator Class Reference<div class="ingroups"><a class="el" href="group__generators.html">Generators</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used for generating a position signal that advances at a constant speed.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="generators_8hpp_source.html">generators.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for VelocityGenerator:</div>
 <div class="dyncontent">
@@ -103,23 +108,68 @@ Inheritance diagram for VelocityGenerator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a10151038501c236dda680966e97c9cce" id="r_a10151038501c236dda680966e97c9cce"><td class="memItemLeft" align="right" valign="top"><a id="a10151038501c236dda680966e97c9cce" name="a10151038501c236dda680966e97c9cce"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memitem:a3bd5ab97f5df23379f0abb7f38c590e0" id="r_a3bd5ab97f5df23379f0abb7f38c590e0"><td class="memItemLeft" align="right" valign="top"><a id="a3bd5ab97f5df23379f0abb7f38c590e0" name="a3bd5ab97f5df23379f0abb7f38c590e0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memdesc:a10151038501c236dda680966e97c9cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_velocity_generator.html" title="Used for generating a position signal that advances at a constant speed.">VelocityGenerator</a>. Must be called to set up the generator. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a6585a0eb09b0b7f27bd944059613cb19" id="r_a6585a0eb09b0b7f27bd944059613cb19"><td class="memItemLeft" align="right" valign="top"><a id="a6585a0eb09b0b7f27bd944059613cb19" name="a6585a0eb09b0b7f27bd944059613cb19"></a>
 volatile ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>speed_units_per_sec</b> = 0</td></tr>
-<tr class="memitem:a520b0ca4b9495bc35ad62f218655a8fe" id="r_a520b0ca4b9495bc35ad62f218655a8fe"><td class="memItemLeft" align="right" valign="top"><a id="a520b0ca4b9495bc35ad62f218655a8fe" name="a520b0ca4b9495bc35ad62f218655a8fe"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output</b></td></tr>
-<tr class="memitem:a38b66c85ab678011c15fb9e60a6e37c5" id="r_a38b66c85ab678011c15fb9e60a6e37c5"><td class="memItemLeft" align="right" valign="top"><a id="a38b66c85ab678011c15fb9e60a6e37c5" name="a38b66c85ab678011c15fb9e60a6e37c5"></a>
-DecimalPosition&#160;</td><td class="memItemRight" valign="bottom"><b>target_position</b> = 0</td></tr>
+<tr class="memdesc:a6585a0eb09b0b7f27bd944059613cb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">ControlParameter specifying the generation speed in units per second. You can set it directly or map an input to it. <br /></td></tr>
+<tr class="memitem:a520b0ca4b9495bc35ad62f218655a8fe" id="r_a520b0ca4b9495bc35ad62f218655a8fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a520b0ca4b9495bc35ad62f218655a8fe">output</a></td></tr>
+<tr class="memdesc:a520b0ca4b9495bc35ad62f218655a8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the generated position signal.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3433a9d6d291b35fb789085d4a658103" id="r_a3433a9d6d291b35fb789085d4a658103"><td class="memItemLeft" align="right" valign="top"><a id="a3433a9d6d291b35fb789085d4a658103" name="a3433a9d6d291b35fb789085d4a658103"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used for generating a position signal that advances at a constant speed. </p>
+<p>A <a class="el" href="class_velocity_generator.html" title="Used for generating a position signal that advances at a constant speed.">VelocityGenerator</a> maintains an internal target position and increments it over time at a specified speed (units per second). This can be used to move a downstream component at a specified rate. Here's an example of how to instantiate and configure a <a class="el" href="class_velocity_generator.html" title="Used for generating a position signal that advances at a constant speed.">VelocityGenerator</a>: </p><div class="fragment"><div class="line">  <span class="comment">//will drive a channel at a constant speed. WARNING, if no limits are implemented, the axis will drive until it crashes.</span></div>
+<div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_velocity_generator.html">VelocityGenerator</a> vel_gen;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_x;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_a;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line">  <span class="comment">// Initialize OutputPort and enable drivers</span></div>
+<div class="line">  output_a.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A);</div>
+<div class="line">  enable_drivers();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Map VelocityGenerator output to channel target position</span></div>
+<div class="line">  vel_gen.<a class="code hl_variable" href="#a520b0ca4b9495bc35ad62f218655a8fe">output</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_x.input_target_position);</div>
+<div class="line">  vel_gen.<a class="code hl_function" href="#a10151038501c236dda680966e97c9cce">begin</a>();</div>
+<div class="line">  vel_gen.<a class="code hl_variable" href="#a6585a0eb09b0b7f27bd944059613cb19">speed_units_per_sec</a> = 20.0; <span class="comment">// example speed</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize channel on an output signal</span></div>
+<div class="line">  channel_x.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_a , SIGNAL_E);</div>
+<div class="line"> </div>
+<div class="line">  dance_start();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">  dance_loop();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a520b0ca4b9495bc35ad62f218655a8fe" name="a520b0ca4b9495bc35ad62f218655a8fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520b0ca4b9495bc35ad62f218655a8fe">&#9670;&#160;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> VelocityGenerator::output</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the generated position signal. </p>
+<div class="fragment"><div class="line">velocity_gen.output.map(channelX.input_target_position); <span class="comment">// Drive a channel at constant speed</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="generators_8hpp_source.html">generators.hpp</a></li>
 </ul>

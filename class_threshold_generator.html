@@ -89,9 +89,14 @@ $(function(){initNavTree('class_threshold_generator.html','','class_threshold_ge
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ThresholdGenerator Class Reference</div></div>
+  <div class="headertitle"><div class="title">ThresholdGenerator Class Reference<div class="ingroups"><a class="el" href="group__generators.html">Generators</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used for generating output signals based on upper and lower thresholds.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="generators_8hpp_source.html">generators.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ThresholdGenerator:</div>
 <div class="dyncontent">
@@ -101,33 +106,243 @@ Inheritance diagram for ThresholdGenerator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aeed8b50dd3a768dd9993d19073e8560e" id="r_aeed8b50dd3a768dd9993d19073e8560e"><td class="memItemLeft" align="right" valign="top"><a id="aeed8b50dd3a768dd9993d19073e8560e" name="aeed8b50dd3a768dd9993d19073e8560e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ThresholdGenerator</b> ()</td></tr>
+<tr class="memdesc:aeed8b50dd3a768dd9993d19073e8560e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. Does not initialize board hardware. Call <a class="el" href="#a3578c3b057e12dc5dfc04b5eae671289" title="Initialize the ThresholdGenerator.">begin()</a> to set up the generator. <br /></td></tr>
 <tr class="memitem:a3578c3b057e12dc5dfc04b5eae671289" id="r_a3578c3b057e12dc5dfc04b5eae671289"><td class="memItemLeft" align="right" valign="top"><a id="a3578c3b057e12dc5dfc04b5eae671289" name="a3578c3b057e12dc5dfc04b5eae671289"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="memdesc:a3578c3b057e12dc5dfc04b5eae671289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. <br /></td></tr>
 <tr class="memitem:aed4b3aab359cccf7d139486422ecad5e" id="r_aed4b3aab359cccf7d139486422ecad5e"><td class="memItemLeft" align="right" valign="top"><a id="aed4b3aab359cccf7d139486422ecad5e" name="aed4b3aab359cccf7d139486422ecad5e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>debugPrint</b> ()</td></tr>
+<tr class="memdesc:aed4b3aab359cccf7d139486422ecad5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print debug information about the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a> to the Serial console. <br /></td></tr>
 <tr class="memitem:aaabaf01447179abc74a6525a3ec06729" id="r_aaabaf01447179abc74a6525a3ec06729"><td class="memItemLeft" align="right" valign="top"><a id="aaabaf01447179abc74a6525a3ec06729" name="aaabaf01447179abc74a6525a3ec06729"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> ()</td></tr>
+<tr class="memdesc:aaabaf01447179abc74a6525a3ec06729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. <br /></td></tr>
 <tr class="memitem:ae4414385f46b4c3701eb25586eaf9eca" id="r_ae4414385f46b4c3701eb25586eaf9eca"><td class="memItemLeft" align="right" valign="top"><a id="ae4414385f46b4c3701eb25586eaf9eca" name="ae4414385f46b4c3701eb25586eaf9eca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></tr>
-<tr class="memitem:a5002bccf315b2347c0259608f1ad7b1f" id="r_a5002bccf315b2347c0259608f1ad7b1f"><td class="memItemLeft" align="right" valign="top"><a id="a5002bccf315b2347c0259608f1ad7b1f" name="a5002bccf315b2347c0259608f1ad7b1f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memdesc:ae4414385f46b4c3701eb25586eaf9eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. <br /></td></tr>
+<tr class="memitem:abf2d823e546fab1755645860ceb3fea3" id="r_abf2d823e546fab1755645860ceb3fea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf2d823e546fab1755645860ceb3fea3">setLowerCallback</a> (void(*callback_function)())</td></tr>
+<tr class="memdesc:abf2d823e546fab1755645860ceb3fea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback function to be called when the input crosses the lower threshold.  <br /></td></tr>
+<tr class="memitem:a373837c57d0959bf0170684c498875bf" id="r_a373837c57d0959bf0170684c498875bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a373837c57d0959bf0170684c498875bf">setUpperCallback</a> (void(*callback_function)())</td></tr>
+<tr class="memdesc:a373837c57d0959bf0170684c498875bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback function to be called when the input crosses the upper threshold.  <br /></td></tr>
+<tr class="memitem:a165d218a1f6537bf7b11e1118ae507f2" id="r_a165d218a1f6537bf7b11e1118ae507f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a165d218a1f6537bf7b11e1118ae507f2">setUpperThreshold</a> (float64_t upper_threshold, bool clamp_to_upper=false)</td></tr>
+<tr class="memdesc:a165d218a1f6537bf7b11e1118ae507f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the upper threshold value and optionally enable clamping to the upper threshold. This must be called to activate the upper threshold.  <br /></td></tr>
+<tr class="memitem:a396480cb218ce448b63be154ec430e91" id="r_a396480cb218ce448b63be154ec430e91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a396480cb218ce448b63be154ec430e91">setLowerThreshold</a> (float64_t lower_threshold, bool clamp_to_lower=false)</td></tr>
+<tr class="memdesc:a396480cb218ce448b63be154ec430e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the lower threshold value and optionally enable clamping to the lower threshold. This must be called to activate the lower threshold.  <br /></td></tr>
+<tr class="memitem:a7dbe3c7ac94b27e206f4d198b130129f" id="r_a7dbe3c7ac94b27e206f4d198b130129f"><td class="memItemLeft" align="right" valign="top"><a id="a7dbe3c7ac94b27e206f4d198b130129f" name="a7dbe3c7ac94b27e206f4d198b130129f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clearUpperThreshold</b> ()</td></tr>
+<tr class="memdesc:a7dbe3c7ac94b27e206f4d198b130129f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the upper threshold, disabling its effect. <br /></td></tr>
+<tr class="memitem:a5138b879ac51822745611494315558d8" id="r_a5138b879ac51822745611494315558d8"><td class="memItemLeft" align="right" valign="top"><a id="a5138b879ac51822745611494315558d8" name="a5138b879ac51822745611494315558d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clearLowerThreshold</b> ()</td></tr>
+<tr class="memdesc:a5138b879ac51822745611494315558d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the lower threshold, disabling its effect. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8748e61a2d640a80ca1bd1f2175923de" id="r_a8748e61a2d640a80ca1bd1f2175923de"><td class="memItemLeft" align="right" valign="top"><a id="a8748e61a2d640a80ca1bd1f2175923de" name="a8748e61a2d640a80ca1bd1f2175923de"></a>
-volatile ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>threshold</b> = 0</td></tr>
-<tr class="memitem:a0f3b5fe9c91c48e211fba7635cca5371" id="r_a0f3b5fe9c91c48e211fba7635cca5371"><td class="memItemLeft" align="right" valign="top"><a id="a0f3b5fe9c91c48e211fba7635cca5371" name="a0f3b5fe9c91c48e211fba7635cca5371"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_a</b></td></tr>
-<tr class="memitem:ad6c7b9220abe6afa883089721fc524ac" id="r_ad6c7b9220abe6afa883089721fc524ac"><td class="memItemLeft" align="right" valign="top"><a id="ad6c7b9220abe6afa883089721fc524ac" name="ad6c7b9220abe6afa883089721fc524ac"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_b</b></td></tr>
-<tr class="memitem:abb039acbb4fe9654b9dd0b758c686c4a" id="r_abb039acbb4fe9654b9dd0b758c686c4a"><td class="memItemLeft" align="right" valign="top"><a id="abb039acbb4fe9654b9dd0b758c686c4a" name="abb039acbb4fe9654b9dd0b758c686c4a"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output</b></td></tr>
+<tr class="memitem:af09183a866a477c3854090a7c0d19b32" id="r_af09183a866a477c3854090a7c0d19b32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af09183a866a477c3854090a7c0d19b32">input</a></td></tr>
+<tr class="memdesc:af09183a866a477c3854090a7c0d19b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. This is what you map to with an upstream component.  <br /></td></tr>
+<tr class="memitem:abb039acbb4fe9654b9dd0b758c686c4a" id="r_abb039acbb4fe9654b9dd0b758c686c4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb039acbb4fe9654b9dd0b758c686c4a">output</a></td></tr>
+<tr class="memdesc:abb039acbb4fe9654b9dd0b758c686c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. This is what you map from to a downstream component. If clamping is enabled, the output will be clamped to the threshold values.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a614d69375604f6af95fc58070bef60f0" id="r_a614d69375604f6af95fc58070bef60f0"><td class="memItemLeft" align="right" valign="top"><a id="a614d69375604f6af95fc58070bef60f0" name="a614d69375604f6af95fc58070bef60f0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used for generating output signals based on upper and lower thresholds. </p>
+<p>The <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a> monitors an input signal and triggers callbacks or clamps output when the input crosses specified upper or lower thresholds. It can be used to restrict a motion signal within defined bounds and/or to trigger events when those bounds are exceeded. <br  />
+ Here's an example of how to instantiate and configure a <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_threshold_generator.html">ThresholdGenerator</a> threshold_gen;</div>
+<div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> input_a;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a>  channel_a;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_a;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Initialize OutputPort A</span></div>
+<div class="line">  output_a.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A);</div>
+<div class="line">    <span class="comment">// Enable the output drivers</span></div>
+<div class="line">  enable_drivers();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize InputPort A</span></div>
+<div class="line">  input_a.<a class="code hl_function" href="class_input_port.html#a7bec13041ef7d76fbcb3f4126300270a">begin</a>(INPUT_A);</div>
+<div class="line">  input_a.<a class="code hl_variable" href="class_input_port.html#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(threshold_gen.<a class="code hl_variable" href="#af09183a866a477c3854090a7c0d19b32">input</a>); <span class="comment">// Map SIGNAL_X to ThresholdGenerator input</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Configure ThresholdGenerator</span></div>
+<div class="line">  threshold_gen.<a class="code hl_function" href="#a396480cb218ce448b63be154ec430e91">setLowerThreshold</a>(10.0, <span class="keyword">true</span>); <span class="comment">// Set lower threshold at 10.0 with clamping</span></div>
+<div class="line">  threshold_gen.<a class="code hl_function" href="#a165d218a1f6537bf7b11e1118ae507f2">setUpperThreshold</a>(90.0, <span class="keyword">true</span>); <span class="comment">// Set upper threshold at 90.0 with clamping</span></div>
+<div class="line">  threshold_gen.<a class="code hl_function" href="#abf2d823e546fab1755645860ceb3fea3">setLowerCallback</a>(&amp;onLowerThresholdCrossed); <span class="comment">// Set callback for lower threshold crossing</span></div>
+<div class="line">  threshold_gen.<a class="code hl_function" href="#a373837c57d0959bf0170684c498875bf">setUpperCallback</a>(&amp;onUpperThresholdCrossed); <span class="comment">// Set callback for upper threshold crossing</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Map ThresholdGenerator output to Channel A&#39;s target position</span></div>
+<div class="line">  threshold_gen.<a class="code hl_variable" href="#abb039acbb4fe9654b9dd0b758c686c4a">output</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_a.input_target_position);</div>
+<div class="line">  threshold_gen.<a class="code hl_function" href="#a3578c3b057e12dc5dfc04b5eae671289">begin</a>();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize Channel A</span></div>
+<div class="line">  channel_a.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_a, SIGNAL_E); <span class="comment">// Connect Channel A to OutputPort A&#39;s SIGNAL_E</span></div>
+<div class="line">  dance_start();</div>
+<div class="line">} </div>
+<div class="line"><span class="keywordtype">void</span> onLowerThresholdCrossed() {</div>
+<div class="line">  Serial.println(<span class="stringliteral">&quot;Lower threshold crossed!&quot;</span>);</div>
+<div class="line">  <span class="comment">// Additional actions can be added here</span></div>
+<div class="line">}  </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> onUpperThresholdCrossed() {</div>
+<div class="line">  Serial.println(<span class="stringliteral">&quot;Upper threshold crossed!&quot;</span>);</div>
+<div class="line">  <span class="comment">// Additional actions can be added here</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">dance_loop();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="abf2d823e546fab1755645860ceb3fea3" name="abf2d823e546fab1755645860ceb3fea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2d823e546fab1755645860ceb3fea3">&#9670;&#160;</a></span>setLowerCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThresholdGenerator::setLowerCallback </td>
+          <td>(</td>
+          <td class="paramtype">void(*</td>          <td class="paramname"><span class="paramname"><em>callback_function&#160;</em></span>)()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the callback function to be called when the input crosses the lower threshold. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a396480cb218ce448b63be154ec430e91" name="a396480cb218ce448b63be154ec430e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396480cb218ce448b63be154ec430e91">&#9670;&#160;</a></span>setLowerThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThresholdGenerator::setLowerThreshold </td>
+          <td>(</td>
+          <td class="paramtype">float64_t</td>          <td class="paramname"><span class="paramname"><em>lower_threshold</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>clamp_to_lower</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the lower threshold value and optionally enable clamping to the lower threshold. This must be called to activate the lower threshold. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lower_threshold</td><td>The lower threshold value. </td></tr>
+    <tr><td class="paramname">clamp_to_lower</td><td>If true, output will be clamped to the lower threshold when exceeded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a373837c57d0959bf0170684c498875bf" name="a373837c57d0959bf0170684c498875bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373837c57d0959bf0170684c498875bf">&#9670;&#160;</a></span>setUpperCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThresholdGenerator::setUpperCallback </td>
+          <td>(</td>
+          <td class="paramtype">void(*</td>          <td class="paramname"><span class="paramname"><em>callback_function&#160;</em></span>)()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the callback function to be called when the input crosses the upper threshold. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a165d218a1f6537bf7b11e1118ae507f2" name="a165d218a1f6537bf7b11e1118ae507f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165d218a1f6537bf7b11e1118ae507f2">&#9670;&#160;</a></span>setUpperThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThresholdGenerator::setUpperThreshold </td>
+          <td>(</td>
+          <td class="paramtype">float64_t</td>          <td class="paramname"><span class="paramname"><em>upper_threshold</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>clamp_to_upper</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the upper threshold value and optionally enable clamping to the upper threshold. This must be called to activate the upper threshold. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">upper_threshold</td><td>The upper threshold value. </td></tr>
+    <tr><td class="paramname">clamp_to_upper</td><td>If true, output will be clamped to the upper threshold when exceeded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="af09183a866a477c3854090a7c0d19b32" name="af09183a866a477c3854090a7c0d19b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af09183a866a477c3854090a7c0d19b32">&#9670;&#160;</a></span>input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> ThresholdGenerator::input</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. This is what you map to with an upstream component. </p>
+<div class="fragment"><div class="line">input_a.output_x.map(threshold_gen.input); <span class="comment">// Map SIGNAL_X to ThresholdGenerator input</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="abb039acbb4fe9654b9dd0b758c686c4a" name="abb039acbb4fe9654b9dd0b758c686c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb039acbb4fe9654b9dd0b758c686c4a">&#9670;&#160;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> ThresholdGenerator::output</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the <a class="el" href="class_threshold_generator.html" title="Used for generating output signals based on upper and lower thresholds.">ThresholdGenerator</a>. This is what you map from to a downstream component. If clamping is enabled, the output will be clamped to the threshold values. </p>
+<div class="fragment"><div class="line">threshold_gen.output.map(channelX.input_target_position); <span class="comment">// Map ThresholdGenerator output to ChannelX target position</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="generators_8hpp_source.html">generators.hpp</a></li>
 </ul>

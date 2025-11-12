@@ -111,240 +111,298 @@ $(function(){initNavTree('generators_8hpp_source.html','',''); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef generators_h </span><span class="comment">//prevent importing twice</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define generators_h</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_threshold_generator.html">   20</a></span><span class="keyword">class </span>ThresholdGenerator : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    ThresholdGenerator();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">volatile</span> ControlParameter threshold = 0;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input_a;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input_b;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> debugPrint();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> enable();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> disable();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    DecimalPosition input_a_position; </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    DecimalPosition input_b_position; </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    DecimalPosition output_position;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    DecimalPosition current_value;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_threshold_generator.html">   29</a></span><span class="keyword">class </span><a class="code hl_function" href="class_threshold_generator.html#aeed8b50dd3a768dd9993d19073e8560e">ThresholdGenerator</a> : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#aeed8b50dd3a768dd9993d19073e8560e">   34</a></span>    <a class="code hl_function" href="class_threshold_generator.html#aeed8b50dd3a768dd9993d19073e8560e">ThresholdGenerator</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#a3578c3b057e12dc5dfc04b5eae671289">   38</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#a3578c3b057e12dc5dfc04b5eae671289">begin</a>(); </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#aed4b3aab359cccf7d139486422ecad5e">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#aed4b3aab359cccf7d139486422ecad5e">debugPrint</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#aaabaf01447179abc74a6525a3ec06729">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#aaabaf01447179abc74a6525a3ec06729">enable</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#ae4414385f46b4c3701eb25586eaf9eca">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#ae4414385f46b4c3701eb25586eaf9eca">disable</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#abf2d823e546fab1755645860ceb3fea3">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#abf2d823e546fab1755645860ceb3fea3">setLowerCallback</a>(<span class="keywordtype">void</span> (*callback_function)());</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#a373837c57d0959bf0170684c498875bf">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#a373837c57d0959bf0170684c498875bf">setUpperCallback</a>(<span class="keywordtype">void</span> (*callback_function)());</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#a165d218a1f6537bf7b11e1118ae507f2">   66</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#a165d218a1f6537bf7b11e1118ae507f2">setUpperThreshold</a>(float64_t upper_threshold, <span class="keywordtype">bool</span> clamp_to_upper = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#a396480cb218ce448b63be154ec430e91">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#a396480cb218ce448b63be154ec430e91">setLowerThreshold</a>(float64_t lower_threshold, <span class="keywordtype">bool</span> clamp_to_lower = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#a7dbe3c7ac94b27e206f4d198b130129f">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#a7dbe3c7ac94b27e206f4d198b130129f">clearUpperThreshold</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#a5138b879ac51822745611494315558d8">   80</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_threshold_generator.html#a5138b879ac51822745611494315558d8">clearLowerThreshold</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#af09183a866a477c3854090a7c0d19b32">   88</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_threshold_generator.html#af09183a866a477c3854090a7c0d19b32">input</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_threshold_generator.html#abb039acbb4fe9654b9dd0b758c686c4a">   95</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_threshold_generator.html#abb039acbb4fe9654b9dd0b758c686c4a">output</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    DecimalPosition input_position;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    DecimalPosition output_position;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">volatile</span> ControlParameter _lower_threshold = 0;  </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">volatile</span> ControlParameter _upper_threshold = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    void (*callback_on_lower_threshold)() = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    void (*callback_on_upper_threshold)() = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">bool</span> clamp_lower = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">bool</span> clamp_upper = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">bool</span> upper_set = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">bool</span> lower_set = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>};</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html">   46</a></span><span class="keyword">class </span>WaveGenerator1D : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    WaveGenerator1D();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">volatile</span> ControlParameter amplitude = 0;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">volatile</span> ControlParameter phase = 0.0;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">volatile</span> ControlParameter rotational_speed_rev_per_sec = 8;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> setNoInput();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> debugPrint();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> enable();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> disable();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    DecimalPosition input_position; </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    DecimalPosition output_position;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">bool</span> no_input = <span class="keyword">false</span>; <span class="comment">//if set to true uses the frame value to update the output</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keyword">volatile</span> float64_t current_angle_rad = 0;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keyword">volatile</span> float64_t delta = 0;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
-</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//removing because it&#39;s currently not needed with WaveGenerator1D</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">/*class WaveGenerator2D : public Plugin{</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">  public:</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">    WaveGenerator2D();</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">    volatile ControlParameter amplitude = 1.0;</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    volatile ControlParameter phase = 0.0;</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">    volatile ControlParameter rotational_speed_rev_per_sec = 6;</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">    volatile bool no_input = false; //if set to true uses the frame value to update the output</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment"></span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">    void begin();</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">    void setNoInput();</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"></span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">    void debugPrint();</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"></span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">    BlockPort input; </span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">    BlockPort output_x;</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">    BlockPort output_y;</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"></span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">    private:</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">    DecimalPosition input_position; </span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">    DecimalPosition output_x_position;</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">    DecimalPosition output_y_position;</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment"></span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">    protected:</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">      volatile float64_t current_angle_rad = 0;</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">      volatile float64_t delta = 0;</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"></span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">      void run();</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">};*/</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="foldopen" id="foldopen00106" data-start="{" data-end="};">
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_circle_generator.html">  106</a></span><span class="keyword">class </span>CircleGenerator : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    CircleGenerator();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">volatile</span> ControlParameter radius = 1.0;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">volatile</span> ControlParameter rotational_speed_rev_per_sec = 6; <span class="comment">//starts off</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> setNoInput();</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> debugPrint();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input; </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_x;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_y;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    DecimalPosition input_position; </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    DecimalPosition output_x_position;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    DecimalPosition output_y_position;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">bool</span> no_input = <span class="keyword">false</span>; <span class="comment">//if set to true uses the frame value to update the output</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keyword">volatile</span> float64_t current_angle_rad = 0;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keyword">volatile</span> float64_t delta = 0;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>};</div>
-</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="foldopen" id="foldopen00135" data-start="{" data-end="};">
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_velocity_generator.html">  135</a></span><span class="keyword">class </span>VelocityGenerator : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    VelocityGenerator();</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keyword">volatile</span> ControlParameter speed_units_per_sec = 0; <span class="comment">// generation velocity</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    DecimalPosition target_position = 0;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>};</div>
-</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="foldopen" id="foldopen00149" data-start="{" data-end="};">
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_position_generator.html">  149</a></span><span class="keyword">class </span>PositionGenerator : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="comment">// This position generator maintains its own internal state, and will incrementally drive an output transmission to achieve</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="comment">// a particular value of its internal position state under the constraints of a maximum velocity.</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    PositionGenerator();</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">void</span> set_speed(ControlParameter speed);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">void</span> go(float64_t distance_or_position, uint8_t mode);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">void</span> go(float64_t distance_or_position, uint8_t mode, ControlParameter speed);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">volatile</span> ControlParameter speed_units_per_sec = 0; <span class="comment">// generation velocity. This will be used if not explicitly provided by the call to go()</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">// BlockPorts</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    DecimalPosition target_position = 0;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    DecimalPosition current_position = 0;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>};</div>
-</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="foldopen" id="foldopen00175" data-start="{" data-end="};">
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html">  175</a></span><span class="keyword">class </span>PathLengthGenerator2D : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="comment">// Generates an output signal in proportion to the linear distance traversed by two inputs.</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    PathLengthGenerator2D();</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordtype">void</span> set_ratio(ControlParameter ratio);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> set_ratio(ControlParameter output_distance, ControlParameter input_distance){</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      set_ratio(output_distance / input_distance);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="};">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html">  130</a></span><span class="keyword">class </span><a class="code hl_function" href="class_wave_generator1_d.html#a67772422138cfdf78cb3c7601bdcce4a">WaveGenerator1D</a> : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a67772422138cfdf78cb3c7601bdcce4a">  135</a></span>    <a class="code hl_function" href="class_wave_generator1_d.html#a67772422138cfdf78cb3c7601bdcce4a">WaveGenerator1D</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a486debcdc8df3736920fa9c6f482351f">  139</a></span>    <span class="keyword">volatile</span> ControlParameter <a class="code hl_variable" href="class_wave_generator1_d.html#a486debcdc8df3736920fa9c6f482351f">amplitude</a> = 0;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a1614580ec0ed79cb209117fcd1b1da39">  143</a></span>    <span class="keyword">volatile</span> ControlParameter <a class="code hl_variable" href="class_wave_generator1_d.html#a1614580ec0ed79cb209117fcd1b1da39">phase</a> = 0.0;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a14b9b19aa976e382b4ae58f15b7d23e2">  147</a></span>    <span class="keyword">volatile</span> ControlParameter <a class="code hl_variable" href="class_wave_generator1_d.html#a14b9b19aa976e382b4ae58f15b7d23e2">frequency</a> = 8;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#abd6acd6684ed5dfe6b05ce983c091285">  151</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wave_generator1_d.html#abd6acd6684ed5dfe6b05ce983c091285">begin</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a8d49e84aeb59f1e9dcaff6f4850af05f">  155</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wave_generator1_d.html#a8d49e84aeb59f1e9dcaff6f4850af05f">setNoInput</a>();</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a304c0671c3591732dace0f4834dc3839">  159</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wave_generator1_d.html#a304c0671c3591732dace0f4834dc3839">debugPrint</a>();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a05960e1ba1d8a187ecf0a517e9998f41">  163</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wave_generator1_d.html#a05960e1ba1d8a187ecf0a517e9998f41">enable</a>();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#aefad5e3445c0417fa928b2fac5877f79">  167</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wave_generator1_d.html#aefad5e3445c0417fa928b2fac5877f79">disable</a>();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#a010d62b34de60350b703673248e5b6fe">  174</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_wave_generator1_d.html#a010d62b34de60350b703673248e5b6fe">input</a>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="class_wave_generator1_d.html#ac6760594edd51cf4b065ed4a7d5fa1ef">  181</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_wave_generator1_d.html#ac6760594edd51cf4b065ed4a7d5fa1ef">output</a>;   </div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    ControlParameter ratio = 1.0; <span class="comment">// output / input</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="comment">// BlockPorts</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input_1;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input_2;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    DecimalPosition input_1_position;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    DecimalPosition input_2_position;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    DecimalPosition output_position;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    DecimalPosition input_position; </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    DecimalPosition output_position;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">bool</span> no_input = <span class="keyword">false</span>; <span class="comment">//if set to true uses the frame value to update the output</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="keyword">volatile</span> float64_t current_angle_rad = 0;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      <span class="keyword">volatile</span> float64_t delta = 0;</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>};</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>};</div>
 </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="foldopen" id="foldopen00206" data-start="{" data-end="};">
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html">  206</a></span><span class="keyword">class </span>PathLengthGenerator3D : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="comment">// Generates an output signal in proportion to the linear distance traversed by three inputs.</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    PathLengthGenerator3D();</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordtype">void</span> set_ratio(ControlParameter ratio);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> set_ratio(ControlParameter output_distance, ControlParameter input_distance){</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      set_ratio(output_distance / input_distance);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    ControlParameter ratio = 1.0; <span class="comment">// output / input</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="comment">// BlockPorts</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input_1;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input_2;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> input_3;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    DecimalPosition input_1_position;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    DecimalPosition input_2_position;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    DecimalPosition input_3_position;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    DecimalPosition output_position;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>};</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment">//removing because it&#39;s currently not needed with WaveGenerator1D</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="comment">/*class WaveGenerator2D : public Plugin{</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">  public:</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">    WaveGenerator2D();</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment">    volatile ControlParameter amplitude = 1.0;</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">    volatile ControlParameter phase = 0.0;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">    volatile ControlParameter frequency = 6;</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment">    volatile bool no_input = false; //if set to true uses the frame value to update the output</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment"></span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment">    void begin();</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">    void setNoInput();</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment"></span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">    void debugPrint();</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment"></span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">    BlockPort input; </span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="comment">    BlockPort output_x;</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment">    BlockPort output_y;</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment"></span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">    private:</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">    DecimalPosition input_position; </span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">    DecimalPosition output_x_position;</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">    DecimalPosition output_y_position;</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment"></span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">    protected:</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">      volatile float64_t current_angle_rad = 0;</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment">      volatile float64_t delta = 0;</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment"></span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">      void run();</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">};*/</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span></div>
+<div class="foldopen" id="foldopen00244" data-start="{" data-end="};">
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="class_circle_generator.html">  244</a></span><span class="keyword">class </span>CircleGenerator : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    CircleGenerator();</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="class_circle_generator.html#a83f13cc4e4efea855329acd1b475a5b7">  250</a></span>    <span class="keyword">volatile</span> ControlParameter <a class="code hl_variable" href="class_circle_generator.html#a83f13cc4e4efea855329acd1b475a5b7">radius</a> = 1.0;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="class_circle_generator.html#ae4e83547705553ba5f3a8772e14decc2">  255</a></span>    <span class="keyword">volatile</span> ControlParameter <a class="code hl_variable" href="class_circle_generator.html#ae4e83547705553ba5f3a8772e14decc2">rotational_speed_rev_per_sec</a> = 6; <span class="comment">//starts off</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="class_circle_generator.html#ac8dcf701a89fd71e71f2de34aa458f8c">  259</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_circle_generator.html#ac8dcf701a89fd71e71f2de34aa458f8c">begin</a>();</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91">  263</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91">setNoInput</a>();</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="class_circle_generator.html#a10552bb66ba68aff68efae6269e52815">  267</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_circle_generator.html#a10552bb66ba68aff68efae6269e52815">debugPrint</a>();</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="class_circle_generator.html#ac17aee6b32de386df19f19ec2d5eb0d0">  280</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_circle_generator.html#ac17aee6b32de386df19f19ec2d5eb0d0">input</a>; </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="class_circle_generator.html#af424db546b61fab8690dab2d40f32b5e">  287</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_circle_generator.html#af424db546b61fab8690dab2d40f32b5e">output_x</a>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="class_circle_generator.html#ab209058f3943d3aac01c67d6160271ea">  294</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_circle_generator.html#ab209058f3943d3aac01c67d6160271ea">output_y</a>;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    DecimalPosition input_position; </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    DecimalPosition output_x_position;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    DecimalPosition output_y_position;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keywordtype">bool</span> no_input = <span class="keyword">false</span>; <span class="comment">//if set to true uses the frame value to update the output</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      <span class="keyword">volatile</span> float64_t current_angle_rad = 0;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      <span class="keyword">volatile</span> float64_t delta = 0;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>};</div>
 </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">#endif </span><span class="comment">//generators_h</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span></div>
+<div class="foldopen" id="foldopen00319" data-start="{" data-end="};">
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="class_velocity_generator.html">  319</a></span><span class="keyword">class </span>VelocityGenerator : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    VelocityGenerator();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="class_velocity_generator.html#a6585a0eb09b0b7f27bd944059613cb19">  326</a></span>    <span class="keyword">volatile</span> ControlParameter <a class="code hl_variable" href="class_velocity_generator.html#a6585a0eb09b0b7f27bd944059613cb19">speed_units_per_sec</a> = 0; <span class="comment">// generation velocity</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="class_velocity_generator.html#a10151038501c236dda680966e97c9cce">  330</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_velocity_generator.html#a10151038501c236dda680966e97c9cce">begin</a>();</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="class_velocity_generator.html#a520b0ca4b9495bc35ad62f218655a8fe">  343</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_velocity_generator.html#a520b0ca4b9495bc35ad62f218655a8fe">output</a>;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    DecimalPosition target_position = 0;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>};</div>
+</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span></div>
+<div class="foldopen" id="foldopen00363" data-start="{" data-end="};">
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno"><a class="line" href="class_position_generator.html">  363</a></span><span class="keyword">class </span><a class="code hl_function" href="class_position_generator.html#a1a1837f8127c065959382a5754ab1a53">PositionGenerator</a> : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>  <span class="comment">// This position generator maintains its own internal state, and will incrementally drive an output transmission to achieve</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <span class="comment">// a particular value of its internal position state under the constraints of a maximum velocity.</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="class_position_generator.html#a1a1837f8127c065959382a5754ab1a53">  371</a></span>    <a class="code hl_function" href="class_position_generator.html#a1a1837f8127c065959382a5754ab1a53">PositionGenerator</a>();</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno"><a class="line" href="class_position_generator.html#ac1ffc639139b334d2d180332859e0d48">  375</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_generator.html#ac1ffc639139b334d2d180332859e0d48">begin</a>();</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno"><a class="line" href="class_position_generator.html#a4b39e72ca8796b959b5f1bd16bee5141">  380</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_generator.html#a4b39e72ca8796b959b5f1bd16bee5141">set_speed</a>(ControlParameter speed);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno"><a class="line" href="class_position_generator.html#a069294b6a0d1b9204f1e613cb40f83a3">  386</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_generator.html#a069294b6a0d1b9204f1e613cb40f83a3">go</a>(float64_t distance_or_position, uint8_t mode);</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno"><a class="line" href="class_position_generator.html#ad6daff12b8005974f878d33d8ab5b1ba">  393</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_generator.html#ad6daff12b8005974f878d33d8ab5b1ba">go</a>(float64_t distance_or_position, uint8_t mode, ControlParameter speed);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="class_position_generator.html#a616c3fdcd9dfea7c2d18c4a69d9568f4">  397</a></span>    <span class="keyword">volatile</span> ControlParameter <a class="code hl_variable" href="class_position_generator.html#a616c3fdcd9dfea7c2d18c4a69d9568f4">speed_units_per_sec</a> = 0; <span class="comment">// generation velocity. This will be used if not explicitly provided by the call to go()</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    <span class="comment">// BlockPorts</span></div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno"><a class="line" href="class_position_generator.html#abfeae5a3a55ab5333502b0d97f232647">  406</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_position_generator.html#abfeae5a3a55ab5333502b0d97f232647">output</a>;</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    DecimalPosition target_position = 0;</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    DecimalPosition current_position = 0;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>};</div>
+</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span></div>
+<div class="foldopen" id="foldopen00432" data-start="{" data-end="};">
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html">  432</a></span><span class="keyword">class </span>PathLengthGenerator2D : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>  <span class="comment">// Generates an output signal in proportion to the linear distance traversed by two inputs.</span></div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    PathLengthGenerator2D();</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html#a4012dc9e017f0c941e1b1350f84a998c">  440</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_length_generator2_d.html#a4012dc9e017f0c941e1b1350f84a998c">begin</a>();</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html#a9405f2a072602847a6d8100c96b2d703">  445</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_length_generator2_d.html#a9405f2a072602847a6d8100c96b2d703">set_ratio</a>(ControlParameter <a class="code hl_variable" href="class_path_length_generator2_d.html#a74c0c9dd987515cee14fbe1b4cccf484">ratio</a>);</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_length_generator2_d.html#a9405f2a072602847a6d8100c96b2d703">set_ratio</a>(ControlParameter output_distance, ControlParameter input_distance){</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>      <a class="code hl_function" href="class_path_length_generator2_d.html#a9405f2a072602847a6d8100c96b2d703">set_ratio</a>(output_distance / input_distance);</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>    }</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html#a2d4c17edb370fb75581cc3fc2156f154">  460</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_length_generator2_d.html#a2d4c17edb370fb75581cc3fc2156f154">set_ratio_for_circle</a>(ControlParameter circle_radius, ControlParameter output_per_revolution);</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html#a74c0c9dd987515cee14fbe1b4cccf484">  470</a></span>    ControlParameter <a class="code hl_variable" href="class_path_length_generator2_d.html#a74c0c9dd987515cee14fbe1b4cccf484">ratio</a> = 1.0; <span class="comment">// output / input</span></div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>    <span class="comment">// BlockPorts</span></div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html#a9d9a56779ca08af995a46e86f83ed7bd">  475</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_path_length_generator2_d.html#a9d9a56779ca08af995a46e86f83ed7bd">input_1</a>;</div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html#a82740bda61a12ed101b03fa73e9c7056">  479</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_path_length_generator2_d.html#a82740bda61a12ed101b03fa73e9c7056">input_2</a>;</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno"><a class="line" href="class_path_length_generator2_d.html#a6bedaf2c273e89769da8b9287c138721">  486</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_path_length_generator2_d.html#a6bedaf2c273e89769da8b9287c138721">output</a>;</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span> </div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    DecimalPosition input_1_position;</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>    DecimalPosition input_2_position;</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>    DecimalPosition output_position;</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span> </div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span> </div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span> </div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>    <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>};</div>
+</div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span></div>
+<div class="foldopen" id="foldopen00508" data-start="{" data-end="};">
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html">  508</a></span><span class="keyword">class </span>PathLengthGenerator3D : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>  <span class="comment">// Generates an output signal in proportion to the linear distance traversed by three inputs.</span></div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span> </div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    PathLengthGenerator3D();</div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html#ac2ab1ecbd812c2f8cce14c9c7e266aaa">  516</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_length_generator3_d.html#ac2ab1ecbd812c2f8cce14c9c7e266aaa">begin</a>();</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html#a00ec5616c1a7bc119654e398d9527cad">  521</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_length_generator3_d.html#a00ec5616c1a7bc119654e398d9527cad">set_ratio</a>(ControlParameter <a class="code hl_variable" href="class_path_length_generator3_d.html#a8f100cbf5974028728c735aed83976e2">ratio</a>);</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_length_generator3_d.html#a00ec5616c1a7bc119654e398d9527cad">set_ratio</a>(ControlParameter output_distance, ControlParameter input_distance){</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>      <a class="code hl_function" href="class_path_length_generator3_d.html#a00ec5616c1a7bc119654e398d9527cad">set_ratio</a>(output_distance / input_distance);</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>    }</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html#a8f100cbf5974028728c735aed83976e2">  534</a></span>    ControlParameter <a class="code hl_variable" href="class_path_length_generator3_d.html#a8f100cbf5974028728c735aed83976e2">ratio</a> = 1.0; <span class="comment">// output / input</span></div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>    <span class="comment">// BlockPorts</span></div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html#a8b6e61418b9c63fddf96612375c50465">  539</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_path_length_generator3_d.html#a8b6e61418b9c63fddf96612375c50465">input_1</a>;</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html#a221b42c931825041172206c4898edb4e">  543</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_path_length_generator3_d.html#a221b42c931825041172206c4898edb4e">input_2</a>;</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html#af6bc49294540b48b2d33a00cf3899e31">  547</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_path_length_generator3_d.html#af6bc49294540b48b2d33a00cf3899e31">input_3</a>;</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno"><a class="line" href="class_path_length_generator3_d.html#af77c791ae7dd61a664df6d8f0837a6ed">  551</a></span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> <a class="code hl_variable" href="class_path_length_generator3_d.html#af77c791ae7dd61a664df6d8f0837a6ed">output</a>;</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span> </div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>    DecimalPosition input_1_position;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    DecimalPosition input_2_position;</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    DecimalPosition input_3_position;</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    DecimalPosition output_position;</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span> </div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>};</div>
+</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="preprocessor">#endif </span><span class="comment">//generators_h</span></div>
 <div class="ttc" id="aclass_block_port_html"><div class="ttname"><a href="class_block_port.html">BlockPort</a></div><div class="ttdoc">BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...</div><div class="ttdef"><b>Definition</b> core.hpp:135</div></div>
+<div class="ttc" id="aclass_circle_generator_html_a10552bb66ba68aff68efae6269e52815"><div class="ttname"><a href="class_circle_generator.html#a10552bb66ba68aff68efae6269e52815">CircleGenerator::debugPrint</a></div><div class="ttdeci">void debugPrint()</div><div class="ttdoc">Print debug information about the CircleGenerator to the Serial console.</div></div>
+<div class="ttc" id="aclass_circle_generator_html_a140dc4a8f517f36587e6aad1018f8c91"><div class="ttname"><a href="class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91">CircleGenerator::setNoInput</a></div><div class="ttdeci">void setNoInput()</div><div class="ttdoc">Use internal frame count for phase instead of an input signal. This will allow the circle generator t...</div></div>
+<div class="ttc" id="aclass_circle_generator_html_a83f13cc4e4efea855329acd1b475a5b7"><div class="ttname"><a href="class_circle_generator.html#a83f13cc4e4efea855329acd1b475a5b7">CircleGenerator::radius</a></div><div class="ttdeci">volatile ControlParameter radius</div><div class="ttdoc">ControlParameter for the circle radius. You can set it directly or map an input to it.</div><div class="ttdef"><b>Definition</b> generators.hpp:250</div></div>
+<div class="ttc" id="aclass_circle_generator_html_ab209058f3943d3aac01c67d6160271ea"><div class="ttname"><a href="class_circle_generator.html#ab209058f3943d3aac01c67d6160271ea">CircleGenerator::output_y</a></div><div class="ttdeci">BlockPort output_y</div><div class="ttdoc">Output BlockPort for Y component of the circular path.</div><div class="ttdef"><b>Definition</b> generators.hpp:294</div></div>
+<div class="ttc" id="aclass_circle_generator_html_ac17aee6b32de386df19f19ec2d5eb0d0"><div class="ttname"><a href="class_circle_generator.html#ac17aee6b32de386df19f19ec2d5eb0d0">CircleGenerator::input</a></div><div class="ttdeci">BlockPort input</div><div class="ttdoc">Optional input BlockPort (phase). If setNoInput() is called, this input is ignored.</div><div class="ttdef"><b>Definition</b> generators.hpp:280</div></div>
+<div class="ttc" id="aclass_circle_generator_html_ac8dcf701a89fd71e71f2de34aa458f8c"><div class="ttname"><a href="class_circle_generator.html#ac8dcf701a89fd71e71f2de34aa458f8c">CircleGenerator::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialize the CircleGenerator. Must be called to set up the generator.</div></div>
+<div class="ttc" id="aclass_circle_generator_html_ae4e83547705553ba5f3a8772e14decc2"><div class="ttname"><a href="class_circle_generator.html#ae4e83547705553ba5f3a8772e14decc2">CircleGenerator::rotational_speed_rev_per_sec</a></div><div class="ttdeci">volatile ControlParameter rotational_speed_rev_per_sec</div><div class="ttdoc">ControlParameter for the rotational speed, in revolutions per second. You can set it directly or map ...</div><div class="ttdef"><b>Definition</b> generators.hpp:255</div></div>
+<div class="ttc" id="aclass_circle_generator_html_af424db546b61fab8690dab2d40f32b5e"><div class="ttname"><a href="class_circle_generator.html#af424db546b61fab8690dab2d40f32b5e">CircleGenerator::output_x</a></div><div class="ttdeci">BlockPort output_x</div><div class="ttdoc">Output BlockPort for X component of the circular path.</div><div class="ttdef"><b>Definition</b> generators.hpp:287</div></div>
+<div class="ttc" id="aclass_path_length_generator2_d_html_a2d4c17edb370fb75581cc3fc2156f154"><div class="ttname"><a href="class_path_length_generator2_d.html#a2d4c17edb370fb75581cc3fc2156f154">PathLengthGenerator2D::set_ratio_for_circle</a></div><div class="ttdeci">void set_ratio_for_circle(ControlParameter circle_radius, ControlParameter output_per_revolution)</div><div class="ttdoc">Configure the generator for circular motion (e.g., from CircleGenerator). Sets the ratio so that the ...</div></div>
+<div class="ttc" id="aclass_path_length_generator2_d_html_a4012dc9e017f0c941e1b1350f84a998c"><div class="ttname"><a href="class_path_length_generator2_d.html#a4012dc9e017f0c941e1b1350f84a998c">PathLengthGenerator2D::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialize the PathLengthGenerator2D. Must be called to set up the generator.</div></div>
+<div class="ttc" id="aclass_path_length_generator2_d_html_a6bedaf2c273e89769da8b9287c138721"><div class="ttname"><a href="class_path_length_generator2_d.html#a6bedaf2c273e89769da8b9287c138721">PathLengthGenerator2D::output</a></div><div class="ttdeci">BlockPort output</div><div class="ttdoc">Output BlockPort proportional to 2D path length.</div><div class="ttdef"><b>Definition</b> generators.hpp:486</div></div>
+<div class="ttc" id="aclass_path_length_generator2_d_html_a74c0c9dd987515cee14fbe1b4cccf484"><div class="ttname"><a href="class_path_length_generator2_d.html#a74c0c9dd987515cee14fbe1b4cccf484">PathLengthGenerator2D::ratio</a></div><div class="ttdeci">ControlParameter ratio</div><div class="ttdoc">ControlParameter scaling output relative to input path length (output/input).</div><div class="ttdef"><b>Definition</b> generators.hpp:470</div></div>
+<div class="ttc" id="aclass_path_length_generator2_d_html_a82740bda61a12ed101b03fa73e9c7056"><div class="ttname"><a href="class_path_length_generator2_d.html#a82740bda61a12ed101b03fa73e9c7056">PathLengthGenerator2D::input_2</a></div><div class="ttdeci">BlockPort input_2</div><div class="ttdoc">Second input BlockPort (e.g., Y position).</div><div class="ttdef"><b>Definition</b> generators.hpp:479</div></div>
+<div class="ttc" id="aclass_path_length_generator2_d_html_a9405f2a072602847a6d8100c96b2d703"><div class="ttname"><a href="class_path_length_generator2_d.html#a9405f2a072602847a6d8100c96b2d703">PathLengthGenerator2D::set_ratio</a></div><div class="ttdeci">void set_ratio(ControlParameter ratio)</div><div class="ttdoc">Set the ratio between output distance and input path length.</div></div>
+<div class="ttc" id="aclass_path_length_generator2_d_html_a9d9a56779ca08af995a46e86f83ed7bd"><div class="ttname"><a href="class_path_length_generator2_d.html#a9d9a56779ca08af995a46e86f83ed7bd">PathLengthGenerator2D::input_1</a></div><div class="ttdeci">BlockPort input_1</div><div class="ttdoc">First input BlockPort (e.g., X position).</div><div class="ttdef"><b>Definition</b> generators.hpp:475</div></div>
+<div class="ttc" id="aclass_path_length_generator3_d_html_a00ec5616c1a7bc119654e398d9527cad"><div class="ttname"><a href="class_path_length_generator3_d.html#a00ec5616c1a7bc119654e398d9527cad">PathLengthGenerator3D::set_ratio</a></div><div class="ttdeci">void set_ratio(ControlParameter ratio)</div><div class="ttdoc">Set the ratio between output distance and input path length.</div></div>
+<div class="ttc" id="aclass_path_length_generator3_d_html_a221b42c931825041172206c4898edb4e"><div class="ttname"><a href="class_path_length_generator3_d.html#a221b42c931825041172206c4898edb4e">PathLengthGenerator3D::input_2</a></div><div class="ttdeci">BlockPort input_2</div><div class="ttdoc">Second input BlockPort (e.g., Y position).</div><div class="ttdef"><b>Definition</b> generators.hpp:543</div></div>
+<div class="ttc" id="aclass_path_length_generator3_d_html_a8b6e61418b9c63fddf96612375c50465"><div class="ttname"><a href="class_path_length_generator3_d.html#a8b6e61418b9c63fddf96612375c50465">PathLengthGenerator3D::input_1</a></div><div class="ttdeci">BlockPort input_1</div><div class="ttdoc">First input BlockPort (e.g., X position).</div><div class="ttdef"><b>Definition</b> generators.hpp:539</div></div>
+<div class="ttc" id="aclass_path_length_generator3_d_html_a8f100cbf5974028728c735aed83976e2"><div class="ttname"><a href="class_path_length_generator3_d.html#a8f100cbf5974028728c735aed83976e2">PathLengthGenerator3D::ratio</a></div><div class="ttdeci">ControlParameter ratio</div><div class="ttdoc">ControlParameter scaling output relative to input path length (output/input).</div><div class="ttdef"><b>Definition</b> generators.hpp:534</div></div>
+<div class="ttc" id="aclass_path_length_generator3_d_html_ac2ab1ecbd812c2f8cce14c9c7e266aaa"><div class="ttname"><a href="class_path_length_generator3_d.html#ac2ab1ecbd812c2f8cce14c9c7e266aaa">PathLengthGenerator3D::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialize the PathLengthGenerator3D. Must be called to set up the generator.</div></div>
+<div class="ttc" id="aclass_path_length_generator3_d_html_af6bc49294540b48b2d33a00cf3899e31"><div class="ttname"><a href="class_path_length_generator3_d.html#af6bc49294540b48b2d33a00cf3899e31">PathLengthGenerator3D::input_3</a></div><div class="ttdeci">BlockPort input_3</div><div class="ttdoc">Third input BlockPort (e.g., Z position).</div><div class="ttdef"><b>Definition</b> generators.hpp:547</div></div>
+<div class="ttc" id="aclass_path_length_generator3_d_html_af77c791ae7dd61a664df6d8f0837a6ed"><div class="ttname"><a href="class_path_length_generator3_d.html#af77c791ae7dd61a664df6d8f0837a6ed">PathLengthGenerator3D::output</a></div><div class="ttdeci">BlockPort output</div><div class="ttdoc">Output BlockPort proportional to 3D path length.</div><div class="ttdef"><b>Definition</b> generators.hpp:551</div></div>
+<div class="ttc" id="aclass_position_generator_html_a069294b6a0d1b9204f1e613cb40f83a3"><div class="ttname"><a href="class_position_generator.html#a069294b6a0d1b9204f1e613cb40f83a3">PositionGenerator::go</a></div><div class="ttdeci">void go(float64_t distance_or_position, uint8_t mode)</div><div class="ttdoc">Command the PositionGenerator to move to a specified distance or position.</div></div>
+<div class="ttc" id="aclass_position_generator_html_a1a1837f8127c065959382a5754ab1a53"><div class="ttname"><a href="class_position_generator.html#a1a1837f8127c065959382a5754ab1a53">PositionGenerator::PositionGenerator</a></div><div class="ttdeci">PositionGenerator()</div><div class="ttdoc">Default constructor for PositionGenerator. Does not initialize the Generator. Call begin() to set up ...</div></div>
+<div class="ttc" id="aclass_position_generator_html_a4b39e72ca8796b959b5f1bd16bee5141"><div class="ttname"><a href="class_position_generator.html#a4b39e72ca8796b959b5f1bd16bee5141">PositionGenerator::set_speed</a></div><div class="ttdeci">void set_speed(ControlParameter speed)</div><div class="ttdoc">Set the speed (maximum velocity) for the PositionGenerator.</div></div>
+<div class="ttc" id="aclass_position_generator_html_a616c3fdcd9dfea7c2d18c4a69d9568f4"><div class="ttname"><a href="class_position_generator.html#a616c3fdcd9dfea7c2d18c4a69d9568f4">PositionGenerator::speed_units_per_sec</a></div><div class="ttdeci">volatile ControlParameter speed_units_per_sec</div><div class="ttdoc">ControlParameter that determines the speed of the PositionGenerator. Will not be used if speed is pro...</div><div class="ttdef"><b>Definition</b> generators.hpp:397</div></div>
+<div class="ttc" id="aclass_position_generator_html_abfeae5a3a55ab5333502b0d97f232647"><div class="ttname"><a href="class_position_generator.html#abfeae5a3a55ab5333502b0d97f232647">PositionGenerator::output</a></div><div class="ttdeci">BlockPort output</div><div class="ttdoc">Output BlockPort for the PositionGenerator. This is what you map from to a downstream component.</div><div class="ttdef"><b>Definition</b> generators.hpp:406</div></div>
+<div class="ttc" id="aclass_position_generator_html_ac1ffc639139b334d2d180332859e0d48"><div class="ttname"><a href="class_position_generator.html#ac1ffc639139b334d2d180332859e0d48">PositionGenerator::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialize the PositionGenerator. Must be called to set up the generator.</div></div>
+<div class="ttc" id="aclass_position_generator_html_ad6daff12b8005974f878d33d8ab5b1ba"><div class="ttname"><a href="class_position_generator.html#ad6daff12b8005974f878d33d8ab5b1ba">PositionGenerator::go</a></div><div class="ttdeci">void go(float64_t distance_or_position, uint8_t mode, ControlParameter speed)</div><div class="ttdoc">Command the PositionGenerator to move to a specified distance or position with a specified speed.</div></div>
 <div class="ttc" id="aclass_r_p_c_html"><div class="ttname"><a href="class_r_p_c.html">RPC</a></div><div class="ttdef"><b>Definition</b> rpc.hpp:29</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_a165d218a1f6537bf7b11e1118ae507f2"><div class="ttname"><a href="class_threshold_generator.html#a165d218a1f6537bf7b11e1118ae507f2">ThresholdGenerator::setUpperThreshold</a></div><div class="ttdeci">void setUpperThreshold(float64_t upper_threshold, bool clamp_to_upper=false)</div><div class="ttdoc">Set the upper threshold value and optionally enable clamping to the upper threshold....</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_a3578c3b057e12dc5dfc04b5eae671289"><div class="ttname"><a href="class_threshold_generator.html#a3578c3b057e12dc5dfc04b5eae671289">ThresholdGenerator::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialize the ThresholdGenerator.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_a373837c57d0959bf0170684c498875bf"><div class="ttname"><a href="class_threshold_generator.html#a373837c57d0959bf0170684c498875bf">ThresholdGenerator::setUpperCallback</a></div><div class="ttdeci">void setUpperCallback(void(*callback_function)())</div><div class="ttdoc">Set the callback function to be called when the input crosses the upper threshold.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_a396480cb218ce448b63be154ec430e91"><div class="ttname"><a href="class_threshold_generator.html#a396480cb218ce448b63be154ec430e91">ThresholdGenerator::setLowerThreshold</a></div><div class="ttdeci">void setLowerThreshold(float64_t lower_threshold, bool clamp_to_lower=false)</div><div class="ttdoc">Set the lower threshold value and optionally enable clamping to the lower threshold....</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_a5138b879ac51822745611494315558d8"><div class="ttname"><a href="class_threshold_generator.html#a5138b879ac51822745611494315558d8">ThresholdGenerator::clearLowerThreshold</a></div><div class="ttdeci">void clearLowerThreshold()</div><div class="ttdoc">Clear the lower threshold, disabling its effect.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_a7dbe3c7ac94b27e206f4d198b130129f"><div class="ttname"><a href="class_threshold_generator.html#a7dbe3c7ac94b27e206f4d198b130129f">ThresholdGenerator::clearUpperThreshold</a></div><div class="ttdeci">void clearUpperThreshold()</div><div class="ttdoc">Clear the upper threshold, disabling its effect.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_aaabaf01447179abc74a6525a3ec06729"><div class="ttname"><a href="class_threshold_generator.html#aaabaf01447179abc74a6525a3ec06729">ThresholdGenerator::enable</a></div><div class="ttdeci">void enable()</div><div class="ttdoc">Enable the ThresholdGenerator.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_abb039acbb4fe9654b9dd0b758c686c4a"><div class="ttname"><a href="class_threshold_generator.html#abb039acbb4fe9654b9dd0b758c686c4a">ThresholdGenerator::output</a></div><div class="ttdeci">BlockPort output</div><div class="ttdoc">Output BlockPort for the ThresholdGenerator. This is what you map from to a downstream component....</div><div class="ttdef"><b>Definition</b> generators.hpp:95</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_abf2d823e546fab1755645860ceb3fea3"><div class="ttname"><a href="class_threshold_generator.html#abf2d823e546fab1755645860ceb3fea3">ThresholdGenerator::setLowerCallback</a></div><div class="ttdeci">void setLowerCallback(void(*callback_function)())</div><div class="ttdoc">Set the callback function to be called when the input crosses the lower threshold.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_ae4414385f46b4c3701eb25586eaf9eca"><div class="ttname"><a href="class_threshold_generator.html#ae4414385f46b4c3701eb25586eaf9eca">ThresholdGenerator::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdoc">Disable the ThresholdGenerator.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_aed4b3aab359cccf7d139486422ecad5e"><div class="ttname"><a href="class_threshold_generator.html#aed4b3aab359cccf7d139486422ecad5e">ThresholdGenerator::debugPrint</a></div><div class="ttdeci">void debugPrint()</div><div class="ttdoc">Print debug information about the ThresholdGenerator to the Serial console.</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_aeed8b50dd3a768dd9993d19073e8560e"><div class="ttname"><a href="class_threshold_generator.html#aeed8b50dd3a768dd9993d19073e8560e">ThresholdGenerator::ThresholdGenerator</a></div><div class="ttdeci">ThresholdGenerator()</div><div class="ttdoc">Default constructor for ThresholdGenerator. Does not initialize board hardware. Call begin() to set u...</div></div>
+<div class="ttc" id="aclass_threshold_generator_html_af09183a866a477c3854090a7c0d19b32"><div class="ttname"><a href="class_threshold_generator.html#af09183a866a477c3854090a7c0d19b32">ThresholdGenerator::input</a></div><div class="ttdeci">BlockPort input</div><div class="ttdoc">Input BlockPort for the ThresholdGenerator. This is what you map to with an upstream component.</div><div class="ttdef"><b>Definition</b> generators.hpp:88</div></div>
+<div class="ttc" id="aclass_velocity_generator_html_a10151038501c236dda680966e97c9cce"><div class="ttname"><a href="class_velocity_generator.html#a10151038501c236dda680966e97c9cce">VelocityGenerator::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialize the VelocityGenerator. Must be called to set up the generator.</div></div>
+<div class="ttc" id="aclass_velocity_generator_html_a520b0ca4b9495bc35ad62f218655a8fe"><div class="ttname"><a href="class_velocity_generator.html#a520b0ca4b9495bc35ad62f218655a8fe">VelocityGenerator::output</a></div><div class="ttdeci">BlockPort output</div><div class="ttdoc">Output BlockPort for the generated position signal.</div><div class="ttdef"><b>Definition</b> generators.hpp:343</div></div>
+<div class="ttc" id="aclass_velocity_generator_html_a6585a0eb09b0b7f27bd944059613cb19"><div class="ttname"><a href="class_velocity_generator.html#a6585a0eb09b0b7f27bd944059613cb19">VelocityGenerator::speed_units_per_sec</a></div><div class="ttdeci">volatile ControlParameter speed_units_per_sec</div><div class="ttdoc">ControlParameter specifying the generation speed in units per second. You can set it directly or map ...</div><div class="ttdef"><b>Definition</b> generators.hpp:326</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a010d62b34de60350b703673248e5b6fe"><div class="ttname"><a href="class_wave_generator1_d.html#a010d62b34de60350b703673248e5b6fe">WaveGenerator1D::input</a></div><div class="ttdeci">BlockPort input</div><div class="ttdoc">Input BlockPort for the WaveGenerator1D. This is what you map to with an upstream component....</div><div class="ttdef"><b>Definition</b> generators.hpp:174</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a05960e1ba1d8a187ecf0a517e9998f41"><div class="ttname"><a href="class_wave_generator1_d.html#a05960e1ba1d8a187ecf0a517e9998f41">WaveGenerator1D::enable</a></div><div class="ttdeci">void enable()</div><div class="ttdoc">Enable the WaveGenerator1D.</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a14b9b19aa976e382b4ae58f15b7d23e2"><div class="ttname"><a href="class_wave_generator1_d.html#a14b9b19aa976e382b4ae58f15b7d23e2">WaveGenerator1D::frequency</a></div><div class="ttdeci">volatile ControlParameter frequency</div><div class="ttdoc">ControlParameter for the frequency of the waveform in revolutions per second (e.g....</div><div class="ttdef"><b>Definition</b> generators.hpp:147</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a1614580ec0ed79cb209117fcd1b1da39"><div class="ttname"><a href="class_wave_generator1_d.html#a1614580ec0ed79cb209117fcd1b1da39">WaveGenerator1D::phase</a></div><div class="ttdeci">volatile ControlParameter phase</div><div class="ttdoc">ControlParameter for the phase of the waveform in radians. Phase is the offset of the waveform from i...</div><div class="ttdef"><b>Definition</b> generators.hpp:143</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a304c0671c3591732dace0f4834dc3839"><div class="ttname"><a href="class_wave_generator1_d.html#a304c0671c3591732dace0f4834dc3839">WaveGenerator1D::debugPrint</a></div><div class="ttdeci">void debugPrint()</div><div class="ttdoc">Print debug information about the WaveGenerator1D to the Serial console.</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a486debcdc8df3736920fa9c6f482351f"><div class="ttname"><a href="class_wave_generator1_d.html#a486debcdc8df3736920fa9c6f482351f">WaveGenerator1D::amplitude</a></div><div class="ttdeci">volatile ControlParameter amplitude</div><div class="ttdoc">ControlParameter for the amplitude of the waveform- the distance from the center line of the wave for...</div><div class="ttdef"><b>Definition</b> generators.hpp:139</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a67772422138cfdf78cb3c7601bdcce4a"><div class="ttname"><a href="class_wave_generator1_d.html#a67772422138cfdf78cb3c7601bdcce4a">WaveGenerator1D::WaveGenerator1D</a></div><div class="ttdeci">WaveGenerator1D()</div><div class="ttdoc">Default constructor for WaveGenerator1D. Does not initialize board hardware. Call begin() to set up t...</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_a8d49e84aeb59f1e9dcaff6f4850af05f"><div class="ttname"><a href="class_wave_generator1_d.html#a8d49e84aeb59f1e9dcaff6f4850af05f">WaveGenerator1D::setNoInput</a></div><div class="ttdeci">void setNoInput()</div><div class="ttdoc">Set the generator to use internal frame count for waveform generation instead of an input signal....</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_abd6acd6684ed5dfe6b05ce983c091285"><div class="ttname"><a href="class_wave_generator1_d.html#abd6acd6684ed5dfe6b05ce983c091285">WaveGenerator1D::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialize the WaveGenerator1D. Must be called to set up the generator.</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_ac6760594edd51cf4b065ed4a7d5fa1ef"><div class="ttname"><a href="class_wave_generator1_d.html#ac6760594edd51cf4b065ed4a7d5fa1ef">WaveGenerator1D::output</a></div><div class="ttdeci">BlockPort output</div><div class="ttdoc">Output BlockPort for the WaveGenerator1D. This is what you map from to a downstream component.</div><div class="ttdef"><b>Definition</b> generators.hpp:181</div></div>
+<div class="ttc" id="aclass_wave_generator1_d_html_aefad5e3445c0417fa928b2fac5877f79"><div class="ttname"><a href="class_wave_generator1_d.html#aefad5e3445c0417fa928b2fac5877f79">WaveGenerator1D::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdoc">Disable the WaveGenerator1D.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

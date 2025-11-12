@@ -122,9 +122,27 @@ float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_absolute</b
 <img src="blockport_diagram.png" alt="" width="400px"/>
 <div class="caption">
 Typical mapping patterns of BlockPorts. Components (A-E) each have one BlockPort Input and one BlockPort Output. Multiple BlockPort Outputs can map to a single Input (e.g. A.output and C.output are both mapped to B.input). Inputs can map to multiple inputs or outputs (e.g. D.input is mapped to C.output)</div></div>
-<p>You will never instantiate a <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> directly; instead, you can access the BlockPorts that are members of different components. The example below shows how to access and map an <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a>'s <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to a <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a>'s input target position <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> inputA;</div>
-<div class="line">inputA.<a class="code hl_function" href="class_input_port.html#a7bec13041ef7d76fbcb3f4126300270a">begin</a>(INPUT_A); <span class="comment">// Initialize InputPort A</span></div>
-<div class="line">inputA.<a class="code hl_variable" href="class_input_port.html#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="#a15141b0edfad4e702588f16599e2655b">map</a>(channelX.input_target_position); <span class="comment">// Map SIGNAL_X to Channel X&#39;s input target position</span></div>
+<p>You will never instantiate a <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> directly; instead, you can access the BlockPorts that are members of different components. The example below shows how to access and map an <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a>'s <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> to a <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a>'s input target position <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> inputA;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channelX;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> outputA;</div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line">  <span class="comment">// -- Configure and start the output port --</span></div>
+<div class="line">  outputA.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A); <span class="comment">// Initialize OutputPort A</span></div>
+<div class="line">    <span class="comment">// Enable the output drivers</span></div>
+<div class="line">  enable_drivers();</div>
+<div class="line">    <span class="comment">// -- Configure and start the channel --</span></div>
+<div class="line">  channelX.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;outputA, SIGNAL_X); <span class="comment">// Connect Channel X to OutputPort A</span></div>
+<div class="line">  <span class="comment">// -- Configure and start the input port --</span></div>
+<div class="line">  inputA.<a class="code hl_function" href="class_input_port.html#a7bec13041ef7d76fbcb3f4126300270a">begin</a>(INPUT_A); <span class="comment">// Initialize InputPort A</span></div>
+<div class="line">  inputA.<a class="code hl_variable" href="class_input_port.html#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="#a15141b0edfad4e702588f16599e2655b">map</a>(channelX.input_target_position); <span class="comment">// Map SIGNAL_X to Channel X&#39;s input target position</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">dance_loop();</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a15141b0edfad4e702588f16599e2655b" name="a15141b0edfad4e702588f16599e2655b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15141b0edfad4e702588f16599e2655b">&#9670;&#160;</a></span>map()</h2>

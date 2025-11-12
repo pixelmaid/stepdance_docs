@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generators_0',['Motion Generators',['../group__generators.html',1,'']]]
+  ['generators_0',['Generators',['../group__generators.html',1,'']]]
 ];

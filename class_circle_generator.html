@@ -89,9 +89,14 @@ $(function(){initNavTree('class_circle_generator.html','','class_circle_generato
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">CircleGenerator Class Reference</div></div>
+  <div class="headertitle"><div class="title">CircleGenerator Class Reference<div class="ingroups"><a class="el" href="group__generators.html">Generators</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used for generating circular motion signals.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="generators_8hpp_source.html">generators.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CircleGenerator:</div>
 <div class="dyncontent">
@@ -103,25 +108,28 @@ Inheritance diagram for CircleGenerator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8dcf701a89fd71e71f2de34aa458f8c" id="r_ac8dcf701a89fd71e71f2de34aa458f8c"><td class="memItemLeft" align="right" valign="top"><a id="ac8dcf701a89fd71e71f2de34aa458f8c" name="ac8dcf701a89fd71e71f2de34aa458f8c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="memdesc:ac8dcf701a89fd71e71f2de34aa458f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_circle_generator.html" title="Used for generating circular motion signals.">CircleGenerator</a>. Must be called to set up the generator. <br /></td></tr>
 <tr class="memitem:a140dc4a8f517f36587e6aad1018f8c91" id="r_a140dc4a8f517f36587e6aad1018f8c91"><td class="memItemLeft" align="right" valign="top"><a id="a140dc4a8f517f36587e6aad1018f8c91" name="a140dc4a8f517f36587e6aad1018f8c91"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setNoInput</b> ()</td></tr>
+<tr class="memdesc:a140dc4a8f517f36587e6aad1018f8c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use internal frame count for phase instead of an input signal. This will allow the circle generator to update automatically based on frame rate. When enabled, input is ignored. <br /></td></tr>
 <tr class="memitem:a10552bb66ba68aff68efae6269e52815" id="r_a10552bb66ba68aff68efae6269e52815"><td class="memItemLeft" align="right" valign="top"><a id="a10552bb66ba68aff68efae6269e52815" name="a10552bb66ba68aff68efae6269e52815"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>debugPrint</b> ()</td></tr>
-<tr class="memitem:a41d1a83888f664619119f5aaca70dfed" id="r_a41d1a83888f664619119f5aaca70dfed"><td class="memItemLeft" align="right" valign="top"><a id="a41d1a83888f664619119f5aaca70dfed" name="a41d1a83888f664619119f5aaca70dfed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memdesc:a10552bb66ba68aff68efae6269e52815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print debug information about the <a class="el" href="class_circle_generator.html" title="Used for generating circular motion signals.">CircleGenerator</a> to the Serial console. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a83f13cc4e4efea855329acd1b475a5b7" id="r_a83f13cc4e4efea855329acd1b475a5b7"><td class="memItemLeft" align="right" valign="top"><a id="a83f13cc4e4efea855329acd1b475a5b7" name="a83f13cc4e4efea855329acd1b475a5b7"></a>
 volatile ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b> = 1.0</td></tr>
+<tr class="memdesc:a83f13cc4e4efea855329acd1b475a5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ControlParameter for the circle radius. You can set it directly or map an input to it. <br /></td></tr>
 <tr class="memitem:ae4e83547705553ba5f3a8772e14decc2" id="r_ae4e83547705553ba5f3a8772e14decc2"><td class="memItemLeft" align="right" valign="top"><a id="ae4e83547705553ba5f3a8772e14decc2" name="ae4e83547705553ba5f3a8772e14decc2"></a>
 volatile ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>rotational_speed_rev_per_sec</b> = 6</td></tr>
-<tr class="memitem:ac17aee6b32de386df19f19ec2d5eb0d0" id="r_ac17aee6b32de386df19f19ec2d5eb0d0"><td class="memItemLeft" align="right" valign="top"><a id="ac17aee6b32de386df19f19ec2d5eb0d0" name="ac17aee6b32de386df19f19ec2d5eb0d0"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td></tr>
-<tr class="memitem:af424db546b61fab8690dab2d40f32b5e" id="r_af424db546b61fab8690dab2d40f32b5e"><td class="memItemLeft" align="right" valign="top"><a id="af424db546b61fab8690dab2d40f32b5e" name="af424db546b61fab8690dab2d40f32b5e"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_x</b></td></tr>
-<tr class="memitem:ab209058f3943d3aac01c67d6160271ea" id="r_ab209058f3943d3aac01c67d6160271ea"><td class="memItemLeft" align="right" valign="top"><a id="ab209058f3943d3aac01c67d6160271ea" name="ab209058f3943d3aac01c67d6160271ea"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_y</b></td></tr>
+<tr class="memdesc:ae4e83547705553ba5f3a8772e14decc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ControlParameter for the rotational speed, in revolutions per second. You can set it directly or map an input to it. <br /></td></tr>
+<tr class="memitem:ac17aee6b32de386df19f19ec2d5eb0d0" id="r_ac17aee6b32de386df19f19ec2d5eb0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac17aee6b32de386df19f19ec2d5eb0d0">input</a></td></tr>
+<tr class="memdesc:ac17aee6b32de386df19f19ec2d5eb0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> (phase). If <a class="el" href="#a140dc4a8f517f36587e6aad1018f8c91" title="Use internal frame count for phase instead of an input signal. This will allow the circle generator t...">setNoInput()</a> is called, this input is ignored.  <br /></td></tr>
+<tr class="memitem:af424db546b61fab8690dab2d40f32b5e" id="r_af424db546b61fab8690dab2d40f32b5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af424db546b61fab8690dab2d40f32b5e">output_x</a></td></tr>
+<tr class="memdesc:af424db546b61fab8690dab2d40f32b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for X component of the circular path.  <br /></td></tr>
+<tr class="memitem:ab209058f3943d3aac01c67d6160271ea" id="r_ab209058f3943d3aac01c67d6160271ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab209058f3943d3aac01c67d6160271ea">output_y</a></td></tr>
+<tr class="memdesc:ab209058f3943d3aac01c67d6160271ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Y component of the circular path.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -135,6 +143,94 @@ volatile float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>current
 <tr class="memitem:aacfcdb4ace4f768dc7064fa8d38e6afd" id="r_aacfcdb4ace4f768dc7064fa8d38e6afd"><td class="memItemLeft" align="right" valign="top"><a id="aacfcdb4ace4f768dc7064fa8d38e6afd" name="aacfcdb4ace4f768dc7064fa8d38e6afd"></a>
 volatile float64_t&#160;</td><td class="memItemRight" valign="bottom"><b>delta</b> = 0</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used for generating circular motion signals. </p>
+<p>A <a class="el" href="class_circle_generator.html" title="Used for generating circular motion signals.">CircleGenerator</a> produces a motion signal that traverses a circle defined by a radius and a rotational speed. It can be driven by an input signal (phase) or run autonomously using the internal frame count when <a class="el" href="#a140dc4a8f517f36587e6aad1018f8c91" title="Use internal frame count for phase instead of an input signal. This will allow the circle generator t...">setNoInput()</a> is called. The two outputs, output_x and output_y, provide the Cartesian components of the circle. Here's an example of how to instantiate and configure a <a class="el" href="class_circle_generator.html" title="Used for generating circular motion signals.">CircleGenerator</a>: </p><div class="fragment"><div class="line">  <span class="comment">// Example of using CircleGenerator to create circular motion in X-Y plane (assuming an Cartesian X-Y mechanism)</span></div>
+<div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_circle_generator.html">CircleGenerator</a> circle_gen;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_x;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_y;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_x;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_y;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup(){</div>
+<div class="line">  <span class="comment">// Initialize OutputPort and enable drivers</span></div>
+<div class="line">  output_x.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A);</div>
+<div class="line">  output_y.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_B);</div>
+<div class="line">  enable_drivers();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Configure circle generator to run without input</span></div>
+<div class="line">  circle_gen.<a class="code hl_function" href="#a140dc4a8f517f36587e6aad1018f8c91">setNoInput</a>();</div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="#a83f13cc4e4efea855329acd1b475a5b7">radius</a> = 10.0; <span class="comment">// example radius in units</span></div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="#ae4e83547705553ba5f3a8772e14decc2">rotational_speed_rev_per_sec</a> = 0.5; <span class="comment">// example frequency in rev/s</span></div>
+<div class="line">  circle_gen.<a class="code hl_function" href="#ac8dcf701a89fd71e71f2de34aa458f8c">begin</a>();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Map generator outputs to two channels (X and Y)</span></div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="#af424db546b61fab8690dab2d40f32b5e">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_x.input_target_position);</div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="#ab209058f3943d3aac01c67d6160271ea">output_y</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_y.input_target_position);</div>
+<div class="line">  channel_x.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_x, SIGNAL_E);</div>
+<div class="line">  channel_y.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_y, SIGNAL_E);</div>
+<div class="line"> </div>
+<div class="line">  dance_start();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">  dance_loop();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ac17aee6b32de386df19f19ec2d5eb0d0" name="ac17aee6b32de386df19f19ec2d5eb0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17aee6b32de386df19f19ec2d5eb0d0">&#9670;&#160;</a></span>input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> CircleGenerator::input</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optional input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> (phase). If <a class="el" href="#a140dc4a8f517f36587e6aad1018f8c91" title="Use internal frame count for phase instead of an input signal. This will allow the circle generator t...">setNoInput()</a> is called, this input is ignored. </p>
+<div class="fragment"><div class="line">input_a.output_x.map(circle.input); <span class="comment">// Map a phase signal to CircleGenerator input</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="af424db546b61fab8690dab2d40f32b5e" name="af424db546b61fab8690dab2d40f32b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af424db546b61fab8690dab2d40f32b5e">&#9670;&#160;</a></span>output_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> CircleGenerator::output_x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for X component of the circular path. </p>
+<div class="fragment"><div class="line">circle.output_x.map(channelX.input_target_position); <span class="comment">// Map X output to X-axis channel</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ab209058f3943d3aac01c67d6160271ea" name="ab209058f3943d3aac01c67d6160271ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab209058f3943d3aac01c67d6160271ea">&#9670;&#160;</a></span>output_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> CircleGenerator::output_y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Y component of the circular path. </p>
+<div class="fragment"><div class="line">circle.output_y.map(channelY.input_target_position); <span class="comment">// Map Y output to Y-axis channel</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="generators_8hpp_source.html">generators.hpp</a></li>
 </ul>

@@ -89,9 +89,14 @@ $(function(){initNavTree('class_path_length_generator2_d.html','','class_path_le
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">PathLengthGenerator2D Class Reference</div></div>
+  <div class="headertitle"><div class="title">PathLengthGenerator2D Class Reference<div class="ingroups"><a class="el" href="group__generators.html">Generators</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used for generating an output proportional to the 2D path length traveled by two inputs.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="generators_8hpp_source.html">generators.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for PathLengthGenerator2D:</div>
 <div class="dyncontent">
@@ -103,23 +108,27 @@ Inheritance diagram for PathLengthGenerator2D:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4012dc9e017f0c941e1b1350f84a998c" id="r_a4012dc9e017f0c941e1b1350f84a998c"><td class="memItemLeft" align="right" valign="top"><a id="a4012dc9e017f0c941e1b1350f84a998c" name="a4012dc9e017f0c941e1b1350f84a998c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memitem:a9405f2a072602847a6d8100c96b2d703" id="r_a9405f2a072602847a6d8100c96b2d703"><td class="memItemLeft" align="right" valign="top"><a id="a9405f2a072602847a6d8100c96b2d703" name="a9405f2a072602847a6d8100c96b2d703"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio</b> (ControlParameter ratio)</td></tr>
+<tr class="memdesc:a4012dc9e017f0c941e1b1350f84a998c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_path_length_generator2_d.html" title="Used for generating an output proportional to the 2D path length traveled by two inputs.">PathLengthGenerator2D</a>. Must be called to set up the generator. <br /></td></tr>
+<tr class="memitem:a9405f2a072602847a6d8100c96b2d703" id="r_a9405f2a072602847a6d8100c96b2d703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9405f2a072602847a6d8100c96b2d703">set_ratio</a> (ControlParameter <a class="el" href="#a74c0c9dd987515cee14fbe1b4cccf484">ratio</a>)</td></tr>
+<tr class="memdesc:a9405f2a072602847a6d8100c96b2d703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the ratio between output distance and input path length.  <br /></td></tr>
 <tr class="memitem:ae4acbca119e6dda62987a8d66393000a" id="r_ae4acbca119e6dda62987a8d66393000a"><td class="memItemLeft" align="right" valign="top"><a id="ae4acbca119e6dda62987a8d66393000a" name="ae4acbca119e6dda62987a8d66393000a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio</b> (ControlParameter output_distance, ControlParameter input_distance)</td></tr>
-<tr class="memitem:a5960165631c16bba4aca2ba3ac3d4f4c" id="r_a5960165631c16bba4aca2ba3ac3d4f4c"><td class="memItemLeft" align="right" valign="top"><a id="a5960165631c16bba4aca2ba3ac3d4f4c" name="a5960165631c16bba4aca2ba3ac3d4f4c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memitem:a2d4c17edb370fb75581cc3fc2156f154" id="r_a2d4c17edb370fb75581cc3fc2156f154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d4c17edb370fb75581cc3fc2156f154">set_ratio_for_circle</a> (ControlParameter circle_radius, ControlParameter output_per_revolution)</td></tr>
+<tr class="memdesc:a2d4c17edb370fb75581cc3fc2156f154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the generator for circular motion (e.g., from <a class="el" href="class_circle_generator.html" title="Used for generating circular motion signals.">CircleGenerator</a>). Sets the ratio so that the output advances by the specified distance per complete revolution.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a74c0c9dd987515cee14fbe1b4cccf484" id="r_a74c0c9dd987515cee14fbe1b4cccf484"><td class="memItemLeft" align="right" valign="top"><a id="a74c0c9dd987515cee14fbe1b4cccf484" name="a74c0c9dd987515cee14fbe1b4cccf484"></a>
 ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>ratio</b> = 1.0</td></tr>
+<tr class="memdesc:a74c0c9dd987515cee14fbe1b4cccf484"><td class="mdescLeft">&#160;</td><td class="mdescRight">ControlParameter scaling output relative to input path length (output/input). <br /></td></tr>
 <tr class="memitem:a9d9a56779ca08af995a46e86f83ed7bd" id="r_a9d9a56779ca08af995a46e86f83ed7bd"><td class="memItemLeft" align="right" valign="top"><a id="a9d9a56779ca08af995a46e86f83ed7bd" name="a9d9a56779ca08af995a46e86f83ed7bd"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_1</b></td></tr>
+<tr class="memdesc:a9d9a56779ca08af995a46e86f83ed7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">First input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> (e.g., X position). <br /></td></tr>
 <tr class="memitem:a82740bda61a12ed101b03fa73e9c7056" id="r_a82740bda61a12ed101b03fa73e9c7056"><td class="memItemLeft" align="right" valign="top"><a id="a82740bda61a12ed101b03fa73e9c7056" name="a82740bda61a12ed101b03fa73e9c7056"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_2</b></td></tr>
-<tr class="memitem:a6bedaf2c273e89769da8b9287c138721" id="r_a6bedaf2c273e89769da8b9287c138721"><td class="memItemLeft" align="right" valign="top"><a id="a6bedaf2c273e89769da8b9287c138721" name="a6bedaf2c273e89769da8b9287c138721"></a>
-<a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output</b></td></tr>
+<tr class="memdesc:a82740bda61a12ed101b03fa73e9c7056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Second input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> (e.g., Y position). <br /></td></tr>
+<tr class="memitem:a6bedaf2c273e89769da8b9287c138721" id="r_a6bedaf2c273e89769da8b9287c138721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bedaf2c273e89769da8b9287c138721">output</a></td></tr>
+<tr class="memdesc:a6bedaf2c273e89769da8b9287c138721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> proportional to 2D path length.  <br /></td></tr>
 <tr class="memitem:a7672758f502303002558b692497870ab" id="r_a7672758f502303002558b692497870ab"><td class="memItemLeft" align="right" valign="top"><a id="a7672758f502303002558b692497870ab" name="a7672758f502303002558b692497870ab"></a>
 DecimalPosition&#160;</td><td class="memItemRight" valign="bottom"><b>input_1_position</b></td></tr>
 <tr class="memitem:a460bd3291d65021fe06238535d669019" id="r_a460bd3291d65021fe06238535d669019"><td class="memItemLeft" align="right" valign="top"><a id="a460bd3291d65021fe06238535d669019" name="a460bd3291d65021fe06238535d669019"></a>
@@ -132,6 +141,129 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aed0eb05f9c4c7c6862139aaccc4dab8a" id="r_aed0eb05f9c4c7c6862139aaccc4dab8a"><td class="memItemLeft" align="right" valign="top"><a id="aed0eb05f9c4c7c6862139aaccc4dab8a" name="aed0eb05f9c4c7c6862139aaccc4dab8a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used for generating an output proportional to the 2D path length traveled by two inputs. </p>
+<p><a class="el" href="class_path_length_generator2_d.html" title="Used for generating an output proportional to the 2D path length traveled by two inputs.">PathLengthGenerator2D</a> measures the incremental Euclidean distance traversed by two input signals and produces an output that is proportional to that path length by a configurable ratio. This is useful for applications like controlling extrusion rate of a 3D printer based on XY machine movement. Here's an example of how to instantiate and configure a <a class="el" href="class_path_length_generator2_d.html" title="Used for generating an output proportional to the 2D path length traveled by two inputs.">PathLengthGenerator2D</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_circle_generator.html">CircleGenerator</a> circle_gen;</div>
+<div class="line"><a class="code hl_class" href="class_path_length_generator2_d.html">PathLengthGenerator2D</a> path_gen;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_x;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_y;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_z;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_a;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup(){</div>
+<div class="line">  <span class="comment">// Initialize OutputPort and enable drivers</span></div>
+<div class="line">  output_a.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A);</div>
+<div class="line">  enable_drivers();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Configure CircleGenerator with radius 10mm, 1 revolution per second</span></div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="class_circle_generator.html#a83f13cc4e4efea855329acd1b475a5b7">radius</a> = 10.0;</div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="class_circle_generator.html#ae4e83547705553ba5f3a8772e14decc2">rotational_speed_rev_per_sec</a> = 1.0;</div>
+<div class="line">  circle_gen.<a class="code hl_function" href="class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91">setNoInput</a>(); <span class="comment">// Use internal frame count</span></div>
+<div class="line">  circle_gen.<a class="code hl_function" href="class_circle_generator.html#ac8dcf701a89fd71e71f2de34aa458f8c">begin</a>();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Map circle outputs to X and Y channels</span></div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="class_circle_generator.html#af424db546b61fab8690dab2d40f32b5e">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_x.input_target_position);</div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="class_circle_generator.html#ab209058f3943d3aac01c67d6160271ea">output_y</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_y.input_target_position);</div>
+<div class="line">  channel_x.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_a, SIGNAL_X);</div>
+<div class="line">  channel_y.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_a, SIGNAL_Y);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Configure PathLengthGenerator2D to move Z 1mm per complete circle</span></div>
+<div class="line">  <span class="comment">// The circle has radius 10mm, so we want 1mm output per 2π*10mm = 62.83mm of XY path</span></div>
+<div class="line">  path_gen.<a class="code hl_function" href="#a2d4c17edb370fb75581cc3fc2156f154">set_ratio_for_circle</a>(10.0, 1.0); <span class="comment">// 1mm per revolution of a 10mm radius circle</span></div>
+<div class="line">  path_gen.<a class="code hl_function" href="#a4012dc9e017f0c941e1b1350f84a998c">begin</a>();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Map circle outputs to path length inputs</span></div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="class_circle_generator.html#af424db546b61fab8690dab2d40f32b5e">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(path_gen.<a class="code hl_variable" href="#a9d9a56779ca08af995a46e86f83ed7bd">input_1</a>);</div>
+<div class="line">  circle_gen.<a class="code hl_variable" href="class_circle_generator.html#ab209058f3943d3aac01c67d6160271ea">output_y</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(path_gen.<a class="code hl_variable" href="#a82740bda61a12ed101b03fa73e9c7056">input_2</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Map path length output to Z channel</span></div>
+<div class="line">  path_gen.<a class="code hl_variable" href="#a6bedaf2c273e89769da8b9287c138721">output</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_z.input_target_position);</div>
+<div class="line">  channel_z.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_a, SIGNAL_Z);</div>
+<div class="line"> </div>
+<div class="line">  dance_start();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">  dance_loop();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a9405f2a072602847a6d8100c96b2d703" name="a9405f2a072602847a6d8100c96b2d703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9405f2a072602847a6d8100c96b2d703">&#9670;&#160;</a></span>set_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PathLengthGenerator2D::set_ratio </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the ratio between output distance and input path length. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ratio</td><td>The proportionality constant (output / input). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d4c17edb370fb75581cc3fc2156f154" name="a2d4c17edb370fb75581cc3fc2156f154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4c17edb370fb75581cc3fc2156f154">&#9670;&#160;</a></span>set_ratio_for_circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PathLengthGenerator2D::set_ratio_for_circle </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>circle_radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>output_per_revolution</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the generator for circular motion (e.g., from <a class="el" href="class_circle_generator.html" title="Used for generating circular motion signals.">CircleGenerator</a>). Sets the ratio so that the output advances by the specified distance per complete revolution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circle_radius</td><td>The radius of the circle being traced by the inputs. </td></tr>
+    <tr><td class="paramname">output_per_revolution</td><td>Distance the output should advance per full circle (e.g., 1.0 for 1mm per revolution).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example, to move Z-axis 1mm for each complete circle of radius 10mm: </p><div class="fragment"><div class="line">path_gen.set_ratio_for_circle(10.0, 1.0);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a6bedaf2c273e89769da8b9287c138721" name="a6bedaf2c273e89769da8b9287c138721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bedaf2c273e89769da8b9287c138721">&#9670;&#160;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a> PathLengthGenerator2D::output</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> proportional to 2D path length. </p>
+<div class="fragment"><div class="line">xy_path.output.map(channelE.input_target_position); <span class="comment">// Map to downstream target</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="generators_8hpp_source.html">generators.hpp</a></li>
 </ul>

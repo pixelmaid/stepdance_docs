@@ -136,27 +136,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_invert</b> ()</
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> class for handling digital input buttons. </p>
-<p>The <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> class provides an interface for reading and managing digital input buttons. It supports debouncing, state change detection, and callback functions for button events such as press, release, and toggle. Buttons can be configured in standard or toggle mode, and their state can be inverted if needed. Here's an example of how to instantiate and configure a <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<p>The <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> class provides an interface for reading and managing digital input buttons. It supports debouncing, state change detection, and callback functions for button events such as press, release, and toggle. Buttons can be configured in standard or toggle mode, and their state can be inverted if needed. Here's an example of how to instantiate and configure a <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="class_button.html">Button</a> button_a1;</div>
-<div class="line"><a class="code hl_class" href="class_button.html">Button</a> button_a2;</div>
+<div class="line"><a class="code hl_class" href="class_button.html">Button</a> button_d1;</div>
+<div class="line"><a class="code hl_class" href="class_button.html">Button</a> button_d2;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> setup() {</div>
-<div class="line">  button_a1.<a class="code hl_function" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">begin</a>(IO_A1); <span class="comment">//initialize button on physical input port IO_A1</span></div>
-<div class="line">  button_a1.<a class="code hl_function" href="#aa70753298df42c33455aab1ee7bb4f5d">set_callback_on_release</a>(&amp;onButtonA1Release); <span class="comment">//set callback function for button A1 release event</span></div>
-<div class="line">  button_a2.<a class="code hl_function" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">begin</a>(IO_A2); <span class="comment">//initialize button on physical input port IO_A2</span></div>
-<div class="line">  button_a2.<a class="code hl_function" href="#a1914568c3366dd633024a269dc1a1fbf">set_callback_on_toggle</a>(&amp;onButtonA2Toggle); <span class="comment">//set callback function for button A2 press event</span></div>
+<div class="line">  button_d1.<a class="code hl_function" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">begin</a>(IO_D1); <span class="comment">//initialize button on physical input port IO_D1</span></div>
+<div class="line">  button_d1.<a class="code hl_function" href="#aa70753298df42c33455aab1ee7bb4f5d">set_callback_on_release</a>(&amp;onButtonD1Release); <span class="comment">//set callback function for button D1 release event</span></div>
+<div class="line">  button_d2.<a class="code hl_function" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">begin</a>(IO_D2); <span class="comment">//initialize button on physical input port IO_D2</span></div>
+<div class="line">  button_d2.<a class="code hl_function" href="#a40e990016e6fc218bac80cd761cb0b9c">set_mode</a>(BUTTON_MODE_TOGGLE); <span class="comment">//set button D2 to toggle mode</span></div>
+<div class="line">  button_d2.<a class="code hl_function" href="#a1914568c3366dd633024a269dc1a1fbf">set_callback_on_toggle</a>(&amp;onButtonD2Toggle); <span class="comment">//set callback function for button D2 press event</span></div>
+<div class="line">  </div>
 <div class="line">  dance_start();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onButtonA1Release() {</div>
-<div class="line">  <span class="comment">// Code to execute when button A1 is released</span></div>
-<div class="line">  Serial.println(<span class="stringliteral">&quot;Button A1 Released&quot;</span>);</div>
+<div class="line"><span class="keywordtype">void</span> onButtonD1Release() {</div>
+<div class="line">  <span class="comment">// Code to execute when button D1 is released</span></div>
+<div class="line">  Serial.println(<span class="stringliteral">&quot;Button D1 Released&quot;</span>);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onButtonA2Toggle() {</div>
-<div class="line">  <span class="comment">// Code to execute when button A2 is toggled</span></div>
-<div class="line">  Serial.println(<span class="stringliteral">&quot;Button A2 Toggled&quot;</span>);</div>
+<div class="line"><span class="keywordtype">void</span> onButtonD2Toggle() {</div>
+<div class="line">  <span class="comment">// Code to execute when button D2 is toggled</span></div>
+<div class="line">  Serial.println(<span class="stringliteral">&quot;Button D2 Toggled&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">dance_loop();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ae11ebf1f392b1e0b0c47a5b78de59b8b" name="ae11ebf1f392b1e0b0c47a5b78de59b8b"></a>
