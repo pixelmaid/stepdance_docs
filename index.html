@@ -104,9 +104,34 @@ What is Stepdance?</h1>
  </li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md60"></a>
+Getting Started</h1>
+<p>To get started with Stepdance:</p>
+<ol type="1">
+<li><b>Set up your hardware</b>: Build or acquire a Stepdance module (Driver Module or Basic Module). See <a class="el" href="hardware.html">Hardware Documentation</a> for details on board specifications and pinouts.</li>
+<li><b>Set Up Arduino Programming Environment</b>: Add the Stepdance library to your Arduino IDE or PlatformIO environment. The library is compatible with Teensy 4.0 and 4.1 microcontrollers. You currently need to install the library as a .zip.</li>
+</ol>
+<p>Download the Stepdance zip file here</p>
+<div class="image">
+<img src="ImportLibraryFromZIPFile.png" alt=""/>
+</div>
+    <p>In the Arduino IDE, navigate to Sketch &gt; Include Library &gt; Add .ZIP Library. At the top of the drop down list, select the option to Add .ZIP Library.</p>
+<p>You will be prompted to select the library you would like to add. Navigate to the .zip file's location and open it. Further details can be found on the <a href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/">Arduino Docs</a></p>
+<ol type="1">
+<li><b>Understand the core concepts</b>:<ul>
+<li><b>BlockPorts</b>: The fundamental communication mechanism between components. They route data between different parts of your system.</li>
+<li><b>Channels</b>: Manage position state and generate step/direction signals for motors.</li>
+<li><b>Output Ports</b>: Physical hardware interface that sends motion signals to stepper drivers.</li>
+<li><b>Input Ports</b>: Read signals from encoders, potentiometers, and other sensors.</li>
+</ul>
+</li>
+<li><b>Try the examples</b>: Start with simple examples like reading an encoder or controlling a single axis, then progress to more complex applications. See the <a class="el" href="ssl.html">SSL Documentation</a> for programming guides.</li>
+<li><b>Explore the API</b>: Browse the module documentation to understand available generators, filters, kinematics, and interfaces for building your motion control application.</li>
+</ol>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md61"></a>
 Hardware Documentation</h1>
 <p>For detailed information about Stepdance hardware modules, ports, and specifications, see the <a class="el" href="hardware.html">Hardware Documentation</a>. </p><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md61"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md62"></a>
 Stepdance Software Library (SSL) Documentation</h1>
 <p>For detailed information about programming Stepdance hardware modules, see the <a class="el" href="ssl.html">SSL Documentation</a>. </p><hr  />
  </div></div><!-- PageDoc -->

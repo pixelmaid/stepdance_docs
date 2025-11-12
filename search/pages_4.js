@@ -7,7 +7,7 @@ var searchData=
   ['digital_20inputs_4',['Encoders and Analog / Digital Inputs',['../hardware.html#autotoc_md35',1,'']]],
   ['dimensions_5',['Dimensions',['../hardware.html#autotoc_md41',1,'Dimensions'],['../hardware.html#autotoc_md44',1,'Dimensions']]],
   ['display_20and_20control_20knob_20mounting_6',['Display and Control Knob Mounting',['../hardware.html#autotoc_md39',1,'']]],
-  ['documentation_7',['Documentation',['../index.html#autotoc_md60',1,'Hardware Documentation'],['../index.html',1,'Stepdance Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md61',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
+  ['documentation_7',['Documentation',['../index.html#autotoc_md61',1,'Hardware Documentation'],['../index.html',1,'Stepdance Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md62',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
   ['driver_8',['Hobby Servo Driver',['../hardware.html#autotoc_md45',1,'']]],
   ['driver_20board_9',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
   ['driver_20currents_10',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],

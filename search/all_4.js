@@ -16,7 +16,7 @@ var searchData=
   ['disable_5fsignal_13',['disable_signal',['../class_input_port.html#a7f921423eb6da67a964967083d163345',1,'InputPort']]],
   ['disable_5fupper_5flimit_14',['disable_upper_limit',['../class_channel.html#a837a7759027b950410e4b8ef18ec863e',1,'Channel']]],
   ['display_20and_20control_20knob_20mounting_15',['Display and Control Knob Mounting',['../hardware.html#autotoc_md39',1,'']]],
-  ['documentation_16',['Documentation',['../index.html#autotoc_md60',1,'Hardware Documentation'],['../index.html',1,'Stepdance Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md61',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
+  ['documentation_16',['Documentation',['../index.html#autotoc_md61',1,'Hardware Documentation'],['../index.html',1,'Stepdance Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md62',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
   ['driver_17',['Hobby Servo Driver',['../hardware.html#autotoc_md45',1,'']]],
   ['driver_20board_18',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
   ['driver_20currents_19',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],

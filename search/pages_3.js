@@ -14,7 +14,7 @@ var searchData=
   ['configure_20the_20button_11',['Configure the Button',['../stepasketch.html#autotoc_md27',1,'']]],
   ['configure_20the_20kinematics_12',['Configure the Kinematics',['../stepasketch.html#autotoc_md26',1,'']]],
   ['configuring_20the_20stepdance_20driver_20board_13',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
-  ['connector_14',['Connector',['../taiss.html#autotoc_md71',1,'']]],
+  ['connector_14',['Connector',['../taiss.html#autotoc_md72',1,'']]],
   ['connectors_15',['QWIIC Connectors',['../hardware.html#autotoc_md36',1,'']]],
   ['considerations_16',['Considerations',['../highspeed.html#autotoc_md55',1,'']]],
   ['control_20knob_20mounting_17',['Display and Control Knob Mounting',['../hardware.html#autotoc_md39',1,'']]],

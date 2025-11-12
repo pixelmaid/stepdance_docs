@@ -3,7 +3,7 @@ var searchData=
   ['a_20sketch_0',['&quot;Step-A-Sketch&quot; (Etch-A-Sketch)',['../hardware.html#autotoc_md51',1,'']]],
   ['a_20sketch_20etch_20a_20sketch_1',['&quot;Step-A-Sketch&quot; (Etch-A-Sketch)',['../hardware.html#autotoc_md51',1,'']]],
   ['a_20sketch_20example_2',['Step-A-Sketch Example',['../stepasketch.html',1,'']]],
-  ['additional_20resources_3',['Additional Resources',['../ssl.html#autotoc_md68',1,'']]],
+  ['additional_20resources_3',['Additional Resources',['../ssl.html#autotoc_md69',1,'']]],
   ['all_20stepdance_20components_4',['Define all stepdance components',['../stepasketch.html#autotoc_md14',1,'']]],
   ['also_5',['See Also',['../highspeed.html#autotoc_md57',1,'']]],
   ['analog_20digital_20inputs_6',['Encoders and Analog / Digital Inputs',['../hardware.html#autotoc_md35',1,'']]],
