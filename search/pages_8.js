@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['hardware_0',['Hardware',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md33',1,'Stepdance Hardware'],['../md_doc_2readme__original.html#autotoc_md64',1,'Stepdance Hardware'],['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/SSL/readme.md#autotoc_md91',1,'Supported Hardware']]],
-  ['hardware_20documentation_1',['Hardware Documentation',['../index.html#autotoc_md61',1,'Hardware Documentation'],['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md32',1,'Stepdance Hardware Documentation']]],
-  ['high_20speed_20frame_20configuration_2',['High Speed Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md54',1,'High-Speed Frame Configuration']]],
-  ['hobby_20servo_20driver_3',['Hobby Servo Driver',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md46',1,'Hobby Servo Driver'],['../md_doc_2readme__original.html#autotoc_md77',1,'Hobby Servo Driver']]]
+  ['hardware_0',['Hardware',['../hardware.html#autotoc_md32',1,'Stepdance Hardware'],['../ssl.html#autotoc_md67',1,'Supported Hardware']]],
+  ['hardware_20documentation_1',['Hardware Documentation',['../index.html#autotoc_md60',1,'Hardware Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation']]],
+  ['high_20speed_20frame_20configuration_2',['High Speed Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md53',1,'High-Speed Frame Configuration']]],
+  ['hobby_20servo_20driver_3',['Hobby Servo Driver',['../hardware.html#autotoc_md45',1,'']]]
 ];

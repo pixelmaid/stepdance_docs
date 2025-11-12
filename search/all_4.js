@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['dc_20power_20inputs_0',['DC Power Inputs',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md38',1,'DC Power Inputs'],['../md_doc_2readme__original.html#autotoc_md69',1,'DC Power Inputs']]],
+  ['dc_20power_20inputs_0',['DC Power Inputs',['../hardware.html#autotoc_md37',1,'']]],
   ['debugprint_1',['debugPrint',['../class_threshold_generator.html#aed4b3aab359cccf7d139486422ecad5e',1,'ThresholdGenerator::debugPrint()'],['../class_wave_generator1_d.html#a304c0671c3591732dace0f4834dc3839',1,'WaveGenerator1D::debugPrint()'],['../class_circle_generator.html#a10552bb66ba68aff68efae6269e52815',1,'CircleGenerator::debugPrint()']]],
   ['define_20all_20stepdance_20components_2',['Define all stepdance components',['../stepasketch.html#autotoc_md14',1,'']]],
   ['definition_3',['Board Definition',['../stepasketch.html#autotoc_md12',1,'']]],
   ['determine_20the_20peak_20motor_20current_4',['Determine the Peak Motor Current',['../stepasketch.html#autotoc_md8',1,'']]],
   ['devices_5',['Input Devices',['../group__inputs.html',1,'']]],
-  ['digital_20inputs_6',['Digital Inputs',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md36',1,'Encoders and Analog / Digital Inputs'],['../md_doc_2readme__original.html#autotoc_md67',1,'Encoders and Analog / Digital Inputs']]],
-  ['dimensions_7',['Dimensions',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md42',1,'Dimensions'],['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md45',1,'Dimensions'],['../md_doc_2readme__original.html#autotoc_md73',1,'Dimensions'],['../md_doc_2readme__original.html#autotoc_md76',1,'Dimensions']]],
+  ['digital_20inputs_6',['Encoders and Analog / Digital Inputs',['../hardware.html#autotoc_md35',1,'']]],
+  ['dimensions_7',['Dimensions',['../hardware.html#autotoc_md41',1,'Dimensions'],['../hardware.html#autotoc_md44',1,'Dimensions']]],
   ['disable_8',['disable',['../class_channel.html#a6d2e75a02a53fc31163409f2c58468ab',1,'Channel::disable()'],['../class_threshold_generator.html#ae4414385f46b4c3701eb25586eaf9eca',1,'ThresholdGenerator::disable()'],['../class_wave_generator1_d.html#aefad5e3445c0417fa928b2fac5877f79',1,'WaveGenerator1D::disable()']]],
   ['disable_5fall_5fsignals_9',['disable_all_signals',['../class_input_port.html#a9e0eaea831a5cc11cb1090b0f2ea3374',1,'InputPort']]],
   ['disable_5ffiltering_10',['disable_filtering',['../class_channel.html#aebb93ae1a45624307229f2214234b800',1,'Channel']]],
@@ -15,11 +15,11 @@ var searchData=
   ['disable_5flower_5flimit_12',['disable_lower_limit',['../class_channel.html#a28bf6a07b2b7635c85add28b31aeb255',1,'Channel']]],
   ['disable_5fsignal_13',['disable_signal',['../class_input_port.html#a7f921423eb6da67a964967083d163345',1,'InputPort']]],
   ['disable_5fupper_5flimit_14',['disable_upper_limit',['../class_channel.html#a837a7759027b950410e4b8ef18ec863e',1,'Channel']]],
-  ['display_20and_20control_20knob_20mounting_15',['Display and Control Knob Mounting',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md40',1,'Display and Control Knob Mounting'],['../md_doc_2readme__original.html#autotoc_md71',1,'Display and Control Knob Mounting']]],
-  ['documentation_16',['Documentation',['../index.html#autotoc_md61',1,'Hardware Documentation'],['../md_doc_2readme__original.html',1,'Stepdance Documentation'],['../index.html',1,'Stepdance Documentation'],['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md32',1,'Stepdance Hardware Documentation'],['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/SSL/readme.md#autotoc_md85',1,'Stepdance Software Library Documentation']]],
-  ['driver_17',['Driver',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md46',1,'Hobby Servo Driver'],['../md_doc_2readme__original.html#autotoc_md77',1,'Hobby Servo Driver']]],
+  ['display_20and_20control_20knob_20mounting_15',['Display and Control Knob Mounting',['../hardware.html#autotoc_md39',1,'']]],
+  ['documentation_16',['Documentation',['../index.html#autotoc_md60',1,'Hardware Documentation'],['../index.html',1,'Stepdance Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md61',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
+  ['driver_17',['Hobby Servo Driver',['../hardware.html#autotoc_md45',1,'']]],
   ['driver_20board_18',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
   ['driver_20currents_19',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],
-  ['driver_20module_20board_20v1_200_20',['Driver Module Board v1 0',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md34',1,'Driver Module Board v1.0'],['../md_doc_2readme__original.html#autotoc_md65',1,'Driver Module Board v1.0']]],
-  ['drivers_20and_20motor_20interfaces_21',['Drivers and Motor Interfaces',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/hardware/readme.md#autotoc_md35',1,'Stepper Drivers and Motor Interfaces'],['../md_doc_2readme__original.html#autotoc_md66',1,'Stepper Drivers and Motor Interfaces']]]
+  ['driver_20module_20board_20v1_200_20',['Driver Module Board v1.0',['../hardware.html#autotoc_md33',1,'']]],
+  ['drivers_20and_20motor_20interfaces_21',['Stepper Drivers and Motor Interfaces',['../hardware.html#autotoc_md34',1,'']]]
 ];

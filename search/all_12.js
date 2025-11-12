@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['taiss_20optical_20encoders_0',['TAISS Optical Encoders',['../taiss.html',1,'TAISS Optical Encoders'],['../taiss.html#autotoc_md100',1,'TAISS Optical Encoders']]],
+  ['taiss_20optical_20encoders_0',['TAISS Optical Encoders',['../taiss.html',1,'TAISS Optical Encoders'],['../taiss.html#autotoc_md69',1,'TAISS Optical Encoders']]],
   ['target_5fposition_1',['target_position',['../class_channel.html#a823f52bb234e60643f9b422a084e94f3',1,'Channel']]],
   ['the_20button_2',['the Button',['../stepasketch.html#autotoc_md27',1,'Configure the Button'],['../stepasketch.html#autotoc_md6',1,'Wiring the Button']]],
   ['the_20kinematics_3',['Configure the Kinematics',['../stepasketch.html#autotoc_md26',1,'']]],

@@ -92,67 +92,6 @@ $(function(){initNavTree('dir_67bc67e83530c7d0f5f5ba1000f7e564.html','',''); });
   <div class="headertitle"><div class="title">SSL Directory Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md85"></a>
-Stepdance Software Library Documentation</h1>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md86"></a>
-Introduction</h1>
-<p>Welcome to the Stepdance Software Library documentation. Stepdance is a framework for building motion control systems using modular, composable components.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md87"></a>
-Overview</h1>
-<p>The Stepdance library provides a flexible architecture for motion control through several key concepts:</p>
-<ul>
-<li><b>BlockPorts</b>: Unified interface for connecting components and routing data between them</li>
-<li><b>Channels</b>: Position state management and step/direction signal generation</li>
-<li><b>Input/Output Ports</b>: Physical hardware interface for receiving and transmitting motion signals</li>
-<li><b>Generators</b>: Motion pattern and trajectory generation</li>
-<li><b>Kinematics</b>: Coordinate system transformations (Cartesian, polar, CoreXY, etc.)</li>
-<li><b>Filters</b>: Signal smoothing and noise reduction</li>
-<li><b>Interfaces</b>: External protocol support (G-code, EiBotBoard, etc.)</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md88"></a>
-Getting Started</h1>
-<p>To get started with Stepdance:</p>
-<ol type="1">
-<li><b>Understand BlockPorts</b>: BlockPorts are the fundamental communication mechanism between components. See the core module for details.</li>
-<li><b>Configure Output Ports</b>: Set up your physical output ports to send step/direction signals. See the I/O module for <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a> configuration.</li>
-<li><b>Create Channels</b>: Channels drive motors to target positions. See the channels module for <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> setup and usage.</li>
-<li><b>Add Motion Sources</b>: Connect input ports, generators, or other motion sources to your channels using <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> mapping.</li>
-</ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md89"></a>
-Examples</h1>
-<p>Example code snippets are provided throughout the documentation. Look for code examples in the documentation for each class.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md90"></a>
-Module Organization</h1>
-<p>The library is organized into functional modules:</p>
-<ul>
-<li><b>core</b> - Core framework components</li>
-<li><b>io</b> - Hardware I/O interfaces</li>
-<li><b>channels</b> - Position control</li>
-<li><b>generators</b> - Motion generation</li>
-<li><b>kinematics</b> - Coordinate transformations</li>
-<li><b>filters</b> - Signal processing</li>
-<li><b>interfaces</b> - External protocols</li>
-<li><b>recording</b> - Motion recording and playback</li>
-<li><b>inputs</b> - Physical input devices</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md91"></a>
-Supported Hardware</h1>
-<p>Stepdance runs on Teensy microcontrollers and supports:</p>
-<ul>
-<li>Basic Modules (single input port)</li>
-<li>Machine Controller Modules (multiple I/O ports)</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md92"></a>
-Additional Resources</h1>
-<ul>
-<li>GitHub Repository: <a href="https://github.com/imoyer/stepdance">https://github.com/imoyer/stepdance</a></li>
-<li>Hardware Documentation: [Add link to hardware docs]</li>
-<li>Tutorials: [Add link to tutorials]</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md93"></a>
-License</h1>
-<p>[Add your license information here] </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
