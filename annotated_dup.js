@@ -1,10 +1,8 @@
 var annotated_dup =
 [
-    [ "analog_pin_info_struct", "structanalog__pin__info__struct.html", null ],
-    [ "AnalogInput", "class_analog_input.html", null ],
+    [ "AnalogInput", "class_analog_input.html", "class_analog_input" ],
     [ "BlockPort", "class_block_port.html", "class_block_port" ],
-    [ "Button", "class_button.html", null ],
-    [ "ButtonKilohertzPlugin", "class_button_kilohertz_plugin.html", null ],
+    [ "Button", "class_button.html", "class_button" ],
     [ "Channel", "class_channel.html", "class_channel" ],
     [ "CircleGenerator", "class_circle_generator.html", null ],
     [ "Eibotboard", "class_eibotboard.html", null ],

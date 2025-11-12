@@ -89,9 +89,14 @@ $(function(){initNavTree('class_button.html','','class_button-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Button Class Reference</div></div>
+  <div class="headertitle"><div class="title">Button Class Reference<div class="ingroups"><a class="el" href="group__inputs.html">Input Devices</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> class for handling digital input buttons.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="digital__in_8hpp_source.html">digital_in.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Button:</div>
 <div class="dyncontent">
@@ -101,44 +106,277 @@ Inheritance diagram for Button:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5f5c0d23ab0e5387b861e68019a7e85d" id="r_a5f5c0d23ab0e5387b861e68019a7e85d"><td class="memItemLeft" align="right" valign="top"><a id="a5f5c0d23ab0e5387b861e68019a7e85d" name="a5f5c0d23ab0e5387b861e68019a7e85d"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</td></tr>
-<tr class="memitem:a035c15396a73946def066c57185343c4" id="r_a035c15396a73946def066c57185343c4"><td class="memItemLeft" align="right" valign="top"><a id="a035c15396a73946def066c57185343c4" name="a035c15396a73946def066c57185343c4"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_raw</b> ()</td></tr>
-<tr class="memitem:a7b3bce210b74ea7a37a922a0f92fb12b" id="r_a7b3bce210b74ea7a37a922a0f92fb12b"><td class="memItemLeft" align="right" valign="top"><a id="a7b3bce210b74ea7a37a922a0f92fb12b" name="a7b3bce210b74ea7a37a922a0f92fb12b"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>has_changed</b> ()</td></tr>
-<tr class="memitem:a1914568c3366dd633024a269dc1a1fbf" id="r_a1914568c3366dd633024a269dc1a1fbf"><td class="memItemLeft" align="right" valign="top"><a id="a1914568c3366dd633024a269dc1a1fbf" name="a1914568c3366dd633024a269dc1a1fbf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_callback_on_toggle</b> (void(*callback_function)())</td></tr>
-<tr class="memitem:a25bd627bc9689ff2f82215f05a044f8e" id="r_a25bd627bc9689ff2f82215f05a044f8e"><td class="memItemLeft" align="right" valign="top"><a id="a25bd627bc9689ff2f82215f05a044f8e" name="a25bd627bc9689ff2f82215f05a044f8e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_callback_on_press</b> (void(*callback_function)())</td></tr>
-<tr class="memitem:aa70753298df42c33455aab1ee7bb4f5d" id="r_aa70753298df42c33455aab1ee7bb4f5d"><td class="memItemLeft" align="right" valign="top"><a id="aa70753298df42c33455aab1ee7bb4f5d" name="aa70753298df42c33455aab1ee7bb4f5d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_callback_on_release</b> (void(*callback_function)())</td></tr>
-<tr class="memitem:ae1cfb626934f88fda5b57496e44e6075" id="r_ae1cfb626934f88fda5b57496e44e6075"><td class="memItemLeft" align="right" valign="top"><a id="ae1cfb626934f88fda5b57496e44e6075" name="ae1cfb626934f88fda5b57496e44e6075"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_debounce_ms</b> (uint16_t debounce_ms)</td></tr>
-<tr class="memitem:ae11ebf1f392b1e0b0c47a5b78de59b8b" id="r_ae11ebf1f392b1e0b0c47a5b78de59b8b"><td class="memItemLeft" align="right" valign="top"><a id="ae11ebf1f392b1e0b0c47a5b78de59b8b" name="ae11ebf1f392b1e0b0c47a5b78de59b8b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (uint8_t pin)</td></tr>
-<tr class="memitem:ace48b80ba71bd9396601eb2ad7fc53fe" id="r_ace48b80ba71bd9396601eb2ad7fc53fe"><td class="memItemLeft" align="right" valign="top"><a id="ace48b80ba71bd9396601eb2ad7fc53fe" name="ace48b80ba71bd9396601eb2ad7fc53fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (uint8_t pin, uint8_t mode)</td></tr>
-<tr class="memitem:a40e990016e6fc218bac80cd761cb0b9c" id="r_a40e990016e6fc218bac80cd761cb0b9c"><td class="memItemLeft" align="right" valign="top"><a id="a40e990016e6fc218bac80cd761cb0b9c" name="a40e990016e6fc218bac80cd761cb0b9c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_mode</b> (uint8_t button_mode)</td></tr>
-<tr class="memitem:a9c6acb44cbaa8c9afec18c41a85bb371" id="r_a9c6acb44cbaa8c9afec18c41a85bb371"><td class="memItemLeft" align="right" valign="top"><a id="a9c6acb44cbaa8c9afec18c41a85bb371" name="a9c6acb44cbaa8c9afec18c41a85bb371"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>on_frame</b> ()</td></tr>
+<tr class="memitem:a3b36df1ae23c58aedb9e15a713159459" id="r_a3b36df1ae23c58aedb9e15a713159459"><td class="memItemLeft" align="right" valign="top"><a id="a3b36df1ae23c58aedb9e15a713159459" name="a3b36df1ae23c58aedb9e15a713159459"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Button</b> ()</td></tr>
+<tr class="memdesc:a3b36df1ae23c58aedb9e15a713159459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a>. Does not initialize board hardware. Call <a class="el" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b" title="Reads the debounced state of the button.">begin()</a> to set up the button pin. <br /></td></tr>
+<tr class="memitem:ae11ebf1f392b1e0b0c47a5b78de59b8b" id="r_ae11ebf1f392b1e0b0c47a5b78de59b8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">begin</a> (uint8_t pin)</td></tr>
+<tr class="memdesc:ae11ebf1f392b1e0b0c47a5b78de59b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the debounced state of the button.  <br /></td></tr>
+<tr class="memitem:a5f5c0d23ab0e5387b861e68019a7e85d" id="r_a5f5c0d23ab0e5387b861e68019a7e85d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f5c0d23ab0e5387b861e68019a7e85d">read</a> ()</td></tr>
+<tr class="memdesc:a5f5c0d23ab0e5387b861e68019a7e85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> with the specified pin and mode.  <br /></td></tr>
+<tr class="memitem:a035c15396a73946def066c57185343c4" id="r_a035c15396a73946def066c57185343c4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a035c15396a73946def066c57185343c4">read_raw</a> ()</td></tr>
+<tr class="memdesc:a035c15396a73946def066c57185343c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the raw state of the input pin without debouncing.  <br /></td></tr>
+<tr class="memitem:a7b3bce210b74ea7a37a922a0f92fb12b" id="r_a7b3bce210b74ea7a37a922a0f92fb12b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b3bce210b74ea7a37a922a0f92fb12b">has_changed</a> ()</td></tr>
+<tr class="memdesc:a7b3bce210b74ea7a37a922a0f92fb12b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the button state has changed since the last read.  <br /></td></tr>
+<tr class="memitem:a1914568c3366dd633024a269dc1a1fbf" id="r_a1914568c3366dd633024a269dc1a1fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1914568c3366dd633024a269dc1a1fbf">set_callback_on_toggle</a> (void(*callback_function)())</td></tr>
+<tr class="memdesc:a1914568c3366dd633024a269dc1a1fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback function to be called when the button state toggles-either pressed or released.  <br /></td></tr>
+<tr class="memitem:a25bd627bc9689ff2f82215f05a044f8e" id="r_a25bd627bc9689ff2f82215f05a044f8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25bd627bc9689ff2f82215f05a044f8e">set_callback_on_press</a> (void(*callback_function)())</td></tr>
+<tr class="memdesc:a25bd627bc9689ff2f82215f05a044f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback function to be called when the button is pressed.  <br /></td></tr>
+<tr class="memitem:aa70753298df42c33455aab1ee7bb4f5d" id="r_aa70753298df42c33455aab1ee7bb4f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa70753298df42c33455aab1ee7bb4f5d">set_callback_on_release</a> (void(*callback_function)())</td></tr>
+<tr class="memdesc:aa70753298df42c33455aab1ee7bb4f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback function to be called when the button is released.  <br /></td></tr>
+<tr class="memitem:ae1cfb626934f88fda5b57496e44e6075" id="r_ae1cfb626934f88fda5b57496e44e6075"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1cfb626934f88fda5b57496e44e6075">set_debounce_ms</a> (uint16_t debounce_ms)</td></tr>
+<tr class="memdesc:ae1cfb626934f88fda5b57496e44e6075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the debounce period for the button. Debouncing refers to checking the button state over a short period to avoid false triggering due to mechanical noise.  <br /></td></tr>
+<tr class="memitem:a40e990016e6fc218bac80cd761cb0b9c" id="r_a40e990016e6fc218bac80cd761cb0b9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e990016e6fc218bac80cd761cb0b9c">set_mode</a> (uint8_t button_mode)</td></tr>
+<tr class="memdesc:a40e990016e6fc218bac80cd761cb0b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the button mode to either standard or toggle. Toggle mode triggers the button state only on presses. Standard will trigger callbacks on both press and release.  <br /></td></tr>
 <tr class="memitem:a747ca7097f55df827813968a6fc0731b" id="r_a747ca7097f55df827813968a6fc0731b"><td class="memItemLeft" align="right" valign="top"><a id="a747ca7097f55df827813968a6fc0731b" name="a747ca7097f55df827813968a6fc0731b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_invert</b> ()</td></tr>
+<tr class="memdesc:a747ca7097f55df827813968a6fc0731b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts the button state logic. When inverted, a pressed button reads as released and vice versa. Not sure why you want this, but it's here if you need it. <br /></td></tr>
 <tr class="memitem:abc0a668359f51eb1453ea759d8bb3525" id="r_abc0a668359f51eb1453ea759d8bb3525"><td class="memItemLeft" align="right" valign="top"><a id="abc0a668359f51eb1453ea759d8bb3525" name="abc0a668359f51eb1453ea759d8bb3525"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_invert</b> ()</td></tr>
-<tr class="memitem:ae2c5296d720919e1728d2e89fd84ea37" id="r_ae2c5296d720919e1728d2e89fd84ea37"><td class="memItemLeft" align="right" valign="top"><a id="ae2c5296d720919e1728d2e89fd84ea37" name="ae2c5296d720919e1728d2e89fd84ea37"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a719bda8d90738f3fe751446bda0dffad" id="r_a719bda8d90738f3fe751446bda0dffad"><td class="memItemLeft" align="right" valign="top"><a id="a719bda8d90738f3fe751446bda0dffad" name="a719bda8d90738f3fe751446bda0dffad"></a>
-static <a class="el" href="class_button.html">Button</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>registered_buttons</b> [MAX_NUM_BUTTONS]</td></tr>
-<tr class="memitem:a0d360b64903b8eb8f7c39d1290fd4e97" id="r_a0d360b64903b8eb8f7c39d1290fd4e97"><td class="memItemLeft" align="right" valign="top"><a id="a0d360b64903b8eb8f7c39d1290fd4e97" name="a0d360b64903b8eb8f7c39d1290fd4e97"></a>
-static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_registered_buttons</b></td></tr>
-<tr class="memitem:a0583268fba6a82325ffb3a42c7e57a96" id="r_a0583268fba6a82325ffb3a42c7e57a96"><td class="memItemLeft" align="right" valign="top"><a id="a0583268fba6a82325ffb3a42c7e57a96" name="a0583268fba6a82325ffb3a42c7e57a96"></a>
-static <a class="el" href="class_button_kilohertz_plugin.html">ButtonKilohertzPlugin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>kilohertz_plugin</b></td></tr>
+<tr class="memdesc:abc0a668359f51eb1453ea759d8bb3525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the invert flag, restoring normal button state logic. <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> class for handling digital input buttons. </p>
+<p>The <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> class provides an interface for reading and managing digital input buttons. It supports debouncing, state change detection, and callback functions for button events such as press, release, and toggle. Buttons can be configured in standard or toggle mode, and their state can be inverted if needed. Here's an example of how to instantiate and configure a <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_button.html">Button</a> button_a1;</div>
+<div class="line"><a class="code hl_class" href="class_button.html">Button</a> button_a2;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line">  button_a1.<a class="code hl_function" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">begin</a>(IO_A1); <span class="comment">//initialize button on physical input port IO_A1</span></div>
+<div class="line">  button_a1.<a class="code hl_function" href="#aa70753298df42c33455aab1ee7bb4f5d">set_callback_on_release</a>(&amp;onButtonA1Release); <span class="comment">//set callback function for button A1 release event</span></div>
+<div class="line">  button_a2.<a class="code hl_function" href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">begin</a>(IO_A2); <span class="comment">//initialize button on physical input port IO_A2</span></div>
+<div class="line">  button_a2.<a class="code hl_function" href="#a1914568c3366dd633024a269dc1a1fbf">set_callback_on_toggle</a>(&amp;onButtonA2Toggle); <span class="comment">//set callback function for button A2 press event</span></div>
+<div class="line">  dance_start();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> onButtonA1Release() {</div>
+<div class="line">  <span class="comment">// Code to execute when button A1 is released</span></div>
+<div class="line">  Serial.println(<span class="stringliteral">&quot;Button A1 Released&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> onButtonA2Toggle() {</div>
+<div class="line">  <span class="comment">// Code to execute when button A2 is toggled</span></div>
+<div class="line">  Serial.println(<span class="stringliteral">&quot;Button A2 Toggled&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ae11ebf1f392b1e0b0c47a5b78de59b8b" name="ae11ebf1f392b1e0b0c47a5b78de59b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11ebf1f392b1e0b0c47a5b78de59b8b">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Button::begin </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>pin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the debounced state of the button. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t Returns BUTTON_STATE_PRESSED or BUTTON_STATE_RELEASED.</dd></dl>
+<p>Initializes the <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> with the specified pin and mode. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>The digital pin number where the button is connected (e.g. ) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b3bce210b74ea7a37a922a0f92fb12b" name="a7b3bce210b74ea7a37a922a0f92fb12b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3bce210b74ea7a37a922a0f92fb12b">&#9670;&#160;</a></span>has_changed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Button::has_changed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the button state has changed since the last read. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t Returns 1 if the button state has changed, otherwise returns 0. </dd></dl>
+
+</div>
+</div>
+<a id="a5f5c0d23ab0e5387b861e68019a7e85d" name="a5f5c0d23ab0e5387b861e68019a7e85d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5c0d23ab0e5387b861e68019a7e85d">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Button::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a> with the specified pin and mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>The digital pin number where the button is connected (e.g. ) </td></tr>
+    <tr><td class="paramname">mode</td><td>The pin mode, e.g. INPUT, INPUT_PULLUP, etc.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Reads the state of the button. </p><dl class="section return"><dt>Returns</dt><dd>uint8_t Returns BUTTON_STATE_PRESSED or BUTTON_STATE_RELEASED. </dd></dl>
+
+</div>
+</div>
+<a id="a035c15396a73946def066c57185343c4" name="a035c15396a73946def066c57185343c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a035c15396a73946def066c57185343c4">&#9670;&#160;</a></span>read_raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Button::read_raw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the raw state of the input pin without debouncing. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t Returns the raw pin state. </dd></dl>
+
+</div>
+</div>
+<a id="a25bd627bc9689ff2f82215f05a044f8e" name="a25bd627bc9689ff2f82215f05a044f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bd627bc9689ff2f82215f05a044f8e">&#9670;&#160;</a></span>set_callback_on_press()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Button::set_callback_on_press </td>
+          <td>(</td>
+          <td class="paramtype">void(*</td>          <td class="paramname"><span class="paramname"><em>callback_function&#160;</em></span>)()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a callback function to be called when the button is pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa70753298df42c33455aab1ee7bb4f5d" name="aa70753298df42c33455aab1ee7bb4f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70753298df42c33455aab1ee7bb4f5d">&#9670;&#160;</a></span>set_callback_on_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Button::set_callback_on_release </td>
+          <td>(</td>
+          <td class="paramtype">void(*</td>          <td class="paramname"><span class="paramname"><em>callback_function&#160;</em></span>)()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a callback function to be called when the button is released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1914568c3366dd633024a269dc1a1fbf" name="a1914568c3366dd633024a269dc1a1fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1914568c3366dd633024a269dc1a1fbf">&#9670;&#160;</a></span>set_callback_on_toggle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Button::set_callback_on_toggle </td>
+          <td>(</td>
+          <td class="paramtype">void(*</td>          <td class="paramname"><span class="paramname"><em>callback_function&#160;</em></span>)()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a callback function to be called when the button state toggles-either pressed or released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae1cfb626934f88fda5b57496e44e6075" name="ae1cfb626934f88fda5b57496e44e6075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1cfb626934f88fda5b57496e44e6075">&#9670;&#160;</a></span>set_debounce_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Button::set_debounce_ms </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>debounce_ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the debounce period for the button. Debouncing refers to checking the button state over a short period to avoid false triggering due to mechanical noise. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">debounce_ms</td><td>Debounce period in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40e990016e6fc218bac80cd761cb0b9c" name="a40e990016e6fc218bac80cd761cb0b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e990016e6fc218bac80cd761cb0b9c">&#9670;&#160;</a></span>set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Button::set_mode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>button_mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the button mode to either standard or toggle. Toggle mode triggers the button state only on presses. Standard will trigger callbacks on both press and release. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button_mode</td><td>BUTTON_MODE_STANDARD or BUTTON_MODE_TOGGLE. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="digital__in_8hpp_source.html">digital_in.hpp</a></li>
 </ul>

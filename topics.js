@@ -9,6 +9,6 @@ var topics =
     [ "Interpolators", "group__interpolators.html", null ],
     [ "External Interfaces", "group__interfaces.html", null ],
     [ "Recording and Playback", "group__recording.html", null ],
-    [ "Input Devices", "group__inputs.html", null ],
+    [ "Input Devices", "group__inputs.html", "group__inputs" ],
     [ "Utilities", "group__utilities.html", null ]
 ];

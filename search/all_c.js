@@ -1,7 +1,7 @@
 var searchData=
 [
   ['manual_0',['Stepdance Software Library User Manual',['..//Users/jenniferjacobs/Documents/research/code/stepdance_research/stepdance/doc/SSL/readme.md#autotoc_md60',1,'']]],
-  ['map_1',['map',['../class_block_port.html#a15141b0edfad4e702588f16599e2655b',1,'BlockPort']]],
+  ['map_1',['map',['../class_block_port.html#a15141b0edfad4e702588f16599e2655b',1,'BlockPort::map()'],['../class_analog_input.html#a5b693352b0883ae6fa94cbeae55eb8dd',1,'AnalogInput::map()']]],
   ['microcontroller_2',['Microcontroller',['../index.html#autotoc_md47',1,'Microcontroller'],['../index.html#autotoc_md50',1,'Microcontroller']]],
   ['modifications_3',['Modifications',['../taiss.html#autotoc_md67',1,'']]],
   ['module_20board_20v1_200_4',['Driver Module Board v1.0',['../index.html#autotoc_md40',1,'']]],

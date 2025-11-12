@@ -1,13 +1,11 @@
 var hierarchy =
 [
-    [ "analog_pin_info_struct", "structanalog__pin__info__struct.html", null ],
     [ "BlockPort", "class_block_port.html", null ],
     [ "encoder_info_struct", "structencoder__info__struct.html", null ],
     [ "TimeBasedInterpolator::motion_block", "struct_time_based_interpolator_1_1motion__block.html", null ],
     [ "Plugin", null, [
       [ "AnalogInput", "class_analog_input.html", null ],
       [ "Button", "class_button.html", null ],
-      [ "ButtonKilohertzPlugin", "class_button_kilohertz_plugin.html", null ],
       [ "Channel", "class_channel.html", null ],
       [ "CircleGenerator", "class_circle_generator.html", null ],
       [ "Eibotboard", "class_eibotboard.html", null ],

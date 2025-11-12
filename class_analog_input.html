@@ -89,9 +89,14 @@ $(function(){initNavTree('class_analog_input.html','','class_analog_input-member
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">AnalogInput Class Reference</div></div>
+  <div class="headertitle"><div class="title">AnalogInput Class Reference<div class="ingroups"><a class="el" href="group__inputs.html">Input Devices</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> components read values from physical user interface components and enable them to be mapped to Stepdance Components.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="analog__in_8hpp_source.html">analog_in.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AnalogInput:</div>
 <div class="dyncontent">
@@ -101,87 +106,305 @@ Inheritance diagram for AnalogInput:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b775afdce5bed709d007d5e1ca9c6d7" id="r_a5b775afdce5bed709d007d5e1ca9c6d7"><td class="memItemLeft" align="right" valign="top"><a id="a5b775afdce5bed709d007d5e1ca9c6d7" name="a5b775afdce5bed709d007d5e1ca9c6d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (uint8_t pin_reference)</td></tr>
-<tr class="memitem:acbd686f710f68d83a6f09d9a73c032a1" id="r_acbd686f710f68d83a6f09d9a73c032a1"><td class="memItemLeft" align="right" valign="top"><a id="acbd686f710f68d83a6f09d9a73c032a1" name="acbd686f710f68d83a6f09d9a73c032a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calibrate</b> ()</td></tr>
-<tr class="memitem:ae233466f5e005db70969b067035ab51f" id="r_ae233466f5e005db70969b067035ab51f"><td class="memItemLeft" align="right" valign="top"><a id="ae233466f5e005db70969b067035ab51f" name="ae233466f5e005db70969b067035ab51f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_averaging</b> (int8_t averaging)</td></tr>
-<tr class="memitem:ad4880014845313a7ef6edc53f52759ff" id="r_ad4880014845313a7ef6edc53f52759ff"><td class="memItemLeft" align="right" valign="top"><a id="ad4880014845313a7ef6edc53f52759ff" name="ad4880014845313a7ef6edc53f52759ff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_resolution</b> (int8_t resolution)</td></tr>
-<tr class="memitem:a2fee7d564405332e40a536e11d2d992b" id="r_a2fee7d564405332e40a536e11d2d992b"><td class="memItemLeft" align="right" valign="top"><a id="a2fee7d564405332e40a536e11d2d992b" name="a2fee7d564405332e40a536e11d2d992b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_clock</b> (int8_t clock)</td></tr>
-<tr class="memitem:a5b693352b0883ae6fa94cbeae55eb8dd" id="r_a5b693352b0883ae6fa94cbeae55eb8dd"><td class="memItemLeft" align="right" valign="top"><a id="a5b693352b0883ae6fa94cbeae55eb8dd" name="a5b693352b0883ae6fa94cbeae55eb8dd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> (ControlParameter *target_parameter)</td></tr>
-<tr class="memitem:a7d3661f551d44b75d4f61fa17a89f248" id="r_a7d3661f551d44b75d4f61fa17a89f248"><td class="memItemLeft" align="right" valign="top"><a id="a7d3661f551d44b75d4f61fa17a89f248" name="a7d3661f551d44b75d4f61fa17a89f248"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> (DecimalPosition *target_parameter)</td></tr>
-<tr class="memitem:a94321fb79cb3204d7e3ccd98406bb664" id="r_a94321fb79cb3204d7e3ccd98406bb664"><td class="memItemLeft" align="right" valign="top"><a id="a94321fb79cb3204d7e3ccd98406bb664" name="a94321fb79cb3204d7e3ccd98406bb664"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_callback</b> (void(*callback_function)())</td></tr>
-<tr class="memitem:a9d7fd8ae2d3c12b9bb3133c85386287d" id="r_a9d7fd8ae2d3c12b9bb3133c85386287d"><td class="memItemLeft" align="right" valign="top"><a id="a9d7fd8ae2d3c12b9bb3133c85386287d" name="a9d7fd8ae2d3c12b9bb3133c85386287d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>configure_adc</b> ()</td></tr>
-<tr class="memitem:a21954bb6c667d2696299708f8b8d5a66" id="r_a21954bb6c667d2696299708f8b8d5a66"><td class="memItemLeft" align="right" valign="top"><a id="a21954bb6c667d2696299708f8b8d5a66" name="a21954bb6c667d2696299708f8b8d5a66"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin_conversion</b> ()</td></tr>
-<tr class="memitem:abebd50d249b8180d1b18fe37e026afd5" id="r_abebd50d249b8180d1b18fe37e026afd5"><td class="memItemLeft" align="right" valign="top"><a id="abebd50d249b8180d1b18fe37e026afd5" name="abebd50d249b8180d1b18fe37e026afd5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_floor</b> (ControlParameter output_at_floor)</td></tr>
-<tr class="memitem:ace60001ca7af6539ac805b815cdf06b5" id="r_ace60001ca7af6539ac805b815cdf06b5"><td class="memItemLeft" align="right" valign="top"><a id="ace60001ca7af6539ac805b815cdf06b5" name="ace60001ca7af6539ac805b815cdf06b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_floor</b> (ControlParameter output_at_floor, uint16_t adc_lower_limit)</td></tr>
-<tr class="memitem:a79552bae1a61205c886343c8c147bcab" id="r_a79552bae1a61205c886343c8c147bcab"><td class="memItemLeft" align="right" valign="top"><a id="a79552bae1a61205c886343c8c147bcab" name="a79552bae1a61205c886343c8c147bcab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ceiling</b> (ControlParameter output_at_ceiling)</td></tr>
-<tr class="memitem:a0ed67a746ae3db0fac09006979f590d5" id="r_a0ed67a746ae3db0fac09006979f590d5"><td class="memItemLeft" align="right" valign="top"><a id="a0ed67a746ae3db0fac09006979f590d5" name="a0ed67a746ae3db0fac09006979f590d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ceiling</b> (ControlParameter output_at_ceiling, uint16_t adc_upper_limit)</td></tr>
-<tr class="memitem:a599eea7a23b85f7dd51bae71afefabad" id="r_a599eea7a23b85f7dd51bae71afefabad"><td class="memItemLeft" align="right" valign="top"><a id="a599eea7a23b85f7dd51bae71afefabad" name="a599eea7a23b85f7dd51bae71afefabad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_deadband_here</b> (ControlParameter output_at_deadband=0, uint16_t adc_deadband_width=4)</td></tr>
-<tr class="memitem:a7c615a849a53c78ca2519a41d7db6c27" id="r_a7c615a849a53c78ca2519a41d7db6c27"><td class="memItemLeft" align="right" valign="top"><a id="a7c615a849a53c78ca2519a41d7db6c27" name="a7c615a849a53c78ca2519a41d7db6c27"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_deadband</b> (ControlParameter output_at_deadband, uint16_t adc_deadband_center, uint16_t adc_deadband_width=4)</td></tr>
+<tr class="memitem:af40968136e406531f8838434f1c1356b" id="r_af40968136e406531f8838434f1c1356b"><td class="memItemLeft" align="right" valign="top"><a id="af40968136e406531f8838434f1c1356b" name="af40968136e406531f8838434f1c1356b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AnalogInput</b> ()</td></tr>
+<tr class="memdesc:af40968136e406531f8838434f1c1356b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a>. Initializes an <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> instance with default, unconfigured state. This does not configure hardware or register the input; call <a class="el" href="#a5b775afdce5bed709d007d5e1ca9c6d7" title="Initialize the AnalogInput with a pin reference corresponding to the target physical analog input pin...">begin()</a> to initialize hardware-specific settings and register the input with the system. <br /></td></tr>
+<tr class="memitem:a5b775afdce5bed709d007d5e1ca9c6d7" id="r_a5b775afdce5bed709d007d5e1ca9c6d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b775afdce5bed709d007d5e1ca9c6d7">begin</a> (uint8_t pin_reference)</td></tr>
+<tr class="memdesc:a5b775afdce5bed709d007d5e1ca9c6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> with a pin reference corresponding to the target physical analog input pin on the Stepdance Board.  <br /></td></tr>
+<tr class="memitem:a5b693352b0883ae6fa94cbeae55eb8dd" id="r_a5b693352b0883ae6fa94cbeae55eb8dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b693352b0883ae6fa94cbeae55eb8dd">map</a> (ControlParameter *target_parameter)</td></tr>
+<tr class="memdesc:a5b693352b0883ae6fa94cbeae55eb8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> to a ControlParameter, which will be updated each time a new analog value is read. ControlParameters are typically used to control Component parameters (e.g. 1DWaveGenerator Amplitude, <a class="el" href="class_velocity_generator.html">VelocityGenerator</a> Speed etc.).  <br /></td></tr>
+<tr class="memitem:a94321fb79cb3204d7e3ccd98406bb664" id="r_a94321fb79cb3204d7e3ccd98406bb664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94321fb79cb3204d7e3ccd98406bb664">set_callback</a> (void(*callback_function)())</td></tr>
+<tr class="memdesc:a94321fb79cb3204d7e3ccd98406bb664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback function that will be called each time a new analog value is read.  <br /></td></tr>
+<tr class="memitem:abebd50d249b8180d1b18fe37e026afd5" id="r_abebd50d249b8180d1b18fe37e026afd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abebd50d249b8180d1b18fe37e026afd5">set_floor</a> (ControlParameter output_at_floor)</td></tr>
+<tr class="memdesc:abebd50d249b8180d1b18fe37e026afd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scaled output value of the Analog Input at the floor (lower limit).  <br /></td></tr>
+<tr class="memitem:ace60001ca7af6539ac805b815cdf06b5" id="r_ace60001ca7af6539ac805b815cdf06b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace60001ca7af6539ac805b815cdf06b5">set_floor</a> (ControlParameter output_at_floor, uint16_t adc_lower_limit)</td></tr>
+<tr class="memdesc:ace60001ca7af6539ac805b815cdf06b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scaled output value of the Analog Input at the floor (lower limit). This defines the mapping between raw ADC values and the output ControlParameter values.  <br /></td></tr>
+<tr class="memitem:a79552bae1a61205c886343c8c147bcab" id="r_a79552bae1a61205c886343c8c147bcab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79552bae1a61205c886343c8c147bcab">set_ceiling</a> (ControlParameter output_at_ceiling)</td></tr>
+<tr class="memdesc:a79552bae1a61205c886343c8c147bcab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scaled output value of the Analog Input at the ceiling (upper limit). This defines the mapping between raw ADC values and the output ControlParameter values.  <br /></td></tr>
+<tr class="memitem:a0ed67a746ae3db0fac09006979f590d5" id="r_a0ed67a746ae3db0fac09006979f590d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ed67a746ae3db0fac09006979f590d5">set_ceiling</a> (ControlParameter output_at_ceiling, uint16_t adc_upper_limit)</td></tr>
+<tr class="memdesc:a0ed67a746ae3db0fac09006979f590d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scaled output value of the Analog Input at the ceiling (upper limit). This defines the mapping between raw ADC values and the output ControlParameter values.  <br /></td></tr>
 <tr class="memitem:af8b06cf2264b9d6e79b680a4e0caac4a" id="r_af8b06cf2264b9d6e79b680a4e0caac4a"><td class="memItemLeft" align="right" valign="top"><a id="af8b06cf2264b9d6e79b680a4e0caac4a" name="af8b06cf2264b9d6e79b680a4e0caac4a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></tr>
-<tr class="memitem:af143ba031f43d5b8a5d4766ed9737cf9" id="r_af143ba031f43d5b8a5d4766ed9737cf9"><td class="memItemLeft" align="right" valign="top"><a id="af143ba031f43d5b8a5d4766ed9737cf9" name="af143ba031f43d5b8a5d4766ed9737cf9"></a>
-ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</td></tr>
-<tr class="memitem:ac84e6d7c1beda9c24a551a992fd1e7b0" id="r_ac84e6d7c1beda9c24a551a992fd1e7b0"><td class="memItemLeft" align="right" valign="top"><a id="ac84e6d7c1beda9c24a551a992fd1e7b0" name="ac84e6d7c1beda9c24a551a992fd1e7b0"></a>
-ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>read_raw</b> ()</td></tr>
-<tr class="memitem:a398254742cd2c72bc47166fcabd85fa1" id="r_a398254742cd2c72bc47166fcabd85fa1"><td class="memItemLeft" align="right" valign="top"><a id="a398254742cd2c72bc47166fcabd85fa1" name="a398254742cd2c72bc47166fcabd85fa1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a5f3366d30bc78c74b58593d02723f5d8" id="r_a5f3366d30bc78c74b58593d02723f5d8"><td class="memItemLeft" align="right" valign="top"><a id="a5f3366d30bc78c74b58593d02723f5d8" name="a5f3366d30bc78c74b58593d02723f5d8"></a>
-volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>last_value_raw</b> = 0</td></tr>
-<tr class="memitem:ab1bcb6671779163b900b784cc8316c74" id="r_ab1bcb6671779163b900b784cc8316c74"><td class="memItemLeft" align="right" valign="top"><a id="ab1bcb6671779163b900b784cc8316c74" name="ab1bcb6671779163b900b784cc8316c74"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>callback_function</b> )() = nullptr</td></tr>
-<tr class="memitem:a250a3c6820f6073f1ce3d931768c8318" id="r_a250a3c6820f6073f1ce3d931768c8318"><td class="memItemLeft" align="right" valign="top"><a id="a250a3c6820f6073f1ce3d931768c8318" name="a250a3c6820f6073f1ce3d931768c8318"></a>
-ControlParameter *&#160;</td><td class="memItemRight" valign="bottom"><b>target_control_param</b> = nullptr</td></tr>
-<tr class="memitem:ad780c8e573dc9e7518df02596bc1c657" id="r_ad780c8e573dc9e7518df02596bc1c657"><td class="memItemLeft" align="right" valign="top"><a id="ad780c8e573dc9e7518df02596bc1c657" name="ad780c8e573dc9e7518df02596bc1c657"></a>
-DecimalPosition *&#160;</td><td class="memItemRight" valign="bottom"><b>target_decimal_pos</b> = nullptr</td></tr>
-<tr class="memitem:aa5d8e477911fce6e3facd287d94205df" id="r_aa5d8e477911fce6e3facd287d94205df"><td class="memItemLeft" align="right" valign="top"><a id="aa5d8e477911fce6e3facd287d94205df" name="aa5d8e477911fce6e3facd287d94205df"></a>
-float32_t&#160;</td><td class="memItemRight" valign="bottom"><b>full_scale_volts</b> = VREF_3V3</td></tr>
-<tr class="memitem:a0017764bc844ca44c5873287229d60d2" id="r_a0017764bc844ca44c5873287229d60d2"><td class="memItemLeft" align="right" valign="top"><a id="a0017764bc844ca44c5873287229d60d2" name="a0017764bc844ca44c5873287229d60d2"></a>
-float32_t&#160;</td><td class="memItemRight" valign="bottom"><b>conversion_slope_1</b> = 1</td></tr>
-<tr class="memitem:a04fc93d87648291cfecb468b1a7df348" id="r_a04fc93d87648291cfecb468b1a7df348"><td class="memItemLeft" align="right" valign="top"><a id="a04fc93d87648291cfecb468b1a7df348" name="a04fc93d87648291cfecb468b1a7df348"></a>
-float32_t&#160;</td><td class="memItemRight" valign="bottom"><b>conversion_intercept_1</b> = 0</td></tr>
-<tr class="memitem:ac1d590fbeb3a159940af288cd7d0b2df" id="r_ac1d590fbeb3a159940af288cd7d0b2df"><td class="memItemLeft" align="right" valign="top"><a id="ac1d590fbeb3a159940af288cd7d0b2df" name="ac1d590fbeb3a159940af288cd7d0b2df"></a>
-float32_t&#160;</td><td class="memItemRight" valign="bottom"><b>conversion_slope_2</b> = 1</td></tr>
-<tr class="memitem:a15234f8e24e74733f5a915ed9d3178b0" id="r_a15234f8e24e74733f5a915ed9d3178b0"><td class="memItemLeft" align="right" valign="top"><a id="a15234f8e24e74733f5a915ed9d3178b0" name="a15234f8e24e74733f5a915ed9d3178b0"></a>
-float32_t&#160;</td><td class="memItemRight" valign="bottom"><b>conversion_intercept_2</b> = 0</td></tr>
-<tr class="memitem:ab0059a8694b8b7b91669a7000e0f862d" id="r_ab0059a8694b8b7b91669a7000e0f862d"><td class="memItemLeft" align="right" valign="top"><a id="ab0059a8694b8b7b91669a7000e0f862d" name="ab0059a8694b8b7b91669a7000e0f862d"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_deadband_location</b> = 0</td></tr>
-<tr class="memitem:aec2b95e3fdfa534c8926fb500ccd652d" id="r_aec2b95e3fdfa534c8926fb500ccd652d"><td class="memItemLeft" align="right" valign="top"><a id="aec2b95e3fdfa534c8926fb500ccd652d" name="aec2b95e3fdfa534c8926fb500ccd652d"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_deadband_width</b> = 0</td></tr>
-<tr class="memitem:a6f19e2304c9bba4df3700f2d41f5562b" id="r_a6f19e2304c9bba4df3700f2d41f5562b"><td class="memItemLeft" align="right" valign="top"><a id="a6f19e2304c9bba4df3700f2d41f5562b" name="a6f19e2304c9bba4df3700f2d41f5562b"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_deadband_lower</b> = 0</td></tr>
-<tr class="memitem:a5869a95f220fa781bf86fe57b34750a8" id="r_a5869a95f220fa781bf86fe57b34750a8"><td class="memItemLeft" align="right" valign="top"><a id="a5869a95f220fa781bf86fe57b34750a8" name="a5869a95f220fa781bf86fe57b34750a8"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_deadband_upper</b> = 0</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a28f19f3b8abf60efa06008f363726541" id="r_a28f19f3b8abf60efa06008f363726541"><td class="memItemLeft" align="right" valign="top"><a id="a28f19f3b8abf60efa06008f363726541" name="a28f19f3b8abf60efa06008f363726541"></a>
-static <a class="el" href="class_analog_input.html">AnalogInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>adc1_inputs</b> [MAX_NUM_ADC_INPUTS]</td></tr>
-<tr class="memitem:afd5acfb1b0e0155a1b0178a592a597fb" id="r_afd5acfb1b0e0155a1b0178a592a597fb"><td class="memItemLeft" align="right" valign="top"><a id="afd5acfb1b0e0155a1b0178a592a597fb" name="afd5acfb1b0e0155a1b0178a592a597fb"></a>
-static <a class="el" href="class_analog_input.html">AnalogInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>adc2_inputs</b> [MAX_NUM_ADC_INPUTS]</td></tr>
-<tr class="memitem:aa3dbc699762a66caab2e2aa6b33102f8" id="r_aa3dbc699762a66caab2e2aa6b33102f8"><td class="memItemLeft" align="right" valign="top"><a id="aa3dbc699762a66caab2e2aa6b33102f8" name="aa3dbc699762a66caab2e2aa6b33102f8"></a>
-static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>module_num_inputs</b> [NUM_ADC_MODULES]</td></tr>
-<tr class="memitem:ab4738b74775eaa728199db996eb3c93a" id="r_ab4738b74775eaa728199db996eb3c93a"><td class="memItemLeft" align="right" valign="top"><a id="ab4738b74775eaa728199db996eb3c93a" name="ab4738b74775eaa728199db996eb3c93a"></a>
-static volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>module_current_input_index</b> [NUM_ADC_MODULES]</td></tr>
+<tr class="memdesc:af8b06cf2264b9d6e79b680a4e0caac4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts the output of the Analog Input, such that higher raw ADC values correspond to lower ControlParameter values and vice versa. Useful for inverting potentiometer or other analog UI elements without rewiring. <br /></td></tr>
+<tr class="memitem:af143ba031f43d5b8a5d4766ed9737cf9" id="r_af143ba031f43d5b8a5d4766ed9737cf9"><td class="memItemLeft" align="right" valign="top">ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af143ba031f43d5b8a5d4766ed9737cf9">read</a> ()</td></tr>
+<tr class="memdesc:af143ba031f43d5b8a5d4766ed9737cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the last converted and scaled value from the Analog Input.  <br /></td></tr>
+<tr class="memitem:ac84e6d7c1beda9c24a551a992fd1e7b0" id="r_ac84e6d7c1beda9c24a551a992fd1e7b0"><td class="memItemLeft" align="right" valign="top">ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac84e6d7c1beda9c24a551a992fd1e7b0">read_raw</a> ()</td></tr>
+<tr class="memdesc:ac84e6d7c1beda9c24a551a992fd1e7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the last raw ADC value from the Analog Input.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> components read values from physical user interface components and enable them to be mapped to Stepdance Components. </p>
+<p>AnalogInputs function similarly to the Arduino <a href="https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/">analogIn</a> function. They can be used to directly map analog readings from the Analog input terminals on the Machine Controller or Basic Module to Stepdance Component ControlParameters. Alternatively, you can read the value of the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> directly during the loop() function to implement custom control schemes. You can read <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> values at either scaled values (based on user-defined floor and ceiling settings) or as raw Analog-to-Digital Converter (ADC) values.</p>
+<p>Here's an example of how to instantiate and configure two AnalogInputs to either map to control parameters or read a value directly during the loop() function: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> analog_a1;</div>
+<div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> analog_a2;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_velocity_generator.html">VelocityGenerator</a> velocity_gen;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line"><span class="comment">//analog input a1 </span></div>
+<div class="line">  analog_a1.<a class="code hl_function" href="#abebd50d249b8180d1b18fe37e026afd5">set_floor</a>(0, 25); <span class="comment">//set floor to 0 output at ADC values of 25 and below. </span></div>
+<div class="line">  analog_a1.<a class="code hl_function" href="#a79552bae1a61205c886343c8c147bcab">set_ceiling</a>(2.75, 1020); <span class="comment">//set ceiling to 2.75 output at ADC values of 1020 and above.</span></div>
+<div class="line">  analog_a1.<a class="code hl_function" href="#a5b693352b0883ae6fa94cbeae55eb8dd">map</a>(&amp;velocity_gen.speed_units_per_sec); <span class="comment">//map analog output to VelocityGenerator speed ControlParameter</span></div>
+<div class="line">  analog_a1.<a class="code hl_function" href="#a5b775afdce5bed709d007d5e1ca9c6d7">begin</a>(IO_A1); <span class="comment">//initialize analog input on physical input port IO_A1</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//analog input a2</span></div>
+<div class="line">  analog_a2.<a class="code hl_function" href="#abebd50d249b8180d1b18fe37e026afd5">set_floor</a>(0, 25);</div>
+<div class="line">  analog_a2.<a class="code hl_function" href="#a79552bae1a61205c886343c8c147bcab">set_ceiling</a>(10, 1020);</div>
+<div class="line">  analog_a2.<a class="code hl_function" href="#a5b775afdce5bed709d007d5e1ca9c6d7">begin</a>(IO_A2);<span class="comment">//initialize analog input on physical input port IO_A2</span></div>
+<div class="line">  </div>
+<div class="line">  dance_start();</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  <span class="keywordtype">float</span> extrusionMultiplier =analog_a2.<a class="code hl_function" href="#af143ba031f43d5b8a5d4766ed9737cf9">read</a>(); <span class="comment">//read analog input a2 value during loop and store it in variable </span></div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a5b775afdce5bed709d007d5e1ca9c6d7" name="a5b775afdce5bed709d007d5e1ca9c6d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b775afdce5bed709d007d5e1ca9c6d7">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalogInput::begin </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>pin_reference</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> with a pin reference corresponding to the target physical analog input pin on the Stepdance Board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin_reference</td><td>Index of the physical analog input pin (e.g. IO_A1, IO_A2, IO_A3, IO_A4). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b693352b0883ae6fa94cbeae55eb8dd" name="a5b693352b0883ae6fa94cbeae55eb8dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b693352b0883ae6fa94cbeae55eb8dd">&#9670;&#160;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalogInput::map </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter *</td>          <td class="paramname"><span class="paramname"><em>target_parameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maps the <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a> to a ControlParameter, which will be updated each time a new analog value is read. ControlParameters are typically used to control Component parameters (e.g. 1DWaveGenerator Amplitude, <a class="el" href="class_velocity_generator.html">VelocityGenerator</a> Speed etc.). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target_parameter</td><td>Pointer to the ControlParameter to map to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af143ba031f43d5b8a5d4766ed9737cf9" name="af143ba031f43d5b8a5d4766ed9737cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af143ba031f43d5b8a5d4766ed9737cf9">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ControlParameter AnalogInput::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the last converted and scaled value from the Analog Input. </p>
+<dl class="section return"><dt>Returns</dt><dd>The last read value, based on the internal conversion factor. </dd></dl>
+
+</div>
+</div>
+<a id="ac84e6d7c1beda9c24a551a992fd1e7b0" name="ac84e6d7c1beda9c24a551a992fd1e7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84e6d7c1beda9c24a551a992fd1e7b0">&#9670;&#160;</a></span>read_raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ControlParameter AnalogInput::read_raw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the last raw ADC value from the Analog Input. </p>
+<dl class="section return"><dt>Returns</dt><dd>The last read raw ADC value. </dd></dl>
+
+</div>
+</div>
+<a id="a94321fb79cb3204d7e3ccd98406bb664" name="a94321fb79cb3204d7e3ccd98406bb664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94321fb79cb3204d7e3ccd98406bb664">&#9670;&#160;</a></span>set_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalogInput::set_callback </td>
+          <td>(</td>
+          <td class="paramtype">void(*</td>          <td class="paramname"><span class="paramname"><em>callback_function&#160;</em></span>)()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a callback function that will be called each time a new analog value is read. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback_function</td><td>Pointer to the callback function to be executed on new data. code example: <div class="fragment"><div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> analog_a1;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line"><span class="comment">//analog input a1 </span></div>
+<div class="line">  analog_a1.<a class="code hl_function" href="#a5b775afdce5bed709d007d5e1ca9c6d7">begin</a>(IO_A1); <span class="comment">//initialize analog input on physical input port IO_A1</span></div>
+<div class="line">  analog_a1.<a class="code hl_function" href="#a94321fb79cb3204d7e3ccd98406bb664">set_callback</a>(&amp;analogInputCallback); <span class="comment">//set the callback function to be called on new data</span></div>
+<div class="line">  </div>
+<div class="line">  dance_start();</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> analogInputCallback() {</div>
+<div class="line">  <span class="keywordtype">float</span> inputValue = analog_a1.<a class="code hl_function" href="#af143ba031f43d5b8a5d4766ed9737cf9">read</a>(); <span class="comment">//read analog input a1 value during callback</span></div>
+<div class="line">  <span class="comment">// Do something with inputValue, e.g., print it to the console</span></div>
+<div class="line">  Serial.println(inputValue);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a79552bae1a61205c886343c8c147bcab" name="a79552bae1a61205c886343c8c147bcab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79552bae1a61205c886343c8c147bcab">&#9670;&#160;</a></span>set_ceiling() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalogInput::set_ceiling </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>output_at_ceiling</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the scaled output value of the Analog Input at the ceiling (upper limit). This defines the mapping between raw ADC values and the output ControlParameter values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_at_ceiling</td><td>ControlParameter value corresponding to scaled output value at the upper limit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ed67a746ae3db0fac09006979f590d5" name="a0ed67a746ae3db0fac09006979f590d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed67a746ae3db0fac09006979f590d5">&#9670;&#160;</a></span>set_ceiling() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalogInput::set_ceiling </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>output_at_ceiling</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>adc_upper_limit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the scaled output value of the Analog Input at the ceiling (upper limit). This defines the mapping between raw ADC values and the output ControlParameter values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_at_ceiling</td><td>ControlParameter value corresponding to scaled output value at the upper limit. </td></tr>
+    <tr><td class="paramname">adc_upper_limit</td><td>Raw ADC value corresponding to the upper limit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abebd50d249b8180d1b18fe37e026afd5" name="abebd50d249b8180d1b18fe37e026afd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebd50d249b8180d1b18fe37e026afd5">&#9670;&#160;</a></span>set_floor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalogInput::set_floor </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>output_at_floor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the scaled output value of the Analog Input at the floor (lower limit). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_at_floor</td><td>ControlParameter value corresponding to scaled output value at the lower limit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace60001ca7af6539ac805b815cdf06b5" name="ace60001ca7af6539ac805b815cdf06b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace60001ca7af6539ac805b815cdf06b5">&#9670;&#160;</a></span>set_floor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalogInput::set_floor </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>output_at_floor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>adc_lower_limit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the scaled output value of the Analog Input at the floor (lower limit). This defines the mapping between raw ADC values and the output ControlParameter values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_at_floor</td><td>ControlParameter value corresponding to scaled output value at the lower limit. </td></tr>
+    <tr><td class="paramname">adc_lower_limit</td><td>Raw ADC value corresponding to the lower limit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="analog__in_8hpp_source.html">analog_in.hpp</a></li>
 </ul>
