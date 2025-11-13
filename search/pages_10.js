@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['reference_20voltage_0',['Reference Voltage',['../stepasketch.html#autotoc_md9',1,'Calculate the Reference Voltage'],['../stepasketch.html#autotoc_md10',1,'Set the Reference Voltage']]],
-  ['resources_1',['Additional Resources',['../ssl.html#autotoc_md69',1,'']]]
+  ['next_20steps_0',['3. Next Steps',['../getting_started.html#autotoc_md39',1,'']]]
 ];

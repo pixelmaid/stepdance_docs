@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['includes_0',['Includes',['../stepasketch.html#autotoc_md13',1,'']]],
-  ['inputs_1',['Inputs',['../hardware.html#autotoc_md37',1,'DC Power Inputs'],['../hardware.html#autotoc_md35',1,'Encoders and Analog / Digital Inputs']]],
-  ['interfaces_2',['Stepper Drivers and Motor Interfaces',['../hardware.html#autotoc_md34',1,'']]],
-  ['introduction_3',['Introduction',['../ssl.html#autotoc_md63',1,'']]],
-  ['is_20stepdance_4',['What is Stepdance?',['../index.html#autotoc_md59',1,'']]]
+  ['frame_20configuration_0',['Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md61',1,'High-Speed Frame Configuration']]],
+  ['frames_3a_20multi_20axis_20synchronous_20motion_1',['Frames: Multi-Axis Synchronous Motion',['../hardware.html#autotoc_md57',1,'']]],
+  ['functions_2',['Custom Functions',['../stepasketch.html#autotoc_md31',1,'']]],
+  ['future_20work_3',['Future Work',['../highspeed.html#autotoc_md64',1,'']]]
 ];

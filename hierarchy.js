@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "BlockPort", "class_block_port.html", null ],
-    [ "encoder_info_struct", "structencoder__info__struct.html", null ],
     [ "TimeBasedInterpolator::motion_block", "struct_time_based_interpolator_1_1motion__block.html", null ],
     [ "Plugin", null, [
       [ "AnalogInput", "class_analog_input.html", null ],

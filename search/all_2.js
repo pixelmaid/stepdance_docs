@@ -1,10 +1,4 @@
 var searchData=
 [
-  ['basic_20module_20v1_200_0',['Basic Module v1.0',['../hardware.html#autotoc_md42',1,'']]],
-  ['begin_1',['begin',['../class_output_port.html#a0158ccdab5705216309a16eeb22039d0',1,'OutputPort::begin()'],['../class_channel.html#a395b2f1afe3e1351806fb826e5a23d42',1,'Channel::begin()'],['../class_channel.html#a93505d47732a9a17a97dfb848defadf5',1,'Channel::begin(OutputPort *target_output_port, uint8_t output_signal)'],['../class_input_port.html#a7bec13041ef7d76fbcb3f4126300270a',1,'InputPort::begin()'],['../class_analog_input.html#a5b775afdce5bed709d007d5e1ca9c6d7',1,'AnalogInput::begin()'],['../class_button.html#ae11ebf1f392b1e0b0c47a5b78de59b8b',1,'Button::begin()'],['../class_threshold_generator.html#a3578c3b057e12dc5dfc04b5eae671289',1,'ThresholdGenerator::begin()'],['../class_wave_generator1_d.html#abd6acd6684ed5dfe6b05ce983c091285',1,'WaveGenerator1D::begin()'],['../class_circle_generator.html#ac8dcf701a89fd71e71f2de34aa458f8c',1,'CircleGenerator::begin()'],['../class_velocity_generator.html#a10151038501c236dda680966e97c9cce',1,'VelocityGenerator::begin()'],['../class_position_generator.html#ac1ffc639139b334d2d180332859e0d48',1,'PositionGenerator::begin()'],['../class_path_length_generator2_d.html#a4012dc9e017f0c941e1b1350f84a998c',1,'PathLengthGenerator2D::begin()'],['../class_path_length_generator3_d.html#ac2ab1ecbd812c2f8cce14c9c7e266aaa',1,'PathLengthGenerator3D::begin()']]],
-  ['blockport_2',['BlockPort',['../class_block_port.html',1,'BlockPort'],['../class_block_port.html#a1b0f7e5c475c6b7e260be652d3e0adb9',1,'BlockPort::BlockPort()']]],
-  ['board_3',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
-  ['board_20definition_4',['Board Definition',['../stepasketch.html#autotoc_md12',1,'']]],
-  ['board_20v1_200_5',['Driver Module Board v1.0',['../hardware.html#autotoc_md33',1,'']]],
-  ['button_6',['Button',['../class_button.html',1,'Button'],['../class_button.html#a3b36df1ae23c58aedb9e15a713159459',1,'Button::Button()'],['../stepasketch.html#autotoc_md19',1,'Button'],['../stepasketch.html#autotoc_md27',1,'Configure the Button'],['../stepasketch.html#autotoc_md6',1,'Wiring the Button']]]
+  ['2_20set_20up_20arduino_20programming_20environment_0',['2. Set Up Arduino Programming Environment',['../getting_started.html#autotoc_md34',1,'']]]
 ];

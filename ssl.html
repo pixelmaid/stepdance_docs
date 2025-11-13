@@ -92,7 +92,7 @@ $(function(){initNavTree('ssl.html','',''); });
   <div class="headertitle"><div class="title">Stepdance Software Library Documentation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md63"></a>
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md71"></a>
 Introduction</h2>
 <p>Stepdance is a motion control operating system that scaffolds a wide range of modular software components. These can do things like:</p><ul>
 <li>real-time control of motors from encoders and potentiometers</li>
@@ -105,31 +105,41 @@ Introduction</h2>
 </ul>
 <p>Most of the stepdance framework is interrupt-driven and operates in the background, by taking advantage of the relatively massive computing power of the Teensy 4/4.1 (based on the iMXRT1062).</p>
 <p>In this documentation we describe the overall framework, the currently available elements, and how to connect everything together.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md64"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md72"></a>
 Overview</h2>
-<p>The Stepdance library provides a flexible architecture for motion control through several key concepts:</p>
+<p>The Stepdance library provides a flexible architecture for motion control through several key components:</p>
 <ul>
-<li><b>BlockPorts</b>: Unified interface for connecting components and routing data between them</li>
-<li><b>Channels</b>: Position state management and step/direction signal generation</li>
-<li><b>Input/Output Ports</b>: Physical hardware interface for receiving and transmitting motion signals</li>
-<li><b>Generators</b>: Motion pattern and trajectory generation</li>
-<li><b>Kinematics</b>: Coordinate system transformations (Cartesian, polar, CoreXY, etc.)</li>
-<li><b>Filters</b>: Signal smoothing and noise reduction</li>
-<li><b>Interfaces</b>: External protocol support (G-code, EiBotBoard, etc.)</li>
+<li><b>BlockPorts</b>: Unified interface for connecting components and routing data between them (see <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> and <a class="el" href="group__core.html">Core Components</a>)</li>
+<li><b>Channels</b>: Position state management and step/direction signal generation (see <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> and <a class="el" href="group__channels.html">Channels</a>)</li>
+<li><b>Input/Output Ports</b>: Physical hardware interface for receiving and transmitting motion signals (see <a class="el" href="class_input_port.html" title="InputPort components receive motion streams on physical Stepdance input ports, and map these signals ...">InputPort</a>, <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a>, and <a class="el" href="group__io.html">Input/Output Modules</a>)</li>
+<li><b>Generators</b>: Motion pattern and trajectory generation (see <a class="el" href="group__generators.html">Generators</a>)</li>
+<li><b>Kinematics</b>: Coordinate system transformations (Cartesian, polar, CoreXY, etc.) (see <a class="el" href="group__kinematics.html">Kinematics</a>)</li>
+<li><b>Filters</b>: Signal smoothing and noise reduction (see <a class="el" href="group__filters.html">Filters</a>)</li>
+<li><b>Interfaces</b>: External protocol support (G-code, EiBotBoard, etc.) (see <a class="el" href="class_g_code_interface.html" title="G-code interface class for parsing and executing G-code commands.">GCodeInterface</a>, <a class="el" href="class_eibotboard.html" title="EiBotBoard interface class for receiving commands and generating motion blocks.">Eibotboard</a>, and <a class="el" href="group__interfaces.html">External Interfaces</a>)</li>
+<li><b>Recording</b>: Motion recording and playback functionality (see <a class="el" href="class_four_track_recorder.html">FourTrackRecorder</a>, <a class="el" href="class_four_track_player.html">FourTrackPlayer</a>, and <a class="el" href="group__recording.html">Recording and Playback</a>)</li>
+<li><b>Inputs</b>: Physical input device handling (see <a class="el" href="class_analog_input.html" title="AnalogInput components read values from physical user interface components and enable them to be mapp...">AnalogInput</a>, <a class="el" href="class_button.html" title="Button class for handling digital input buttons.">Button</a>, <a class="el" href="class_encoder.html">Encoder</a>, and <a class="el" href="group__inputs.html">Input Devices</a>)</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md65"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md73"></a>
 Getting Started</h2>
-<p>To get started with Stepdance:</p>
+<p>For a complete guide to getting started with Stepdance, see the <a class="el" href="getting_started.html">Getting Started with Stepdance</a> page.</p>
+<p>To get started with Stepdance programming:</p>
 <ol type="1">
-<li><b>Understand BlockPorts</b>: BlockPorts are the fundamental communication mechanism between components. See the core module for details.</li>
-<li><b>Configure Output Ports</b>: Set up your physical output ports to send step/direction signals. See the I/O module for <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a> configuration.</li>
-<li><b>Create Channels</b>: Channels drive motors to target positions. See the channels module for <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> setup and usage.</li>
-<li><b>Add Motion Sources</b>: Connect input ports, generators, or other motion sources to your channels using <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> mapping.</li>
+<li><b>Understand BlockPorts</b>: BlockPorts are the fundamental communication mechanism between components. See the <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> class and <a class="el" href="group__core.html">Core Components</a> module for details.</li>
+<li><b>Configure Output Ports</b>: Set up your physical output ports to send step/direction signals. See the <a class="el" href="class_output_port.html" title="OutputPorts are modules that convert internal step commands into a frame of pulse signals on the phys...">OutputPort</a> class and <a class="el" href="group__io.html">Input/Output Modules</a> module for configuration.</li>
+<li><b>Create Channels</b>: Channels drive motors to target positions. See the <a class="el" href="class_channel.html" title="Channels are modules that store the machine&#39;s positional state.">Channel</a> class and <a class="el" href="group__channels.html">Channels</a> module for setup and usage.</li>
+<li><b>Add Motion Sources</b>: Connect input ports, generators, or other motion sources to your channels using <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> mapping. See <a class="el" href="group__generators.html">Generators</a> and <a class="el" href="group__inputs.html">Input Devices</a> for available sources.</li>
 </ol>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md66"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md74"></a>
 Examples</h2>
-<p>Example code snippets are provided throughout the documentation. Look for code examples in the documentation for each class.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md67"></a>
+<p>For complete working examples, see the examples page which includes examples organized by category:</p><ul>
+<li>Core examples (analog input, encoders, I/O tests)</li>
+<li>Motion control examples (pantograph, wheelbot, harmonograph)</li>
+<li>Plotting examples (AxiDraw interface, G-code)</li>
+<li>3D printer examples (clay printer, extrusion)</li>
+<li>And more...</li>
+</ul>
+<p>Example code snippets are also provided throughout the documentation for individual classes.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md75"></a>
 Module Organization</h2>
 <p>The library is organized into functional modules:</p>
 <ul>
@@ -143,14 +153,14 @@ Module Organization</h2>
 <li><b>recording</b> - Motion recording and playback</li>
 <li><b>inputs</b> - Physical input devices</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md68"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md76"></a>
 Supported Hardware</h2>
 <p>Stepdance runs on Teensy microcontrollers and supports:</p>
 <ul>
 <li>Basic Modules (single input port)</li>
 <li>Machine Controller Modules (multiple I/O ports)</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md69"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md77"></a>
 Additional Resources</h2>
 <ul>
 <li>GitHub Repository: <a href="https://github.com/imoyer/stepdance">https://github.com/imoyer/stepdance</a></li>

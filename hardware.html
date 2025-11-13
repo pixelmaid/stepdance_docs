@@ -92,19 +92,19 @@ $(function(){initNavTree('hardware.html','',''); });
   <div class="headertitle"><div class="title">Stepdance Hardware Documentation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md40"></a>
 Stepdance Hardware</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
 Driver Module Board v1.0</h3>
 <p><img src="module_driver.png" alt="" class="inline"/>    </p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
 Stepper Drivers and Motor Interfaces</h4>
 <p>This board is designed for <a href="https://pages.github.com/">BIGTREETECH TMC2209</a> driver modules. The sockets have the following pinouts, and microstepping is set by bridging the 2x2 male header pins as shown: <img src="stepper_driver_sockets.png" alt="" class="inline"/>    </p>
 <p>Note that the +5V supply pin is additional to the pins on the TMC2209, and is for future expansion options. These sockets provide a flexible interface for a variety of outputs. For example, our servo stepper board accepts Step/Direction inputs and converts into a hobby servo output.</p>
 <p><b>All driver socket logic connections (e.g. MS1/MS2, STEP, DIR, EN) are at 3.3V</b></p>
 <p>Motors interface with the Stepdance driver module via a 4-pin motor header and a 3-pin limit switch header. <b>The limit switch input is at 5V</b> for compatibility with industrial proximity switches.</p>
 <p>Motor interface header pinouts are as shown: <img src="motor_connectors.png" alt="" class="inline"/>    </p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
 Encoders and Analog / Digital Inputs</h4>
 <p>Two quadrature encoder inputs and six general-purpose IO (GPIO) ports are provided:</p>
 <ul>
@@ -115,15 +115,15 @@ Encoders and Analog / Digital Inputs</h4>
 <p>These are all Molex SL series connectors. Pinouts are as shown: <img src="input_connectors.png" alt="" class="inline"/>    </p>
 <p>The A and B encoder inputs are pulled high thru 10k resistors, for compatibility with open-collector encoders like the TAISS modules.</p>
 <p>A1-A4 and D1-D2 do <em>not</em> have external pullups, but internal pullups on the microcontroller can be enabled.</p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md44"></a>
 QWIIC Connectors</h4>
 <p>Two are provided. It is intended that QWIIC1 is for interfacing with a board-mounted display and knob, while QWIIC0 is for user accessories.</p>
 <p>Note though that QWIIC1 exposes the TX4/RX4 serial port <b>(at 3.3V)</b>, which can be useful for interfacing with certain accessories. Pinout as shown: <img src="qwiic.png" alt="" class="inline"/>    </p>
 <p><img src="sparkfun_qwiic.jpg" alt="" class="inline"/>    </p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
 DC Power Inputs</h4>
 <p>The onboard Teensy 4.1 and most IO gets power from the USB connector on the Teensy itself. A 5.5mm OD / 2.1mm ID barrel connector accepts 12V-24V power that is routed to the stepper drivers.</p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
 Stepdance Ports</h4>
 <ul>
 <li>four independent stepdance input ports A-&gt;D.</li>
@@ -131,11 +131,11 @@ Stepdance Ports</h4>
 <li>additionally, output port D is mirrored to a standard stepdance TRRS connector.</li>
 </ul>
 <p>We discuss stepdance ports in detail later in this document.</p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
 Display and Control Knob Mounting</h4>
 <p>Board-mounted standoffs are provided for a <a href="https://www.sparkfun.com/sparkfun-qwiic-oled-display-0-91-in-128x32-lcd-24606.html">Sparkfun QWIIC OLED</a> and a <a href="https://www.sparkfun.com/sparkfun-qwiic-twist-rgb-rotary-encoder-breakout.html">Sparkfun QWIIC Twist knob</a>.</p>
 <p>Although three standoffs are shown for the OLED, <b>only two should be installed on the PCB</b>. For an old-style OLED display, these are the left and right-most standoffs. For a new-style OLED, these are the top row of standoffs.</p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md40"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md48"></a>
 Microcontroller</h4>
 <p>The Stepdance driver module uses a Teensy 4.1, which is based off the IMXRT1062 (32-bit, 600MHz). The pinout we use is shown below: <img src="module_driver_teensy.png" alt="" class="inline"/>    </p>
 <p>Notes on pin selection:</p>
@@ -149,7 +149,7 @@ Microcontroller</h4>
 <li>output enable pins individually enable each driver</li>
 <li>"LIM" are limit switch inputs for each output port.</li>
 </ul>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
 Dimensions</h4>
 <ul>
 <li>Board dimensions are 5.5" x 4.0"</li>
@@ -157,7 +157,7 @@ Dimensions</h4>
 <li>Standoffs of up to 6.3MM / 0.25" OD may be used.
 - The corners are radiused at R0.15" </li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
 Basic Module v1.0</h3>
 <p><img src="module_basic.png" alt="" class="inline"/>    </p>
 <p>This is a stripped-down version of the Driver Module. It has:</p>
@@ -170,11 +170,11 @@ Basic Module v1.0</h3>
 <li>1 stepdance output port</li>
 </ul>
 <p>Pinouts for all connectors are the same as the driver module.</p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
 Microcontroller</h4>
 <p>The stepdance basic module can utilize either a Teensy 4.1 or a Teensy 4.0. The only difference is cost, and the 4.1 has an onboard SD card.</p>
 <p><b>The pinout is different from the driver module</b>, and is shown below: <img src="module_basic_teensy.png" alt="" class="inline"/>    </p>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md44"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
 Dimensions</h4>
 <ul>
 <li>Board dimensions are 3.0" x 3.0"</li>
@@ -182,7 +182,7 @@ Dimensions</h4>
 <li>Standoffs of up to 6.3MM / 0.25" OD may be used.
 - The corners are radiused at R0.15"</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
 Hobby Servo Driver</h3>
 <p><img src="servo_stepper.png" alt="" class="inline"/>    </p>
 <p>The Hobby Servo Driver is a drop-in replacement for the BIGTREETECH TMC2209 stepper drivers, and provides a step/direction interface to controlling a standard hobby servo.</p>
@@ -202,16 +202,16 @@ Hobby Servo Driver</h3>
 <div class="line">#define SERVO_BOTTOM_LIMIT_STEPS -500</div>
 <div class="line">#define SERVO_MIDPOINT_PULSE_WIDTH_US 1500</div>
 </div><!-- fragment --><hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
 Stepdance Ports</h2>
 <p><img src="stepdance_hookup.png" alt="" class="inline"/>    </p>
 <p>A key feature of Stepdance is that modules can be chained together by connecting the output port of one module to the input port of another. This allows modules to transmit what we call <em>motion streams</em> between modules, which are real-time multi-axis signals carrying motion information.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
 Electrical</h3>
 <p>We use standard tip-ring-ring-sleeve (TRRS) audio cables to carry these motion streams. Electrically, the TRRS connector has the following pinout: <img src="trrs_pinout.png" alt="" class="inline"/>    </p>
 <p>Motion streams are carried by a step/direction signalling scheme, which is what's commonly used to control stepper drivers. <b>Signals are at 5V.</b> If you aren't familiar with step/direction, it works like this: <img src="step_dir_basics.png" alt="" class="inline"/>    </p>
 <p>A unit of motion (a "step") is transmitted whenever the STEP line is pulsed HIGH. If the DIR line is HIGH when this pulse occurs, a FORWARD step is indicated. If DIR is LOW when the pulse occurs, then the a REVERSE step is indicated.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md48"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
 Signals: Axis-Encoded Step Pulses</h3>
 <p>In stepdance, we refer to these STEP pulses as <em>signals</em>, and use their duration to indicate motion in one of six axes:</p>
 <div class="image">
@@ -238,7 +238,7 @@ Signals: Axis-Encoded Step Pulses</h3>
 <li>R and θ signals support polar positioning systems</li>
 <li>This scheme trades simplicity for robustness; electrical impedance can stretch out these signals. One way to think of this is as a 1MHz serial stream, where "X" is two high bits, "Y" is three, etc...</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
 Frames: Multi-Axis Synchronous Motion</h3>
 <p>This scheme doesn't care the order of pulses, or the maximum time between them. The stepdance library is implemented such that a particular signal only occurs at most <em>once</em> within a <em>frame</em>, as shown below:</p>
 <div class="image">
@@ -252,10 +252,10 @@ Frames: Multi-Axis Synchronous Motion</h3>
 <li>Stepdance can be configured to output frames at higher frequencies, with corresponding limits to the number of signals that fit in a frame. See <a class="el" href="highspeed.html">High-Speed Frame Configuration</a> for configuration concepts.</li>
 </ul>
 <hr  />
- <h2 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
+ <h2 class="doxsection"><a class="anchor" id="autotoc_md58"></a>
 Examples</h2>
 <p>Here we provide some example projects based around an AxiDraw pen plotter, which are aimed at introducing the functionality of Stepdance and library usage. These examples build on each other in the order they are listed.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md59"></a>
 "Step-A-Sketch" (Etch-A-Sketch)</h3>
 <p><img src="step-a-sketch_teaser.png" alt="" class="inline"/>    </p>
 <p>This example uses two encoders to control a pen plotter (e.g. an AxiDraw) in realtime, a la etch-a-sketch. One knob is mapped to the X axis, and the other to the Y axis. You will learn how to:</p>
@@ -266,7 +266,7 @@ Examples</h2>
 <li>read position values from encoders, and use them to drive output channels.</li>
 </ul>
 <p>Read the full <a class="el" href="stepasketch.html">Step-A-Sketch Example</a> example page.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md60"></a>
 Axidraw "EBB" Controller Emulator</h3>
 <p><img src="axidraw_ebb_teaser.png" alt="" class="inline"/>    </p>
 <p>In this example, we drive the Axidraw from Inkscape to plot an SVG file. This is accomplished with a Stepdance Interface module that emulates the Axidraw EBB control board, for which an inkscape plugin has been developed. We will build on the Step-a-Sketch example code, that provides real-time jog dials for positioning the pen's starting position. We additionally provide a hardware knob to control the drawing speed in real-time. You will learn how to:</p>

@@ -1,19 +1,13 @@
 var searchData=
 [
-  ['includes_0',['Includes',['../stepasketch.html#autotoc_md13',1,'']]],
-  ['input_1',['input',['../class_threshold_generator.html#af09183a866a477c3854090a7c0d19b32',1,'ThresholdGenerator::input'],['../class_wave_generator1_d.html#a010d62b34de60350b703673248e5b6fe',1,'WaveGenerator1D::input'],['../class_circle_generator.html#ac17aee6b32de386df19f19ec2d5eb0d0',1,'CircleGenerator::input']]],
-  ['input_20devices_2',['Input Devices',['../group__inputs.html',1,'']]],
-  ['input_20output_20modules_3',['Input/Output Modules',['../group__io.html',1,'']]],
-  ['input_5f1_4',['input_1',['../class_path_length_generator2_d.html#a9d9a56779ca08af995a46e86f83ed7bd',1,'PathLengthGenerator2D::input_1'],['../class_path_length_generator3_d.html#a8b6e61418b9c63fddf96612375c50465',1,'PathLengthGenerator3D::input_1']]],
-  ['input_5f2_5',['input_2',['../class_path_length_generator2_d.html#a82740bda61a12ed101b03fa73e9c7056',1,'PathLengthGenerator2D::input_2'],['../class_path_length_generator3_d.html#a221b42c931825041172206c4898edb4e',1,'PathLengthGenerator3D::input_2']]],
-  ['input_5f3_6',['input_3',['../class_path_length_generator3_d.html#af6bc49294540b48b2d33a00cf3899e31',1,'PathLengthGenerator3D']]],
-  ['inputport_7',['InputPort',['../class_input_port.html',1,'InputPort'],['../class_input_port.html#af2431071e069bf97869b474ae313406b',1,'InputPort::InputPort()']]],
-  ['inputs_8',['Inputs',['../hardware.html#autotoc_md37',1,'DC Power Inputs'],['../hardware.html#autotoc_md35',1,'Encoders and Analog / Digital Inputs']]],
-  ['interfaces_9',['Interfaces',['../group__interfaces.html',1,'External Interfaces'],['../hardware.html#autotoc_md34',1,'Stepper Drivers and Motor Interfaces']]],
-  ['interpolators_10',['Interpolators',['../group__interpolators.html',1,'']]],
-  ['introduction_11',['Introduction',['../ssl.html#autotoc_md63',1,'']]],
-  ['invert_12',['invert',['../class_analog_input.html#af8b06cf2264b9d6e79b680a4e0caac4a',1,'AnalogInput']]],
-  ['invert_5foutput_13',['invert_output',['../class_channel.html#ab493519b6aa6d2bdcdbb34ef72b2c20d',1,'Channel::invert_output()'],['../class_channel.html#aabc1e8d3f0563b1b70e8107d2dd7751d',1,'Channel::invert_output(bool invert)']]],
-  ['is_20stepdance_14',['What is Stepdance?',['../index.html#autotoc_md59',1,'']]],
-  ['is_5foutside_5flimits_15',['is_outside_limits',['../class_channel.html#a7bfd0c8dbc915af01f2f03633257fbc9',1,'Channel']]]
+  ['filtered_5ftarget_5fposition_0',['filtered_target_position',['../class_channel.html#afc949cb6c6bbadcc164ab8191e04558c',1,'Channel']]],
+  ['filtering_5fon_1',['filtering_on',['../class_channel.html#a2b370f0b880c356df887b05a55a46b95',1,'Channel']]],
+  ['filters_2',['Filters',['../group__filters.html',1,'']]],
+  ['fourtrackplayer_3',['FourTrackPlayer',['../class_four_track_player.html',1,'']]],
+  ['fourtrackrecorder_4',['FourTrackRecorder',['../class_four_track_recorder.html',1,'']]],
+  ['frame_20configuration_5',['Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md61',1,'High-Speed Frame Configuration']]],
+  ['frames_3a_20multi_20axis_20synchronous_20motion_6',['Frames: Multi-Axis Synchronous Motion',['../hardware.html#autotoc_md57',1,'']]],
+  ['frequency_7',['frequency',['../class_wave_generator1_d.html#a14b9b19aa976e382b4ae58f15b7d23e2',1,'WaveGenerator1D']]],
+  ['functions_8',['Custom Functions',['../stepasketch.html#autotoc_md31',1,'']]],
+  ['future_20work_9',['Future Work',['../highspeed.html#autotoc_md64',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['utilities_0',['Utilities',['../group__utilities.html',1,'']]]
+  ['qwiic_20connectors_0',['QWIIC Connectors',['../hardware.html#autotoc_md44',1,'']]]
 ];

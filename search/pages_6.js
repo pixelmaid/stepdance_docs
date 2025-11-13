@@ -1,7 +1,28 @@
 var searchData=
 [
-  ['frame_20configuration_0',['Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md53',1,'High-Speed Frame Configuration']]],
-  ['frames_3a_20multi_20axis_20synchronous_20motion_1',['Frames: Multi-Axis Synchronous Motion',['../hardware.html#autotoc_md49',1,'']]],
-  ['functions_2',['Custom Functions',['../stepasketch.html#autotoc_md31',1,'']]],
-  ['future_20work_3',['Future Work',['../highspeed.html#autotoc_md56',1,'']]]
+  ['c_20connect_20and_20select_20the_20board_0',['C. Connect and Select the Board',['../getting_started.html#autotoc_md37',1,'']]],
+  ['calculate_20the_20reference_20voltage_1',['Calculate the Reference Voltage',['../stepasketch.html#autotoc_md9',1,'']]],
+  ['channel_2',['Channel',['../stepasketch.html#autotoc_md16',1,'']]],
+  ['channels_3',['Configure Channels',['../stepasketch.html#autotoc_md24',1,'']]],
+  ['code_4',['Code',['../stepasketch.html#autotoc_md11',1,'']]],
+  ['components_5',['Define all stepdance components',['../stepasketch.html#autotoc_md14',1,'']]],
+  ['concepts_6',['Concepts',['../highspeed.html#autotoc_md62',1,'']]],
+  ['configuration_7',['Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md61',1,'High-Speed Frame Configuration']]],
+  ['configure_20channels_8',['Configure Channels',['../stepasketch.html#autotoc_md24',1,'']]],
+  ['configure_20encoders_9',['Configure Encoders',['../stepasketch.html#autotoc_md25',1,'']]],
+  ['configure_20output_20ports_10',['Configure Output Ports',['../stepasketch.html#autotoc_md23',1,'']]],
+  ['configure_20position_20generator_11',['Configure Position Generator',['../stepasketch.html#autotoc_md28',1,'']]],
+  ['configure_20the_20button_12',['Configure the Button',['../stepasketch.html#autotoc_md27',1,'']]],
+  ['configure_20the_20kinematics_13',['Configure the Kinematics',['../stepasketch.html#autotoc_md26',1,'']]],
+  ['configuring_20the_20stepdance_20driver_20board_14',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
+  ['connect_20and_20select_20the_20board_15',['C. Connect and Select the Board',['../getting_started.html#autotoc_md37',1,'']]],
+  ['connector_16',['Connector',['../taiss.html#autotoc_md80',1,'']]],
+  ['connectors_17',['QWIIC Connectors',['../hardware.html#autotoc_md44',1,'']]],
+  ['considerations_18',['Considerations',['../highspeed.html#autotoc_md63',1,'']]],
+  ['control_20knob_20mounting_19',['Display and Control Knob Mounting',['../hardware.html#autotoc_md47',1,'']]],
+  ['controller_20emulator_20',['Axidraw &quot;EBB&quot; Controller Emulator',['../hardware.html#autotoc_md60',1,'']]],
+  ['controller_20emulator_20example_21',['Axidraw EBB Controller Emulator Example',['../ebb.html',1,'']]],
+  ['current_22',['Determine the Peak Motor Current',['../stepasketch.html#autotoc_md8',1,'']]],
+  ['currents_23',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],
+  ['custom_20functions_24',['Custom Functions',['../stepasketch.html#autotoc_md31',1,'']]]
 ];

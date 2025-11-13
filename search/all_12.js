@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['taiss_20optical_20encoders_0',['TAISS Optical Encoders',['../taiss.html',1,'TAISS Optical Encoders'],['../taiss.html#autotoc_md70',1,'TAISS Optical Encoders']]],
-  ['target_5fposition_1',['target_position',['../class_channel.html#a823f52bb234e60643f9b422a084e94f3',1,'Channel']]],
-  ['the_20button_2',['the Button',['../stepasketch.html#autotoc_md27',1,'Configure the Button'],['../stepasketch.html#autotoc_md6',1,'Wiring the Button']]],
-  ['the_20kinematics_3',['Configure the Kinematics',['../stepasketch.html#autotoc_md26',1,'']]],
-  ['the_20motor_20driver_20currents_4',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],
-  ['the_20peak_20motor_20current_5',['Determine the Peak Motor Current',['../stepasketch.html#autotoc_md8',1,'']]],
-  ['the_20reference_20voltage_6',['the Reference Voltage',['../stepasketch.html#autotoc_md9',1,'Calculate the Reference Voltage'],['../stepasketch.html#autotoc_md10',1,'Set the Reference Voltage']]],
-  ['the_20servo_20motor_7',['Wiring the Servo Motor',['../stepasketch.html#autotoc_md5',1,'']]],
-  ['the_20stepdance_20driver_20board_8',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
-  ['the_20stepper_20motors_9',['Enable the Stepper Motors',['../stepasketch.html#autotoc_md22',1,'']]],
-  ['thresholdgenerator_10',['ThresholdGenerator',['../class_threshold_generator.html',1,'ThresholdGenerator'],['../class_threshold_generator.html#aeed8b50dd3a768dd9993d19073e8560e',1,'ThresholdGenerator::ThresholdGenerator()']]],
-  ['timebasedinterpolator_11',['TimeBasedInterpolator',['../class_time_based_interpolator.html',1,'']]]
+  ['pathlengthgenerator2d_0',['PathLengthGenerator2D',['../class_path_length_generator2_d.html',1,'']]],
+  ['pathlengthgenerator3d_1',['PathLengthGenerator3D',['../class_path_length_generator3_d.html',1,'']]],
+  ['peak_20motor_20current_2',['Determine the Peak Motor Current',['../stepasketch.html#autotoc_md8',1,'']]],
+  ['phase_3',['phase',['../class_wave_generator1_d.html#a1614580ec0ed79cb209117fcd1b1da39',1,'WaveGenerator1D']]],
+  ['playback_4',['Recording and Playback',['../group__recording.html',1,'']]],
+  ['ports_5',['Ports',['../stepasketch.html#autotoc_md23',1,'Configure Output Ports'],['../hardware.html#autotoc_md46',1,'Stepdance Ports'],['../hardware.html#autotoc_md54',1,'Stepdance Ports']]],
+  ['position_6',['position',['../struct_time_based_interpolator_1_1position.html',1,'TimeBasedInterpolator']]],
+  ['position_20generator_7',['Configure Position Generator',['../stepasketch.html#autotoc_md28',1,'']]],
+  ['positiongenerator_8',['PositionGenerator',['../class_position_generator.html',1,'PositionGenerator'],['../class_position_generator.html#a1a1837f8127c065959382a5754ab1a53',1,'PositionGenerator::PositionGenerator()'],['../stepasketch.html#autotoc_md20',1,'PositionGenerator']]],
+  ['power_20inputs_9',['DC Power Inputs',['../hardware.html#autotoc_md45',1,'']]],
+  ['programming_20environment_10',['2. Set Up Arduino Programming Environment',['../getting_started.html#autotoc_md34',1,'']]],
+  ['pulses_11',['Signals: Axis-Encoded Step Pulses',['../hardware.html#autotoc_md56',1,'']]]
 ];

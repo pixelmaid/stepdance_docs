@@ -25,9 +25,10 @@
 var NAVTREE =
 [
   [ "Stepdance Software Library", "index.html", [
-    [ "Stepdance Documentation", "index.html", "index" ],
+    [ "Stepdance Overview", "index.html", "index" ],
     [ "Axidraw EBB Controller Emulator Example", "ebb.html", null ],
     [ "Step-A-Sketch Example", "stepasketch.html", null ],
+    [ "Getting Started with Stepdance", "getting_started.html", null ],
     [ "Stepdance Hardware Documentation", "hardware.html", null ],
     [ "High-Speed Frame Configuration", "highspeed.html", null ],
     [ "Stepdance Software Library Documentation", "ssl.html", null ],
@@ -45,8 +46,7 @@ var NAVTREE =
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ]
-    ] ],
-    [ "Examples", "examples.html", "examples" ]
+    ] ]
   ] ]
 ];
 

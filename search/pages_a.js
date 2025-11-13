@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['kinematics_0',['Configure the Kinematics',['../stepasketch.html#autotoc_md26',1,'']]],
-  ['kinematicscorexy_1',['KinematicsCoreXY',['../stepasketch.html#autotoc_md17',1,'']]],
-  ['knob_20mounting_2',['Display and Control Knob Mounting',['../hardware.html#autotoc_md39',1,'']]]
+  ['generator_0',['Configure Position Generator',['../stepasketch.html#autotoc_md28',1,'']]],
+  ['getting_20started_1',['Getting Started',['../index.html#autotoc_md68',1,'Getting Started'],['../ssl.html#autotoc_md73',1,'Getting Started']]],
+  ['getting_20started_20with_20stepdance_2',['Getting Started with Stepdance',['../getting_started.html',1,'']]]
 ];

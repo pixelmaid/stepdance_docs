@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['library_20documentation_0',['Stepdance Software Library Documentation',['../ssl.html',1,'']]],
-  ['library_20ssl_20documentation_1',['Stepdance Software Library (SSL) Documentation',['../index.html#autotoc_md62',1,'']]],
-  ['loop_2',['Loop()',['../stepasketch.html#autotoc_md30',1,'']]]
+  ['hardware_0',['Hardware',['../getting_started.html#autotoc_md33',1,'1. Set Up Your Hardware'],['../hardware.html#autotoc_md40',1,'Stepdance Hardware'],['../ssl.html#autotoc_md76',1,'Supported Hardware']]],
+  ['hardware_20documentation_1',['Hardware Documentation',['../index.html#autotoc_md69',1,'Hardware Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation']]],
+  ['high_20speed_20frame_20configuration_2',['High Speed Frame Configuration',['../highspeed.html',1,'High-Speed Frame Configuration'],['../highspeed.html#autotoc_md61',1,'High-Speed Frame Configuration']]],
+  ['hobby_20servo_20driver_3',['Hobby Servo Driver',['../hardware.html#autotoc_md53',1,'']]]
 ];

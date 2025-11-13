@@ -1,16 +1,9 @@
 var searchData=
 [
-  ['ebb_20controller_20emulator_0',['Axidraw &quot;EBB&quot; Controller Emulator',['../hardware.html#autotoc_md52',1,'']]],
-  ['ebb_20controller_20emulator_20example_1',['Axidraw EBB Controller Emulator Example',['../ebb.html',1,'']]],
-  ['electrical_2',['Electrical',['../hardware.html#autotoc_md47',1,'']]],
-  ['emulator_3',['Axidraw &quot;EBB&quot; Controller Emulator',['../hardware.html#autotoc_md52',1,'']]],
-  ['emulator_20example_4',['Axidraw EBB Controller Emulator Example',['../ebb.html',1,'']]],
-  ['enable_20the_20stepper_20motors_5',['Enable the Stepper Motors',['../stepasketch.html#autotoc_md22',1,'']]],
-  ['encoded_20step_20pulses_6',['Signals: Axis-Encoded Step Pulses',['../hardware.html#autotoc_md48',1,'']]],
-  ['encoder_7',['Encoder',['../stepasketch.html#autotoc_md18',1,'']]],
-  ['encoders_8',['Encoders',['../stepasketch.html#autotoc_md25',1,'Configure Encoders'],['../taiss.html',1,'TAISS Optical Encoders'],['../taiss.html#autotoc_md70',1,'TAISS Optical Encoders']]],
-  ['encoders_20and_20analog_20digital_20inputs_9',['Encoders and Analog / Digital Inputs',['../hardware.html#autotoc_md35',1,'']]],
-  ['etch_20a_20sketch_10',['&quot;Step-A-Sketch&quot; (Etch-A-Sketch)',['../hardware.html#autotoc_md51',1,'']]],
-  ['example_11',['Example',['../ebb.html',1,'Axidraw EBB Controller Emulator Example'],['../stepasketch.html',1,'Step-A-Sketch Example']]],
-  ['examples_12',['Examples',['../hardware.html#autotoc_md50',1,'Examples'],['../ssl.html#autotoc_md66',1,'Examples']]]
+  ['b_20install_20libraries_20and_20dependencies_0',['B. Install Libraries and Dependencies',['../getting_started.html#autotoc_md36',1,'']]],
+  ['basic_20module_20v1_200_1',['Basic Module v1.0',['../hardware.html#autotoc_md50',1,'']]],
+  ['board_2',['Board',['../getting_started.html#autotoc_md37',1,'C. Connect and Select the Board'],['../stepasketch.html#autotoc_md2',1,'Configuring the Stepdance Driver Board']]],
+  ['board_20definition_3',['Board Definition',['../stepasketch.html#autotoc_md12',1,'']]],
+  ['board_20v1_200_4',['Driver Module Board v1.0',['../hardware.html#autotoc_md41',1,'']]],
+  ['button_5',['Button',['../stepasketch.html#autotoc_md19',1,'Button'],['../stepasketch.html#autotoc_md27',1,'Configure the Button'],['../stepasketch.html#autotoc_md6',1,'Wiring the Button']]]
 ];

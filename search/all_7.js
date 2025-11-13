@@ -1,9 +1,27 @@
 var searchData=
 [
-  ['gcodeinterface_0',['GCodeInterface',['../class_g_code_interface.html',1,'']]],
-  ['generator_1',['Configure Position Generator',['../stepasketch.html#autotoc_md28',1,'']]],
-  ['generators_2',['Generators',['../group__generators.html',1,'']]],
-  ['getting_20started_3',['Getting Started',['../index.html#autotoc_md60',1,'Getting Started'],['../ssl.html#autotoc_md65',1,'Getting Started']]],
-  ['go_4',['go',['../class_position_generator.html#a069294b6a0d1b9204f1e613cb40f83a3',1,'PositionGenerator::go(float64_t distance_or_position, uint8_t mode)'],['../class_position_generator.html#ad6daff12b8005974f878d33d8ab5b1ba',1,'PositionGenerator::go(float64_t distance_or_position, uint8_t mode, ControlParameter speed)']]],
-  ['groups_2edox_5',['groups.dox',['../groups_8dox.html',1,'']]]
+  ['d_20test_20serial_20monitor_0',['D. Test Serial Monitor',['../getting_started.html#autotoc_md38',1,'']]],
+  ['dc_20power_20inputs_1',['DC Power Inputs',['../hardware.html#autotoc_md45',1,'']]],
+  ['debugprint_2',['debugPrint',['../class_threshold_generator.html#aed4b3aab359cccf7d139486422ecad5e',1,'ThresholdGenerator::debugPrint()'],['../class_wave_generator1_d.html#a304c0671c3591732dace0f4834dc3839',1,'WaveGenerator1D::debugPrint()'],['../class_circle_generator.html#a10552bb66ba68aff68efae6269e52815',1,'CircleGenerator::debugPrint()']]],
+  ['define_20all_20stepdance_20components_3',['Define all stepdance components',['../stepasketch.html#autotoc_md14',1,'']]],
+  ['definition_4',['Board Definition',['../stepasketch.html#autotoc_md12',1,'']]],
+  ['dependencies_5',['B. Install Libraries and Dependencies',['../getting_started.html#autotoc_md36',1,'']]],
+  ['determine_20the_20peak_20motor_20current_6',['Determine the Peak Motor Current',['../stepasketch.html#autotoc_md8',1,'']]],
+  ['devices_7',['Input Devices',['../group__inputs.html',1,'']]],
+  ['digital_20inputs_8',['Encoders and Analog / Digital Inputs',['../hardware.html#autotoc_md43',1,'']]],
+  ['dimensions_9',['Dimensions',['../hardware.html#autotoc_md49',1,'Dimensions'],['../hardware.html#autotoc_md52',1,'Dimensions']]],
+  ['disable_10',['disable',['../class_channel.html#a6d2e75a02a53fc31163409f2c58468ab',1,'Channel::disable()'],['../class_threshold_generator.html#ae4414385f46b4c3701eb25586eaf9eca',1,'ThresholdGenerator::disable()'],['../class_wave_generator1_d.html#aefad5e3445c0417fa928b2fac5877f79',1,'WaveGenerator1D::disable()']]],
+  ['disable_5fall_5fsignals_11',['disable_all_signals',['../class_input_port.html#a9e0eaea831a5cc11cb1090b0f2ea3374',1,'InputPort']]],
+  ['disable_5ffiltering_12',['disable_filtering',['../class_channel.html#aebb93ae1a45624307229f2214234b800',1,'Channel']]],
+  ['disable_5flimits_13',['disable_limits',['../class_channel.html#a20bf288de296ba9d7c7105f2a66500aa',1,'Channel']]],
+  ['disable_5flower_5flimit_14',['disable_lower_limit',['../class_channel.html#a28bf6a07b2b7635c85add28b31aeb255',1,'Channel']]],
+  ['disable_5fsignal_15',['disable_signal',['../class_input_port.html#a7f921423eb6da67a964967083d163345',1,'InputPort']]],
+  ['disable_5fupper_5flimit_16',['disable_upper_limit',['../class_channel.html#a837a7759027b950410e4b8ef18ec863e',1,'Channel']]],
+  ['display_20and_20control_20knob_20mounting_17',['Display and Control Knob Mounting',['../hardware.html#autotoc_md47',1,'']]],
+  ['documentation_18',['Documentation',['../index.html#autotoc_md69',1,'Hardware Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md70',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
+  ['driver_19',['Hobby Servo Driver',['../hardware.html#autotoc_md53',1,'']]],
+  ['driver_20board_20',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
+  ['driver_20currents_21',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],
+  ['driver_20module_20board_20v1_200_22',['Driver Module Board v1.0',['../hardware.html#autotoc_md41',1,'']]],
+  ['drivers_20and_20motor_20interfaces_23',['Stepper Drivers and Motor Interfaces',['../hardware.html#autotoc_md42',1,'']]]
 ];
