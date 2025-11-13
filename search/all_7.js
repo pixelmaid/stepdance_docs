@@ -18,10 +18,11 @@ var searchData=
   ['disable_5fsignal_15',['disable_signal',['../class_input_port.html#a7f921423eb6da67a964967083d163345',1,'InputPort']]],
   ['disable_5fupper_5flimit_16',['disable_upper_limit',['../class_channel.html#a837a7759027b950410e4b8ef18ec863e',1,'Channel']]],
   ['display_20and_20control_20knob_20mounting_17',['Display and Control Knob Mounting',['../hardware.html#autotoc_md47',1,'']]],
-  ['documentation_18',['Documentation',['../index.html#autotoc_md69',1,'Hardware Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md70',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
-  ['driver_19',['Hobby Servo Driver',['../hardware.html#autotoc_md53',1,'']]],
-  ['driver_20board_20',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
-  ['driver_20currents_21',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],
-  ['driver_20module_20board_20v1_200_22',['Driver Module Board v1.0',['../hardware.html#autotoc_md41',1,'']]],
-  ['drivers_20and_20motor_20interfaces_23',['Stepper Drivers and Motor Interfaces',['../hardware.html#autotoc_md42',1,'']]]
+  ['documentation_18',['Documentation',['../documentation.html',1,'Documentation'],['../hardware_docs.html',1,'Hardware Documentation'],['../index.html#autotoc_md69',1,'Hardware Documentation'],['../software_docs.html',1,'Software Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md70',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
+  ['drawing_19',['Drawing',['../examples.html#autotoc_md89',1,'<a class="el" href="examples_motion.html">Motion &amp; Drawing</a>'],['../examples_motion.html',1,'Motion &amp; Drawing']]],
+  ['driver_20',['Hobby Servo Driver',['../hardware.html#autotoc_md53',1,'']]],
+  ['driver_20board_21',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
+  ['driver_20currents_22',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],
+  ['driver_20module_20board_20v1_200_23',['Driver Module Board v1.0',['../hardware.html#autotoc_md41',1,'']]],
+  ['drivers_20and_20motor_20interfaces_24',['Stepper Drivers and Motor Interfaces',['../hardware.html#autotoc_md42',1,'']]]
 ];
