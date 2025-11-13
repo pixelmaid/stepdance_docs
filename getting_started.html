@@ -111,7 +111,14 @@ B. Install Libraries and Dependencies</h3>
 <li>In Arduino IDE: Sketch &gt; Include Library &gt; Add .ZIP Library and select the downloaded archive.</li>
 <li>Install ArduinoJson: Sketch &gt; Include Library &gt; Manage Libraries, search for "ArduinoJson" (ensure you choose <b>ArduinoJson</b> and NOT <b>Arduino_JSON</b>) and click Install.</li>
 </ol>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
+<p>Optional: if attempting to extend or modify Stepdance library files, it's possible to create a symbolic link between the repository code and the Arduino library folder using the following command:</p>
+<div class="fragment"><div class="line">cd &lt;Arduino folder on your laptop&gt;/libaries</div>
+<div class="line">ln -s &lt;folder where you cloned the stepdance code repo&gt;/lib stepdance</div>
+<div class="line"> </div>
+<div class="line"># example:</div>
+<div class="line">cd ~/Documents/Arduino/libraries</div>
+<div class="line">ln -s /Users/emilie/Documents/Work/stepdance/stepdance/lib stepdance</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
 C. Connect and Select the Board</h3>
 <p>Plug the Stepdance module into your computer via a USB cable connected to the Teensy. Select the Teensy 4.1 (or 4.0) board and correct port from the Arduino IDE toolbar dropdown.</p>
 <div class="image">
