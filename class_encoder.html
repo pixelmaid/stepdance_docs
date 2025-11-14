@@ -89,9 +89,14 @@ $(function(){initNavTree('class_encoder.html','','class_encoder-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Encoder Class Reference</div></div>
+  <div class="headertitle"><div class="title">Encoder Class Reference<div class="ingroups"><a class="el" href="group__inputs.html">Input Devices</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_encoder.html" title="Encoder components read quadrature encoder inputs.">Encoder</a> components read quadrature encoder inputs.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="encoders_8hpp_source.html">encoders.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Encoder:</div>
 <div class="dyncontent">
@@ -101,18 +106,20 @@ Inheritance diagram for Encoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad287d2bda9161a8c024a9fb06e28b741" id="r_ad287d2bda9161a8c024a9fb06e28b741"><td class="memItemLeft" align="right" valign="top"><a id="ad287d2bda9161a8c024a9fb06e28b741" name="ad287d2bda9161a8c024a9fb06e28b741"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (uint8_t encoder_index)</td></tr>
+<tr class="memitem:ad287d2bda9161a8c024a9fb06e28b741" id="r_ad287d2bda9161a8c024a9fb06e28b741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad287d2bda9161a8c024a9fb06e28b741">begin</a> (uint8_t encoder_index)</td></tr>
+<tr class="memdesc:ad287d2bda9161a8c024a9fb06e28b741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_encoder.html" title="Encoder components read quadrature encoder inputs.">Encoder</a> with the specified encoder index.  <br /></td></tr>
 <tr class="memitem:afc06f76a16fecbfd8755e479be2c4e74" id="r_afc06f76a16fecbfd8755e479be2c4e74"><td class="memItemLeft" align="right" valign="top"><a id="afc06f76a16fecbfd8755e479be2c4e74" name="afc06f76a16fecbfd8755e479be2c4e74"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></tr>
-<tr class="memitem:aedc7303b356de35529d4e87a3ba1a10e" id="r_aedc7303b356de35529d4e87a3ba1a10e"><td class="memItemLeft" align="right" valign="top"><a id="aedc7303b356de35529d4e87a3ba1a10e" name="aedc7303b356de35529d4e87a3ba1a10e"></a>
-DecimalPosition&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</td></tr>
+<tr class="memdesc:afc06f76a16fecbfd8755e479be2c4e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts the encoder direction. Useful for changing the direction without rewiring. <br /></td></tr>
+<tr class="memitem:aedc7303b356de35529d4e87a3ba1a10e" id="r_aedc7303b356de35529d4e87a3ba1a10e"><td class="memItemLeft" align="right" valign="top">DecimalPosition&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc7303b356de35529d4e87a3ba1a10e">read</a> ()</td></tr>
+<tr class="memdesc:aedc7303b356de35529d4e87a3ba1a10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position of the encoder in world units.  <br /></td></tr>
 <tr class="memitem:a8ad34a60288f78310ee465da3832b405" id="r_a8ad34a60288f78310ee465da3832b405"><td class="memItemLeft" align="right" valign="top"><a id="a8ad34a60288f78310ee465da3832b405" name="a8ad34a60288f78310ee465da3832b405"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
-<tr class="memitem:a272491ed7e707262799dc34459e5fbef" id="r_a272491ed7e707262799dc34459e5fbef"><td class="memItemLeft" align="right" valign="top"><a id="a272491ed7e707262799dc34459e5fbef" name="a272491ed7e707262799dc34459e5fbef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (DecimalPosition value)</td></tr>
-<tr class="memitem:a80b102b4f83186aaec27285ad19c5be8" id="r_a80b102b4f83186aaec27285ad19c5be8"><td class="memItemLeft" align="right" valign="top"><a id="a80b102b4f83186aaec27285ad19c5be8" name="a80b102b4f83186aaec27285ad19c5be8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_latch</b> (DecimalPosition value_world_units, uint8_t min_or_max)</td></tr>
+<tr class="memdesc:a8ad34a60288f78310ee465da3832b405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the encoder position to zero. <br /></td></tr>
+<tr class="memitem:a272491ed7e707262799dc34459e5fbef" id="r_a272491ed7e707262799dc34459e5fbef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a272491ed7e707262799dc34459e5fbef">set</a> (DecimalPosition value)</td></tr>
+<tr class="memdesc:a272491ed7e707262799dc34459e5fbef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the encoder position to a specified value in world units.  <br /></td></tr>
+<tr class="memitem:a80b102b4f83186aaec27285ad19c5be8" id="r_a80b102b4f83186aaec27285ad19c5be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80b102b4f83186aaec27285ad19c5be8">set_latch</a> (DecimalPosition value_world_units, uint8_t min_or_max)</td></tr>
+<tr class="memdesc:a80b102b4f83186aaec27285ad19c5be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets latching behavior for the encoder at specified world unit values.  <br /></td></tr>
 <tr class="memitem:a839cb408981fdf44d04063d3f3ff1524" id="r_a839cb408981fdf44d04063d3f3ff1524"><td class="memItemLeft" align="right" valign="top"><a id="a839cb408981fdf44d04063d3f3ff1524" name="a839cb408981fdf44d04063d3f3ff1524"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio</b> (float output_units, float encoder_units=1.0)</td></tr>
 <tr class="memitem:a3a9b81f5c2f396da8aa59606957117fe" id="r_a3a9b81f5c2f396da8aa59606957117fe"><td class="memItemLeft" align="right" valign="top"><a id="a3a9b81f5c2f396da8aa59606957117fe" name="a3a9b81f5c2f396da8aa59606957117fe"></a>
@@ -136,6 +143,109 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a820f218418e63e73a20d079274f1fb69" id="r_a820f218418e63e73a20d079274f1fb69"><td class="memItemLeft" align="right" valign="top"><a id="a820f218418e63e73a20d079274f1fb69" name="a820f218418e63e73a20d079274f1fb69"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_encoder.html" title="Encoder components read quadrature encoder inputs.">Encoder</a> components read quadrature encoder inputs. </p>
+<p>The <a class="el" href="class_encoder.html" title="Encoder components read quadrature encoder inputs.">Encoder</a> class interfaces with quadrature encoders connected to the StepDance controller and allows mapping the encoder signals to Stepdance components. Here's an example of how to instantiate and configure an <a class="el" href="class_encoder.html" title="Encoder components read quadrature encoder inputs.">Encoder</a>: </p><div class="fragment"></div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad287d2bda9161a8c024a9fb06e28b741" name="ad287d2bda9161a8c024a9fb06e28b741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad287d2bda9161a8c024a9fb06e28b741">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Encoder::begin </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>encoder_index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_encoder.html" title="Encoder components read quadrature encoder inputs.">Encoder</a> with the specified encoder index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encoder_index</td><td>Index of the encoder to initialize (e.g., ENCODER_1, ENCODER_2, ENCODER_A). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aedc7303b356de35529d4e87a3ba1a10e" name="aedc7303b356de35529d4e87a3ba1a10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc7303b356de35529d4e87a3ba1a10e">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DecimalPosition Encoder::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current position of the encoder in world units. </p>
+<dl class="section return"><dt>Returns</dt><dd>DecimalPosition Current position in world units. </dd></dl>
+
+</div>
+</div>
+<a id="a272491ed7e707262799dc34459e5fbef" name="a272491ed7e707262799dc34459e5fbef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272491ed7e707262799dc34459e5fbef">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Encoder::set </td>
+          <td>(</td>
+          <td class="paramtype">DecimalPosition</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the encoder position to a specified value in world units. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Position value to set in world units. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80b102b4f83186aaec27285ad19c5be8" name="a80b102b4f83186aaec27285ad19c5be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b102b4f83186aaec27285ad19c5be8">&#9670;&#160;</a></span>set_latch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Encoder::set_latch </td>
+          <td>(</td>
+          <td class="paramtype">DecimalPosition</td>          <td class="paramname"><span class="paramname"><em>value_world_units</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>min_or_max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets latching behavior for the encoder at specified world unit values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value_world_units</td><td>The world unit value at which to set the latch. </td></tr>
+    <tr><td class="paramname">min_or_max</td><td>Specify whether this is a minimum (0) or maximum (1) latch. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="encoders_8hpp_source.html">encoders.hpp</a></li>
 </ul>

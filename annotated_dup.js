@@ -6,7 +6,7 @@ var annotated_dup =
     [ "Channel", "class_channel.html", "class_channel" ],
     [ "CircleGenerator", "class_circle_generator.html", "class_circle_generator" ],
     [ "Eibotboard", "class_eibotboard.html", "class_eibotboard" ],
-    [ "Encoder", "class_encoder.html", null ],
+    [ "Encoder", "class_encoder.html", "class_encoder" ],
     [ "FourTrackPlayer", "class_four_track_player.html", null ],
     [ "FourTrackRecorder", "class_four_track_recorder.html", null ],
     [ "GCodeInterface", "class_g_code_interface.html", "class_g_code_interface" ],

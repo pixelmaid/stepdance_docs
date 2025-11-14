@@ -36,7 +36,7 @@ var searchData=
   ['interface_33',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md108',1,'']]],
   ['interfaces_34',['Interfaces',['../group__interfaces.html',1,'External Interfaces'],['../hardware.html#autotoc_md42',1,'Stepper Drivers and Motor Interfaces']]],
   ['introduction_35',['Introduction',['../ssl.html#autotoc_md71',1,'']]],
-  ['invert_36',['invert',['../class_analog_input.html#af8b06cf2264b9d6e79b680a4e0caac4a',1,'AnalogInput']]],
+  ['invert_36',['invert',['../class_analog_input.html#af8b06cf2264b9d6e79b680a4e0caac4a',1,'AnalogInput::invert()'],['../class_encoder.html#afc06f76a16fecbfd8755e479be2c4e74',1,'Encoder::invert()']]],
   ['invert_5foutput_37',['invert_output',['../class_channel.html#ab493519b6aa6d2bdcdbb34ef72b2c20d',1,'Channel::invert_output()'],['../class_channel.html#aabc1e8d3f0563b1b70e8107d2dd7751d',1,'Channel::invert_output(bool invert)']]],
   ['io_5fport_5ftest_20ino_20i_20o_20port_20test_38',['&lt;a class=&quot;el&quot; href=&quot;io_port_test_2io_port_test_8ino-example.html&quot;&gt;I/O Port Test&lt;/a&gt;',['../examples_core.html#autotoc_md98',1,'']]],
   ['io_5fport_5ftest_20io_5fport_5ftest_20ino_20i_20o_20port_20test_39',['&lt;a class=&quot;el&quot; href=&quot;io_port_test_2io_port_test_8ino-example.html&quot;&gt;I/O Port Test&lt;/a&gt;',['../examples_core.html#autotoc_md98',1,'']]],
