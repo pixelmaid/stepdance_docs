@@ -11,13 +11,15 @@ var searchData=
   ['set_5flower_5flimit_8',['set_lower_limit',['../class_channel.html#add939b27aad8cff94b857bcd2895e3e0',1,'Channel']]],
   ['set_5fmax_5fpulse_5frate_9',['set_max_pulse_rate',['../class_channel.html#ac73f65baf832b880f262e99ad6c79606',1,'Channel']]],
   ['set_5fmode_10',['set_mode',['../class_button.html#a40e990016e6fc218bac80cd761cb0b9c',1,'Button']]],
-  ['set_5fratio_11',['set_ratio',['../class_channel.html#acfd40d913937c2ef292f9d6b00d9f144',1,'Channel::set_ratio()'],['../class_input_port.html#a36b4299d3b36c3a2f5404be75f477f48',1,'InputPort::set_ratio()'],['../class_block_port.html#adcdf52455b347f9f3a77d539c470d763',1,'BlockPort::set_ratio()'],['../class_path_length_generator2_d.html#a9405f2a072602847a6d8100c96b2d703',1,'PathLengthGenerator2D::set_ratio()'],['../class_path_length_generator3_d.html#a00ec5616c1a7bc119654e398d9527cad',1,'PathLengthGenerator3D::set_ratio()']]],
+  ['set_5fratio_11',['set_ratio',['../class_channel.html#acfd40d913937c2ef292f9d6b00d9f144',1,'Channel::set_ratio()'],['../class_input_port.html#a36b4299d3b36c3a2f5404be75f477f48',1,'InputPort::set_ratio()'],['../class_block_port.html#adcdf52455b347f9f3a77d539c470d763',1,'BlockPort::set_ratio()'],['../class_scaling_filter1_d.html#ac22f76b633e5c32ce2aa34c43b2fbdcb',1,'ScalingFilter1D::set_ratio(ControlParameter ratio)'],['../class_scaling_filter1_d.html#a80f52e46c20996ad894db0f4d6ccb32e',1,'ScalingFilter1D::set_ratio(ControlParameter output_distance, ControlParameter input_distance)'],['../class_path_length_generator2_d.html#a9405f2a072602847a6d8100c96b2d703',1,'PathLengthGenerator2D::set_ratio()'],['../class_path_length_generator3_d.html#a00ec5616c1a7bc119654e398d9527cad',1,'PathLengthGenerator3D::set_ratio()']]],
   ['set_5fratio_5ffor_5fcircle_12',['set_ratio_for_circle',['../class_path_length_generator2_d.html#a2d4c17edb370fb75581cc3fc2156f154',1,'PathLengthGenerator2D']]],
-  ['set_5fspeed_13',['set_speed',['../class_position_generator.html#a4b39e72ca8796b959b5f1bd16bee5141',1,'PositionGenerator']]],
-  ['set_5fupper_5flimit_14',['set_upper_limit',['../class_channel.html#a9c0df399ebeba1a09e41b42264d064c7',1,'Channel']]],
-  ['setlowercallback_15',['setLowerCallback',['../class_threshold_generator.html#abf2d823e546fab1755645860ceb3fea3',1,'ThresholdGenerator']]],
-  ['setlowerthreshold_16',['setLowerThreshold',['../class_threshold_generator.html#a396480cb218ce448b63be154ec430e91',1,'ThresholdGenerator']]],
-  ['setnoinput_17',['setNoInput',['../class_wave_generator1_d.html#a8d49e84aeb59f1e9dcaff6f4850af05f',1,'WaveGenerator1D::setNoInput()'],['../class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91',1,'CircleGenerator::setNoInput()']]],
-  ['setuppercallback_18',['setUpperCallback',['../class_threshold_generator.html#a373837c57d0959bf0170684c498875bf',1,'ThresholdGenerator']]],
-  ['setupperthreshold_19',['setUpperThreshold',['../class_threshold_generator.html#a165d218a1f6537bf7b11e1118ae507f2',1,'ThresholdGenerator']]]
+  ['set_5fratio_5fxy_13',['set_ratio_xy',['../class_eibotboard.html#ab7b0631eac328b0394edc65f28755529',1,'Eibotboard']]],
+  ['set_5fratio_5fz_14',['set_ratio_z',['../class_eibotboard.html#afd2401a96a31faa83fa9d68a873fe229',1,'Eibotboard']]],
+  ['set_5fspeed_15',['set_speed',['../class_position_generator.html#a4b39e72ca8796b959b5f1bd16bee5141',1,'PositionGenerator']]],
+  ['set_5fupper_5flimit_16',['set_upper_limit',['../class_channel.html#a9c0df399ebeba1a09e41b42264d064c7',1,'Channel']]],
+  ['setlowercallback_17',['setLowerCallback',['../class_threshold_generator.html#abf2d823e546fab1755645860ceb3fea3',1,'ThresholdGenerator']]],
+  ['setlowerthreshold_18',['setLowerThreshold',['../class_threshold_generator.html#a396480cb218ce448b63be154ec430e91',1,'ThresholdGenerator']]],
+  ['setnoinput_19',['setNoInput',['../class_wave_generator1_d.html#a8d49e84aeb59f1e9dcaff6f4850af05f',1,'WaveGenerator1D::setNoInput()'],['../class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91',1,'CircleGenerator::setNoInput()']]],
+  ['setuppercallback_20',['setUpperCallback',['../class_threshold_generator.html#a373837c57d0959bf0170684c498875bf',1,'ThresholdGenerator']]],
+  ['setupperthreshold_21',['setUpperThreshold',['../class_threshold_generator.html#a165d218a1f6537bf7b11e1118ae507f2',1,'ThresholdGenerator']]]
 ];

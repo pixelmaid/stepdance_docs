@@ -93,7 +93,7 @@ $(function(){initNavTree('class_eibotboard.html','','class_eibotboard-members');
 </div><!--header-->
 <div class="contents">
 
-<p>EiBotBoard interface class for receiving commands and generating motion blocks.  
+<p>Enables using Axidraw commands from over serial as motion stream input.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a>&gt;</code></p>
@@ -108,25 +108,23 @@ Inheritance diagram for Eibotboard:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a77c54c9883af9bca2ffc0488f1bf490b" id="r_a77c54c9883af9bca2ffc0488f1bf490b"><td class="memItemLeft" align="right" valign="top"><a id="a77c54c9883af9bca2ffc0488f1bf490b" name="a77c54c9883af9bca2ffc0488f1bf490b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memitem:ab7b0631eac328b0394edc65f28755529" id="r_ab7b0631eac328b0394edc65f28755529"><td class="memItemLeft" align="right" valign="top"><a id="ab7b0631eac328b0394edc65f28755529" name="ab7b0631eac328b0394edc65f28755529"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio_xy</b> (float output_units_mm, float input_units_steps)</td></tr>
-<tr class="memitem:afd2401a96a31faa83fa9d68a873fe229" id="r_afd2401a96a31faa83fa9d68a873fe229"><td class="memItemLeft" align="right" valign="top"><a id="afd2401a96a31faa83fa9d68a873fe229" name="afd2401a96a31faa83fa9d68a873fe229"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio_z</b> (float output_units_mm, float input_units_steps)</td></tr>
+<tr class="memdesc:a77c54c9883af9bca2ffc0488f1bf490b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the EiBotBoard interface. This must be called to set up the interface. <br /></td></tr>
+<tr class="memitem:ab7b0631eac328b0394edc65f28755529" id="r_ab7b0631eac328b0394edc65f28755529"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7b0631eac328b0394edc65f28755529">set_ratio_xy</a> (float output_units_mm, float input_units_steps)</td></tr>
+<tr class="memdesc:ab7b0631eac328b0394edc65f28755529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the conversion ratio between XY steps and millimeters.  <br /></td></tr>
+<tr class="memitem:afd2401a96a31faa83fa9d68a873fe229" id="r_afd2401a96a31faa83fa9d68a873fe229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd2401a96a31faa83fa9d68a873fe229">set_ratio_z</a> (float output_units_mm, float input_units_steps)</td></tr>
+<tr class="memdesc:afd2401a96a31faa83fa9d68a873fe229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the conversion ratio between Z steps and millimeters.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a85eb2ea307f4488697133e8e7d664c09" id="r_a85eb2ea307f4488697133e8e7d664c09"><td class="memItemLeft" align="right" valign="top"><a id="a85eb2ea307f4488697133e8e7d664c09" name="a85eb2ea307f4488697133e8e7d664c09"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_x</b> = target_interpolator.output_x</td></tr>
+<tr class="memdesc:a85eb2ea307f4488697133e8e7d664c09"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for X axis output. Use this to map to downstream components to drive position based on the EiBotBoard x-axis position data. <br /></td></tr>
 <tr class="memitem:a94721a0c24dbf2fd02cddc07aee3de9a" id="r_a94721a0c24dbf2fd02cddc07aee3de9a"><td class="memItemLeft" align="right" valign="top"><a id="a94721a0c24dbf2fd02cddc07aee3de9a" name="a94721a0c24dbf2fd02cddc07aee3de9a"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_y</b> = target_interpolator.output_y</td></tr>
+<tr class="memdesc:a94721a0c24dbf2fd02cddc07aee3de9a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Y axis output. Use this to map to downstream components to drive position based on the EiBotBoard y-axis position data. <br /></td></tr>
 <tr class="memitem:a5d6694916dbb254f0201fceebc556223" id="r_a5d6694916dbb254f0201fceebc556223"><td class="memItemLeft" align="right" valign="top"><a id="a5d6694916dbb254f0201fceebc556223" name="a5d6694916dbb254f0201fceebc556223"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_z</b> = target_interpolator.output_z</td></tr>
-<tr class="memitem:a8f8c6483682accc267712e52f8845c01" id="r_a8f8c6483682accc267712e52f8845c01"><td class="memItemLeft" align="right" valign="top"><a id="a8f8c6483682accc267712e52f8845c01" name="a8f8c6483682accc267712e52f8845c01"></a>
-<a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_e</b> = target_interpolator.output_e</td></tr>
-<tr class="memitem:a6199965135084af043207a9e85d6fc47" id="r_a6199965135084af043207a9e85d6fc47"><td class="memItemLeft" align="right" valign="top"><a id="a6199965135084af043207a9e85d6fc47" name="a6199965135084af043207a9e85d6fc47"></a>
-<a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_r</b> = target_interpolator.output_r</td></tr>
-<tr class="memitem:a7010e36edb45b6a5ad1a775d4971809b" id="r_a7010e36edb45b6a5ad1a775d4971809b"><td class="memItemLeft" align="right" valign="top"><a id="a7010e36edb45b6a5ad1a775d4971809b" name="a7010e36edb45b6a5ad1a775d4971809b"></a>
-<a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_t</b> = target_interpolator.output_t</td></tr>
+<tr class="memdesc:a5d6694916dbb254f0201fceebc556223"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Z axis output. Use this to map to downstream components to drive position based on the EiBotBoard z-axis position data. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -134,10 +132,71 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>EiBotBoard interface class for receiving commands and generating motion blocks. </p>
-<p>The <a class="el" href="class_eibotboard.html" title="EiBotBoard interface class for receiving commands and generating motion blocks.">Eibotboard</a> class emulates the EiBotBoard interface, allowing standard AxiDraw workflows to provide direct input. It processes serial commands, generates motion blocks, and interfaces with a <a class="el" href="class_time_based_interpolator.html">TimeBasedInterpolator</a> to drive motion. The class supports various commands for querying status, configuring motors, and controlling pen position.</p>
+<div class="textblock"><p>Enables using Axidraw commands from over serial as motion stream input. </p>
+<p>The <a class="el" href="class_eibotboard.html" title="Enables using Axidraw commands from over serial as motion stream input.">Eibotboard</a> class emulates the Axidraw EiBotBoard interface, allowing standard AxiDraw workflows to provide direct input. It processes serial commands sent over the axidraw inteface (e.g. from Inkscape or from the AxiDraw Python library), to generate motion streams corresponding to the geometry of input SVG drawings. To use with Inkscape, select the "AxiDraw Control" extension and set the output port to the serial port connected to the StepDance controller running this interface.</p>
 <p>For an example of how to use this class, see <a class="el" href="axidraw_interface_2axidraw_interface_8ino-example.html">axidraw_interface/axidraw_interface.ino</a> </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab7b0631eac328b0394edc65f28755529" name="ab7b0631eac328b0394edc65f28755529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b0631eac328b0394edc65f28755529">&#9670;&#160;</a></span>set_ratio_xy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Eibotboard::set_ratio_xy </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>output_units_mm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>input_units_steps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the conversion ratio between XY steps and millimeters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_units_mm</td><td>The output units in millimeters. </td></tr>
+    <tr><td class="paramname">input_units_steps</td><td>The input units in steps. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd2401a96a31faa83fa9d68a873fe229" name="afd2401a96a31faa83fa9d68a873fe229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2401a96a31faa83fa9d68a873fe229">&#9670;&#160;</a></span>set_ratio_z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Eibotboard::set_ratio_z </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>output_units_mm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>input_units_steps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the conversion ratio between Z steps and millimeters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_units_mm</td><td>The output units in millimeters. </td></tr>
+    <tr><td class="paramname">input_units_steps</td><td>The input units in steps. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
 </ul>
 </div><!-- contents -->

@@ -93,7 +93,7 @@ $(function(){initNavTree('class_g_code_interface.html','','class_g_code_interfac
 </div><!--header-->
 <div class="contents">
 
-<p>G-code interface class for parsing and executing G-code commands.  
+<p>G-code interface class for parsing and executing G-code commands as motion streams.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a>&gt;</code></p>
@@ -104,31 +104,19 @@ Inheritance diagram for GCodeInterface:</div>
   <img src="class_g_code_interface.png" alt=""/>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a66a91087fbd12663b46f94fde3f51e6b" id="r_a66a91087fbd12663b46f94fde3f51e6b"><td class="memItemLeft" align="right" valign="top"><a id="a66a91087fbd12663b46f94fde3f51e6b" name="a66a91087fbd12663b46f94fde3f51e6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memitem:a2114f0a2dbfd1f3852797c2535707eb0" id="r_a2114f0a2dbfd1f3852797c2535707eb0"><td class="memItemLeft" align="right" valign="top"><a id="a2114f0a2dbfd1f3852797c2535707eb0" name="a2114f0a2dbfd1f3852797c2535707eb0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (Stream *target_stream)</td></tr>
-<tr class="memitem:a2c53816558cb3d6249fa936897f2665a" id="r_a2c53816558cb3d6249fa936897f2665a"><td class="memItemLeft" align="right" valign="top"><a id="a2c53816558cb3d6249fa936897f2665a" name="a2c53816558cb3d6249fa936897f2665a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (usb_serial_class *target_usb_serial)</td></tr>
-<tr class="memitem:ad740fc23370ced30e73b9e37335ed477" id="r_ad740fc23370ced30e73b9e37335ed477"><td class="memItemLeft" align="right" valign="top"><a id="ad740fc23370ced30e73b9e37335ed477" name="ad740fc23370ced30e73b9e37335ed477"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (HardwareSerialIMXRT *target_serial, uint32_t baud, uint16_t format=0)</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad3330be19d87038d9a1277c9f62f5037" id="r_ad3330be19d87038d9a1277c9f62f5037"><td class="memItemLeft" align="right" valign="top"><a id="ad3330be19d87038d9a1277c9f62f5037" name="ad3330be19d87038d9a1277c9f62f5037"></a>
-<a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_x</b> = target_interpolator.output_x</td></tr>
+<tr class="memitem:ad3330be19d87038d9a1277c9f62f5037" id="r_ad3330be19d87038d9a1277c9f62f5037"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3330be19d87038d9a1277c9f62f5037">output_x</a> = target_interpolator.output_x</td></tr>
+<tr class="memdesc:ad3330be19d87038d9a1277c9f62f5037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the G-code interface with a USB serial port.  <br /></td></tr>
 <tr class="memitem:acc8598d93085f212c3d87e8324b36bfb" id="r_acc8598d93085f212c3d87e8324b36bfb"><td class="memItemLeft" align="right" valign="top"><a id="acc8598d93085f212c3d87e8324b36bfb" name="acc8598d93085f212c3d87e8324b36bfb"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_y</b> = target_interpolator.output_y</td></tr>
+<tr class="memdesc:acc8598d93085f212c3d87e8324b36bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Y axis output. Use this to map to downstream components to drive position based on G-code Y-axis commands. <br /></td></tr>
 <tr class="memitem:a8155b912a3a6844116c345ff405c389a" id="r_a8155b912a3a6844116c345ff405c389a"><td class="memItemLeft" align="right" valign="top"><a id="a8155b912a3a6844116c345ff405c389a" name="a8155b912a3a6844116c345ff405c389a"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_z</b> = target_interpolator.output_z</td></tr>
+<tr class="memdesc:a8155b912a3a6844116c345ff405c389a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Z axis output. Use this to map to downstream components to drive position based on G-code Z-axis commands. <br /></td></tr>
 <tr class="memitem:a59368d7347a46b91bd1e34e6c38e6ce1" id="r_a59368d7347a46b91bd1e34e6c38e6ce1"><td class="memItemLeft" align="right" valign="top"><a id="a59368d7347a46b91bd1e34e6c38e6ce1" name="a59368d7347a46b91bd1e34e6c38e6ce1"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_e</b> = target_interpolator.output_e</td></tr>
-<tr class="memitem:a86ad235397367d7e0838e04ee4196663" id="r_a86ad235397367d7e0838e04ee4196663"><td class="memItemLeft" align="right" valign="top"><a id="a86ad235397367d7e0838e04ee4196663" name="a86ad235397367d7e0838e04ee4196663"></a>
-<a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_r</b> = target_interpolator.output_r</td></tr>
-<tr class="memitem:a47555687a153567cb5637d46217b3c36" id="r_a47555687a153567cb5637d46217b3c36"><td class="memItemLeft" align="right" valign="top"><a id="a47555687a153567cb5637d46217b3c36" name="a47555687a153567cb5637d46217b3c36"></a>
-<a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>output_t</b> = target_interpolator.output_t</td></tr>
+<tr class="memdesc:a59368d7347a46b91bd1e34e6c38e6ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for extruder output. Use this to map to downstream components to drive position based on G-code E-axis commands. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -136,9 +124,37 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>G-code interface class for parsing and executing G-code commands. </p>
-<p>The <a class="el" href="class_g_code_interface.html" title="G-code interface class for parsing and executing G-code commands.">GCodeInterface</a> class provides a G-code parser and interpreter for motion control. It processes standard G-code commands and generates motion blocks for the <a class="el" href="class_time_based_interpolator.html">TimeBasedInterpolator</a>. Supports common G-code commands for linear motion, coordinate systems, and machine control. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>G-code interface class for parsing and executing G-code commands as motion streams. </p>
+<p>The <a class="el" href="class_g_code_interface.html" title="G-code interface class for parsing and executing G-code commands as motion streams.">GCodeInterface</a> class provides a G-code parser and interpreter for motion control. It processes standard G-code commands sent via serial using <a href="https://sienci.com/gsender/">gSender</a>. To use, install gSender and set the output port to the serial port connected to the StepDance controller running this interface. You can send common G-code commands for linear motion, coordinate systems, and machine control. Note- currently not all G-code commands are supported; unsupported commands will return an error message. We are working on this. For an example of how to use this class, see gcode_interface/gcode_interface.ino </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ad3330be19d87038d9a1277c9f62f5037" name="ad3330be19d87038d9a1277c9f62f5037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3330be19d87038d9a1277c9f62f5037">&#9670;&#160;</a></span>output_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block_port.html">BlockPort</a>&amp; GCodeInterface::output_x = target_interpolator.output_x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the G-code interface with a USB serial port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target_usb_serial</td><td>The USB serial port to use. <br  />
+ <div class="fragment"><div class="line"><span class="comment">// -- Start the G-Code interface</span></div>
+<div class="line">SerialUSB1.begin(115200);</div>
+<div class="line">gcode_interface.begin(&amp;SerialUSB1);</div>
+</div><!-- fragment --></td></tr>
+  </table>
+  </dd>
+</dl>
+<p><a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for X axis output. Use this to map to downstream components to drive position based on G-code X-axis commands. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
 </ul>
 </div><!-- contents -->

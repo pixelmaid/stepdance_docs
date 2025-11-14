@@ -22,7 +22,7 @@ var searchData=
   ['ino_20stepasketch_20old_19',['&lt;a class=&quot;el&quot; href=&quot;stepasketch_old_2stepasketch_old_8ino-example.html&quot;&gt;Stepasketch Old&lt;/a&gt;',['../examples_legacy.html#autotoc_md123',1,'']]],
   ['ino_20stepasketch_20with_20inputs_20',['&lt;a class=&quot;el&quot; href=&quot;stepasketch_with_inputs_2stepasketch_with_inputs_8ino-example.html&quot;&gt;Stepasketch with Inputs&lt;/a&gt;',['../examples_plotting.html#autotoc_md111',1,'']]],
   ['ino_20wheelbot_21',['&lt;a class=&quot;el&quot; href=&quot;wheelbot_2wheelbot_8ino-example.html&quot;&gt;Wheelbot&lt;/a&gt;',['../examples_motion.html#autotoc_md105',1,'']]],
-  ['input_22',['input',['../class_threshold_generator.html#af09183a866a477c3854090a7c0d19b32',1,'ThresholdGenerator::input'],['../class_wave_generator1_d.html#a010d62b34de60350b703673248e5b6fe',1,'WaveGenerator1D::input'],['../class_circle_generator.html#ac17aee6b32de386df19f19ec2d5eb0d0',1,'CircleGenerator::input']]],
+  ['input_22',['input',['../class_scaling_filter1_d.html#a0745aa024278df2cda3bf118a5a6fc74',1,'ScalingFilter1D::input'],['../class_threshold_generator.html#af09183a866a477c3854090a7c0d19b32',1,'ThresholdGenerator::input'],['../class_wave_generator1_d.html#a010d62b34de60350b703673248e5b6fe',1,'WaveGenerator1D::input'],['../class_circle_generator.html#ac17aee6b32de386df19f19ec2d5eb0d0',1,'CircleGenerator::input']]],
   ['input_20devices_23',['Input Devices',['../group__inputs.html',1,'']]],
   ['input_20output_20modules_24',['Input/Output Modules',['../group__io.html',1,'']]],
   ['input_20test_25',['&lt;a class=&quot;el&quot; href=&quot;analog_in_test_2analog_in_test_8ino-example.html&quot;&gt;Analog Input Test&lt;/a&gt;',['../examples_core.html#autotoc_md96',1,'']]],
@@ -35,12 +35,11 @@ var searchData=
   ['install_20libraries_20and_20dependencies_32',['B. Install Libraries and Dependencies',['../getting_started.html#autotoc_md36',1,'']]],
   ['interface_33',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md108',1,'']]],
   ['interfaces_34',['Interfaces',['../group__interfaces.html',1,'External Interfaces'],['../hardware.html#autotoc_md42',1,'Stepper Drivers and Motor Interfaces']]],
-  ['interpolators_35',['Interpolators',['../group__interpolators.html',1,'']]],
-  ['introduction_36',['Introduction',['../ssl.html#autotoc_md71',1,'']]],
-  ['invert_37',['invert',['../class_analog_input.html#af8b06cf2264b9d6e79b680a4e0caac4a',1,'AnalogInput']]],
-  ['invert_5foutput_38',['invert_output',['../class_channel.html#ab493519b6aa6d2bdcdbb34ef72b2c20d',1,'Channel::invert_output()'],['../class_channel.html#aabc1e8d3f0563b1b70e8107d2dd7751d',1,'Channel::invert_output(bool invert)']]],
-  ['io_5fport_5ftest_20ino_20i_20o_20port_20test_39',['&lt;a class=&quot;el&quot; href=&quot;io_port_test_2io_port_test_8ino-example.html&quot;&gt;I/O Port Test&lt;/a&gt;',['../examples_core.html#autotoc_md98',1,'']]],
-  ['io_5fport_5ftest_20io_5fport_5ftest_20ino_20i_20o_20port_20test_40',['&lt;a class=&quot;el&quot; href=&quot;io_port_test_2io_port_test_8ino-example.html&quot;&gt;I/O Port Test&lt;/a&gt;',['../examples_core.html#autotoc_md98',1,'']]],
-  ['is_20stepdance_41',['What is Stepdance?',['../index.html#autotoc_md67',1,'']]],
-  ['is_5foutside_5flimits_42',['is_outside_limits',['../class_channel.html#a7bfd0c8dbc915af01f2f03633257fbc9',1,'Channel']]]
+  ['introduction_35',['Introduction',['../ssl.html#autotoc_md71',1,'']]],
+  ['invert_36',['invert',['../class_analog_input.html#af8b06cf2264b9d6e79b680a4e0caac4a',1,'AnalogInput']]],
+  ['invert_5foutput_37',['invert_output',['../class_channel.html#ab493519b6aa6d2bdcdbb34ef72b2c20d',1,'Channel::invert_output()'],['../class_channel.html#aabc1e8d3f0563b1b70e8107d2dd7751d',1,'Channel::invert_output(bool invert)']]],
+  ['io_5fport_5ftest_20ino_20i_20o_20port_20test_38',['&lt;a class=&quot;el&quot; href=&quot;io_port_test_2io_port_test_8ino-example.html&quot;&gt;I/O Port Test&lt;/a&gt;',['../examples_core.html#autotoc_md98',1,'']]],
+  ['io_5fport_5ftest_20io_5fport_5ftest_20ino_20i_20o_20port_20test_39',['&lt;a class=&quot;el&quot; href=&quot;io_port_test_2io_port_test_8ino-example.html&quot;&gt;I/O Port Test&lt;/a&gt;',['../examples_core.html#autotoc_md98',1,'']]],
+  ['is_20stepdance_40',['What is Stepdance?',['../index.html#autotoc_md67',1,'']]],
+  ['is_5foutside_5flimits_41',['is_outside_limits',['../class_channel.html#a7bfd0c8dbc915af01f2f03633257fbc9',1,'Channel']]]
 ];
