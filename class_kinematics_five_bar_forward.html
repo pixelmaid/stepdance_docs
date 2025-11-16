@@ -89,9 +89,14 @@ $(function(){initNavTree('class_kinematics_five_bar_forward.html','','class_kine
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">KinematicsFiveBarForward Class Reference</div></div>
+  <div class="headertitle"><div class="title">KinematicsFiveBarForward Class Reference<div class="ingroups"><a class="el" href="group__kinematics.html">Kinematics</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_kinematics_five_bar_forward.html" title="KinematicsFiveBarForward implements forward kinematics for a five-bar parallel mechanism- currently w...">KinematicsFiveBarForward</a> implements forward kinematics for a five-bar parallel mechanism- currently we apply this to a custom built digital pantograph, though it may be useful for other things...  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="kinematics_8hpp_source.html">kinematics.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for KinematicsFiveBarForward:</div>
 <div class="dyncontent">
@@ -101,27 +106,93 @@ Inheritance diagram for KinematicsFiveBarForward:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a24e5192831545a0e02872632004e79f0" id="r_a24e5192831545a0e02872632004e79f0"><td class="memItemLeft" align="right" valign="top"><a id="a24e5192831545a0e02872632004e79f0" name="a24e5192831545a0e02872632004e79f0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (float32_t s, float32_t l1, float32_t l2, float32_t l3, float32_t l4, float32_t l5, float32_t a)</td></tr>
-<tr class="memitem:a4c52bd3efab75a1cb21be7f92188ea24" id="r_a4c52bd3efab75a1cb21be7f92188ea24"><td class="memItemLeft" align="right" valign="top"><a id="a4c52bd3efab75a1cb21be7f92188ea24" name="a4c52bd3efab75a1cb21be7f92188ea24"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memitem:a24e5192831545a0e02872632004e79f0" id="r_a24e5192831545a0e02872632004e79f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24e5192831545a0e02872632004e79f0">begin</a> (float32_t s, float32_t l1, float32_t l2, float32_t l3, float32_t l4, float32_t l5, float32_t a)</td></tr>
+<tr class="memdesc:a24e5192831545a0e02872632004e79f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_kinematics_five_bar_forward.html" title="KinematicsFiveBarForward implements forward kinematics for a five-bar parallel mechanism- currently w...">KinematicsFiveBarForward</a> with the specified mechanism parameters.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a622bba565cbb4a9acc11e9f3d25f8953" id="r_a622bba565cbb4a9acc11e9f3d25f8953"><td class="memItemLeft" align="right" valign="top"><a id="a622bba565cbb4a9acc11e9f3d25f8953" name="a622bba565cbb4a9acc11e9f3d25f8953"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_r</b></td></tr>
+<tr class="memdesc:a622bba565cbb4a9acc11e9f3d25f8953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the right encoder angle in radians. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:a9ce3ea14353d4b30402ce819662bab47" id="r_a9ce3ea14353d4b30402ce819662bab47"><td class="memItemLeft" align="right" valign="top"><a id="a9ce3ea14353d4b30402ce819662bab47" name="a9ce3ea14353d4b30402ce819662bab47"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_l</b></td></tr>
+<tr class="memdesc:a9ce3ea14353d4b30402ce819662bab47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the left encoder angle in radians. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:a5c122a445eb04e3c4577ae15aa7f4307" id="r_a5c122a445eb04e3c4577ae15aa7f4307"><td class="memItemLeft" align="right" valign="top"><a id="a5c122a445eb04e3c4577ae15aa7f4307" name="a5c122a445eb04e3c4577ae15aa7f4307"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_x</b></td></tr>
+<tr class="memdesc:a5c122a445eb04e3c4577ae15aa7f4307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for X axis motion. Map downstream components to this port. <br /></td></tr>
 <tr class="memitem:a6cf295b71141ad45da3f28c6ba163659" id="r_a6cf295b71141ad45da3f28c6ba163659"><td class="memItemLeft" align="right" valign="top"><a id="a6cf295b71141ad45da3f28c6ba163659" name="a6cf295b71141ad45da3f28c6ba163659"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_y</b></td></tr>
+<tr class="memdesc:a6cf295b71141ad45da3f28c6ba163659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Y axis motion. Map downstream components to this port. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4bde9da4fd49f012d53141a3861ee2b5" id="r_a4bde9da4fd49f012d53141a3861ee2b5"><td class="memItemLeft" align="right" valign="top"><a id="a4bde9da4fd49f012d53141a3861ee2b5" name="a4bde9da4fd49f012d53141a3861ee2b5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_kinematics_five_bar_forward.html" title="KinematicsFiveBarForward implements forward kinematics for a five-bar parallel mechanism- currently w...">KinematicsFiveBarForward</a> implements forward kinematics for a five-bar parallel mechanism- currently we apply this to a custom built digital pantograph, though it may be useful for other things... </p>
+<p>The <a class="el" href="class_kinematics_five_bar_forward.html" title="KinematicsFiveBarForward implements forward kinematics for a five-bar parallel mechanism- currently w...">KinematicsFiveBarForward</a> class converts encoder angles into Cartesian X and Y coordinates for a five-bar parallel kinematics mechanism, such as a Parallel SCARA. This is useful for controlling mechanisms that utilize a five-bar linkage system. To see an example of a basic module that uses <a class="el" href="class_kinematics_five_bar_forward.html" title="KinematicsFiveBarForward implements forward kinematics for a five-bar parallel mechanism- currently w...">KinematicsFiveBarForward</a>, see the Pantograph example under <a class="el" href="examples_kinematics.html">Kinematics Examples</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a24e5192831545a0e02872632004e79f0" name="a24e5192831545a0e02872632004e79f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e5192831545a0e02872632004e79f0">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KinematicsFiveBarForward::begin </td>
+          <td>(</td>
+          <td class="paramtype">float32_t</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float32_t</td>          <td class="paramname"><span class="paramname"><em>l1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float32_t</td>          <td class="paramname"><span class="paramname"><em>l2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float32_t</td>          <td class="paramname"><span class="paramname"><em>l3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float32_t</td>          <td class="paramname"><span class="paramname"><em>l4</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float32_t</td>          <td class="paramname"><span class="paramname"><em>l5</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float32_t</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_kinematics_five_bar_forward.html" title="KinematicsFiveBarForward implements forward kinematics for a five-bar parallel mechanism- currently w...">KinematicsFiveBarForward</a> with the specified mechanism parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Separation between the two encoders (distance between encoder pivots). </td></tr>
+    <tr><td class="paramname">l1</td><td>Length of the right encoder arm. </td></tr>
+    <tr><td class="paramname">l2</td><td>Length of the left encoder arm. </td></tr>
+    <tr><td class="paramname">l3</td><td>Length of the right pivot arm. </td></tr>
+    <tr><td class="paramname">l4</td><td>Length of the left pivot arm. </td></tr>
+    <tr><td class="paramname">l5</td><td>Length of the tool arm. </td></tr>
+    <tr><td class="paramname">a</td><td>Tool arm angle in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="kinematics_8hpp_source.html">kinematics.hpp</a></li>
 </ul>

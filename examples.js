@@ -4,6 +4,7 @@ var examples =
     [ "encoder_test/encoder_test.ino", "encoder_test_2encoder_test_8ino-example.html", null ],
     [ "io_port_test/io_port_test.ino", "io_port_test_2io_port_test_8ino-example.html", null ],
     [ "set_motor_currents/set_motor_currents.ino", "set_motor_currents_2set_motor_currents_8ino-example.html", null ],
+    [ "remote_procedure_call/remote_procedure_call.ino", "remote_procedure_call_2remote_procedure_call_8ino-example.html", null ],
     [ "pantograph/pantograph.ino", "pantograph_2pantograph_8ino-example.html", null ],
     [ "pantograph_basic_module/pantograph_basic_module.ino", "pantograph_basic_module_2pantograph_basic_module_8ino-example.html", null ],
     [ "harmonograph_basic_module/harmonograph_basic_module.ino", "harmonograph_basic_module_2harmonograph_basic_module_8ino-example.html", null ],

@@ -89,9 +89,14 @@ $(function(){initNavTree('class_four_track_recorder.html','','class_four_track_r
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">FourTrackRecorder Class Reference</div></div>
+  <div class="headertitle"><div class="title">FourTrackRecorder Class Reference<div class="ingroups"><a class="el" href="group__recording.html">Recording and Playback</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_four_track_recorder.html" title="FourTrackRecorder records four motion streams to an SD card file.">FourTrackRecorder</a> records four motion streams to an SD card file.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="recording_8hpp_source.html">recording.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for FourTrackRecorder:</div>
 <div class="dyncontent">
@@ -103,48 +108,114 @@ Inheritance diagram for FourTrackRecorder:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a99afab0bdddbb4cf4652010902b15c4d" id="r_a99afab0bdddbb4cf4652010902b15c4d"><td class="memItemLeft" align="right" valign="top"><a id="a99afab0bdddbb4cf4652010902b15c4d" name="a99afab0bdddbb4cf4652010902b15c4d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memitem:a4e15a1995b887e5282fe92dfd9579b6e" id="r_a4e15a1995b887e5282fe92dfd9579b6e"><td class="memItemLeft" align="right" valign="top"><a id="a4e15a1995b887e5282fe92dfd9579b6e" name="a4e15a1995b887e5282fe92dfd9579b6e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> (const char *recording_name, uint8_t recording_length_min=30)</td></tr>
+<tr class="memdesc:a99afab0bdddbb4cf4652010902b15c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_four_track_recorder.html" title="FourTrackRecorder records four motion streams to an SD card file.">FourTrackRecorder</a>. Must be called before using the recorder. <br /></td></tr>
+<tr class="memitem:a4e15a1995b887e5282fe92dfd9579b6e" id="r_a4e15a1995b887e5282fe92dfd9579b6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e15a1995b887e5282fe92dfd9579b6e">start</a> (const char *recording_name, uint8_t recording_length_min=30)</td></tr>
+<tr class="memdesc:a4e15a1995b887e5282fe92dfd9579b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a new recording with the specified name and optional length.  <br /></td></tr>
 <tr class="memitem:a67018398eee1d78010a0d11664a18a3c" id="r_a67018398eee1d78010a0d11664a18a3c"><td class="memItemLeft" align="right" valign="top"><a id="a67018398eee1d78010a0d11664a18a3c" name="a67018398eee1d78010a0d11664a18a3c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>pause</b> ()</td></tr>
+<tr class="memdesc:a67018398eee1d78010a0d11664a18a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses the current recording. <br /></td></tr>
 <tr class="memitem:a3fcd06976ee049fdf49e29166a054c93" id="r_a3fcd06976ee049fdf49e29166a054c93"><td class="memItemLeft" align="right" valign="top"><a id="a3fcd06976ee049fdf49e29166a054c93" name="a3fcd06976ee049fdf49e29166a054c93"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resume</b> ()</td></tr>
+<tr class="memdesc:a3fcd06976ee049fdf49e29166a054c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes a paused recording. <br /></td></tr>
 <tr class="memitem:a236b7a1a416b889cfefc2387f758363c" id="r_a236b7a1a416b889cfefc2387f758363c"><td class="memItemLeft" align="right" valign="top"><a id="a236b7a1a416b889cfefc2387f758363c" name="a236b7a1a416b889cfefc2387f758363c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
-<tr class="memitem:adaa165a31cc7c69eb2599f659b63b972" id="r_adaa165a31cc7c69eb2599f659b63b972"><td class="memItemLeft" align="right" valign="top"><a id="adaa165a31cc7c69eb2599f659b63b972" name="adaa165a31cc7c69eb2599f659b63b972"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_resolution</b> (float input_units, float per_steps=1.0)</td></tr>
-<tr class="memitem:af35b784ef117af5b30bc871fb5a0a6d7" id="r_af35b784ef117af5b30bc871fb5a0a6d7"><td class="memItemLeft" align="right" valign="top"><a id="af35b784ef117af5b30bc871fb5a0a6d7" name="af35b784ef117af5b30bc871fb5a0a6d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memdesc:a236b7a1a416b889cfefc2387f758363c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the current recording. <br /></td></tr>
+<tr class="memitem:adaa165a31cc7c69eb2599f659b63b972" id="r_adaa165a31cc7c69eb2599f659b63b972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaa165a31cc7c69eb2599f659b63b972">set_resolution</a> (float input_units, float per_steps=1.0)</td></tr>
+<tr class="memdesc:adaa165a31cc7c69eb2599f659b63b972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the resolution for recording in world units per step.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a89ed6783ce9835fbae3403648a3357a7" id="r_a89ed6783ce9835fbae3403648a3357a7"><td class="memItemLeft" align="right" valign="top"><a id="a89ed6783ce9835fbae3403648a3357a7" name="a89ed6783ce9835fbae3403648a3357a7"></a>
-<a class="el" href="class_recorder_track.html">RecorderTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><b>recorder_tracks</b> [NUM_CHANNELS]</td></tr>
 <tr class="memitem:a299838d9d02cc9d1cbc33baa1de9dcb1" id="r_a299838d9d02cc9d1cbc33baa1de9dcb1"><td class="memItemLeft" align="right" valign="top"><a id="a299838d9d02cc9d1cbc33baa1de9dcb1" name="a299838d9d02cc9d1cbc33baa1de9dcb1"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>input_1</b> = recorder_tracks[0].input_target_position</td></tr>
+<tr class="memdesc:a299838d9d02cc9d1cbc33baa1de9dcb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the first recording channel. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:abb2236c599b44479edf8021fae87bf5d" id="r_abb2236c599b44479edf8021fae87bf5d"><td class="memItemLeft" align="right" valign="top"><a id="abb2236c599b44479edf8021fae87bf5d" name="abb2236c599b44479edf8021fae87bf5d"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>input_2</b> = recorder_tracks[1].input_target_position</td></tr>
+<tr class="memdesc:abb2236c599b44479edf8021fae87bf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the second recording channel. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:aa8da90d21ca74aa2989e513365069784" id="r_aa8da90d21ca74aa2989e513365069784"><td class="memItemLeft" align="right" valign="top"><a id="aa8da90d21ca74aa2989e513365069784" name="aa8da90d21ca74aa2989e513365069784"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>input_3</b> = recorder_tracks[2].input_target_position</td></tr>
+<tr class="memdesc:aa8da90d21ca74aa2989e513365069784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the third recording channel. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:a3f177e8a67506cde814994ee5d446731" id="r_a3f177e8a67506cde814994ee5d446731"><td class="memItemLeft" align="right" valign="top"><a id="a3f177e8a67506cde814994ee5d446731" name="a3f177e8a67506cde814994ee5d446731"></a>
 <a class="el" href="class_block_port.html">BlockPort</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>input_4</b> = recorder_tracks[3].input_target_position</td></tr>
+<tr class="memdesc:a3f177e8a67506cde814994ee5d446731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for the fourth recording channel. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:a2a3f2c03215e1baaf5f9d4e488cfb966" id="r_a2a3f2c03215e1baaf5f9d4e488cfb966"><td class="memItemLeft" align="right" valign="top"><a id="a2a3f2c03215e1baaf5f9d4e488cfb966" name="a2a3f2c03215e1baaf5f9d4e488cfb966"></a>
 volatile long&#160;</td><td class="memItemRight" valign="bottom"><b>current_sample_index</b> = 0</td></tr>
+<tr class="memdesc:a2a3f2c03215e1baaf5f9d4e488cfb966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current sample index in the recording. <br /></td></tr>
 <tr class="memitem:a9df85efd2f9855f5be6859ad1a9942bc" id="r_a9df85efd2f9855f5be6859ad1a9942bc"><td class="memItemLeft" align="right" valign="top"><a id="a9df85efd2f9855f5be6859ad1a9942bc" name="a9df85efd2f9855f5be6859ad1a9942bc"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><b>max_num_samples</b> = 0</td></tr>
+<tr class="memdesc:a9df85efd2f9855f5be6859ad1a9942bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of samples in the recording. <br /></td></tr>
 <tr class="memitem:a530143d2e732052dfc4f7fd5c3d072d1" id="r_a530143d2e732052dfc4f7fd5c3d072d1"><td class="memItemLeft" align="right" valign="top"><a id="a530143d2e732052dfc4f7fd5c3d072d1" name="a530143d2e732052dfc4f7fd5c3d072d1"></a>
 volatile bool&#160;</td><td class="memItemRight" valign="bottom"><b>recorder_active</b> = false</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:aba564e1a3179eae3b1ee3fdcdbc8853c" id="r_aba564e1a3179eae3b1ee3fdcdbc8853c"><td class="memItemLeft" align="right" valign="top"><a id="aba564e1a3179eae3b1ee3fdcdbc8853c" name="aba564e1a3179eae3b1ee3fdcdbc8853c"></a>
-static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_CHANNELS</b> = 4</td></tr>
+<tr class="memdesc:a530143d2e732052dfc4f7fd5c3d072d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the recorder is currently active. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a11635edd1caaecf4968b2dc6e4fd0092" id="r_a11635edd1caaecf4968b2dc6e4fd0092"><td class="memItemLeft" align="right" valign="top"><a id="a11635edd1caaecf4968b2dc6e4fd0092" name="a11635edd1caaecf4968b2dc6e4fd0092"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_four_track_recorder.html" title="FourTrackRecorder records four motion streams to an SD card file.">FourTrackRecorder</a> records four motion streams to an SD card file. </p>
+<p>The <a class="el" href="class_four_track_recorder.html" title="FourTrackRecorder records four motion streams to an SD card file.">FourTrackRecorder</a> class allows simultaneous recording of four motion streams to an SD card file. Each track can be mapped to a <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for input. The recorder supports starting, pausing, resuming, and stopping recordings, as well as setting the resolution for recording. Recorded data is stored in a binary format on the SD card for efficient storage and retrieval. It is typically used in conjunction with the <a class="el" href="class_four_track_player.html" title="FourTrackPlayer plays back four motion streams from an SD card file.">FourTrackPlayer</a> class for playback of recorded motion streams. Here's an example of how to instantiate and configure a <a class="el" href="class_four_track_recorder.html" title="FourTrackRecorder records four motion streams to an SD card file.">FourTrackRecorder</a>: <a class="el" href="axidraw_recorder_2axidraw_recorder_8ino-example.html">AxiDraw Recorder Example</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="adaa165a31cc7c69eb2599f659b63b972" name="adaa165a31cc7c69eb2599f659b63b972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa165a31cc7c69eb2599f659b63b972">&#9670;&#160;</a></span>set_resolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FourTrackRecorder::set_resolution </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>input_units</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>per_steps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the resolution for recording in world units per step. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_units</td><td>World units corresponding to one step. </td></tr>
+    <tr><td class="paramname">per_steps</td><td>Number of steps. Default is 1.0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e15a1995b887e5282fe92dfd9579b6e" name="a4e15a1995b887e5282fe92dfd9579b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e15a1995b887e5282fe92dfd9579b6e">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FourTrackRecorder::start </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>recording_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>recording_length_min</em></span><span class="paramdefsep"> = </span><span class="paramdefval">30</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts a new recording with the specified name and optional length. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recording_name</td><td>Name of the recording file. This should be the same name you provide to the <a class="el" href="class_four_track_player.html" title="FourTrackPlayer plays back four motion streams from an SD card file.">FourTrackPlayer</a> for playback. </td></tr>
+    <tr><td class="paramname">recording_length_min</td><td>Optional length of the recording in minutes. Default is 30 minutes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="recording_8hpp_source.html">recording.hpp</a></li>
 </ul>

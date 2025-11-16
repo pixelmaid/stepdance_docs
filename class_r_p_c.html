@@ -89,9 +89,14 @@ $(function(){initNavTree('class_r_p_c.html','','class_r_p_c-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">RPC Class Reference</div></div>
+  <div class="headertitle"><div class="title">RPC Class Reference<div class="ingroups"><a class="el" href="group__rpc.html">Remote Procedure Call</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> class for handling remote procedure calls over serial streams.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="rpc_8hpp_source.html">rpc.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for RPC:</div>
 <div class="dyncontent">
@@ -103,12 +108,13 @@ Inheritance diagram for RPC:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5f0ff7087797a7fe55b0af6313cd5aa" id="r_ad5f0ff7087797a7fe55b0af6313cd5aa"><td class="memItemLeft" align="right" valign="top"><a id="ad5f0ff7087797a7fe55b0af6313cd5aa" name="ad5f0ff7087797a7fe55b0af6313cd5aa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memitem:ad9d08e75d423d0bc42126f4c890cf740" id="r_ad9d08e75d423d0bc42126f4c890cf740"><td class="memItemLeft" align="right" valign="top"><a id="ad9d08e75d423d0bc42126f4c890cf740" name="ad9d08e75d423d0bc42126f4c890cf740"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (Stream *target_stream)</td></tr>
-<tr class="memitem:a84f93d29bc224bad63455620c139bc36" id="r_a84f93d29bc224bad63455620c139bc36"><td class="memItemLeft" align="right" valign="top"><a id="a84f93d29bc224bad63455620c139bc36" name="a84f93d29bc224bad63455620c139bc36"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (usb_serial_class *target_usb_serial)</td></tr>
-<tr class="memitem:ad1a394aa5b6c93f37540dfb107da3fbb" id="r_ad1a394aa5b6c93f37540dfb107da3fbb"><td class="memItemLeft" align="right" valign="top"><a id="ad1a394aa5b6c93f37540dfb107da3fbb" name="ad1a394aa5b6c93f37540dfb107da3fbb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (HardwareSerialIMXRT *target_serial, uint32_t baud, uint16_t format=0)</td></tr>
+<tr class="memdesc:ad5f0ff7087797a7fe55b0af6313cd5aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> with the specified stream. Defaults to Serial if no stream is provided. <br /></td></tr>
+<tr class="memitem:ad9d08e75d423d0bc42126f4c890cf740" id="r_ad9d08e75d423d0bc42126f4c890cf740"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9d08e75d423d0bc42126f4c890cf740">begin</a> (Stream *target_stream)</td></tr>
+<tr class="memdesc:ad9d08e75d423d0bc42126f4c890cf740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> with the specified stream.  <br /></td></tr>
+<tr class="memitem:a84f93d29bc224bad63455620c139bc36" id="r_a84f93d29bc224bad63455620c139bc36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84f93d29bc224bad63455620c139bc36">begin</a> (usb_serial_class *target_usb_serial)</td></tr>
+<tr class="memdesc:a84f93d29bc224bad63455620c139bc36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> with the specified USB serial class.  <br /></td></tr>
+<tr class="memitem:ad1a394aa5b6c93f37540dfb107da3fbb" id="r_ad1a394aa5b6c93f37540dfb107da3fbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1a394aa5b6c93f37540dfb107da3fbb">begin</a> (HardwareSerialIMXRT *target_serial, uint32_t baud, uint16_t format=0)</td></tr>
+<tr class="memdesc:ad1a394aa5b6c93f37540dfb107da3fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> with the specified hardware serial.  <br /></td></tr>
 <tr class="memitem:a205b57cb9f534049e4387d33cc1c21e0" id="r_a205b57cb9f534049e4387d33cc1c21e0"><td class="memTemplParams" colspan="2"><a id="a205b57cb9f534049e4387d33cc1c21e0" name="a205b57cb9f534049e4387d33cc1c21e0"></a>
 template&lt;typename Ret, typename... Args&gt; </td></tr>
 <tr class="memitem:a205b57cb9f534049e4387d33cc1c21e0 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (const String &amp;name, Ret(*func)(Args...))</td></tr>
@@ -138,6 +144,97 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:afb978e5afe55aea30dacbb6f902894d3" id="r_afb978e5afe55aea30dacbb6f902894d3"><td class="memItemLeft" align="right" valign="top"><a id="afb978e5afe55aea30dacbb6f902894d3" name="afb978e5afe55aea30dacbb6f902894d3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> class for handling remote procedure calls over serial streams. </p>
+<p>The <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> class provides an interface for registering functions and parameters that can be called and accessed remotely via over serial streams. It supports enrolling functions with various signatures, as well as plugin instances and parameters. The class handles dispatching incoming <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> calls and sending responses back to the caller. Here's an example of how to instantiate and configure an <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a>: <br  />
+ <a class="el" href="remote_procedure_call_2remote_procedure_call_8ino-example.html">RPC Example</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad1a394aa5b6c93f37540dfb107da3fbb" name="ad1a394aa5b6c93f37540dfb107da3fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a394aa5b6c93f37540dfb107da3fbb">&#9670;&#160;</a></span>begin() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RPC::begin </td>
+          <td>(</td>
+          <td class="paramtype">HardwareSerialIMXRT *</td>          <td class="paramname"><span class="paramname"><em>target_serial</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>baud</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> with the specified hardware serial. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target_serial</td><td>Pointer to the HardwareSerialIMXRT to use for <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> communication. </td></tr>
+    <tr><td class="paramname">baud</td><td>Baud rate for the serial communication. </td></tr>
+    <tr><td class="paramname">format</td><td>Data format for the serial communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad9d08e75d423d0bc42126f4c890cf740" name="ad9d08e75d423d0bc42126f4c890cf740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d08e75d423d0bc42126f4c890cf740">&#9670;&#160;</a></span>begin() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RPC::begin </td>
+          <td>(</td>
+          <td class="paramtype">Stream *</td>          <td class="paramname"><span class="paramname"><em>target_stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> with the specified stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target_stream</td><td>Pointer to the Stream to use for <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a84f93d29bc224bad63455620c139bc36" name="a84f93d29bc224bad63455620c139bc36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f93d29bc224bad63455620c139bc36">&#9670;&#160;</a></span>begin() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RPC::begin </td>
+          <td>(</td>
+          <td class="paramtype">usb_serial_class *</td>          <td class="paramname"><span class="paramname"><em>target_usb_serial</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> with the specified USB serial class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target_usb_serial</td><td>Pointer to the usb_serial_class to use for <a class="el" href="class_r_p_c.html" title="RPC class for handling remote procedure calls over serial streams.">RPC</a> communication. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="rpc_8hpp_source.html">rpc.hpp</a></li>
 </ul>

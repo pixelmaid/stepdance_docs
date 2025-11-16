@@ -1,7 +1,7 @@
 var searchData=
 [
   ['o_20port_20test_0',['&lt;a class=&quot;el&quot; href=&quot;io_port_test_2io_port_test_8ino-example.html&quot;&gt;I/O Port Test&lt;/a&gt;',['../examples_core.html#autotoc_md98',1,'']]],
-  ['old_1',['&lt;a class=&quot;el&quot; href=&quot;stepasketch_old_2stepasketch_old_8ino-example.html&quot;&gt;Stepasketch Old&lt;/a&gt;',['../examples_legacy.html#autotoc_md123',1,'']]],
+  ['old_1',['&lt;a class=&quot;el&quot; href=&quot;stepasketch_old_2stepasketch_old_8ino-example.html&quot;&gt;Stepasketch Old&lt;/a&gt;',['../examples_legacy.html#autotoc_md124',1,'']]],
   ['optical_20encoders_2',['Optical Encoders',['../taiss.html',1,'TAISS Optical Encoders'],['../taiss.html#autotoc_md78',1,'TAISS Optical Encoders']]],
   ['organization_3',['Module Organization',['../ssl.html#autotoc_md75',1,'']]],
   ['output_20ports_4',['Configure Output Ports',['../stepasketch.html#autotoc_md23',1,'']]],

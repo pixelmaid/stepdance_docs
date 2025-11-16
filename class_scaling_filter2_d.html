@@ -106,27 +106,30 @@ Inheritance diagram for ScalingFilter2D:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7de9cb9f85870d3b36a2d0d7e51afb61" id="r_a7de9cb9f85870d3b36a2d0d7e51afb61"><td class="memItemLeft" align="right" valign="top"><a id="a7de9cb9f85870d3b36a2d0d7e51afb61" name="a7de9cb9f85870d3b36a2d0d7e51afb61"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (uint8_t mode=INCREMENTAL)</td></tr>
-<tr class="memitem:a21b26b9094b5df6bba9c51aca7349621" id="r_a21b26b9094b5df6bba9c51aca7349621"><td class="memItemLeft" align="right" valign="top"><a id="a21b26b9094b5df6bba9c51aca7349621" name="a21b26b9094b5df6bba9c51aca7349621"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio</b> (ControlParameter ratio)</td></tr>
-<tr class="memitem:a611e7c4e0203fbbbd5f9fa0aad64cfe9" id="r_a611e7c4e0203fbbbd5f9fa0aad64cfe9"><td class="memItemLeft" align="right" valign="top"><a id="a611e7c4e0203fbbbd5f9fa0aad64cfe9" name="a611e7c4e0203fbbbd5f9fa0aad64cfe9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ratio</b> (ControlParameter output_distance, ControlParameter input_distance)</td></tr>
-<tr class="memitem:a2fdd310a70c7ed8169cfa8a0cb5db55a" id="r_a2fdd310a70c7ed8169cfa8a0cb5db55a"><td class="memItemLeft" align="right" valign="top"><a id="a2fdd310a70c7ed8169cfa8a0cb5db55a" name="a2fdd310a70c7ed8169cfa8a0cb5db55a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memitem:a7de9cb9f85870d3b36a2d0d7e51afb61" id="r_a7de9cb9f85870d3b36a2d0d7e51afb61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7de9cb9f85870d3b36a2d0d7e51afb61">begin</a> (uint8_t mode=INCREMENTAL)</td></tr>
+<tr class="memdesc:a7de9cb9f85870d3b36a2d0d7e51afb61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_scaling_filter2_d.html" title="Generates two output signals, each in proportion to an input signal.">ScalingFilter2D</a> with the specified mode. Must be called to set up the filter.  <br /></td></tr>
+<tr class="memitem:a21b26b9094b5df6bba9c51aca7349621" id="r_a21b26b9094b5df6bba9c51aca7349621"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21b26b9094b5df6bba9c51aca7349621">set_ratio</a> (ControlParameter <a class="el" href="#a7dab7cab3a61f6cbff2ad7ba7ad77075">ratio</a>)</td></tr>
+<tr class="memdesc:a21b26b9094b5df6bba9c51aca7349621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scaling ratio between output and input.  <br /></td></tr>
+<tr class="memitem:a611e7c4e0203fbbbd5f9fa0aad64cfe9" id="r_a611e7c4e0203fbbbd5f9fa0aad64cfe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a611e7c4e0203fbbbd5f9fa0aad64cfe9">set_ratio</a> (ControlParameter output_distance, ControlParameter input_distance)</td></tr>
+<tr class="memdesc:a611e7c4e0203fbbbd5f9fa0aad64cfe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scaling ratio using output and input distances.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7dab7cab3a61f6cbff2ad7ba7ad77075" id="r_a7dab7cab3a61f6cbff2ad7ba7ad77075"><td class="memItemLeft" align="right" valign="top"><a id="a7dab7cab3a61f6cbff2ad7ba7ad77075" name="a7dab7cab3a61f6cbff2ad7ba7ad77075"></a>
 ControlParameter&#160;</td><td class="memItemRight" valign="bottom"><b>ratio</b> = 1.0</td></tr>
+<tr class="memdesc:a7dab7cab3a61f6cbff2ad7ba7ad77075"><td class="mdescLeft">&#160;</td><td class="mdescRight">ControlParameter scaling output relative to input (output/input). Can be set by calling <a class="el" href="#a21b26b9094b5df6bba9c51aca7349621" title="Sets the scaling ratio between output and input.">set_ratio()</a>. <br /></td></tr>
 <tr class="memitem:a63a1db3093a239370a7aacbf726df006" id="r_a63a1db3093a239370a7aacbf726df006"><td class="memItemLeft" align="right" valign="top"><a id="a63a1db3093a239370a7aacbf726df006" name="a63a1db3093a239370a7aacbf726df006"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_1</b></td></tr>
+<tr class="memdesc:a63a1db3093a239370a7aacbf726df006"><td class="mdescLeft">&#160;</td><td class="mdescRight">First input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. Map upstream components to this input. <br /></td></tr>
 <tr class="memitem:aee02345349eac0c1803fed84cace11de" id="r_aee02345349eac0c1803fed84cace11de"><td class="memItemLeft" align="right" valign="top"><a id="aee02345349eac0c1803fed84cace11de" name="aee02345349eac0c1803fed84cace11de"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_2</b></td></tr>
+<tr class="memdesc:aee02345349eac0c1803fed84cace11de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Second input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a>. Map upstream components to this input. <br /></td></tr>
 <tr class="memitem:a96e7a1cc39640590f4f72611bc115589" id="r_a96e7a1cc39640590f4f72611bc115589"><td class="memItemLeft" align="right" valign="top"><a id="a96e7a1cc39640590f4f72611bc115589" name="a96e7a1cc39640590f4f72611bc115589"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_1</b></td></tr>
+<tr class="memdesc:a96e7a1cc39640590f4f72611bc115589"><td class="mdescLeft">&#160;</td><td class="mdescRight">First output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> corresponding to the scaled input_1. Map downstream components to this output. <br /></td></tr>
 <tr class="memitem:adaa333f1a2bb24b0349abfbc8e2bee93" id="r_adaa333f1a2bb24b0349abfbc8e2bee93"><td class="memItemLeft" align="right" valign="top"><a id="adaa333f1a2bb24b0349abfbc8e2bee93" name="adaa333f1a2bb24b0349abfbc8e2bee93"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_2</b></td></tr>
+<tr class="memdesc:adaa333f1a2bb24b0349abfbc8e2bee93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Second output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> corresponding to the scaled input_2. Map downstream components to this output. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -136,7 +139,96 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generates two output signals, each in proportion to an input signal. </p>
 <p>The <a class="el" href="class_scaling_filter2_d.html" title="Generates two output signals, each in proportion to an input signal.">ScalingFilter2D</a> class scales two input signals by a specified ratio to produce two output signals. This is useful for scaling a motion trajectory in two dimensions. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a7de9cb9f85870d3b36a2d0d7e51afb61" name="a7de9cb9f85870d3b36a2d0d7e51afb61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de9cb9f85870d3b36a2d0d7e51afb61">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScalingFilter2D::begin </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">INCREMENTAL</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_scaling_filter2_d.html" title="Generates two output signals, each in proportion to an input signal.">ScalingFilter2D</a> with the specified mode. Must be called to set up the filter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>Mode of operation: INCREMENTAL or ABSOLUTE. Default is INCREMENTAL. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a611e7c4e0203fbbbd5f9fa0aad64cfe9" name="a611e7c4e0203fbbbd5f9fa0aad64cfe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a611e7c4e0203fbbbd5f9fa0aad64cfe9">&#9670;&#160;</a></span>set_ratio() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScalingFilter2D::set_ratio </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>output_distance</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>input_distance</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the scaling ratio using output and input distances. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_distance</td><td>Distance in world units for the output. </td></tr>
+    <tr><td class="paramname">input_distance</td><td>Distance in world units for the input. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21b26b9094b5df6bba9c51aca7349621" name="a21b26b9094b5df6bba9c51aca7349621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b26b9094b5df6bba9c51aca7349621">&#9670;&#160;</a></span>set_ratio() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScalingFilter2D::set_ratio </td>
+          <td>(</td>
+          <td class="paramtype">ControlParameter</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the scaling ratio between output and input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ratio</td><td>Scaling ratio (output / input). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="filters_8hpp_source.html">filters.hpp</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['files_0',['Files',['../examples_core.html#autotoc_md95',1,'Example Files'],['../examples_motion.html#autotoc_md101',1,'Example Files'],['../examples_plotting.html#autotoc_md107',1,'Example Files'],['../examples_clayprinter.html#autotoc_md113',1,'Example Files'],['../examples_kinematics.html#autotoc_md119',1,'Example Files'],['../examples_legacy.html#autotoc_md122',1,'Example Files']]],
+  ['files_0',['Files',['../examples_core.html#autotoc_md95',1,'Example Files'],['../examples_motion.html#autotoc_md102',1,'Example Files'],['../examples_plotting.html#autotoc_md108',1,'Example Files'],['../examples_clayprinter.html#autotoc_md114',1,'Example Files'],['../examples_kinematics.html#autotoc_md120',1,'Example Files'],['../examples_legacy.html#autotoc_md123',1,'Example Files']]],
   ['filtered_5ftarget_5fposition_1',['filtered_target_position',['../class_channel.html#afc949cb6c6bbadcc164ab8191e04558c',1,'Channel']]],
   ['filtering_5fon_2',['filtering_on',['../class_channel.html#a2b370f0b880c356df887b05a55a46b95',1,'Channel']]],
   ['filters_3',['Filters',['../group__filters.html',1,'']]],

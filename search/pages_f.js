@@ -2,8 +2,8 @@ var searchData=
 [
   ['microcontroller_0',['Microcontroller',['../hardware.html#autotoc_md48',1,'Microcontroller'],['../hardware.html#autotoc_md51',1,'Microcontroller']]],
   ['modifications_1',['Modifications',['../taiss.html#autotoc_md79',1,'']]],
-  ['modularized_20v2_2',['&lt;a class=&quot;el&quot; href=&quot;clay_3dprinter_texturizer_modularized_v2_2clay_3dprinter_texturizer_modularized_v2_8ino-example.html&quot;&gt;Clay 3D Printer Texturizer Modularized V2&lt;/a&gt;',['../examples_clayprinter.html#autotoc_md115',1,'']]],
-  ['module_3',['Module',['../examples_motion.html#autotoc_md104',1,'<a class="el" href="harmonograph_basic_module_2harmonograph_basic_module_8ino-example.html">Harmonograph Basic Module</a>'],['../examples_motion.html#autotoc_md103',1,'<a class="el" href="pantograph_basic_module_2pantograph_basic_module_8ino-example.html">Pantograph Basic Module</a>']]],
+  ['modularized_20v2_2',['&lt;a class=&quot;el&quot; href=&quot;clay_3dprinter_texturizer_modularized_v2_2clay_3dprinter_texturizer_modularized_v2_8ino-example.html&quot;&gt;Clay 3D Printer Texturizer Modularized V2&lt;/a&gt;',['../examples_clayprinter.html#autotoc_md116',1,'']]],
+  ['module_3',['Module',['../examples_motion.html#autotoc_md105',1,'<a class="el" href="harmonograph_basic_module_2harmonograph_basic_module_8ino-example.html">Harmonograph Basic Module</a>'],['../examples_motion.html#autotoc_md104',1,'<a class="el" href="pantograph_basic_module_2pantograph_basic_module_8ino-example.html">Pantograph Basic Module</a>']]],
   ['module_20board_20v1_200_4',['Driver Module Board v1.0',['../hardware.html#autotoc_md41',1,'']]],
   ['module_20organization_5',['Module Organization',['../ssl.html#autotoc_md75',1,'']]],
   ['module_20v1_200_6',['Basic Module v1.0',['../hardware.html#autotoc_md50',1,'']]],

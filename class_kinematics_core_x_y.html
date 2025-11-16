@@ -89,9 +89,14 @@ $(function(){initNavTree('class_kinematics_core_x_y.html','','class_kinematics_c
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">KinematicsCoreXY Class Reference</div></div>
+  <div class="headertitle"><div class="title">KinematicsCoreXY Class Reference<div class="ingroups"><a class="el" href="group__kinematics.html">Kinematics</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_kinematics_core_x_y.html" title="KinematicsCoreXY implements coreXY kinematics transformation.">KinematicsCoreXY</a> implements <a href="https://www.corexy.com/">coreXY</a> kinematics transformation.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="kinematics_8hpp_source.html">kinematics.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for KinematicsCoreXY:</div>
 <div class="dyncontent">
@@ -103,26 +108,76 @@ Inheritance diagram for KinematicsCoreXY:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a806876b71a71f8911ccfb3a1dea30a89" id="r_a806876b71a71f8911ccfb3a1dea30a89"><td class="memItemLeft" align="right" valign="top"><a id="a806876b71a71f8911ccfb3a1dea30a89" name="a806876b71a71f8911ccfb3a1dea30a89"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memitem:ae21538fd9228bd33c2ff40288884a6ba" id="r_ae21538fd9228bd33c2ff40288884a6ba"><td class="memItemLeft" align="right" valign="top"><a id="ae21538fd9228bd33c2ff40288884a6ba" name="ae21538fd9228bd33c2ff40288884a6ba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memdesc:a806876b71a71f8911ccfb3a1dea30a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_kinematics_core_x_y.html" title="KinematicsCoreXY implements coreXY kinematics transformation.">KinematicsCoreXY</a>. This must be called before using the kinematics. <br /></td></tr>
+<tr class="memitem:ac2b32fbc6047997a3e14ef632c02d9dc" id="r_ac2b32fbc6047997a3e14ef632c02d9dc"><td class="memItemLeft" align="right" valign="top"><a id="ac2b32fbc6047997a3e14ef632c02d9dc" name="ac2b32fbc6047997a3e14ef632c02d9dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_deep</b> () override</td></tr>
+<tr class="memitem:af169ffff91ad92cb61a7d7ef8f99c643" id="r_af169ffff91ad92cb61a7d7ef8f99c643"><td class="memItemLeft" align="right" valign="top"><a id="af169ffff91ad92cb61a7d7ef8f99c643" name="af169ffff91ad92cb61a7d7ef8f99c643"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pull_deep</b> () override</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af78b8497d15d95babb64728f7cbb2aec" id="r_af78b8497d15d95babb64728f7cbb2aec"><td class="memItemLeft" align="right" valign="top"><a id="af78b8497d15d95babb64728f7cbb2aec" name="af78b8497d15d95babb64728f7cbb2aec"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_x</b></td></tr>
+<tr class="memdesc:af78b8497d15d95babb64728f7cbb2aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for X axis motion. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:a65a8b2bb3866e328d19053714857f134" id="r_a65a8b2bb3866e328d19053714857f134"><td class="memItemLeft" align="right" valign="top"><a id="a65a8b2bb3866e328d19053714857f134" name="a65a8b2bb3866e328d19053714857f134"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_y</b></td></tr>
+<tr class="memdesc:a65a8b2bb3866e328d19053714857f134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Y axis motion. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:a17f41ffe14ab99138d703e65c35681d5" id="r_a17f41ffe14ab99138d703e65c35681d5"><td class="memItemLeft" align="right" valign="top"><a id="a17f41ffe14ab99138d703e65c35681d5" name="a17f41ffe14ab99138d703e65c35681d5"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_a</b></td></tr>
+<tr class="memdesc:a17f41ffe14ab99138d703e65c35681d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for A motor motion. Map downstream components to this port. <br /></td></tr>
 <tr class="memitem:a95822b7d7c95f6bc03e38938ee3cd28b" id="r_a95822b7d7c95f6bc03e38938ee3cd28b"><td class="memItemLeft" align="right" valign="top"><a id="a95822b7d7c95f6bc03e38938ee3cd28b" name="a95822b7d7c95f6bc03e38938ee3cd28b"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_b</b></td></tr>
+<tr class="memdesc:a95822b7d7c95f6bc03e38938ee3cd28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for B motor motion. Map downstream components to this port. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac12133b903f698ad828fc59547efcfca" id="r_ac12133b903f698ad828fc59547efcfca"><td class="memItemLeft" align="right" valign="top"><a id="ac12133b903f698ad828fc59547efcfca" name="ac12133b903f698ad828fc59547efcfca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_kinematics_core_x_y.html" title="KinematicsCoreXY implements coreXY kinematics transformation.">KinematicsCoreXY</a> implements <a href="https://www.corexy.com/">coreXY</a> kinematics transformation. </p>
+<p>The <a class="el" href="class_kinematics_core_x_y.html" title="KinematicsCoreXY implements coreXY kinematics transformation.">KinematicsCoreXY</a> class converts Cartesian X and Y motion inputs into CoreXY A and B motor outputs. This is useful for controlling CoreXY mechanisms commonly used in 3D printers, plotters and other CNC machines. Here's an example of how to instantiate and configure a <a class="el" href="class_kinematics_core_x_y.html" title="KinematicsCoreXY implements coreXY kinematics transformation.">KinematicsCoreXY</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"><a class="code hl_class" href="class_encoder.html">Encoder</a> enc_1;</div>
+<div class="line"><a class="code hl_class" href="class_encoder.html">Encoder</a> enc_2;</div>
+<div class="line"><a class="code hl_class" href="class_kinematics_core_x_y.html">KinematicsCoreXY</a> corexy_kinematics;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_a;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_b;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_a;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_b;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup(){</div>
+<div class="line">  <span class="comment">// Initialize OutputPorts and enable drivers</span></div>
+<div class="line">  output_a.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A);</div>
+<div class="line">  output_b.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_B);</div>
+<div class="line">  enable_drivers();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize Channels</span></div>
+<div class="line">  channel_a.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_a, SIGNAL_E);</div>
+<div class="line">  channel_b.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_b, SIGNAL_E);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize Encoders</span></div>
+<div class="line">  enc_1.<a class="code hl_function" href="class_encoder.html#ad287d2bda9161a8c024a9fb06e28b741">begin</a>(ENCODER_1);</div>
+<div class="line">  enc_1.set_ratio(24, 2400);  <span class="comment">// 24mm per revolution, where 1 rev == 2400 encoder pulses</span></div>
+<div class="line">  enc_2.<a class="code hl_function" href="class_encoder.html#ad287d2bda9161a8c024a9fb06e28b741">begin</a>(ENCODER_2);</div>
+<div class="line">  enc_2.set_ratio(24, 2400);  <span class="comment">// 24mm per revolution, where 1 rev == 2400 encoder pulses</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Map Encoder outputs to KinematicsCoreXY inputs</span></div>
+<div class="line">  enc_1.output.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(corexy_kinematics.<a class="code hl_variable" href="#af78b8497d15d95babb64728f7cbb2aec">input_x</a>);</div>
+<div class="line">  enc_2.output.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(corexy_kinematics.<a class="code hl_variable" href="#a65a8b2bb3866e328d19053714857f134">input_y</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize KinematicsCoreXY and map to channels</span></div>
+<div class="line">  corexy_kinematics.<a class="code hl_function" href="#a806876b71a71f8911ccfb3a1dea30a89">begin</a>();</div>
+<div class="line">  corexy_kinematics.output_x.map(channel_a.input_target_position);</div>
+<div class="line">  corexy_kinematics.output_y.map(channel_b.input_target_position);</div>
+<div class="line"> </div>
+<div class="line">  dance_start();</div>
+<div class="line">} </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">  dance_loop();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="kinematics_8hpp_source.html">kinematics.hpp</a></li>
 </ul>
 </div><!-- contents -->

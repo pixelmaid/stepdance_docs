@@ -118,124 +118,127 @@ $(function(){initNavTree('rpc_8hpp_source.html','',''); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;core.hpp&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef rpc_h </span><span class="comment">//prevent importing twice</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define rpc_h</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_r_p_c.html">   29</a></span><span class="keyword">class </span>RPC : <span class="keyword">public</span> Plugin{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    RPC();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> begin(); <span class="comment">//defaults to Serial as the input stream</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> begin(Stream *target_stream);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> begin(usb_serial_class *target_usb_serial);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> begin(HardwareSerialIMXRT *target_serial, uint32_t baud, uint16_t format = 0); <span class="comment">//hardware serial</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// --- RPC Registration ---</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args&gt; <span class="comment">//function registration</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; name, Ret(*func)(Args...)){ <span class="comment">//registers an RPC function with any signature, as handled by above templating</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      add_to_registry(name, [func, <span class="keyword">this</span>](JsonArray args){ <span class="comment">//creates a lambda function with access to func, that accepts a JsonArray of arguments (i.e. matching the registry map definition)</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        this-&gt;call_and_respond(func, args, std::index_sequence_for&lt;Args...&gt;{}); <span class="comment">//the lambda function will then call a call_and_respond</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      });</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      rpc_index[name] = <span class="stringliteral">&quot;function&quot;</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj, <span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args&gt; <span class="comment">//bound method registration. This is intended to be called from within the enroll() method of a plugin</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; instance_name, <span class="keyword">const</span> String&amp; name, Obj&amp; instance, Ret(Obj::*method)(Args...)){</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      add_to_registry(instance_name + <span class="stringliteral">&quot;.&quot;</span> + name, [&amp;instance, method, <span class="keyword">this</span>](JsonArray args){</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        this-&gt;call_and_respond(instance, method, args, std::index_sequence_for&lt;Args...&gt;{});</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      });</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      rpc_index[instance_name + <span class="stringliteral">&quot;.&quot;</span> + name] = <span class="stringliteral">&quot;function&quot;</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; name, Plugin&amp; instance){ <span class="comment">//enrolls a plugin instance</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      instance.enroll(<span class="keyword">this</span>, name);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> = std::enable_if_t&lt;!std::is_base_of_v&lt;Plugin, T&gt;&gt;&gt; <span class="comment">//parameter registration</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; name, T&amp; parameter){</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      add_to_registry(name, [&amp;parameter, <span class="keyword">this</span>](JsonArray args){</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span>(!args.isNull() &amp;&amp; args.size() &gt; 0){ <span class="comment">//we&#39;re setting the value of the parameter</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>          parameter = args[0].as&lt;T&gt;();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>          reset_outbound_state();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>          outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>          serializeJson(outbound_json_doc, *rpc_stream);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>          rpc_stream-&gt;println();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }<span class="keywordflow">else</span>{ <span class="comment">//getting the value</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>          reset_outbound_state();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>          outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>          outbound_json_doc[<span class="stringliteral">&quot;return&quot;</span>] = parameter;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          serializeJson(outbound_json_doc, *rpc_stream);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>          rpc_stream-&gt;println();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      });</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      rpc_index[name] = <span class="stringliteral">&quot;parameter&quot;</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// --- RPC Dispatch ---</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;  <span class="comment">// function with no return value</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> call_and_respond(<span class="keywordtype">void</span>(*func)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      func(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      reset_outbound_state();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      rpc_stream-&gt;println();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj, <span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;  <span class="comment">// bound method with no return value</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> call_and_respond(Obj&amp; instance, <span class="keywordtype">void</span>(Obj::*method)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      (instance.*method)(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      reset_outbound_state();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      rpc_stream-&gt;println();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span> call_and_respond(Ret(*func)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      Ret ret = func(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args and returns type Ret</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      reset_outbound_state();</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      outbound_json_doc[<span class="stringliteral">&quot;return&quot;</span>] = ret;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      rpc_stream-&gt;println();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj, <span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;  <span class="comment">// bound method with no return value</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> call_and_respond(Obj&amp; instance, Ret(Obj::*method)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      Ret ret = (instance.*method)(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      reset_outbound_state();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      outbound_json_doc[<span class="stringliteral">&quot;return&quot;</span>] = ret;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      rpc_stream-&gt;println();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">void</span> reset_inbound_state();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> reset_outbound_state();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    Stream *rpc_stream; <span class="comment">//pointer to an I/O stream for the remote call</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    String inbound_string;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    JsonDocument inbound_json_doc; <span class="comment">//stores JSON doc based on inbound stream</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    JsonDocument outbound_json_doc;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">using </span>RPCFunction = std::function&lt;void(JsonArray)&gt;; <span class="comment">//function format as it goes into the registry</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    std::map&lt;String, RPCFunction&gt; rpc_registry; <span class="comment">//registry for storing rpc functions. Note that these are lambda functions wrapping the actual function (or parameter) to be called/returned.</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    std::map&lt;String, String&gt; rpc_index; <span class="comment">//index of all rpc strings and their type. This can be reported back to the remote system as a convenience.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define rpc_h</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_r_p_c.html">   35</a></span><span class="keyword">class </span>RPC : <span class="keyword">public</span> Plugin{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    RPC();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_r_p_c.html#ad5f0ff7087797a7fe55b0af6313cd5aa">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_r_p_c.html#ad5f0ff7087797a7fe55b0af6313cd5aa">begin</a>(); <span class="comment">//defaults to Serial as the input stream</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_r_p_c.html#ad9d08e75d423d0bc42126f4c890cf740">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_r_p_c.html#ad9d08e75d423d0bc42126f4c890cf740">begin</a>(Stream *target_stream);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_r_p_c.html#a84f93d29bc224bad63455620c139bc36">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_r_p_c.html#a84f93d29bc224bad63455620c139bc36">begin</a>(usb_serial_class *target_usb_serial);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_r_p_c.html#ad1a394aa5b6c93f37540dfb107da3fbb">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_r_p_c.html#ad1a394aa5b6c93f37540dfb107da3fbb">begin</a>(HardwareSerialIMXRT *target_serial, uint32_t baud, uint16_t format = 0); <span class="comment">//hardware serial</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// --- RPC Registration ---</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args&gt; <span class="comment">//function registration</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; name, Ret(*func)(Args...)){ <span class="comment">//registers an RPC function with any signature, as handled by above templating</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      add_to_registry(name, [func, <span class="keyword">this</span>](JsonArray args){ <span class="comment">//creates a lambda function with access to func, that accepts a JsonArray of arguments (i.e. matching the registry map definition)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        this-&gt;call_and_respond(func, args, std::index_sequence_for&lt;Args...&gt;{}); <span class="comment">//the lambda function will then call a call_and_respond</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      });</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      rpc_index[name] = <span class="stringliteral">&quot;function&quot;</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj, <span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args&gt; <span class="comment">//bound method registration. This is intended to be called from within the enroll() method of a plugin</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; instance_name, <span class="keyword">const</span> String&amp; name, Obj&amp; instance, Ret(Obj::*method)(Args...)){</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      add_to_registry(instance_name + <span class="stringliteral">&quot;.&quot;</span> + name, [&amp;instance, method, <span class="keyword">this</span>](JsonArray args){</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        this-&gt;call_and_respond(instance, method, args, std::index_sequence_for&lt;Args...&gt;{});</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      });</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      rpc_index[instance_name + <span class="stringliteral">&quot;.&quot;</span> + name] = <span class="stringliteral">&quot;function&quot;</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; name, Plugin&amp; instance){ <span class="comment">//enrolls a plugin instance</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      instance.enroll(<span class="keyword">this</span>, name);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> = std::enable_if_t&lt;!std::is_base_of_v&lt;Plugin, T&gt;&gt;&gt; <span class="comment">//parameter registration</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> enroll(<span class="keyword">const</span> String&amp; name, T&amp; parameter){</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      add_to_registry(name, [&amp;parameter, <span class="keyword">this</span>](JsonArray args){</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">if</span>(!args.isNull() &amp;&amp; args.size() &gt; 0){ <span class="comment">//we&#39;re setting the value of the parameter</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>          parameter = args[0].as&lt;T&gt;();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>          reset_outbound_state();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>          outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>          serializeJson(outbound_json_doc, *rpc_stream);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>          rpc_stream-&gt;println();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }<span class="keywordflow">else</span>{ <span class="comment">//getting the value</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          reset_outbound_state();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>          outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>          outbound_json_doc[<span class="stringliteral">&quot;return&quot;</span>] = parameter;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          serializeJson(outbound_json_doc, *rpc_stream);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>          rpc_stream-&gt;println();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      });</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      rpc_index[name] = <span class="stringliteral">&quot;parameter&quot;</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// --- RPC Dispatch ---</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;  <span class="comment">// function with no return value</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordtype">void</span> call_and_respond(<span class="keywordtype">void</span>(*func)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      func(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      reset_outbound_state();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      rpc_stream-&gt;println();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj, <span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;  <span class="comment">// bound method with no return value</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> call_and_respond(Obj&amp; instance, <span class="keywordtype">void</span>(Obj::*method)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      (instance.*method)(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      reset_outbound_state();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      rpc_stream-&gt;println();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">void</span> call_and_respond(Ret(*func)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      Ret ret = func(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args and returns type Ret</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      reset_outbound_state();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      outbound_json_doc[<span class="stringliteral">&quot;return&quot;</span>] = ret;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      rpc_stream-&gt;println();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> add_to_registry(<span class="keyword">const</span> String&amp; name, RPCFunction rpc_function){</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      rpc_registry[name] = rpc_function;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    };</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> rpc_call(<span class="keyword">const</span> String&amp; name, JsonArray args); <span class="comment">//makes an RPC call, and handles returning values etc.</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">void</span> send_index(); <span class="comment">//returns an index of all the functions registered in the RPC.</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> loop(); <span class="comment">// should be run inside loop</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>};</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj, <span class="keyword">typename</span> Ret, <span class="keyword">typename</span>... Args, <span class="keywordtype">size_t</span>... I&gt;  <span class="comment">// bound method with no return value</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">void</span> call_and_respond(Obj&amp; instance, Ret(Obj::*method)(Args...), JsonArray args, std::index_sequence&lt;I...&gt;){</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      Ret ret = (instance.*method)(args[I].as&lt;Args&gt;()...); <span class="comment">//calls function with args</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      reset_outbound_state();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      outbound_json_doc[<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;ok&quot;</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      outbound_json_doc[<span class="stringliteral">&quot;return&quot;</span>] = ret;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      serializeJson(outbound_json_doc, *rpc_stream);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      rpc_stream-&gt;println();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span> reset_inbound_state();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">void</span> reset_outbound_state();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    Stream *rpc_stream; <span class="comment">//pointer to an I/O stream for the remote call</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    String inbound_string;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    JsonDocument inbound_json_doc; <span class="comment">//stores JSON doc based on inbound stream</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    JsonDocument outbound_json_doc;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">using </span>RPCFunction = std::function&lt;void(JsonArray)&gt;; <span class="comment">//function format as it goes into the registry</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    std::map&lt;String, RPCFunction&gt; rpc_registry; <span class="comment">//registry for storing rpc functions. Note that these are lambda functions wrapping the actual function (or parameter) to be called/returned.</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    std::map&lt;String, String&gt; rpc_index; <span class="comment">//index of all rpc strings and their type. This can be reported back to the remote system as a convenience.</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> add_to_registry(<span class="keyword">const</span> String&amp; name, RPCFunction rpc_function){</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      rpc_registry[name] = rpc_function;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    };</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">void</span> rpc_call(<span class="keyword">const</span> String&amp; name, JsonArray args); <span class="comment">//makes an RPC call, and handles returning values etc.</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">void</span> send_index(); <span class="comment">//returns an index of all the functions registered in the RPC.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordtype">void</span> loop(); <span class="comment">// should be run inside loop</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>};</div>
 </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif </span><span class="comment">//rpc_h</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#endif </span><span class="comment">//rpc_h</span></div>
+<div class="ttc" id="aclass_r_p_c_html_a84f93d29bc224bad63455620c139bc36"><div class="ttname"><a href="class_r_p_c.html#a84f93d29bc224bad63455620c139bc36">RPC::begin</a></div><div class="ttdeci">void begin(usb_serial_class *target_usb_serial)</div><div class="ttdoc">Initializes the RPC with the specified USB serial class.</div></div>
+<div class="ttc" id="aclass_r_p_c_html_ad1a394aa5b6c93f37540dfb107da3fbb"><div class="ttname"><a href="class_r_p_c.html#ad1a394aa5b6c93f37540dfb107da3fbb">RPC::begin</a></div><div class="ttdeci">void begin(HardwareSerialIMXRT *target_serial, uint32_t baud, uint16_t format=0)</div><div class="ttdoc">Initializes the RPC with the specified hardware serial.</div></div>
+<div class="ttc" id="aclass_r_p_c_html_ad5f0ff7087797a7fe55b0af6313cd5aa"><div class="ttname"><a href="class_r_p_c.html#ad5f0ff7087797a7fe55b0af6313cd5aa">RPC::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initializes the RPC with the specified stream. Defaults to Serial if no stream is provided.</div></div>
+<div class="ttc" id="aclass_r_p_c_html_ad9d08e75d423d0bc42126f4c890cf740"><div class="ttname"><a href="class_r_p_c.html#ad9d08e75d423d0bc42126f4c890cf740">RPC::begin</a></div><div class="ttdeci">void begin(Stream *target_stream)</div><div class="ttdoc">Initializes the RPC with the specified stream.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

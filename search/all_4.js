@@ -25,12 +25,12 @@ var searchData=
   ['axidraw_22',['Plotting &amp;amp; Axidraw',['../examples_plotting.html',1,'code_examples']]],
   ['axidraw_20ebb_20controller_20emulator_23',['Axidraw &quot;EBB&quot; Controller Emulator',['../hardware.html#autotoc_md60',1,'']]],
   ['axidraw_20ebb_20controller_20emulator_20example_24',['Axidraw EBB Controller Emulator Example',['../ebb.html',1,'tutorials_docs']]],
-  ['axidraw_20interface_25',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md108',1,'']]],
-  ['axidraw_20recorder_26',['&lt;a class=&quot;el&quot; href=&quot;axidraw_recorder_2axidraw_recorder_8ino-example.html&quot;&gt;AxiDraw Recorder&lt;/a&gt;',['../examples_plotting.html#autotoc_md109',1,'']]],
-  ['axidraw_5finterface_20axidraw_5finterface_20ino_20axidraw_20interface_27',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md108',1,'']]],
-  ['axidraw_5finterface_20ino_20axidraw_20interface_28',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md108',1,'']]],
-  ['axidraw_5frecorder_20axidraw_5frecorder_20ino_20axidraw_20recorder_29',['&lt;a class=&quot;el&quot; href=&quot;axidraw_recorder_2axidraw_recorder_8ino-example.html&quot;&gt;AxiDraw Recorder&lt;/a&gt;',['../examples_plotting.html#autotoc_md109',1,'']]],
-  ['axidraw_5frecorder_20ino_20axidraw_20recorder_30',['&lt;a class=&quot;el&quot; href=&quot;axidraw_recorder_2axidraw_recorder_8ino-example.html&quot;&gt;AxiDraw Recorder&lt;/a&gt;',['../examples_plotting.html#autotoc_md109',1,'']]],
+  ['axidraw_20interface_25',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md109',1,'']]],
+  ['axidraw_20recorder_26',['&lt;a class=&quot;el&quot; href=&quot;axidraw_recorder_2axidraw_recorder_8ino-example.html&quot;&gt;AxiDraw Recorder&lt;/a&gt;',['../examples_plotting.html#autotoc_md110',1,'']]],
+  ['axidraw_5finterface_20axidraw_5finterface_20ino_20axidraw_20interface_27',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md109',1,'']]],
+  ['axidraw_5finterface_20ino_20axidraw_20interface_28',['&lt;a class=&quot;el&quot; href=&quot;axidraw_interface_2axidraw_interface_8ino-example.html&quot;&gt;AxiDraw Interface&lt;/a&gt;',['../examples_plotting.html#autotoc_md109',1,'']]],
+  ['axidraw_5frecorder_20axidraw_5frecorder_20ino_20axidraw_20recorder_29',['&lt;a class=&quot;el&quot; href=&quot;axidraw_recorder_2axidraw_recorder_8ino-example.html&quot;&gt;AxiDraw Recorder&lt;/a&gt;',['../examples_plotting.html#autotoc_md110',1,'']]],
+  ['axidraw_5frecorder_20ino_20axidraw_20recorder_30',['&lt;a class=&quot;el&quot; href=&quot;axidraw_recorder_2axidraw_recorder_8ino-example.html&quot;&gt;AxiDraw Recorder&lt;/a&gt;',['../examples_plotting.html#autotoc_md110',1,'']]],
   ['axis_20encoded_20step_20pulses_31',['Signals: Axis-Encoded Step Pulses',['../hardware.html#autotoc_md56',1,'']]],
   ['axis_20synchronous_20motion_32',['Frames: Multi-Axis Synchronous Motion',['../hardware.html#autotoc_md57',1,'']]]
 ];

@@ -89,9 +89,14 @@ $(function(){initNavTree('class_kinematics_polar_to_cartesian.html','','class_ki
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">KinematicsPolarToCartesian Class Reference</div></div>
+  <div class="headertitle"><div class="title">KinematicsPolarToCartesian Class Reference<div class="ingroups"><a class="el" href="group__kinematics.html">Kinematics</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_kinematics_polar_to_cartesian.html" title="KinematicsPolarToCartesian converts polar coordinates (radius and angle) to Cartesian coordinates (X ...">KinematicsPolarToCartesian</a> converts polar coordinates (radius and angle) to Cartesian coordinates (X and Y).  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="kinematics_8hpp_source.html">kinematics.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for KinematicsPolarToCartesian:</div>
 <div class="dyncontent">
@@ -101,31 +106,105 @@ Inheritance diagram for KinematicsPolarToCartesian:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0b4a3cf6bf4ee2f84c1ec77bc804c2bf" id="r_a0b4a3cf6bf4ee2f84c1ec77bc804c2bf"><td class="memItemLeft" align="right" valign="top"><a id="a0b4a3cf6bf4ee2f84c1ec77bc804c2bf" name="a0b4a3cf6bf4ee2f84c1ec77bc804c2bf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (float64_t fixed_radius=0)</td></tr>
-<tr class="memitem:a364c77a0c07bfd428b36351c21d0c4eb" id="r_a364c77a0c07bfd428b36351c21d0c4eb"><td class="memItemLeft" align="right" valign="top"><a id="a364c77a0c07bfd428b36351c21d0c4eb" name="a364c77a0c07bfd428b36351c21d0c4eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
-<tr class="memitem:a726cabff31a516699914537bfe15eb89" id="r_a726cabff31a516699914537bfe15eb89"><td class="memItemLeft" align="right" valign="top"><a id="a726cabff31a516699914537bfe15eb89" name="a726cabff31a516699914537bfe15eb89"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>solve_kinematics</b> ()</td></tr>
-<tr class="memitem:ae4555b1b10ce6f7a0756f9154bc1b5fc" id="r_ae4555b1b10ce6f7a0756f9154bc1b5fc"><td class="memItemLeft" align="right" valign="top"><a id="ae4555b1b10ce6f7a0756f9154bc1b5fc" name="ae4555b1b10ce6f7a0756f9154bc1b5fc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enroll</b> (<a class="el" href="class_r_p_c.html">RPC</a> *rpc, const String &amp;instance_name)</td></tr>
+<tr class="memitem:a0b4a3cf6bf4ee2f84c1ec77bc804c2bf" id="r_a0b4a3cf6bf4ee2f84c1ec77bc804c2bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b4a3cf6bf4ee2f84c1ec77bc804c2bf">begin</a> (float64_t fixed_radius=0)</td></tr>
+<tr class="memdesc:a0b4a3cf6bf4ee2f84c1ec77bc804c2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_kinematics_polar_to_cartesian.html" title="KinematicsPolarToCartesian converts polar coordinates (radius and angle) to Cartesian coordinates (X ...">KinematicsPolarToCartesian</a> with an optional fixed radius. If a fixed radius is provided, the radius input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> will be ignored.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8e7745776a9b17c160b288134c7406bb" id="r_a8e7745776a9b17c160b288134c7406bb"><td class="memItemLeft" align="right" valign="top"><a id="a8e7745776a9b17c160b288134c7406bb" name="a8e7745776a9b17c160b288134c7406bb"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_radius</b></td></tr>
+<tr class="memdesc:a8e7745776a9b17c160b288134c7406bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for radius (r) in polar coordinates. Ignored if a fixed radius is set in <a class="el" href="#a0b4a3cf6bf4ee2f84c1ec77bc804c2bf" title="Initializes the KinematicsPolarToCartesian with an optional fixed radius. If a fixed radius is provid...">begin()</a>. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:ac26d04799390b49adfd6b5f2dd8fe4ec" id="r_ac26d04799390b49adfd6b5f2dd8fe4ec"><td class="memItemLeft" align="right" valign="top"><a id="ac26d04799390b49adfd6b5f2dd8fe4ec" name="ac26d04799390b49adfd6b5f2dd8fe4ec"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input_angle</b></td></tr>
+<tr class="memdesc:ac26d04799390b49adfd6b5f2dd8fe4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for angle (theta) in polar coordinates. Map upstream components to this port. <br /></td></tr>
 <tr class="memitem:a82aa7bdef205880cdb8cc0b0fd9c19c7" id="r_a82aa7bdef205880cdb8cc0b0fd9c19c7"><td class="memItemLeft" align="right" valign="top"><a id="a82aa7bdef205880cdb8cc0b0fd9c19c7" name="a82aa7bdef205880cdb8cc0b0fd9c19c7"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_x</b></td></tr>
+<tr class="memdesc:a82aa7bdef205880cdb8cc0b0fd9c19c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for X axis motion. Map downstream components to this port. <br /></td></tr>
 <tr class="memitem:aed3d69082d1f364a6ae0f65f78c9b909" id="r_aed3d69082d1f364a6ae0f65f78c9b909"><td class="memItemLeft" align="right" valign="top"><a id="aed3d69082d1f364a6ae0f65f78c9b909" name="aed3d69082d1f364a6ae0f65f78c9b909"></a>
 <a class="el" href="class_block_port.html">BlockPort</a>&#160;</td><td class="memItemRight" valign="bottom"><b>output_y</b></td></tr>
+<tr class="memdesc:aed3d69082d1f364a6ae0f65f78c9b909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> for Y axis motion. Map downstream components to this port. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad671eb9b951863a2c073a10a95113339" id="r_ad671eb9b951863a2c073a10a95113339"><td class="memItemLeft" align="right" valign="top"><a id="ad671eb9b951863a2c073a10a95113339" name="ad671eb9b951863a2c073a10a95113339"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_kinematics_polar_to_cartesian.html" title="KinematicsPolarToCartesian converts polar coordinates (radius and angle) to Cartesian coordinates (X ...">KinematicsPolarToCartesian</a> converts polar coordinates (radius and angle) to Cartesian coordinates (X and Y). </p>
+<p>The <a class="el" href="class_kinematics_polar_to_cartesian.html" title="KinematicsPolarToCartesian converts polar coordinates (radius and angle) to Cartesian coordinates (X ...">KinematicsPolarToCartesian</a> class transforms polar coordinate inputs into Cartesian X and Y outputs. This is useful for simulating a system with a polar mechanism like a pottery wheel or a lathe. Heres an example of how to instantiate and configure a <a class="el" href="class_kinematics_polar_to_cartesian.html" title="KinematicsPolarToCartesian converts polar coordinates (radius and angle) to Cartesian coordinates (X ...">KinematicsPolarToCartesian</a> component and then use it to drive Cartesian motion from polar inputs: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"><a class="code hl_class" href="class_analog_input.html">AnalogInput</a> angle_input;</div>
+<div class="line"><a class="code hl_class" href="class_encoder.html">Encoder</a> radius_enc;</div>
+<div class="line"><a class="code hl_class" href="class_kinematics_polar_to_cartesian.html">KinematicsPolarToCartesian</a> polar_to_cartesian_kinematics;</div>
+<div class="line"><a class="code hl_class" href="class_velocity_generator.html">VelocityGenerator</a> angle_velocity_gen;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_x;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_y;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_x;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_y;  </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup(){</div>
+<div class="line">  <span class="comment">// Initialize OutputPorts and enable drivers</span></div>
+<div class="line">  output_x.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A);</div>
+<div class="line">  output_y.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_B);</div>
+<div class="line">  enable_drivers();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize Channels</span></div>
+<div class="line">  channel_x.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_x, SIGNAL_E);</div>
+<div class="line">  channel_y.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_y, SIGNAL_E);</div>
+<div class="line"> </div>
+<div class="line">  vel_genocity_gen.begin();</div>
+<div class="line">  angle_velocity_gen.<a class="code hl_variable" href="class_velocity_generator.html#a520b0ca4b9495bc35ad62f218655a8fe">output</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(polar_to_cartesian_kinematics.<a class="code hl_variable" href="#ac26d04799390b49adfd6b5f2dd8fe4ec">input_angle</a>); </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  </div>
+<div class="line">  <span class="comment">// Initialize AnalogInput for angle</span></div>
+<div class="line">  angle_input.<a class="code hl_function" href="class_analog_input.html#abebd50d249b8180d1b18fe37e026afd5">set_floor</a>(0, 25); <span class="comment">// Set floor to 0 output at ADC values of 25 and below.</span></div>
+<div class="line">  angle_input.<a class="code hl_function" href="class_analog_input.html#a79552bae1a61205c886343c8c147bcab">set_ceiling</a>(3.28, 1020); <span class="comment">//radians per second</span></div>
+<div class="line"> </div>
+<div class="line">  angle_input.<a class="code hl_function" href="class_analog_input.html#a5b693352b0883ae6fa94cbeae55eb8dd">map</a>(&amp;angle_velocity_gen.<a class="code hl_variable" href="class_velocity_generator.html#a6585a0eb09b0b7f27bd944059613cb19">speed_units_per_sec</a>); <span class="comment">// Map analog output to VelocityGenerator speed ControlParameter</span></div>
+<div class="line">  angle_input.<a class="code hl_function" href="class_analog_input.html#a5b775afdce5bed709d007d5e1ca9c6d7">begin</a>(IO_A1);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize Encoder for radius</span></div>
+<div class="line">  radius_enc.<a class="code hl_function" href="class_encoder.html#ad287d2bda9161a8c024a9fb06e28b741">begin</a>(ENCODER_1);</div>
+<div class="line">  radius_enc.set_ratio(1, 2400);  </div>
+<div class="line">  radius_enc.output.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(polar_to_cartesian_kinematics.<a class="code hl_variable" href="#a8e7745776a9b17c160b288134c7406bb">input_radius</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize KinematicsPolarToCartesian and map to channels</span></div>
+<div class="line">  polar_to_cartesian_kinematics.<a class="code hl_function" href="#a0b4a3cf6bf4ee2f84c1ec77bc804c2bf">begin</a>();</div>
+<div class="line">  polar_to_cartesian_kinematics.<a class="code hl_variable" href="#a82aa7bdef205880cdb8cc0b0fd9c19c7">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_x.input_target_position);</div>
+<div class="line">  polar_to_cartesian_kinematics.<a class="code hl_variable" href="#aed3d69082d1f364a6ae0f65f78c9b909">output_y</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_y.input_target_position);</div>
+<div class="line"> </div>
+<div class="line">  dance_start();</div>
+<div class="line">} </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">  dance_loop();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0b4a3cf6bf4ee2f84c1ec77bc804c2bf" name="a0b4a3cf6bf4ee2f84c1ec77bc804c2bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4a3cf6bf4ee2f84c1ec77bc804c2bf">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KinematicsPolarToCartesian::begin </td>
+          <td>(</td>
+          <td class="paramtype">float64_t</td>          <td class="paramname"><span class="paramname"><em>fixed_radius</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="class_kinematics_polar_to_cartesian.html" title="KinematicsPolarToCartesian converts polar coordinates (radius and angle) to Cartesian coordinates (X ...">KinematicsPolarToCartesian</a> with an optional fixed radius. If a fixed radius is provided, the radius input <a class="el" href="class_block_port.html" title="BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...">BlockPort</a> will be ignored. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fixed_radius</td><td>Optional fixed radius value. Default is 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>lib/<a class="el" href="kinematics_8hpp_source.html">kinematics.hpp</a></li>
 </ul>

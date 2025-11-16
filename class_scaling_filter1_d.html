@@ -129,7 +129,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generates an output signal in proportion to one input signal. </p>
-<p>The <a class="el" href="class_scaling_filter1_d.html" title="Generates an output signal in proportion to one input signal.">ScalingFilter1D</a> class scales an input signal by a specified ratio to produce an output signal. This is useful for scaling a motion trajectory. Here's an example of how to instantiate and configure a <a class="el" href="class_scaling_filter1_d.html" title="Generates an output signal in proportion to one input signal.">ScalingFilter1D</a>: </p><div class="fragment"></div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<p>The <a class="el" href="class_scaling_filter1_d.html" title="Generates an output signal in proportion to one input signal.">ScalingFilter1D</a> class scales an input signal by a specified ratio to produce an output signal. This is useful for scaling a motion trajectory. Here's an example of how to instantiate and configure a <a class="el" href="class_scaling_filter1_d.html" title="Generates an output signal in proportion to one input signal.">ScalingFilter1D</a>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define module_driver</span></div>
+<div class="line"><span class="preprocessor">#include &quot;stepdance.hpp&quot;</span></div>
+<div class="line"><a class="code hl_class" href="class_input_port.html">InputPort</a> input_a;</div>
+<div class="line"><a class="code hl_class" href="class_scaling_filter1_d.html">ScalingFilter1D</a> scale_filter;</div>
+<div class="line"><a class="code hl_class" href="class_channel.html">Channel</a> channel_x;</div>
+<div class="line"><a class="code hl_class" href="class_output_port.html">OutputPort</a> output_a;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup(){</div>
+<div class="line">  <span class="comment">// Initialize OutputPort and enable drivers</span></div>
+<div class="line">  output_a.<a class="code hl_function" href="class_output_port.html#a0158ccdab5705216309a16eeb22039d0">begin</a>(OUTPUT_A);</div>
+<div class="line">  enable_drivers();</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize Channel</span></div>
+<div class="line">  channel_x.<a class="code hl_function" href="class_channel.html#a395b2f1afe3e1351806fb826e5a23d42">begin</a>(&amp;output_a, SIGNAL_E);</div>
+<div class="line"> </div>
+<div class="line">  input_a.<a class="code hl_function" href="class_input_port.html#a7bec13041ef7d76fbcb3f4126300270a">begin</a>(INPUT_A);</div>
+<div class="line">  input_a.<a class="code hl_variable" href="class_input_port.html#a7352accb51d331f3ec1f827c0af6fc24">output_x</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(scale_filter.<a class="code hl_variable" href="#a0745aa024278df2cda3bf118a5a6fc74">input</a>); <span class="comment">// Map InputPort to ScalingFilter1D input</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize ScalingFilter1D and map to channel</span></div>
+<div class="line">  scale_filter.<a class="code hl_function" href="#ac22f76b633e5c32ce2aa34c43b2fbdcb">set_ratio</a>(2.0); <span class="comment">// Example ratio- will scale inpyut by factor of 2</span></div>
+<div class="line">  scale_filter.<a class="code hl_function" href="#a03c0272d664acf2c46658a4dbfb2b1f1">begin</a>();</div>
+<div class="line">  scale_filter.<a class="code hl_variable" href="#a9b465d9a0a09cb095dac6af36afbff0a">output</a>.<a class="code hl_function" href="class_block_port.html#a15141b0edfad4e702588f16599e2655b">map</a>(channel_x.input_target_position);</div>
+<div class="line"> </div>
+<div class="line">  dance_start();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop(){</div>
+<div class="line">  dance_loop();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a03c0272d664acf2c46658a4dbfb2b1f1" name="a03c0272d664acf2c46658a4dbfb2b1f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03c0272d664acf2c46658a4dbfb2b1f1">&#9670;&#160;</a></span>begin()</h2>
 

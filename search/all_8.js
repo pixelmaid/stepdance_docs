@@ -18,14 +18,14 @@ var searchData=
   ['encoder_5ftest_20ino_20encoder_20test_15',['&lt;a class=&quot;el&quot; href=&quot;encoder_test_2encoder_test_8ino-example.html&quot;&gt;Encoder Test&lt;/a&gt;',['../examples_core.html#autotoc_md97',1,'']]],
   ['encoders_16',['Encoders',['../stepasketch.html#autotoc_md25',1,'Configure Encoders'],['../taiss.html',1,'TAISS Optical Encoders'],['../taiss.html#autotoc_md78',1,'TAISS Optical Encoders']]],
   ['encoders_20and_20analog_20digital_20inputs_17',['Encoders and Analog / Digital Inputs',['../hardware.html#autotoc_md43',1,'']]],
-  ['ender_20sketch_20extrude_18',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md124',1,'']]],
-  ['ender_5fsketch_5fextrude_20ender_5fsketch_5fextrude_20ino_20ender_20sketch_20extrude_19',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md124',1,'']]],
-  ['ender_5fsketch_5fextrude_20ino_20ender_20sketch_20extrude_20',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md124',1,'']]],
+  ['ender_20sketch_20extrude_18',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md125',1,'']]],
+  ['ender_5fsketch_5fextrude_20ender_5fsketch_5fextrude_20ino_20ender_20sketch_20extrude_19',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md125',1,'']]],
+  ['ender_5fsketch_5fextrude_20ino_20ender_20sketch_20extrude_20',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md125',1,'']]],
   ['environment_21',['2. Set Up Arduino Programming Environment',['../getting_started.html#autotoc_md34',1,'']]],
   ['etch_20a_20sketch_22',['&quot;Step-A-Sketch&quot; (Etch-A-Sketch)',['../hardware.html#autotoc_md59',1,'']]],
   ['example_23',['Example',['../ebb.html',1,'Axidraw EBB Controller Emulator Example'],['../stepasketch.html',1,'Step-A-Sketch Example']]],
   ['example_20categories_24',['Example Categories',['../code_examples.html#autotoc_md86',1,'']]],
-  ['example_20files_25',['Example Files',['../examples_core.html#autotoc_md95',1,'Example Files'],['../examples_motion.html#autotoc_md101',1,'Example Files'],['../examples_plotting.html#autotoc_md107',1,'Example Files'],['../examples_clayprinter.html#autotoc_md113',1,'Example Files'],['../examples_kinematics.html#autotoc_md119',1,'Example Files'],['../examples_legacy.html#autotoc_md122',1,'Example Files']]],
+  ['example_20files_25',['Example Files',['../examples_core.html#autotoc_md95',1,'Example Files'],['../examples_motion.html#autotoc_md102',1,'Example Files'],['../examples_plotting.html#autotoc_md108',1,'Example Files'],['../examples_clayprinter.html#autotoc_md114',1,'Example Files'],['../examples_kinematics.html#autotoc_md120',1,'Example Files'],['../examples_legacy.html#autotoc_md123',1,'Example Files']]],
   ['example_20index_26',['Stepdance Example Index',['../examples.html',1,'code_examples']]],
   ['example_20sketches_27',['Core Example Sketches',['../examples_core.html',1,'code_examples']]],
   ['examples_28',['Examples',['../code_examples.html',1,'Code Examples'],['../hardware.html#autotoc_md58',1,'Examples'],['../ssl.html#autotoc_md74',1,'Examples']]],
@@ -37,6 +37,6 @@ var searchData=
   ['examples_5fplotting_20plotting_20axidraw_34',['&lt;a class=&quot;el&quot; href=&quot;examples_plotting.html&quot;&gt;Plotting &amp;amp; AxiDraw&lt;/a&gt;',['../examples.html#autotoc_md90',1,'']]],
   ['experimental_35',['Experimental',['../examples.html#autotoc_md93',1,'<a class="el" href="examples_legacy.html">Legacy / Experimental</a>'],['../examples_legacy.html',1,'Legacy / Experimental']]],
   ['external_20interfaces_36',['External Interfaces',['../group__interfaces.html',1,'']]],
-  ['extrude_37',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md124',1,'']]],
-  ['extrusion_38',['&lt;a class=&quot;el&quot; href=&quot;polar_cartesian_3dprinter_extrusion_2polar_cartesian_3dprinter_extrusion_8ino-example.html&quot;&gt;Polar Cartesian 3D Printer with Extrusion&lt;/a&gt;',['../examples_clayprinter.html#autotoc_md117',1,'']]]
+  ['extrude_37',['&lt;a class=&quot;el&quot; href=&quot;ender_sketch_extrude_2ender_sketch_extrude_8ino-example.html&quot;&gt;Ender Sketch Extrude&lt;/a&gt;',['../examples_legacy.html#autotoc_md125',1,'']]],
+  ['extrusion_38',['&lt;a class=&quot;el&quot; href=&quot;polar_cartesian_3dprinter_extrusion_2polar_cartesian_3dprinter_extrusion_8ino-example.html&quot;&gt;Polar Cartesian 3D Printer with Extrusion&lt;/a&gt;',['../examples_clayprinter.html#autotoc_md118',1,'']]]
 ];
