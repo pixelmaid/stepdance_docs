@@ -108,7 +108,9 @@ Inheritance diagram for Eibotboard:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a77c54c9883af9bca2ffc0488f1bf490b" id="r_a77c54c9883af9bca2ffc0488f1bf490b"><td class="memItemLeft" align="right" valign="top"><a id="a77c54c9883af9bca2ffc0488f1bf490b" name="a77c54c9883af9bca2ffc0488f1bf490b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="memdesc:a77c54c9883af9bca2ffc0488f1bf490b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the EiBotBoard interface. This must be called to set up the interface. <br /></td></tr>
+<tr class="memdesc:a77c54c9883af9bca2ffc0488f1bf490b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the EiBotBoard interface. This must be called to set up the interface. Default communication interface is Serial. <br /></td></tr>
+<tr class="memitem:a82e10719f5c95005f3b8c9e720f8b6d9" id="r_a82e10719f5c95005f3b8c9e720f8b6d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82e10719f5c95005f3b8c9e720f8b6d9">begin</a> (usb_serial_class *target_usb_serial)</td></tr>
+<tr class="memdesc:a82e10719f5c95005f3b8c9e720f8b6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the EiBotBoard interface with a specified communication interface.  <br /></td></tr>
 <tr class="memitem:ab7b0631eac328b0394edc65f28755529" id="r_ab7b0631eac328b0394edc65f28755529"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7b0631eac328b0394edc65f28755529">set_ratio_xy</a> (float output_units_mm, float input_units_steps)</td></tr>
 <tr class="memdesc:ab7b0631eac328b0394edc65f28755529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the conversion ratio between XY steps and millimeters.  <br /></td></tr>
 <tr class="memitem:afd2401a96a31faa83fa9d68a873fe229" id="r_afd2401a96a31faa83fa9d68a873fe229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd2401a96a31faa83fa9d68a873fe229">set_ratio_z</a> (float output_units_mm, float input_units_steps)</td></tr>
@@ -136,6 +138,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
 <p>The <a class="el" href="class_eibotboard.html" title="Enables using Axidraw commands from over serial as motion stream input.">Eibotboard</a> class emulates the Axidraw EiBotBoard interface, allowing standard AxiDraw workflows to provide direct input. It processes serial commands sent over the axidraw inteface (e.g. from Inkscape or from the AxiDraw Python library), to generate motion streams corresponding to the geometry of input SVG drawings. To use with Inkscape, select the "AxiDraw Control" extension and set the output port to the serial port connected to the StepDance controller running this interface.</p>
 <p>For an example of how to use this class, see <a class="el" href="axidraw_interface_2axidraw_interface_8ino-example.html">axidraw_interface/axidraw_interface.ino</a> </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a82e10719f5c95005f3b8c9e720f8b6d9" name="a82e10719f5c95005f3b8c9e720f8b6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e10719f5c95005f3b8c9e720f8b6d9">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Eibotboard::begin </td>
+          <td>(</td>
+          <td class="paramtype">usb_serial_class *</td>          <td class="paramname"><span class="paramname"><em>target_usb_serial</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the EiBotBoard interface with a specified communication interface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target_usb_serial</td><td>A pointer to a communication interface, e.g. &amp;Serial or &amp;SerialUSB1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab7b0631eac328b0394edc65f28755529" name="ab7b0631eac328b0394edc65f28755529"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7b0631eac328b0394edc65f28755529">&#9670;&#160;</a></span>set_ratio_xy()</h2>
 

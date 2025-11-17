@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wavegenerator1d_0',['WaveGenerator1D',['../class_wave_generator1_d.html',1,'']]]
+  ['velocitygenerator_0',['VelocityGenerator',['../class_velocity_generator.html',1,'']]]
 ];

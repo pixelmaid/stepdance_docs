@@ -2,6 +2,7 @@ var group__interfaces =
 [
     [ "Eibotboard", "class_eibotboard.html", [
       [ "begin", "class_eibotboard.html#a77c54c9883af9bca2ffc0488f1bf490b", null ],
+      [ "begin", "class_eibotboard.html#a82e10719f5c95005f3b8c9e720f8b6d9", null ],
       [ "set_ratio_xy", "class_eibotboard.html#ab7b0631eac328b0394edc65f28755529", null ],
       [ "set_ratio_z", "class_eibotboard.html#afd2401a96a31faa83fa9d68a873fe229", null ],
       [ "output_x", "class_eibotboard.html#a85eb2ea307f4488697133e8e7d664c09", null ],

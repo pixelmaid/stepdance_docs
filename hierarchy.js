@@ -29,5 +29,8 @@ var hierarchy =
       [ "WaveGenerator1D", "class_wave_generator1_d.html", null ]
     ] ],
     [ "TimeBasedInterpolator::position", "struct_time_based_interpolator_1_1position.html", null ],
-    [ "RecorderTrack", "class_recorder_track.html", null ]
+    [ "RecorderTrack", "class_recorder_track.html", null ],
+    [ "Stream", null, [
+      [ "NullSerial", "class_null_serial.html", null ]
+    ] ]
 ];

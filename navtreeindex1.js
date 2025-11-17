@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"functions.html":[3,3,0],
+"functions_func.html":[3,3,1],
 "functions_vars.html":[3,3,2],
 "gcode_stepasketch_2gcode_stepasketch_8ino-example.html":[5,11],
 "generators_8hpp_source.html":[4,0,0,6],
@@ -47,8 +49,8 @@ var NAVTREEINDEX1 =
 "stepasketch.html":[1,2,2],
 "stepasketch_old_2stepasketch_old_8ino-example.html":[5,18],
 "stepasketch_with_inputs_2stepasketch_with_inputs_8ino-example.html":[5,12],
-"struct_time_based_interpolator_1_1motion__block.html":[3,0,23,0],
-"struct_time_based_interpolator_1_1position.html":[3,0,23,1],
+"struct_time_based_interpolator_1_1motion__block.html":[3,0,24,0],
+"struct_time_based_interpolator_1_1position.html":[3,0,24,1],
 "taiss.html":[1,1,1],
 "topics.html":[2],
 "tutorials_docs.html":[1,2],

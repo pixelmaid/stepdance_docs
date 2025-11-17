@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['thresholdgenerator_0',['ThresholdGenerator',['../class_threshold_generator.html',1,'']]],
-  ['timebasedinterpolator_1',['TimeBasedInterpolator',['../class_time_based_interpolator.html',1,'']]]
+  ['scalingfilter1d_0',['ScalingFilter1D',['../class_scaling_filter1_d.html',1,'']]],
+  ['scalingfilter2d_1',['ScalingFilter2D',['../class_scaling_filter2_d.html',1,'']]]
 ];

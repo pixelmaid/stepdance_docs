@@ -14,6 +14,7 @@ var annotated_dup =
     [ "KinematicsCoreXY", "class_kinematics_core_x_y.html", "class_kinematics_core_x_y" ],
     [ "KinematicsFiveBarForward", "class_kinematics_five_bar_forward.html", "class_kinematics_five_bar_forward" ],
     [ "KinematicsPolarToCartesian", "class_kinematics_polar_to_cartesian.html", "class_kinematics_polar_to_cartesian" ],
+    [ "NullSerial", "class_null_serial.html", null ],
     [ "OutputPort", "class_output_port.html", "class_output_port" ],
     [ "PathLengthGenerator2D", "class_path_length_generator2_d.html", "class_path_length_generator2_d" ],
     [ "PathLengthGenerator3D", "class_path_length_generator3_d.html", "class_path_length_generator3_d" ],

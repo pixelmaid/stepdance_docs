@@ -146,59 +146,68 @@ $(function(){initNavTree('interpolators_8hpp_source.html','',''); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      uint8_t block_type; <span class="comment">//specifies which type of block this is (e.g. delay, absolute, relative, set position, etc...). We don&#39;t currently use this.</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      uint32_t block_id; <span class="comment">//an ID # for the motion block</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      float32_t block_time_s; <span class="comment">//total time for the block, in seconds. We&#39;ll later convert this to frames, but keep it in seconds here for legibility.</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">struct </span><a class="code hl_struct" href="struct_time_based_interpolator_1_1position.html">position</a> block_position_delta;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      float32_t block_velocity_per_s;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keyword">struct </span><a class="code hl_struct" href="struct_time_based_interpolator_1_1position.html">position</a> block_position;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    int16_t add_block(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_time_based_interpolator_1_1motion__block.html">motion_block</a>* block_to_add); <span class="comment">//adds a block to the queue</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    int16_t add_move(float32_t move_time_s, DecimalPosition delta_x, DecimalPosition delta_y, DecimalPosition delta_z, DecimalPosition delta_e, DecimalPosition delta_r, DecimalPosition delta_t); <span class="comment">//generates a move and adds to queue</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">volatile</span> ControlParameter speed_overide = 1; <span class="comment">//modifier for the interpolator speed.</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">volatile</span> uint16_t slots_remaining; <span class="comment">//number of slots remaining in block queue</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span> is_idle(); <span class="comment">//returns true if the interpolator is idle</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> queue_is_full();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// BlockPorts</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_x;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_y;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_z;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_e;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_r;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_t;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// BlockPort State Variables</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    DecimalPosition output_position_x;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    DecimalPosition output_position_y;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    DecimalPosition output_position_z;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    DecimalPosition output_position_e;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    DecimalPosition output_position_r;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    DecimalPosition output_position_t;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_time_based_interpolator_1_1motion__block.html">motion_block</a> block_queue[TBI_BLOCK_QUEUE_SIZE]; <span class="comment">// stores all pending motion blocks</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">volatile</span> uint16_t next_write_index; <span class="comment">//next write index in the block queue</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">volatile</span> uint16_t next_read_index; <span class="comment">//next read index in the block queue </span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> advance_head(<span class="keyword">volatile</span> uint16_t* target_head); <span class="comment">//handles roll-overs etc</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> reset_block_queue();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> pull_block(); <span class="comment">//pulls a block from the queue and into the active buffer</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">volatile</span> uint8_t in_block = 0; <span class="comment">//1 if actively reading a block</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">volatile</span> uint16_t active_block_id; <span class="comment">//stores the current active block</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">volatile</span> uint8_t active_block_type; <span class="comment">//we don&#39;t use this for now</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">volatile</span> uint8_t active_axes[TBI_NUM_AXES]; <span class="comment">//indexed by axis #, 0 if axis inactive, 1 if active</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">volatile</span> float64_t active_axes_remaining_distance_mm[TBI_NUM_AXES];</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">volatile</span> float32_t active_axes_velocity_mm_per_frame[TBI_NUM_AXES];</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a>* output_BlockPorts[TBI_NUM_AXES - 1] = {&amp;output_x, &amp;output_y, &amp;output_z, &amp;output_e, &amp;output_r, &amp;output_t};</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> run_frame_on_active_block(); <span class="comment">//run a frame of the currently active block</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    int16_t add_block(<span class="keyword">struct</span> <a class="code hl_struct" href="struct_time_based_interpolator_1_1motion__block.html">motion_block</a>* block_to_add); <span class="comment">//adds a block to the queue</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    int16_t add_move(uint8_t mode, float32_t velocity_per_s, DecimalPosition x, DecimalPosition y, DecimalPosition z, DecimalPosition e, DecimalPosition r, DecimalPosition t);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    int16_t add_timed_move(uint8_t mode, float32_t time_s, DecimalPosition x, DecimalPosition y, DecimalPosition z, DecimalPosition e, DecimalPosition r, DecimalPosition t);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">volatile</span> ControlParameter speed_overide = 1; <span class="comment">//modifier for the interpolator speed.</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> begin();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">volatile</span> uint16_t slots_remaining; <span class="comment">//number of slots remaining in block queue</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> is_idle(); <span class="comment">//returns true if the interpolator is idle</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> queue_is_full();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> enroll(<a class="code hl_class" href="class_r_p_c.html">RPC</a> *rpc, <span class="keyword">const</span> String&amp; instance_name);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// BlockPorts</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_x;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_y;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_z;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_e;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_r;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a> output_t;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// BlockPort State Variables</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    DecimalPosition output_position_x;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    DecimalPosition output_position_y;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    DecimalPosition output_position_z;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    DecimalPosition output_position_e;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    DecimalPosition output_position_r;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    DecimalPosition output_position_t;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_time_based_interpolator_1_1motion__block.html">motion_block</a> block_queue[TBI_BLOCK_QUEUE_SIZE]; <span class="comment">// stores all pending motion blocks</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">volatile</span> uint16_t next_write_index; <span class="comment">//next write index in the block queue</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">volatile</span> uint16_t next_read_index; <span class="comment">//next read index in the block queue </span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> advance_head(<span class="keyword">volatile</span> uint16_t* target_head); <span class="comment">//handles roll-overs etc</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> reset_block_queue();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> pull_block(); <span class="comment">//pulls a block from the queue and into the active buffer</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">volatile</span> uint8_t in_block = 0; <span class="comment">//1 if actively reading a block</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">volatile</span> uint16_t active_block_id; <span class="comment">//stores the current active block</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">volatile</span> uint8_t active_block_type; <span class="comment">//we don&#39;t use this for now</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">volatile</span> uint8_t active_axes[TBI_NUM_AXES]; <span class="comment">//indexed by axis #, 0 if axis inactive, 1 if active</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">volatile</span> float64_t active_axes_remaining_distance_mm[TBI_NUM_AXES];</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">volatile</span> float32_t active_axes_velocity_mm_per_frame[TBI_NUM_AXES];</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_class" href="class_block_port.html">BlockPort</a>* output_BlockPorts[TBI_NUM_AXES - 1] = {&amp;output_x, &amp;output_y, &amp;output_z, &amp;output_e, &amp;output_r, &amp;output_t};</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> run_frame_on_active_block(); <span class="comment">//run a frame of the currently active block</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    int16_t _add_move(uint8_t mode, float32_t move_time_s, float32_t velocity_per_s, DecimalPosition x, DecimalPosition y, DecimalPosition z, DecimalPosition e, DecimalPosition r, DecimalPosition t);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">enum</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      BLOCK_TYPE_INCREMENTAL,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      BLOCK_TYPE_ABSOLUTE,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      BLOCK_TYPE_GLOBAL</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    };</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>};</div>
 </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_block_port_html"><div class="ttname"><a href="class_block_port.html">BlockPort</a></div><div class="ttdoc">BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...</div><div class="ttdef"><b>Definition</b> core.hpp:143</div></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_block_port_html"><div class="ttname"><a href="class_block_port.html">BlockPort</a></div><div class="ttdoc">BlockPorts provide a unified interface for mapping inputs and outputs of different StepDance componen...</div><div class="ttdef"><b>Definition</b> core.hpp:148</div></div>
 <div class="ttc" id="aclass_r_p_c_html"><div class="ttname"><a href="class_r_p_c.html">RPC</a></div><div class="ttdoc">RPC class for handling remote procedure calls over serial streams.</div><div class="ttdef"><b>Definition</b> rpc.hpp:35</div></div>
 <div class="ttc" id="astruct_time_based_interpolator_1_1motion__block_html"><div class="ttname"><a href="struct_time_based_interpolator_1_1motion__block.html">TimeBasedInterpolator::motion_block</a></div><div class="ttdef"><b>Definition</b> interpolators.hpp:47</div></div>
 <div class="ttc" id="astruct_time_based_interpolator_1_1position_html"><div class="ttname"><a href="struct_time_based_interpolator_1_1position.html">TimeBasedInterpolator::position</a></div><div class="ttdef"><b>Definition</b> interpolators.hpp:38</div></div>
