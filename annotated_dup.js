@@ -10,6 +10,8 @@ var annotated_dup =
     [ "FourTrackPlayer", "class_four_track_player.html", "class_four_track_player" ],
     [ "FourTrackRecorder", "class_four_track_recorder.html", "class_four_track_recorder" ],
     [ "GCodeInterface", "class_g_code_interface.html", "class_g_code_interface" ],
+    [ "Homing", "class_homing.html", null ],
+    [ "HomingAxis", "class_homing_axis.html", null ],
     [ "InputPort", "class_input_port.html", "class_input_port" ],
     [ "KinematicsCoreXY", "class_kinematics_core_x_y.html", "class_kinematics_core_x_y" ],
     [ "KinematicsFiveBarForward", "class_kinematics_five_bar_forward.html", "class_kinematics_five_bar_forward" ],
@@ -26,5 +28,6 @@ var annotated_dup =
     [ "ThresholdGenerator", "class_threshold_generator.html", "class_threshold_generator" ],
     [ "TimeBasedInterpolator", "class_time_based_interpolator.html", "class_time_based_interpolator" ],
     [ "VelocityGenerator", "class_velocity_generator.html", "class_velocity_generator" ],
-    [ "WaveGenerator1D", "class_wave_generator1_d.html", "class_wave_generator1_d" ]
+    [ "WaveGenerator1D", "class_wave_generator1_d.html", "class_wave_generator1_d" ],
+    [ "WaveGenerator2D", "class_wave_generator2_d.html", "class_wave_generator2_d" ]
 ];

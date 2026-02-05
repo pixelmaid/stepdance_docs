@@ -7,6 +7,7 @@ var dir_97aefd0d527b934f1d99a682da8fe6a9 =
     [ "encoders.hpp", "encoders_8hpp_source.html", null ],
     [ "filters.hpp", "filters_8hpp_source.html", null ],
     [ "generators.hpp", "generators_8hpp_source.html", null ],
+    [ "homing.hpp", "homing_8hpp_source.html", null ],
     [ "input_ports.hpp", "input__ports_8hpp_source.html", null ],
     [ "interfaces.hpp", "interfaces_8hpp_source.html", null ],
     [ "interpolators.hpp", "interpolators_8hpp_source.html", null ],

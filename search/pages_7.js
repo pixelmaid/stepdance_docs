@@ -10,7 +10,7 @@ var searchData=
   ['dimensions_7',['Dimensions',['../hardware.html#autotoc_md49',1,'Dimensions'],['../hardware.html#autotoc_md52',1,'Dimensions']]],
   ['display_20and_20control_20knob_20mounting_8',['Display and Control Knob Mounting',['../hardware.html#autotoc_md47',1,'']]],
   ['documentation_9',['Documentation',['../documentation.html',1,'Documentation'],['../hardware_docs.html',1,'Hardware Documentation'],['../index.html#autotoc_md69',1,'Hardware Documentation'],['../software_docs.html',1,'Software Documentation'],['../hardware.html',1,'Stepdance Hardware Documentation'],['../index.html#autotoc_md70',1,'Stepdance Software Library (SSL) Documentation'],['../ssl.html',1,'Stepdance Software Library Documentation']]],
-  ['drawing_10',['Drawing',['../examples.html#autotoc_md89',1,'<a class="el" href="examples_motion.html">Motion &amp; Drawing</a>'],['../examples_motion.html',1,'Motion &amp; Drawing']]],
+  ['drawing_10',['Drawing',['../examples.html#autotoc_md89',1,'&lt;a class=&quot;el&quot; href=&quot;examples_motion.html&quot; title=&quot;Motion &amp;amp; Drawing&quot;&gt;Motion &amp;amp; Drawing&lt;/a&gt;'],['../examples_motion.html',1,'Motion &amp; Drawing']]],
   ['driver_11',['Hobby Servo Driver',['../hardware.html#autotoc_md53',1,'']]],
   ['driver_20board_12',['Configuring the Stepdance Driver Board',['../stepasketch.html#autotoc_md2',1,'']]],
   ['driver_20currents_13',['Setting the Motor Driver Currents',['../stepasketch.html#autotoc_md7',1,'']]],

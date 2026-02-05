@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "BlockPort", "class_block_port.html", null ],
-    [ "TimeBasedInterpolator::motion_block", "struct_time_based_interpolator_1_1motion__block.html", null ],
     [ "Plugin", null, [
       [ "AnalogInput", "class_analog_input.html", null ],
       [ "Button", "class_button.html", null ],
@@ -12,6 +11,8 @@ var hierarchy =
       [ "FourTrackPlayer", "class_four_track_player.html", null ],
       [ "FourTrackRecorder", "class_four_track_recorder.html", null ],
       [ "GCodeInterface", "class_g_code_interface.html", null ],
+      [ "Homing", "class_homing.html", null ],
+      [ "HomingAxis", "class_homing_axis.html", null ],
       [ "InputPort", "class_input_port.html", null ],
       [ "KinematicsCoreXY", "class_kinematics_core_x_y.html", null ],
       [ "KinematicsFiveBarForward", "class_kinematics_five_bar_forward.html", null ],
@@ -26,9 +27,9 @@ var hierarchy =
       [ "ThresholdGenerator", "class_threshold_generator.html", null ],
       [ "TimeBasedInterpolator", "class_time_based_interpolator.html", null ],
       [ "VelocityGenerator", "class_velocity_generator.html", null ],
-      [ "WaveGenerator1D", "class_wave_generator1_d.html", null ]
+      [ "WaveGenerator1D", "class_wave_generator1_d.html", null ],
+      [ "WaveGenerator2D", "class_wave_generator2_d.html", null ]
     ] ],
-    [ "TimeBasedInterpolator::position", "struct_time_based_interpolator_1_1position.html", null ],
     [ "RecorderTrack", "class_recorder_track.html", null ],
     [ "Stream", null, [
       [ "NullSerial", "class_null_serial.html", null ]

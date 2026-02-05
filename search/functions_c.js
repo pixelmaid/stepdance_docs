@@ -22,7 +22,7 @@ var searchData=
   ['set_5fupper_5flimit_19',['set_upper_limit',['../class_channel.html#a9c0df399ebeba1a09e41b42264d064c7',1,'Channel']]],
   ['setlowercallback_20',['setLowerCallback',['../class_threshold_generator.html#abf2d823e546fab1755645860ceb3fea3',1,'ThresholdGenerator']]],
   ['setlowerthreshold_21',['setLowerThreshold',['../class_threshold_generator.html#a396480cb218ce448b63be154ec430e91',1,'ThresholdGenerator']]],
-  ['setnoinput_22',['setNoInput',['../class_wave_generator1_d.html#a8d49e84aeb59f1e9dcaff6f4850af05f',1,'WaveGenerator1D::setNoInput()'],['../class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91',1,'CircleGenerator::setNoInput()']]],
+  ['setnoinput_22',['setNoInput',['../class_wave_generator1_d.html#a8d49e84aeb59f1e9dcaff6f4850af05f',1,'WaveGenerator1D::setNoInput()'],['../class_wave_generator2_d.html#a6cb0354a12cd07f8237777377712c425',1,'WaveGenerator2D::setNoInput()'],['../class_circle_generator.html#a140dc4a8f517f36587e6aad1018f8c91',1,'CircleGenerator::setNoInput()']]],
   ['setuppercallback_23',['setUpperCallback',['../class_threshold_generator.html#a373837c57d0959bf0170684c498875bf',1,'ThresholdGenerator']]],
   ['setupperthreshold_24',['setUpperThreshold',['../class_threshold_generator.html#a165d218a1f6537bf7b11e1118ae507f2',1,'ThresholdGenerator']]],
   ['start_25',['start',['../class_four_track_recorder.html#a4e15a1995b887e5282fe92dfd9579b6e',1,'FourTrackRecorder::start()'],['../class_four_track_player.html#a3d86c4b6e385ebf754e0f626aceba250',1,'FourTrackPlayer::start()']]],

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['motion_5fblock_0',['motion_block',['../struct_time_based_interpolator_1_1motion__block.html',1,'TimeBasedInterpolator']]]
+  ['kinematicscorexy_0',['KinematicsCoreXY',['../class_kinematics_core_x_y.html',1,'']]],
+  ['kinematicsfivebarforward_1',['KinematicsFiveBarForward',['../class_kinematics_five_bar_forward.html',1,'']]],
+  ['kinematicspolartocartesian_2',['KinematicsPolarToCartesian',['../class_kinematics_polar_to_cartesian.html',1,'']]]
 ];

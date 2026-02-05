@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['inputport_0',['InputPort',['../class_input_port.html',1,'']]]
+  ['homing_0',['Homing',['../class_homing.html',1,'']]],
+  ['homingaxis_1',['HomingAxis',['../class_homing_axis.html',1,'']]]
 ];

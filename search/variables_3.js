@@ -6,9 +6,12 @@ var searchData=
   ['input_5f3_3',['input_3',['../class_path_length_generator3_d.html#af6bc49294540b48b2d33a00cf3899e31',1,'PathLengthGenerator3D::input_3'],['../class_four_track_recorder.html#aa8da90d21ca74aa2989e513365069784',1,'FourTrackRecorder::input_3']]],
   ['input_5f4_4',['input_4',['../class_four_track_recorder.html#a3f177e8a67506cde814994ee5d446731',1,'FourTrackRecorder']]],
   ['input_5fangle_5',['input_angle',['../class_kinematics_polar_to_cartesian.html#ac26d04799390b49adfd6b5f2dd8fe4ec',1,'KinematicsPolarToCartesian']]],
-  ['input_5fl_6',['input_l',['../class_kinematics_five_bar_forward.html#a9ce3ea14353d4b30402ce819662bab47',1,'KinematicsFiveBarForward']]],
-  ['input_5fr_7',['input_r',['../class_kinematics_five_bar_forward.html#a622bba565cbb4a9acc11e9f3d25f8953',1,'KinematicsFiveBarForward']]],
-  ['input_5fradius_8',['input_radius',['../class_kinematics_polar_to_cartesian.html#a8e7745776a9b17c160b288134c7406bb',1,'KinematicsPolarToCartesian']]],
-  ['input_5fx_9',['input_x',['../class_kinematics_core_x_y.html#af78b8497d15d95babb64728f7cbb2aec',1,'KinematicsCoreXY']]],
-  ['input_5fy_10',['input_y',['../class_kinematics_core_x_y.html#a65a8b2bb3866e328d19053714857f134',1,'KinematicsCoreXY']]]
+  ['input_5ffrequency_6',['input_frequency',['../class_wave_generator2_d.html#ade2ea2b0bc959bfbb29ad8de41a7f6c3',1,'WaveGenerator2D']]],
+  ['input_5fl_7',['input_l',['../class_kinematics_five_bar_forward.html#a9ce3ea14353d4b30402ce819662bab47',1,'KinematicsFiveBarForward']]],
+  ['input_5fr_8',['input_r',['../class_kinematics_five_bar_forward.html#a622bba565cbb4a9acc11e9f3d25f8953',1,'KinematicsFiveBarForward']]],
+  ['input_5fradius_9',['input_radius',['../class_kinematics_polar_to_cartesian.html#a8e7745776a9b17c160b288134c7406bb',1,'KinematicsPolarToCartesian']]],
+  ['input_5ft_10',['input_t',['../class_wave_generator2_d.html#aa33076774d26c3aad74a9f1749613da1',1,'WaveGenerator2D']]],
+  ['input_5ftheta_11',['input_theta',['../class_wave_generator2_d.html#a111ee649b1459e55cd33b926a4c364ce',1,'WaveGenerator2D']]],
+  ['input_5fx_12',['input_x',['../class_kinematics_core_x_y.html#af78b8497d15d95babb64728f7cbb2aec',1,'KinematicsCoreXY']]],
+  ['input_5fy_13',['input_y',['../class_kinematics_core_x_y.html#a65a8b2bb3866e328d19053714857f134',1,'KinematicsCoreXY']]]
 ];
